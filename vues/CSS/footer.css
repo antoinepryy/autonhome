@@ -1,0 +1,7 @@
+footer{
+    border: 1px solid black;
+}
+
+.footer-links, footer{
+    display: flex;
+}
