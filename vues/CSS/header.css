@@ -3,6 +3,14 @@ body{
 }
 
 header{
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     margin-bottom: 5px;
+}
+
+.logo_logo{
+    margin-top: 100px;
+}
+
+.logo_texte{
+    margin-left: 10px;
 }
