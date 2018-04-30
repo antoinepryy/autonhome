@@ -17,7 +17,7 @@
 
 <header>
     <div class="header-title">
-        <a href=""><img src="ressources/logo/logo.png"/></a>
+        <a href="index.php?cible=accueil"><img src="ressources/logo/logo.png"/></a>
 
     </div>
     <div>

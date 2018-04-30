@@ -10,12 +10,12 @@
     </div>
     <div class="footer-links">
         <div>
-            <a href="">
+            <a href="index.php?cible=assistance">
                 Assistance
             </a>
         </div>
         <div>
-            <a href="">
+            <a href="index.php?cible=faq">
                 FAQ
             </a>
         </div>
