@@ -20,12 +20,12 @@
             </a>
         </div>
         <div>
-            <a href="">
+            <a href="index.php?cible=mentionslegales">
                 Mentions légales
             </a>
         </div>
         <div>
-            <a href="">
+            <a href="index.php?cible=apropos">
                 A propos
             </a>
         </div>
