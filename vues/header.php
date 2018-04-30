@@ -1,28 +1,32 @@
-<?php
+<?php 
 /**
-* Vue : entête HTML
+* Vue : pied de page
 */
 ?>
-<!DOCTYPE html>
-<head>
-    <title>Autonhome</title>
-    <meta charset="utf-8"/>
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="vues/CSS/header.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
 
-</head>
-<body>
-
-<header>
-    <div class="header-title">
-        <a href="index.php?cible=accueil"><img src="ressources/logo/logo.png"/></a>
-
+<footer>
+    <div class="droit-reserve">
+        &copy;Domisep 2018
     </div>
-    <div>
-        Images + catégories
-    </div>
-</header>
+    <div class="footer-links">
 
-    
+        <ul>
+            <li> <a href="index.php?cible=assistance">
+                Assistance
+            </a> </li>
+            <li> <a href=""index.php?cible=faq">
+                    FAQ
+                </a> </li>
+            <li> <a href="">
+                    Mentions légales
+                </a> </li>
+            <li> <a href="">
+                    A propos
+                </a> </li>
+        </ul>
+
+</footer>
+
+
+</body>
+</html>
