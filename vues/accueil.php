@@ -62,6 +62,31 @@ require ('vues/header.php');
         </div>
     </section>
 
+<section class="faq">
+    <div>
+        <a href=""><img src=""/></a>
+        <h3>
+            FAQ
+        </h3>
+        <p>
+            La foire aux questions d'AutonHome
+        </p>
+    </div>
+
+</section>
+
+    <section class="assistance">
+        <div>
+            <a href=""><img src=""/></a>
+            <h3>
+                Assistance
+            </h3>
+            <p>
+            Une assistance 24h/24 7j/7 pour vous accompagner sur la prise en main et l'utilisation d'Autonhome"
+            </p>
+        </div>
+    </section>
+
 
 <?php
 
