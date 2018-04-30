@@ -1,4 +1,4 @@
-.products, .why-us{
+.products, .why-us, .assistance, .form-field, .faq{
     border: 1px solid black;
 
 }
@@ -28,24 +28,26 @@
 
 input
 {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    border : 1px solid black;
+
 }
 
 .link-mdp-oubie{
     display: flex;
     font-size: small;
     justify-content: flex-end;
+    color: grey;
+    padding-right: 5px;
 }
 
 .inscription
 {
     text-align: center;
     margin-bottom: 10px;
-    color: black;
-}
-
-.link-mdp-oubie{
-    color: grey;
+    height: 40px;
+    margin-top: 30px;
 }
 
 .products{
@@ -77,4 +79,27 @@ nav{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.assistance,.faq{
+    display: flex;
+    background-color: lightgrey;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    width: 46%;
+}
+
+.faq{
+    position: absolute;
+    right: 0;
+}
+
+.assistance p,.faq p{
+    margin-right: 170px;
+    margin-left: 170px;
 }
