@@ -3,7 +3,6 @@
 * Vue : accueil
 */
 
-$title = 'coucou';
 require ('vues/header.php');
 
 ?>

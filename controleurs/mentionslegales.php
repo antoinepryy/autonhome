@@ -6,4 +6,5 @@
  * Time: 15:20
  */
 
+$section = 'mentionslegales';
 include('vues/mentionslegales.php');
