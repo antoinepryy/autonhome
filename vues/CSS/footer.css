@@ -1,7 +1,35 @@
 footer{
     border: 1px solid black;
+    justify-content: space-around;
 }
 
 .footer-links, footer{
     display: flex;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+li{
+    margin-right: 10px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    padding: 10px;
+    height: 20px;
+    width: 150px;
+    text-align: center;
+
+}
+
+.droit-reserve{
+    font-size : 40px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+a{
+    color: black;
+    text-decoration: none ;
 }

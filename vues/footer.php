@@ -5,32 +5,26 @@
 ?>
 
 <footer>
-    <div class="">
-        &copy;Autonhome 2018
+    <div class="droit-reserve">
+        &copy;Domisep 2018
     </div>
     <div class="footer-links">
-        <div>
-            <a href="index.php?cible=assistance">
-                Assistance
-            </a>
-        </div>
-        <div>
-            <a href="index.php?cible=faq">
-                FAQ
-            </a>
-        </div>
-        <div>
-            <a href="index.php?cible=mentionslegales">
-                Mentions légales
-            </a>
-        </div>
-        <div>
-            <a href="index.php?cible=apropos">
-                A propos
-            </a>
-        </div>
 
-    </div>
+
+        <ul>
+            <li> <a href="index.php?cible=assistance">
+                Assistance
+            </a> </li>
+            <li> <a href=""index.php?cible=faq">
+                    FAQ
+                </a> </li>
+            <li> <a href="">
+                    Mentions légales
+                </a> </li>
+            <li> <a href="">
+                    A propos
+                </a> </li>
+        </ul>
 
 </footer>
 
