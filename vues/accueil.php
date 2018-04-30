@@ -6,15 +6,14 @@
 require ('vues/header.php');
 
 ?>
+    <nav>
+        <ul>
+            <li>
+                Offres et Produits
+            </li>
+        </ul>
 
-    <section>
-        <div class="presentation-picture">
-            <img src=""/>
-
-        </div>
-
-    </section>
-
+    </nav>
 
     <section class="form-field">
         <form action="">
@@ -24,11 +23,20 @@ require ('vues/header.php');
             <input type="password" placeholder="Mot de passe"/><br />
             <label>Se souvenir de moi</label>
             <input type="checkbox"/><br />
-            <a href="">Mot de passe oublié</a><br />
+            <a class ="link-mdp-oubie" href="">Mot de passe oublié</a><br />
             <input type="submit"/>
+            <label hidden> Inscription </label>
+            <input class="inscription" type="text" placeholder="Inscription"/><br/>
         </form>
     </section>
 
+    <section xmlns="http://www.w3.org/1999/html">
+        <div class="presentation-picture">
+            <img src=""/>
+
+        </div>
+
+    </section>
 
     <section class="products">
         <div class="product-text">
