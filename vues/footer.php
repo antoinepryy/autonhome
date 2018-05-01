@@ -15,7 +15,7 @@
             <li> <a href="index.php?cible=assistance">
                 Assistance
             </a> </li>
-            <li> <a href=""index.php?cible=faq">
+            <li> <a href="index.php?cible=faq">
                     FAQ
                 </a> </li>
             <li> <a href="">

@@ -6,14 +6,6 @@
 require ('vues/header.php');
 
 ?>
-    <nav>
-        <ul>
-            <li>
-                Offres et Produits
-            </li>
-        </ul>
-
-    </nav>
 
     <section class="form-field">
         <form action="">
@@ -21,10 +13,10 @@ require ('vues/header.php');
             <input type="text" placeholder="Identifiant"/><br/>
             <label hidden>Mot de passe</label>
             <input type="password" placeholder="Mot de passe"/><br />
+            <a class ="link-mdp-oubie" href="">Mot de passe oublié</a><br />
             <label>Se souvenir de moi</label>
             <input type="checkbox"/><br />
-            <a class ="link-mdp-oubie" href="">Mot de passe oublié</a><br />
-            <input type="submit"/>
+            <input type="submit"/><br/>
             <label hidden> Inscription </label>
             <input class="inscription" type="text" placeholder="Inscription"/><br/>
         </form>

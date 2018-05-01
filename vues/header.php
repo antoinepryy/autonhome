@@ -21,4 +21,12 @@
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo_texte.png"/></a>
 
     </div>
-    <div>
+
+    <nav>
+        <ul>
+            <li>
+                Offres et Produits
+            </li>
+        </ul>
+
+    </nav>

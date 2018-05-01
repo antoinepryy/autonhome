@@ -9,7 +9,7 @@
     background-color: black;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: 50px;
+    margin-left: 3%;
 }
 
 .form-field{
@@ -20,18 +20,19 @@
     text-align: center;
     position: absolute;
     right: 0;
-    margin-right: 50px;
+    margin-right: 3.5%;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     height: 300px;
 }
 
 input
 {
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 100%;
     border : 1px solid black;
-
+    justify-content: center;
+    width: 100%;
 }
 
 .link-mdp-oubie{
@@ -39,7 +40,18 @@ input
     font-size: small;
     justify-content: flex-end;
     color: grey;
-    padding-right: 5px;
+    padding-right: 2%;
+}
+
+.link-mdp-oubie + label{
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.checkbox{
+    margin-top: 0px;
+    position: absolute;
+    right: 0;
 }
 
 .inscription
@@ -55,19 +67,19 @@ input
     justify-content: center;
     text-align: center;
     height: 200px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
 }
 
 .why-us{
     display: flex;
     background-color: lightgrey;
-    padding-left: 20px;
+    padding-left: 1%;
     height: 200px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
 }
 
 ::placeholder{
@@ -87,18 +99,21 @@ nav{
     justify-content: center;
     text-align: center;
     height: 200px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    width: 46%;
+    margin-bottom: 2%;
+    width: 47%;
 }
 
 .faq{
     position: absolute;
     right: 0;
+    margin-right: 3%;
+}
+
+.assistance{
+    margin-left: 3%;
 }
 
 .assistance p,.faq p{
-    margin-right: 170px;
-    margin-left: 170px;
+    margin-right: 7%;
+    margin-left: 7%;
 }
