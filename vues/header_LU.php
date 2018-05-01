@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_LU.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_LU.css"/>
 
 </head>
 <body>
@@ -27,3 +28,20 @@
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo_texte.png"/></a>
 
     </div>
+
+    <nav>
+        <ul>
+            <li><a href="">
+                Offres et Produits
+                </a></li>
+            <li><a href="">
+                Mon abonnement
+                </a></li>
+            <li><a href="">
+                Mon profil
+                </a></li>
+            <li><a href="">
+                Déconnexion
+                </a></li>
+        </ul>
+    </nav>

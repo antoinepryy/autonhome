@@ -4,23 +4,9 @@
 */
 
 require ('vues/header.php');
-
+require ('vues/accueil_special_UU.php');
 ?>
 
-    <section class="form-field">
-        <form action="">
-            <label hidden>Identifiant</label>
-            <input type="text" placeholder="Identifiant"/><br/>
-            <label hidden>Mot de passe</label>
-            <input type="password" placeholder="Mot de passe"/><br />
-            <a class ="link-mdp-oubie" href="">Mot de passe oublié</a><br />
-            <label>Se souvenir de moi</label>
-            <input type="checkbox"/><br />
-            <input type="submit"/><br/>
-            <label hidden> Inscription </label>
-            <input class="inscription" type="text" placeholder="Inscription"/><br/>
-        </form>
-    </section>
 
     <section xmlns="http://www.w3.org/1999/html">
         <div class="presentation-picture">
@@ -56,7 +42,7 @@ require ('vues/header.php');
 
 <section class="faq">
     <div>
-        <a href=""><img src=""/></a>
+        <a href="index.php?cible=assistance"><img src=""/></a>
         <h3>
             FAQ
         </h3>
@@ -69,7 +55,7 @@ require ('vues/header.php');
 
     <section class="assistance">
         <div>
-            <a href=""><img src=""/></a>
+            <a href="index.php?cible=faq"><img src=""/></a>
             <h3>
                 Assistance
             </h3>

@@ -1,0 +1,38 @@
+.my-house-state{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: lightgrey;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    margin-right: 3.5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    height: 35%;
+}
+
+input[type="checkbox"]
+{
+    font-size: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+
+h3{
+    font-weight: bold;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+.house-choice{
+    font-size: 17px;
+}
+
