@@ -1,0 +1,46 @@
+.my-profil{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: lightgrey;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    margin-right: 3.5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    height: 35%;
+}
+
+input
+{
+    background-color: lightgrey;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+h3{
+    display: flex;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: white;
+    height: 15%;
+    width: 75%;
+    line-height : 200%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-picture{
+    display: flex;
+    justify-content: center;
+    height : 150px;
+    width : 100px;
+    background-color: black;
+    margin:auto;
+}
