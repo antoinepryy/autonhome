@@ -8,9 +8,8 @@
     <div class="droit-reserve">
         &copy;Domisep 2018
     </div>
+
     <div class="footer-links">
-
-
         <ul>
             <li> <a href="index.php?cible=assistance">
                 Assistance

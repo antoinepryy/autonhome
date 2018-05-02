@@ -5,6 +5,7 @@ body{
 header{
     border-bottom: 1px solid black;
     margin-bottom: 5px;
+
 }
 
 .logo_logo{
@@ -20,4 +21,21 @@ nav{
     justify-content: flex-end;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+}
+
+nav ul{
+    list-style-type: none;
+    margin-right: 2%;
+}
+
+nav li {
+    margin-right: 5%;
+    background-color: lightgrey;
+    border: 1px solid black;
+    line-height: 50px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-right: 3%;
+    padding-left: 3%;
 }

@@ -3,8 +3,8 @@
 * Vue : accueil
 */
 
-require ('vues/header_LU.php');
-require ('vues/accueil_special_LU.php');
+require ('vues/header.php');
+require ('vues/accueil_special_UU.php');
 ?>
 
 

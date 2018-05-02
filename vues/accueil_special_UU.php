@@ -14,6 +14,6 @@
             <input type="checkbox"/><br />
             <input type="submit"/><br/>
             <label hidden> Inscription </label>
-            <input class="inscription" type="text" placeholder="Inscription"/><br/>
+            <button href="" type="submit" name="submit">Inscription</button><br/>
         </form>
     </section>

@@ -14,6 +14,9 @@
 	<label>Mot de passe :</label>
 	<input type="password"  name="password"  />
 
+    <label>Téléphone :</label>
+    <input type="tel"  name="telephone"  />
+
     <button type="submit" name="submit">S'inscrire</button>
 
 </form>

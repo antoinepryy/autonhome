@@ -1,15 +1,7 @@
 footer{
     border: 1px solid black;
-    justify-content: space-around;
-}
-
-.footer-links, footer{
     display: flex;
-}
 
-ul{
-    display: flex;
-    list-style-type: none;
 }
 
 a{
@@ -17,21 +9,40 @@ a{
     text-decoration: none ;
 }
 
-li{
+.footer-links{
+    display : flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.footer-links ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 4%;
+
+}
+
+.footer-links li{
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
-    line-height: 50px;
-    height: 50px;
-    width: 350px;
-    text-align: center;
-
+    height: 110%;
+    width: auto;
+    justify-content: center;
+    padding-right: 3%;
+    padding-left: 3%;
 }
 
 .droit-reserve{
     font-size : 300%;
     font-weight: bold;
     line-height: 80px;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 1%;
+
 }
 
 

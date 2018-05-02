@@ -22,7 +22,6 @@ a{
     position: absolute;
     right: 0;
 }
-
 nav{
     display: flex;
     justify-content: flex-end;
@@ -30,17 +29,19 @@ nav{
     border-top: 1px solid black;
 }
 
-ul{
-    display: flex;
+nav ul{
     list-style-type: none;
+    margin-right: 4%;
 }
 
-li{
+nav li {
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
     line-height: 50px;
-    height: 50px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
     text-align: center;
+    padding-right: 3%;
+    padding-left: 3%;
 }
