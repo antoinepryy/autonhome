@@ -6,4 +6,5 @@
  * Time: 18:40
  */
 $section = 'accueil';
+
 include('vues/accueil.php');
