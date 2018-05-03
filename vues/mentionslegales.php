@@ -10,6 +10,8 @@ require ('vues/header.php');
 ?>
 
 <section>
+
+    <h1> Mentions légales</h1>
     <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004
     pour la Confiance dans l&#39;économie numérique, dite L.C.E.N., il est porté à la connaissance des
     utilisateurs et visiteurs du site AutonHome.DomIsep.com les présentes mentions légales.
