@@ -13,25 +13,20 @@ require ('vues/CSS/inscription.css')
 <form method="POST" action="">
 
     <div class="section-1">
-	    <label hidden>Name</label>
-	    <input type="text"  name="username" placeholder="Nom" />
-
-        <label hidden>Firstname</label>
-        <input type="text"  name="firstname" placeholder="Prénom"/>
+        <input type="text" name="mail" placeholder="Adresse mail"/>
+	    <input type="text"  name="lastName" placeholder="Nom" />
+        <input type="text"  name="firstName" placeholder="Prénom"/>
     </div>
 
     <div class="section-2">
-	    <label hidden>Password</label>
 	    <input type="password"  name="password" placeholder="Mot de passe" />
-
-        <label hidden>Telephone</label>
-        <input type="tel"  name="telephone" placeholder="Téléphone" />
+        <input type="tel"  name="phone" placeholder="Téléphone" />
     </div>
 
     <div class="section-3">
         <div class="address-text">Adresse de facturation</div>
 
-        <label hidden>Numbre</label>
+        <label hidden>Number</label>
         <input type="number"  name="number" placeholder="Numéro"/>
 
         <label hidden>Road</label>

@@ -35,6 +35,17 @@ function identifyUser(PDO $bdd, $mail, $password){
 
 }
 
+function createUser(PDO $bdd, $data){
+    $cryptedPassword = $data["password"];
+    $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+    $statement = $bdd->prepare('SELECT * FROM user WHERE mail = :mail AND password = :password');
+    $statement->bindParam(":mail", $mail);
+    $statement->bindParam(":password", $cryptedPassword);
+    $statement->execute();
+    return $statement->fetchAll();
+
+}
+
 
 /**
  * Récupère tous les enregistrements de la table users
