@@ -6,7 +6,7 @@
 <section class="form-field">
     <div class="form-container"></div>
         <form action="" method="post">
-            <label hidden>Identifiant</label>
+            <label hidden>Adresse mail</label>
             <input type="text" placeholder="Identifiant"/><br/>
             <label hidden>Mot de passe</label>
             <input type="password" placeholder="Mot de passe"/><br />

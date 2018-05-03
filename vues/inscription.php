@@ -4,20 +4,50 @@
 */
 
 require ('vues/header.php');
+require ('vues/CSS/inscription.css')
 ?>
 
 <?php echo AfficheAlerte($alerte); ?>
 
 <form method="POST" action="">
-	
-	<label>Pseudo :</label>
-	<input type="text"  name="username" />
-	
-	<label>Mot de passe :</label>
-	<input type="password"  name="password"  />
 
-    <label>Téléphone :</label>
-    <input type="tel"  name="telephone"  />
+    <div class="section-1">
+	    <label hidden>Name</label>
+	    <input type="text"  name="username" placeholder="Nom" />
+
+        <label hidden>Firstname</label>
+        <input type="text"  name="firstname" placeholder="Prénom"/>
+    </div>
+
+    <div class="section-2">
+	    <label hidden>Password</label>
+	    <input type="password"  name="password" placeholder="Mot de passe" />
+
+        <label hidden>Telephone</label>
+        <input type="tel"  name="telephone" placeholder="Téléphone" />
+    </div>
+
+    <div class="section-3">
+        <div class="address-text">Adresse de facturation</div>
+
+        <label hidden>Numbre</label>
+        <input type="number"  name="number" placeholder="Numéro"/>
+
+        <label hidden>Road</label>
+        <input type="text"  name="road" placeholder="Rue"/>
+
+        <label hidden>Town</label>
+        <input type="text"  name="town" placeholder="Ville" />
+
+        <label hidden>Country</label>
+        <select name="country" class="country-choice">
+            <option value="exemple">Pays</option>
+            <option value="france" >France</option>
+            <option value="germany" >Deutschland</option>
+            <option value="england" >England</option>
+            <option value="japon" >日本</option>
+        </select>
+    </div>
 
     <button type="submit" name="submit">S'inscrire</button>
 
