@@ -8,7 +8,7 @@ require ('vues/accueil_special_UU.php');
 ?>
 
 
-    <section xmlns="http://www.w3.org/1999/html">
+    <section>
         <div class="presentation-picture">
             <img src=""/>
 

@@ -4,7 +4,8 @@
  */
 ?>
 <section class="form-field">
-        <form action="">
+    <div class="form-container"></div>
+        <form action="" method="post">
             <label hidden>Identifiant</label>
             <input type="text" placeholder="Identifiant"/><br/>
             <label hidden>Mot de passe</label>
@@ -13,7 +14,9 @@
             <label>Se souvenir de moi</label>
             <input type="checkbox"/><br />
             <input type="submit"/><br/>
-            <label hidden> Inscription </label>
-            <button href="" type="submit" name="submit">Inscription</button><br/>
         </form>
-    </section>
+        <form action="" method="post">
+            <input type="submit" value="Sinscrire" /><br/>
+        </form>
+    </div>
+</section>
