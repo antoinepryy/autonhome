@@ -8,7 +8,7 @@
 
 include('./modele/requetes.utilisateurs.php');
 if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
-    createTestUser($bdd, $_POST);
+    createUser($bdd, $_POST);
 
 }
 

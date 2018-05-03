@@ -13,7 +13,7 @@ require ('vues/CSS/inscription.css')
 <form method="POST" action="index.php?cible=verifinscriptionform">
 
     <div class="section-1">
-        <input type="text" name="mail" placeholder="Adresse mail"/>
+        <input type="email" name="mail" placeholder="Adresse mail"/>
 	    <input type="text"  name="lastName" placeholder="Nom" />
         <input type="text"  name="firstName" placeholder="Prénom"/>
     </div>
