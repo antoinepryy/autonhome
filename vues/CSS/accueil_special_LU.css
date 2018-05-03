@@ -16,12 +16,17 @@
     height: 58.5%;
 }
 
-input[type="checkbox"]
+.my-house-state input[type="checkbox"]
 {
     font-size: 100%;
     width: 100%;
     position: absolute;
-    right: 0;
+    left: 20%;
+}
+
+.light input[type="checkbox"]{
+
+
 }
 
 h3{
