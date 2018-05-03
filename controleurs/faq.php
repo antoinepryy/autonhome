@@ -5,5 +5,5 @@
  * Date: 30/04/2018
  * Time: 15:21
  */
-
+$section = 'faq';
 include('vues/faq.php');
