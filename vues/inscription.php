@@ -9,7 +9,7 @@ require ('vues/CSS/inscription.css')
 
 <?php echo AfficheAlerte($alerte); ?>
 
-<<<<<<< HEAD
+
 <form method="POST" action="">
 
     <div class="section-1">
@@ -49,18 +49,7 @@ require ('vues/CSS/inscription.css')
             <option value="japon" >日本</option>
         </select>
     </div>
-=======
-<form method="post" action="">
-	
-	<label>Pseudo :</label>
-	<input type="text"  name="username" />
-	
-	<label>Mot de passe :</label>
-	<input type="password"  name="password"  />
 
-    <label>Téléphone :</label>
-    <input type="tel"  name="telephone"  />
->>>>>>> 349f48f77c8fdcb531591aafc665931beeeefed4
 
     <button type="submit" name="submit">S'inscrire</button>
 
