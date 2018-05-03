@@ -34,6 +34,7 @@ require ('vues/CSS/inscription.css')
 
         <label hidden>Town</label>
         <input type="text"  name="addressCity" placeholder="Ville" />
+        <input type="number"  name="addressZipCode" placeholder="Code postal" />
 
         <label hidden>Country</label>
         <select name="addressCountry" class="country-choice">
