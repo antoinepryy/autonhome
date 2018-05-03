@@ -4,7 +4,7 @@
 include('requetes.generiques.php');
 
 //on définit le nom de la table
-$table = "users";
+$table = "user";
 
 // requêtes spécifiques à la table des capteurs
 
@@ -17,7 +17,7 @@ $table = "users";
  */
 function rechercheParNom(PDO $bdd, string $nom): array {
     
-    $statement = $bdd->prepare('SELECT * FROM  users WHERE username = :username');
+    $statement = $bdd->prepare('SELECT * FROM  user WHERE username = :username');
     $statement->bindParam(":username", $value);
     $statement->execute();
     
@@ -31,7 +31,7 @@ function rechercheParNom(PDO $bdd, string $nom): array {
  * @return array
  */
 function recupereTousUtilisateurs(PDO $bdd): array {
-    $query = 'SELECT * FROM users';
+    $query = 'SELECT * FROM user';
     return $bdd->query($query)->fetchAll();
 }
 

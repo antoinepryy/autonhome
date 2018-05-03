@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/header.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+    <link rel="stylesheet" type="text/css" href=<?php echo ("vues/CSS/".$section.".css"); ?> />
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_UU.css"/>
 
 </head>

@@ -15,8 +15,8 @@
             <input type="checkbox"/><br />
             <input type="submit"/><br/>
         </form>
-        <form action="" method="post">
-            <input type="submit" value="Sinscrire" /><br/>
+        <form action="index.php?cible=inscription" method="get">
+            <input type="submit" value="S'inscrire" /><br/>
         </form>
     </div>
 </section>

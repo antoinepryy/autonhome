@@ -25,7 +25,7 @@
         Lumières :
     </h4>
 
-    <div>
+    <div class="light">
         <label>Salon</label>
         <input type="checkbox"/><br />
         <label>Cuisine</label>
