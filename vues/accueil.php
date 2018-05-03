@@ -33,7 +33,7 @@ require ('vues/accueil_special_AD.php');
 
 <section class="faq">
     <div>
-        <a href="index.php?cible=assistance"><img src=""/></a>
+        <a href="index.php?cible=faq"><img src=""/></a>
         <h3>
             FAQ
         </h3>

@@ -8,7 +8,7 @@
 include('requetes.generiques.php');
 
 //on définit le nom de la table
-$table = "sensors";
+$table = "sensor";
 
 
 
