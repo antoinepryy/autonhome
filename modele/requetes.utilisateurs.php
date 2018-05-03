@@ -25,6 +25,17 @@ function rechercheParNom(PDO $bdd, string $nom): array {
     
 }
 
+function identifyUser(PDO $bdd, $mail, $password){
+    $cryptedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $statement = $bdd->prepare('SELECT * FROM user WHERE mail = :mail AND password = :password');
+    $statement->bindParam(":mail", $mail);
+    $statement->bindParam(":password", $cryptedPassword);
+    $statement->execute();
+    return $statement->fetchAll();
+
+}
+
+
 /**
  * Récupère tous les enregistrements de la table users
  * @param PDO $bdd
