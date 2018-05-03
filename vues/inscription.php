@@ -2,6 +2,8 @@
 /**
 * Vue : inscrire un nouvel utilisateur
 */
+
+require ('vues/header.php');
 ?>
 
 <?php echo AfficheAlerte($alerte); ?>
@@ -22,3 +24,8 @@
 </form>
 
 <p><a href="index.php">Retour</a></p>
+
+<?php
+
+require ('vues/footer.php');
+?>
