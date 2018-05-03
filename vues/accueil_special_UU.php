@@ -15,7 +15,8 @@
             <input type="checkbox" name="rememberMe"/><br />
             <input type="submit"/><br/>
         </form>
-        <form action="index.php?cible=inscription" method="get">
+        <form action="index.php?cible=inscription" method="post">
+            <input hidden/>
             <input type="submit" value="S'inscrire" /><br/>
         </form>
     </div>

@@ -27,20 +27,63 @@ function rechercheParNom(PDO $bdd, string $nom): array {
 
 function identifyUser(PDO $bdd, $mail, $password){
     $cryptedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $statement = $bdd->prepare('SELECT * FROM user WHERE mail = :mail AND password = :password');
+    $statement = $bdd->prepare('SELECT * FROM user 
+    WHERE mail = :mail 
+    AND password = :password'
+    );
     $statement->bindParam(":mail", $mail);
-    $statement->bindParam(":password", $cryptedPassword);
+    $statement->bindParam(":password", $password);
     $statement->execute();
+    die(var_dump($statement->fetchAll()));
     return $statement->fetchAll();
 
 }
 
+function createTestUser(PDO $bdd, $data){
+    $cryptedPassword = $data["password"];
+    $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+    $statement = $bdd->prepare(
+        'INSERT INTO user VALUES 
+        (:firstName,
+        :lastName,
+        :mail,
+        :password
+    )');
+    $statement->bindParam(":firstName", $data["firstName"]);
+    $statement->bindParam(":lastName", $data["lastName"]);
+    $statement->bindParam(":mail", $data["mail"]);
+    $statement->bindParam(":password", $data["password"]);
+    $statement->execute();
+    return $statement->fetchAll();
+
+
+
 function createUser(PDO $bdd, $data){
     $cryptedPassword = $data["password"];
     $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
-    $statement = $bdd->prepare('SELECT * FROM user WHERE mail = :mail AND password = :password');
-    $statement->bindParam(":mail", $mail);
-    $statement->bindParam(":password", $cryptedPassword);
+    $statement = $bdd->prepare(
+        'INSERT INTO user VALUES 
+        (:firstName,
+        :lastName,
+        :mail,
+        :password,
+        :phoneNumber,
+        :addressNumber,
+        :addressStreet,
+        :addressZipCode,
+        :addressCity,
+        :addressCountry,
+        :type)');
+    $statement->bindParam(":firstName", $data["firstName"]);
+    $statement->bindParam(":lastName", $data["lastName"]);
+    $statement->bindParam(":mail", $data["mail"]);
+    $statement->bindParam(":password", $data["password"]);
+    $statement->bindParam(":phoneNumber", $data["phoneNumber"]);
+    $statement->bindParam(":addressNumber", $data["addressNumber"]);
+    $statement->bindParam(":addressStreet", $data["addressStreet"]);
+    $statement->bindParam(":addressZipCode", $data["addressZipCode"]);
+    $statement->bindParam(":addressCity", $data["addressCity"]);
+    $statement->bindParam(":addressContry", $data["addressCountry"]);
     $statement->execute();
     return $statement->fetchAll();
 

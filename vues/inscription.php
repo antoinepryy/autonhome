@@ -10,7 +10,7 @@ require ('vues/CSS/inscription.css')
 <?php echo AfficheAlerte($alerte); ?>
 
 
-<form method="POST" action="">
+<form method="POST" action="index.php?cible=verifinscriptionform">
 
     <div class="section-1">
         <input type="text" name="mail" placeholder="Adresse mail"/>
@@ -20,23 +20,23 @@ require ('vues/CSS/inscription.css')
 
     <div class="section-2">
 	    <input type="password"  name="password" placeholder="Mot de passe" />
-        <input type="tel"  name="phone" placeholder="Téléphone" />
+        <input type="tel"  name="phoneNumber" placeholder="Téléphone" />
     </div>
 
     <div class="section-3">
         <div class="address-text">Adresse de facturation</div>
 
         <label hidden>Number</label>
-        <input type="number"  name="number" placeholder="Numéro"/>
+        <input type="number"  name="addressNumber" placeholder="Numéro"/>
 
         <label hidden>Road</label>
-        <input type="text"  name="road" placeholder="Rue"/>
+        <input type="text"  name="addressStreet" placeholder="Rue"/>
 
         <label hidden>Town</label>
-        <input type="text"  name="town" placeholder="Ville" />
+        <input type="text"  name="addressCity" placeholder="Ville" />
 
         <label hidden>Country</label>
-        <select name="country" class="country-choice">
+        <select name="addressCountry" class="country-choice">
             <option value="exemple">Pays</option>
             <option value="france" >France</option>
             <option value="germany" >Deutschland</option>

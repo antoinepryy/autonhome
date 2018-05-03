@@ -9,7 +9,8 @@
 
 include('./modele/requetes.utilisateurs.php');
 if(isset($_POST["mail"]) && isset($_POST["password"])){
-    die(var_dump('bueno'));
+    identifyUser($bdd, $_POST["mail"], $_POST["password"]);
+
 
 }
 
