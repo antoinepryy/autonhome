@@ -19,4 +19,16 @@ require ('vues/header.php');
         Nos Capteurs
     </h2>
 
+    <img src="">
+
+    <P>
+        
+    </P>
+
+
+</section>
+
+<section>
+    <h2> Nos Abonnements </h2>
+
 </section>
