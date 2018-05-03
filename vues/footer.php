@@ -17,10 +17,10 @@
             <li> <a href="index.php?cible=faq">
                     FAQ
                 </a> </li>
-            <li> <a href="">
+            <li> <a href="index.php?cible=mentionslegales">
                     Mentions légales
                 </a> </li>
-            <li> <a href="">
+            <li> <a href="index.php?cible=apropos">
                     A propos
                 </a> </li>
         </ul>
