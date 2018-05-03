@@ -8,7 +8,7 @@ require ('vues/header.php');
 
 <?php echo AfficheAlerte($alerte); ?>
 
-<form method="POST" action="">
+<form method="post" action="">
 	
 	<label>Pseudo :</label>
 	<input type="text"  name="username" />
