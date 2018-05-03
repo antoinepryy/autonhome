@@ -3,17 +3,18 @@
 * Vue : accueil
 */
 
-require ('vues/header.php');
-require ('vues/accueil_special_UU.php');
+require ('vues/header_AD.php');
+require ('vues/accueil_special_AD.php');
 ?>
 
 
-    <section>
-        <div class="presentation-picture">
-            <img src=""/>
+    <section class="why-us">
+        <div>
+            <p>
+                Pourquoi choisir Autonhome ?
+            </p>
 
-        </div>
-
+         </div>
     </section>
 
     <section class="products">
@@ -28,17 +29,7 @@ require ('vues/accueil_special_UU.php');
     </section>
 
 
-    <section class="why-us">
-        <div>
-            <p>
-                Pourquoi choisir Autonhome ?
-            </p>
 
-        </div>
-        <div>
-
-        </div>
-    </section>
 
 <section class="faq">
     <div>
