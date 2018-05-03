@@ -15,5 +15,8 @@ require ('vues/header.php');
 </section>
 
 <section>
-    <a href=""
+    <h2>
+        Nos Capteurs
+    </h2>
+
 </section>
