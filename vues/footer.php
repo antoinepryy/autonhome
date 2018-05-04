@@ -4,6 +4,8 @@
 */
 ?>
 
+<link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
+
 <footer>
     <div class="droit-reserve">
         &copy;Domisep 2018

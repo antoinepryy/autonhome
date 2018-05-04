@@ -7,6 +7,8 @@ require ('vues/header_LU.php');
 require ('vues/accueil_special_LU.php');
 ?>
 
+<link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+
 
     <section class="why-us">
         <div>

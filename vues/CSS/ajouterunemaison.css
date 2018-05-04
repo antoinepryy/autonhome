@@ -1,0 +1,77 @@
+.principal {
+    background-color: lightgrey;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding : 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: 110%;
+    margin-right: 20%;
+    margin-left: 20%;
+    width: 100%;
+}
+
+.principal span{
+    display: flex;
+    justify-content: center;
+}
+
+.facturation-address{
+    width: 40%;
+    margin-right: 49%;
+    margin-top: 1%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+
+.facturation-address h3{
+    background-color: white;
+    border: 1px solid black;
+    height: 15%;
+    text-align: center;
+    line-height: 170%;
+    font-size: 110%;
+}
+
+.facturation-address div{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.facturation-address div input , .facturation-address div select{
+    margin: 1%;
+    font-size: 100%;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.inscription-button{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    margin-right: 48%;
+}
+
+.inscription-button button{
+    font-size: 100%;
+    width: 15%;
+}
+
+.facturation-address div input{
+    padding-left: 1%;
+}
+
+form input{
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    width: 50%;
+}
+
