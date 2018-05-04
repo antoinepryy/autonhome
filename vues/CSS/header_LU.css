@@ -23,17 +23,16 @@ header a{
     right: 0;
 }
 
-header nav{
+header nav ul{
     display: flex;
+    flex-direction: row;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
 
-header nav ul{
-    display: flex;
+header nav a{
     list-style-type: none;
     width: 100%;
-    justify-content: flex-end;
 }
 
 header nav a {

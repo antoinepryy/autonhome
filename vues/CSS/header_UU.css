@@ -22,12 +22,12 @@ nav{
     border-top: 1px solid black;
 }
 
-nav ul{
+nav a{
     list-style-type: none;
     margin-right: 2%;
 }
 
-nav a {
+nav a li{
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;

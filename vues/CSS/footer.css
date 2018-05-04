@@ -20,7 +20,7 @@ footer a{
     width: 100%;
 }
 
-.footer-links li{
+.footer-links ul a{
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;

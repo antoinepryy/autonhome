@@ -13,18 +13,27 @@
 
     <div class="footer-links">
         <ul>
-            <li> <a href="index.php?cible=assistance">
-                Assistance
-            </a> </li>
-            <li> <a href="index.php?cible=faq">
+            <a href="index.php?cible=assistance">
+                <li>
+                    Assistance
+                </li>
+            </a>
+
+            <a href="index.php?cible=faq">
+                <li>
                     FAQ
-                </a> </li>
-            <li> <a href="index.php?cible=mentionslegales">
+                </li>
+            </a>
+            <a href="index.php?cible=mentionslegales">
+                <li>
                     Mentions légales
-                </a> </li>
-            <li> <a href="index.php?cible=apropos">
+                </li>
+            </a>
+            <a href="index.php?cible=apropos">
+                <li>
                     A propos
-                </a> </li>
+                </li>
+            </a>
         </ul>
 
 </footer>
@@ -32,4 +41,4 @@
 </body>
 </html>
 
-<script type="text/javascript" src="vues/JS/header.js"></script>
+<script type="text/javascript" src="vues/JS/<?php echo('.$section.'); ?>.js"></script>
