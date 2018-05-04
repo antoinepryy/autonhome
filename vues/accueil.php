@@ -46,7 +46,7 @@ require ('vues/accueil_special_UU.php');
 
     <section class="assistance">
         <div>
-            <a href="index.php?cible=faq"><img src=""/></a>
+            <a href="index.php?cible=assistance"><img src=""/></a>
             <h3>
                 Assistance
             </h3>

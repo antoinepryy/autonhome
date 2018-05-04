@@ -17,7 +17,6 @@ a{
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-    width: 100%;
 }
 
 .footer-links li{
@@ -25,11 +24,10 @@ a{
     background-color: lightgrey;
     border: 1px solid black;
     line-height: 50px;
-    height: 100%;
-    width: auto;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    width: 20%;
 }
 
 .droit-reserve{
@@ -39,7 +37,6 @@ a{
     justify-content: flex-start;
     display: flex;
     margin-left: 1%;
-
 }
 
 

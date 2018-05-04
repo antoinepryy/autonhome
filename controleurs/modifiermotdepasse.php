@@ -6,4 +6,5 @@
  * Time: 11:03
  */
 
+$section = 'modifiermotdepasse';
 include('vues/modifiermotdepasse.php');
