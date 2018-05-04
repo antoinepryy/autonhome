@@ -6,4 +6,4 @@
  * Time: 15:20
  */
 $section = 'assistance';
-include('vues/assistance.php');
+include('assistance.php');
