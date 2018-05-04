@@ -18,27 +18,37 @@ form{
 }
 
 .identity{
+    display: flex;
+    flex-direction: column;
     margin-left: 5%;
-
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    margin-top: 1%;
 }
 
 .identity input{
+
+    border: 1px solid black;
+    font-size: 100%;
     text-align: center;
     line-height: 200%;
     height: 10%;
+    margin-bottom: 4%;
 }
 
 .facturation-address{
-    width: 50%;
+    width: 40%;
     margin-right: 5%;
 }
 
-.facturation-address p{
+.facturation-address h3{
     background-color: white;
     border: 1px solid black;
     height: 15%;
     text-align: center;
-    line-height: 250%;
+    line-height: 170%;
+    font-size: 110%;
 }
 
 .facturation-address div{
@@ -48,11 +58,42 @@ form{
 
 .facturation-address div input , .facturation-address div select{
     margin: 1%;
+    font-size: 100%;
+    border: 1px solid black;
 }
 
 .inscription-button{
+    margin-top: 1%;
     display: flex;
-    width: 25%;
-    height: 10%;
     justify-content: center;
+    margin-bottom: 1%;
+}
+
+.inscription-button button{
+    font-size: 100%;
+}
+
+.facturation-address div input{
+    padding-left: 1%;
+}
+
+.use-case a{
+   color: blue;
+}
+
+.use-case{
+    font-size: 110%;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+}
+
+.use-case input{
+    width: 3%;
+    margin-top: 2%;
+}
+
+.use-case p{
+    text-align: center;
 }
