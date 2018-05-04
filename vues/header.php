@@ -27,9 +27,13 @@
 
     <nav>
         <ul>
-            <li id="test1"><a id="test" href="">
-                Offres et Produits
-                </a></li>
+
+            <a id="test" href="">
+                <li id="test1">
+                    Offres et Produits
+                </li>
+            </a>
+
         </ul>
 
     </nav>
