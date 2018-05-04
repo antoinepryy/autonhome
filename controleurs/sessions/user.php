@@ -13,4 +13,5 @@ function authentify($data){
     $_SESSION["userMail"] = $data["mail"];
     $_SESSION["userFirstName"] = $data["firstName"];
     $_SESSION["userLastName"] = $data["lastName"];
+    $_SESSION["type"] = $data["type"];
 }

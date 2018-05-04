@@ -17,8 +17,7 @@ if(isset($_POST["mail"]) && isset($_POST["password"])){
     else{
         die(var_dump('fail'));
     }
-
-    die(var_dump($_SESSION));
+    include ('./vues/accueil.php');
 
 
 }
