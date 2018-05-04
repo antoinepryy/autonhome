@@ -6,6 +6,7 @@
  * Time: 15:20
  */
 $section = 'assistance';
+
 if (!isset($_SESSION)){
     session_start();
 }

@@ -34,4 +34,4 @@ require ('header.php');        /* modifier par la suite header.php par header_LU
     </form>
 </section>
 
-<?php require('vues/footer.php');
+<?php require('footer.php'); ?>
