@@ -1,0 +1,19 @@
+h1
+{
+    text-align: center;
+}
+.lien
+{
+    color : blue;
+    text-decoration: underline;
+}
+#apropos
+{
+    display : flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text{
+    text-align: center;
+}
