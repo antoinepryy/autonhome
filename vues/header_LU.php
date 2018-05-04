@@ -37,17 +37,27 @@
 
     <nav>
         <ul>
-            <li><a href="index.php?cible=nosoffres">
-                Offres et Produits
-                </a></li>
-            <li><a href="">
-                Mon abonnement
-                </a></li>
-            <li><a href="index.php?cible=monprofil">
-                Mon profil
-                </a></li>
-            <li><a href="index.php?cible=logout">
-                Déconnexion
-                </a></li>
+
+            <a href="index.php?cible=nosoffres">
+                <li>
+                    Offres et Produits
+                </li>
+            </a>
+
+            <a href="index.php?cible=nosoffres">
+                <li>
+                    Mon abonnement
+                </li>
+            </a>
+            <a href="index.php?cible=nosoffres">
+                <li>
+                    Mon profil
+                </li>
+            </a>
+            <a href="index.php?cible=nosoffres">
+                <li>
+                    Déconnexion
+                </li>
+            </a>
         </ul>
     </nav>

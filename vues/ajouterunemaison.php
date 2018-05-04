@@ -3,7 +3,7 @@
  * Vue : inscrire une nouvelle maison
  */
 
-require ('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
 <?php

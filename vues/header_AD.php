@@ -33,15 +33,22 @@
 
     <nav>
         <ul>
-            <li><a href="">
-                    Offres et Produits
-                </a></li>
-            <li><a href="">
+
+            <a href="">
+                <li>
+                Offres et Produits
+                </li>
+            </a>
+            <a href="">
+                <li>
                     Espace Admin
-                </a></li>
-            <li><a href="index.php?cible=logout">
+                </li>
+            </a>
+            <a href="">
+                <li>
                     Déconnexion
-                </a></li>
+                </li>
+            </a>
         </ul>
 
     </nav>

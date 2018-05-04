@@ -7,7 +7,7 @@
  */
 
 
-require ('header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
 <h1 class="titlemotdepasseoublie" >Mot de passe oublié</h1>

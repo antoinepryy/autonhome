@@ -6,7 +6,7 @@
  * Time: 09:39
  */
 
-require('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
     <section class="Ma Maison principale">

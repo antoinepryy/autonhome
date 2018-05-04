@@ -7,7 +7,7 @@
  */
 
 
-require ('header.php');        /* modifier par la suite header.php par header_LU.php */
+require ('vues/header_'.$status.'.php');
 ?>
 
 

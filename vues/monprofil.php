@@ -5,7 +5,7 @@
  * Date: 04/05/2018
  * Time: 15:56
  */
-require ('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
 

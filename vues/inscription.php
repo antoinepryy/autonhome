@@ -3,7 +3,7 @@
 * Vue : inscrire un nouvel utilisateur
 */
 
-require ('vues/header.php');
+require ('vues/header_UU.php');
 ?>
 
 <?php
@@ -11,7 +11,6 @@ if (isset($alerte)){
     echo AfficheAlerte($alerte);
 } ?>
 
-    <link rel="stylesheet" type="text/css" href="vues/CSS/inscription.css"/>
 
 <section class="principal">
     <form method="POST" action="index.php?cible=verifinscriptionform">

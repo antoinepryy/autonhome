@@ -27,7 +27,7 @@ nav ul{
     justify-content: flex-end;
 }
 
-nav li {
+nav a {
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
