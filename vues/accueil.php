@@ -8,12 +8,13 @@ require ('vues/accueil_special_UU.php');
 ?>
 
 
-    <section>
-        <div class="presentation-picture">
-            <img src=""/>
+    <section class="why-us">
+        <div>
+            <p>
+                Pourquoi choisir Autonhome ?
+            </p>
 
-        </div>
-
+         </div>
     </section>
 
     <section class="products">
@@ -28,17 +29,7 @@ require ('vues/accueil_special_UU.php');
     </section>
 
 
-    <section class="why-us">
-        <div>
-            <p>
-                Pourquoi choisir Autonhome ?
-            </p>
 
-        </div>
-        <div>
-
-        </div>
-    </section>
 
 <section class="faq">
     <div>
@@ -65,8 +56,4 @@ require ('vues/accueil_special_UU.php');
         </div>
     </section>
 
-
-<?php
-
-require ('vues/footer.php');
-?>
+<?php require ('footer.php'); ?>

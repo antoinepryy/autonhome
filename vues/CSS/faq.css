@@ -1,0 +1,31 @@
+.FAQ h1{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 90%;
+
+}
+
+.question{
+    text-align: left;
+    font-size: 150%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+.réponse{
+    text-align: -moz-center;
+    font-size: 120%;
+    margin-left: 11%;
+    margin-right:2%;
+    margin-bottom: 1%;
+}
+
+.FAQ{
+    background-color: lightgrey;
+}
+.question1,.question2,.question3
+{
+    font-weight:bold ;
+}

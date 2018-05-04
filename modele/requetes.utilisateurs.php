@@ -4,7 +4,7 @@
 include('requetes.generiques.php');
 
 //on définit le nom de la table
-$table = "users";
+$table = "user";
 
 // requêtes spécifiques à la table des capteurs
 
@@ -16,8 +16,8 @@ $table = "users";
  * @return array
  */
 function rechercheParNom(PDO $bdd, string $nom): array {
-    
-    $statement = $bdd->prepare('SELECT * FROM  users WHERE username = :username');
+
+    $statement = $bdd->prepare('SELECT * FROM  user WHERE username = :username');
     $statement->bindParam(":username", $value);
     $statement->execute();
     
@@ -25,14 +25,64 @@ function rechercheParNom(PDO $bdd, string $nom): array {
     
 }
 
-/**
- * Récupère tous les enregistrements de la table users
- * @param PDO $bdd
- * @return array
- */
-function recupereTousUtilisateurs(PDO $bdd): array {
-    $query = 'SELECT * FROM users';
-    return $bdd->query($query)->fetchAll();
+function identifyUserDatabase(PDO $bdd, $mail, $password){
+    $statement = $bdd->prepare('SELECT * FROM  user WHERE mail = :mail');
+    $statement->bindParam(":mail", $mail);
+    $statement->execute();
+    $foundUser = $statement->fetch();
+    $var = password_verify($password, $foundUser["password"]);
+    if($var==true) {
+        return $foundUser;
+    }
+    else{
+        return NULL;
+    }
 }
+
+    function createUser(PDO $bdd, $data)
+    {
+        $cryptedPassword = $data["password"];
+        $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+        $statement = $bdd->prepare('INSERT INTO user 
+        (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) 
+        VALUES 
+        (NULL, 
+        :firstName, 
+        :lastName, 
+        :mail, 
+        :password, 
+        :phoneNumber, 
+        :addressNumber, 
+        :addressStreet, 
+        :addressZipCode, 
+        :addressCity, 
+        :addressCountry, 
+        "user" , 
+        NULL)');
+        $statement->bindParam(":firstName", $data["firstName"]);
+        $statement->bindParam(":lastName", $data["lastName"]);
+        $statement->bindParam(":mail", $data["mail"]);
+        $statement->bindParam(":password", $cryptedPassword);
+        $statement->bindParam(":phoneNumber", $data["phoneNumber"]);
+        $statement->bindParam(":addressNumber", $data["addressNumber"]);
+        $statement->bindParam(":addressStreet", $data["addressStreet"]);
+        $statement->bindParam(":addressZipCode", $data["addressZipCode"]);
+        $statement->bindParam(":addressCity", $data["addressCity"]);
+        $statement->bindParam(":addressCountry", $data["addressCountry"]);
+        $statement->execute();
+
+    }
+
+
+    /**
+     * Récupère tous les enregistrements de la table users
+     * @param PDO $bdd
+     * @return array
+     */
+    function findAllUsers(PDO $bdd): array
+    {
+        $query = 'SELECT * FROM user';
+        return $bdd->query($query)->fetchAll();
+    }
 
 ?>

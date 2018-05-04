@@ -5,7 +5,7 @@
  */
 
 // on inclut le fichier modèle contenant les appels à la BDD
-include('./modele/requetes.capteurs.php');
+include('./modele/sensors.php');
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
