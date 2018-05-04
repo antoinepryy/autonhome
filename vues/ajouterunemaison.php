@@ -1,6 +1,6 @@
 <?php
 /**
- * Vue : inscrire un nouvel utilisateur
+ * Vue : inscrire une nouvelle maison
  */
 
 require ('vues/header.php');
@@ -18,11 +18,11 @@ if (isset($alerte)){
         Ajouter une maison
     </h1>
 
-    <form method="POST" action="">
+    <form method="POST" action="index.php?cible=MaMaisonPrincipale">
         <label hidden>houseName</label>
         <input type="text"  name="houseName" placeholder="Maison principale" required/>
 
-        <section class="facturation-address">
+        <span><section class="facturation-address">
             <h3>Adresse de facturation</h3>
             <div>
                 <label hidden>Number</label>
@@ -42,18 +42,22 @@ if (isset($alerte)){
                 <label hidden>ZIP-code</label>
                 <input type="number"  name="addressZipCode" placeholder="Code postal" required/><br/>
             </div>
-        </section>
+        </section></span>
 
         <label hidden>Surface</label>
-        <input type="number"  name="Surface" placeholder="Numéro" required/>
+        <input type="number"  name="Surface" placeholder="Surface" required/>
         <label hidden>numberOfRoom</label>
-        <input type="number"  name="numberOfRoom" placeholder="Numéro" required/>
+        <input type="number"  name="numberOfRoom" placeholder="Nombre de pièce" required/>
         <label hidden>numberOfPeople</label>
         <input type="number"  name="numberOfPeople" placeholder="Numéro" required/>
 
+        <div class="inscription-button">
+            <button type="submit" name="submit">Valider</button>
+        </div>
 
     </form>
 
+    <p><a href="index.php">Retour</a></p>
 
 
 </section>

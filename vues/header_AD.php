@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_AD.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_AD.css"/>
+
 
 </head>
 <body>
