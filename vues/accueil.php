@@ -3,11 +3,10 @@
 * Vue : accueil
 */
 
-require ('vues/header.php');
-require ('vues/accueil_special_'.$status.'.php');
+require ('vues/header_'.$status.'.php');
+require ('vues/accueil_'.$status.'.php');
 ?>
 
-<link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
 
 
     <section class="why-us">

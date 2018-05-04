@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_AD.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_AD.css"/>
 
 
 </head>
@@ -31,7 +32,7 @@
             <li><a href="">
                     Espace Admin
                 </a></li>
-            <li><a href="">
+            <li><a href="index.php?cible=logout">
                     Déconnexion
                 </a></li>
         </ul>

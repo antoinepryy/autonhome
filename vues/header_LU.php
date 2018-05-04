@@ -8,7 +8,10 @@
     <title>Autonhome</title>
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="vues/CSS/header_LU.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/header_LU.css">
+    <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_LU.css")>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
 
 </head>
 <body>
@@ -37,7 +40,7 @@
             <li><a href="">
                 Mon profil
                 </a></li>
-            <li><a href="">
+            <li><a href="index.php?cible=logout">
                 Déconnexion
                 </a></li>
         </ul>

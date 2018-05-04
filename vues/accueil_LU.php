@@ -4,7 +4,7 @@
  */
 ?>
 
-<link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_LU.css"/>
+
 
 <section class="my-house-state">
 

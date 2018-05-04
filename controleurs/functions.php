@@ -82,3 +82,7 @@ function isLogged()
     }
 }
 
+function setStatus(){
+
+}
+

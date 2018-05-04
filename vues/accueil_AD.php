@@ -4,7 +4,6 @@
  */
 ?>
 
-<link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_AD.css"/>
 
 <section class="my-profil">
     <h3>

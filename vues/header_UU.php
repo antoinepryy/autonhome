@@ -8,12 +8,10 @@
     <title>Autonhome</title>
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="vues/CSS/header.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/header_UU.css">
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_UU.css">
     <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
-    <link rel="stylesheet" type="text/css" href=<?php echo ("vues/CSS/".$section.".css"); ?> />
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_UU.css"/>
-
 
 </head>
 <body>
