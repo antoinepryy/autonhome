@@ -17,16 +17,17 @@
             <li> <a href="index.php?cible=faq">
                     FAQ
                 </a> </li>
-            <li> <a href="">
+            <li> <a href="index.php?cible=mentionslegales">
                     Mentions légales
                 </a> </li>
-            <li> <a href="">
+            <li> <a href="index.php?cible=apropos">
                     A propos
                 </a> </li>
         </ul>
 
 </footer>
 
-
 </body>
 </html>
+
+<script type="text/javascript" src="vues/JS/header.js"></script>

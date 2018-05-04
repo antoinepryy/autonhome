@@ -2,18 +2,16 @@
     border: 1px solid black;
 
 }
-.presentation-picture{
-    display: flex;
+.why-us{
     height: 350px;
     width : 70%;
-    background-color: black;
+    background-color: lightgrey;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 3%;
 }
 
 .products{
-    display: flex;
     background-color: lightgrey;
     justify-content: center;
     text-align: center;
@@ -23,20 +21,9 @@
     margin-bottom: 2%;
 }
 
-.why-us{
-    display: flex;
-    background-color: lightgrey;
-    padding-left: 1%;
-    height: 200px;
-    margin-right: 3%;
-    margin-left: 3%;
-    margin-bottom: 2%;
-}
-
 ::placeholder{
     color: black;
 }
-
 
 .assistance,.faq{
     display: flex;

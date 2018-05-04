@@ -21,16 +21,16 @@ input
     background-color: lightgrey;
     margin-top: 5%;
     font-size: 20px;
+    width: 100%;
 }
 
-h3{
+.my-profil h3{
     display: flex;
     font-weight: bold;
     font-size: 25px;
     background-color: white;
     height: 15%;
     width: 75%;
-    line-height : 200%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -39,8 +39,8 @@ h3{
 .my-picture{
     display: flex;
     justify-content: center;
-    height : 150px;
-    width : 100px;
+    height : auto;
+    width : 50%;
     background-color: black;
     margin:auto;
 }

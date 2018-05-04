@@ -11,32 +11,29 @@ a{
 
 .footer-links{
     display : flex;
-    justify-content: flex-end;
-    position: absolute;
-    right: 0;
 }
 
 .footer-links ul{
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-    margin-right: 4%;
-
+    width: 100%;
 }
 
 .footer-links li{
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
-    height: 110%;
+    line-height: 50px;
+    height: 100%;
     width: auto;
-    justify-content: center;
+    text-align: center;
     padding-right: 3%;
     padding-left: 3%;
 }
 
 .droit-reserve{
-    font-size : 300%;
+    font-size : 200%;
     font-weight: bold;
     line-height: 80px;
     justify-content: flex-start;
