@@ -71,6 +71,7 @@ form{
 
 .inscription-button button{
     font-size: 100%;
+    width: 15%;
 }
 
 .facturation-address div input{

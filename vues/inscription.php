@@ -51,7 +51,7 @@ if (isset($alerte)){
 
         <div class="use-case">
             <input class="use-case" type="checkbox" name ="conditions" required/>
-            <p>Accepter les <a href="index.php?cible=conditionsutilisations.php" >Conditions d'utilisation</a></p>
+            <p>Accepter les <a href='index.php?cible=conditionsutilisation' >Conditions d'utilisation</a></p>
         </div>
 
         <div class="inscription-button">
