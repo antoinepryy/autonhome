@@ -6,13 +6,6 @@
  * Time: 18:40
  */
 $section = 'accueil';
-require ('sessions/user.php');
-
-auth(array(
-    'mail' => 'test',
-    'firstName' => 'test',
-    'lastName' => 'test',
-    'ID' => 23,
-));
+include('sessions/user.php');
 
 include('vues/accueil.php');

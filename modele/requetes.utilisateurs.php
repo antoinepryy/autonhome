@@ -26,38 +26,27 @@ function rechercheParNom(PDO $bdd, string $nom): array {
 }
 
 function identifyUser(PDO $bdd, $mail, $password){
+    $users = findAllUsers($bdd);
+    $array = array();
     $cryptedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $statement = $bdd->prepare('SELECT * FROM user 
-    WHERE mail = :mail 
-    AND password = :password'
-    );
-    $statement->bindParam(":mail", $mail);
-    $statement->bindParam(":password", $password);
-    $statement->execute();
-    die(var_dump($statement->fetchAll()));
+//    $statement = $bdd->prepare('SELECT * FROM user
+//    WHERE mail = :mail
+//    AND password = :password'
+//    );
+//    $statement->bindParam(":mail", $mail);
+//    $statement->bindParam(":password", $password);
+//    $statement->execute();
+    foreach ($users as $user){
+        array_push($array, $user["password"]);
+
+
+
+    }
+    die(var_dump($array));
+    die(var_dump($statement->fetchAll()["password"]));
     return $statement->fetchAll();
 
 }
-
-function createTestUser(PDO $bdd, $data)
-{
-    $cryptedPassword = $data["password"];
-    $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
-    $statement = $bdd->prepare(
-        'INSERT INTO user VALUES 
-        (:firstName,
-        :lastName,
-        :mail,
-        :password
-    )');
-    $statement->bindParam(":firstName", $data["firstName"]);
-    $statement->bindParam(":lastName", $data["lastName"]);
-    $statement->bindParam(":mail", $data["mail"]);
-    $statement->bindParam(":password", $data["password"]);
-    $statement->execute();
-    return $statement->fetchAll();
-}
-
 
     function createUser(PDO $bdd, $data)
     {
@@ -99,7 +88,7 @@ function createTestUser(PDO $bdd, $data)
      * @param PDO $bdd
      * @return array
      */
-    function recupereTousUtilisateurs(PDO $bdd): array
+    function findAllUsers(PDO $bdd): array
     {
         $query = 'SELECT * FROM user';
         return $bdd->query($query)->fetchAll();
