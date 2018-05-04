@@ -49,12 +49,12 @@
                     Mon abonnement
                 </li>
             </a>
-            <a href="index.php?cible=nosoffres">
+            <a href="index.php?cible=monprofil">
                 <li>
                     Mon profil
                 </li>
             </a>
-            <a href="index.php?cible=nosoffres">
+            <a href="index.php?cible=logout">
                 <li>
                     Déconnexion
                 </li>

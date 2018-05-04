@@ -34,7 +34,7 @@
     <nav>
         <ul>
 
-            <a href="">
+            <a href="index.php?cible=nosoffres">
                 <li>
                 Offres et Produits
                 </li>
@@ -44,7 +44,7 @@
                     Espace Admin
                 </li>
             </a>
-            <a href="">
+            <a href="index.php?cible=logout">
                 <li>
                     Déconnexion
                 </li>
