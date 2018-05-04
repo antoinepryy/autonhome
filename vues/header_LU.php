@@ -10,8 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_LU.css">
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_LU.css")>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+    <?php
+    echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'.css"/>');
+    if(in_array($section,array("accueil"))){
+        echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'_'.$status.'.css">');
+    }
+
+    ?>
+
 
 </head>
 <body>
@@ -31,13 +37,13 @@
 
     <nav>
         <ul>
-            <li><a href="">
+            <li><a href="index.php?cible=nosoffres">
                 Offres et Produits
                 </a></li>
             <li><a href="">
                 Mon abonnement
                 </a></li>
-            <li><a href="">
+            <li><a href="index.php?cible=monprofil">
                 Mon profil
                 </a></li>
             <li><a href="index.php?cible=logout">

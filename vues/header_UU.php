@@ -10,8 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_UU.css">
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_UU.css">
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
+    <?php
+    echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'.css"/>');
+    if(in_array($section,array("accueil"))){
+        echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'_'.$status.'.css">');
+    }
+
+    ?>
 
 
 </head>
@@ -27,7 +32,7 @@
     <nav>
         <ul>
 
-            <a id="test" href="">
+            <a id="test" href="index.php?cible=nosoffres">
                 <li id="test1">
                     Offres et Produits
                 </li>
