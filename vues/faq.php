@@ -12,34 +12,34 @@ require ('vues/header.php');
 
     <section class="FAQ">
 
-        <h1> FOIRE AUX QUESTIONS !</h1>
+        <h1> FOIRE AUX QUESTIONS </h1>
 
 
 
         <p class="question">
-            Question 1 :<br>
+            <span class="question1"> Question 1 : </span> Comment s'inscrire ? <br>
         </p>
 
         <p class="réponse">
-           Réponse 1<br>
+           Réponse 1 : Nam primum secundumque ac tertium Ahenobarborum Lucios, sequentis rursus tres ex ordine Gnaeos accepimus, reliquos non nisi uicissim tum Lucos tum Gnaeos.<br>
         </p>
 
         <p class="question">
-            Question 2 :<br>
+            <span class="question2"> Question 2 :</span> Comment configurer mon compte ?<br>
         </p>
 
         <p class="réponse">
 
-           Réponse 2<br>
+           Réponse 2 : Pluris e familia cognosci referre arbitror, quo facilius appareat ita degenerasse a suorum uirtutibus Nero, ut tamen uitia cuiusque quasi tradita et ingentia rettulerit.<br>
         </p>
 
         <p class="question">
-            Question 3 :<br>
+            <span class="question3"> Question 3 : </span> Comment payer ?  <br>
         </p>
 
         <p class="réponse">
 
-           Réponse 3<br>
+           Réponse 3 : Ac ne praenomia quidem ulla praeterquam Gnaei et Luci usurparunt, eaque ipsa notabili uarietate, modo continuantes per singulas. <br>
         </p>
 
 
