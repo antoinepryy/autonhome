@@ -17,9 +17,12 @@ require('vues/header.php');
 
             </p>
 
-            <img src="salon.jpg"/>
-            <img src="cuisine.jpg"/>
-            <img src="chambre.jpg"/>
+            <img src="ressources/pictures/salon.jpg"/>
+            <img src="ressources/pictures/cuisine.jpg"/>
+            <img src="ressources/pictures/chambre.jpg"/>
+            <img src="ressources/pictures/salleamanger.jpg">
+            <img src="ressources/pictures/salledebain.jpg">
+            <img src="ressources/pictures/bureau.jpg">
 
 
 
