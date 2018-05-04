@@ -41,27 +41,43 @@ function isPassword($chaine): bool
 
 function isLoggedAsUser(): bool
 {
-    if ($_SESSION["type"]=="user") {
-        return true;
-    } else {
+    if(isset($_SESSION["type"])){
+        if ($_SESSION["type"]=="user") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+
+}
+
+function isLoggedAsAdmin()
+{
+    if(isset($_SESSION["type"])){
+        if ($_SESSION["type"]=="admin") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    else{
         return false;
     }
 }
 
-function isLoggedAsAdmin(): bool
+function isLogged()
 {
-    if ($_SESSION["type"]=="admin") {
-        return true;
-    } else {
-        return false;
+    if(isset($_SESSION["type"])){
+        if ($_SESSION["type"]=="user" || $_SESSION["type"]=="admin" ) {
+            return true;
+        } else {
+            return false;
+        }
     }
-}
-
-function isLogged(): bool
-{
-    if ($_SESSION["type"]=="user" || $_SESSION["type"]=="admin") {
-        return true;
-    } else {
+    else{
         return false;
     }
 }

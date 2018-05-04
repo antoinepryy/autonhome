@@ -6,10 +6,13 @@
  * Time: 16:55
  */
 
-include ('sessions/general.php');
-startSession();
+session_start();
 include ('sessions/user.php');
 
 session_destroy();
 
+$status = "UU";
 include ('./vues/accueil.php');
+
+
+

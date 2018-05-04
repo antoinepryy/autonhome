@@ -5,8 +5,8 @@
  * Date: 03/05/2018
  * Time: 11:32
  */
+session_start();
 include ('sessions/user.php');
-
 include('./modele/users.php');
 
 if(isset($_POST["mail"]) && isset($_POST["password"])){
@@ -17,7 +17,6 @@ if(isset($_POST["mail"]) && isset($_POST["password"])){
     else{
         die(var_dump('fail'));
     }
-    include ('./vues/accueil.php');
 
 
 }
@@ -26,5 +25,4 @@ else{
     include('vues/erreur404.php');
 }
 
-$section = 'accueil';
-include('vues/accueil.php');
+include('accueil.php');
