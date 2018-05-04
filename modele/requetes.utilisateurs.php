@@ -25,7 +25,7 @@ function rechercheParNom(PDO $bdd, string $nom): array {
     
 }
 
-function identifyUser(PDO $bdd, $mail, $password){
+function identifyUserDatabase(PDO $bdd, $mail, $password){
     $statement = $bdd->prepare('SELECT * FROM  user WHERE mail = :mail');
     $statement->bindParam(":mail", $mail);
     $statement->execute();
