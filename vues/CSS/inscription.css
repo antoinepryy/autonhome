@@ -1,0 +1,58 @@
+.principal {
+    background-color: lightgrey;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding : 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.personnal-informations{
+    display: flex;
+    justify-content: space-around;
+}
+
+.identity{
+    margin-left: 5%;
+
+}
+
+.identity input{
+    text-align: center;
+    line-height: 200%;
+    height: 10%;
+}
+
+.facturation-address{
+    width: 50%;
+    margin-right: 5%;
+}
+
+.facturation-address p{
+    background-color: white;
+    border: 1px solid black;
+    height: 15%;
+    text-align: center;
+    line-height: 250%;
+}
+
+.facturation-address div{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.facturation-address div input , .facturation-address div select{
+    margin: 1%;
+}
+
+.inscription-button{
+    display: flex;
+    width: 25%;
+    height: 10%;
+    justify-content: center;
+}
