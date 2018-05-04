@@ -16,7 +16,7 @@ $table = "user";
  * @return array
  */
 function rechercheParNom(PDO $bdd, string $nom): array {
-    
+
     $statement = $bdd->prepare('SELECT * FROM  user WHERE username = :username');
     $statement->bindParam(":username", $value);
     $statement->execute();
@@ -26,26 +26,17 @@ function rechercheParNom(PDO $bdd, string $nom): array {
 }
 
 function identifyUser(PDO $bdd, $mail, $password){
-    $users = findAllUsers($bdd);
-    $array = array();
-    $cryptedPassword = password_hash($password, PASSWORD_DEFAULT);
-//    $statement = $bdd->prepare('SELECT * FROM user
-//    WHERE mail = :mail
-//    AND password = :password'
-//    );
-//    $statement->bindParam(":mail", $mail);
-//    $statement->bindParam(":password", $password);
-//    $statement->execute();
-    foreach ($users as $user){
-        array_push($array, $user["password"]);
-
-
-
+    $statement = $bdd->prepare('SELECT * FROM  user WHERE mail = :mail');
+    $statement->bindParam(":mail", $mail);
+    $statement->execute();
+    $foundUser = $statement->fetch();
+    $var = password_verify($password, $foundUser["password"]);
+    if($var==true) {
+        return $foundUser;
     }
-    die(var_dump($array));
-    die(var_dump($statement->fetchAll()["password"]));
-    return $statement->fetchAll();
-
+    else{
+        return NULL;
+    }
 }
 
     function createUser(PDO $bdd, $data)
