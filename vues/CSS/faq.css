@@ -1,0 +1,6 @@
+.FAQ h1{
+    display: flex;
+    border: 2px solid black;
+    margin: auto;
+    justify-content: center;
+}
