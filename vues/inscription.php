@@ -4,10 +4,12 @@
 */
 
 require ('vues/header.php');
-require ('vues/CSS/inscription.css')
 ?>
 
-<?php echo AfficheAlerte($alerte); ?>
+<?php
+if (isset($alerte)){
+    echo AfficheAlerte($alerte);
+} ?>
 
 
 <section class="principal">
