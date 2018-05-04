@@ -6,4 +6,8 @@
  * Time: 15:21
  */
 
+$section = "faq";
 include('vues/faq.php');
+?>
+
+
