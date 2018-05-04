@@ -6,7 +6,7 @@
  * Time: 11:31
  */
 
-include('./modele/requetes.utilisateurs.php');
+include('./modele/users.php');
 if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
     createUser($bdd, $_POST);
 

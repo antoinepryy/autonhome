@@ -6,7 +6,7 @@
  * Time: 10:48
  */
 
-include('./modele/requetes.utilisateurs.php');
+include('./modele/users.php');
 $array = recupereTousUtilisateurs($bdd);
 
 die(var_dump($array));
