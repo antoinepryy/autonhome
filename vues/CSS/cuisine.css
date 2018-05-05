@@ -1,0 +1,16 @@
+.use-case{
+    font-size: 110%;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+}
+
+.use-case input{
+    width: 3%;
+    margin-top: 2%;
+}
+
+.use-case label{
+    text-align: center;
+}

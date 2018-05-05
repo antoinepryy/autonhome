@@ -1,5 +1,6 @@
 Couleurs en RGB
 
-orange : 	255  153  0	#ff9900
+orange : 		#ff9900
 bleu : 		0    102  153	#006699
-bleu foncé : 	47   54   67	#2f3643
+bleu foncï¿½ : 	47   54   67	#2f3643
+bleu-gris : #21485f

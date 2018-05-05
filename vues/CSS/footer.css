@@ -23,12 +23,13 @@ footer a{
 .footer-links ul a{
     display: block;
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    color: white;
 }
 
 .footer-links ul a:hover {
@@ -42,5 +43,3 @@ footer a{
     font-weight: bold;
     margin-left: 1%;
 }
-
-

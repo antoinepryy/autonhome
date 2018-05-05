@@ -15,24 +15,26 @@ header{
     margin-left: 10px;
 }
 
-nav{
+header nav{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
 
-nav a{
-    text-decoration: none;
-    list-style-type: none;
+header nav ul {
     margin-right: 2%;
 }
 
-nav a li{
+header nav a{
+    text-decoration: none;
+    list-style-type: none;
+}
 
-    display: block;
+
+header nav a li{
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
     width: 100%;
@@ -46,3 +48,4 @@ nav a :hover{
     background-color: lightskyblue;
     box-shadow: 2px 2px;
 }
+

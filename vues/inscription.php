@@ -37,7 +37,7 @@ require ('vues/header_UU.php');
                     <input type="text"  name="addressCity" placeholder="Ville" required/>
                     <label hidden>Country</label>
                     <select name="addressCountry" class="country-choice" required>
-                        <option value="exemple">Pays</option>
+                        <option value="exemple"> Pays</option>
                         <option value="france" >France</option>
                         <option value="germany" >Deutschland</option>
                         <option value="england" >England</option>

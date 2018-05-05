@@ -10,6 +10,7 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
+<link rel="stylesheet" type="text/css" href="vues/CSS/changerdemotdepasse.css"/>
 
 <section class="container-modifmdp">
     <h1 class="titlemodifiermotdepasse"> Modifier le mot de passe </h1>

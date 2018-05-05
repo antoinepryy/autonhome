@@ -1,9 +1,15 @@
+.FAQ{
+    background-color: #21485f;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+}
+
 .FAQ h1{
     display: flex;
     margin: auto;
     justify-content: center;
     width: 90%;
-
 }
 
 .question{
@@ -11,7 +17,11 @@
     font-size: 150%;
     margin-left: 2%;
     margin-right: 2%;
+}
 
+.question1,.question2,.question3
+{
+    font-weight:bold ;
 }
 
 .réponse{
@@ -20,14 +30,4 @@
     margin-left: 11%;
     margin-right:2%;
     margin-bottom: 1%;
-}
-
-.FAQ{
-    background-color: lightgrey;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-.question1,.question2,.question3
-{
-    font-weight:bold ;
 }
