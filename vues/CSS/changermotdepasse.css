@@ -1,0 +1,45 @@
+
+.container-changermdp{
+
+    background-color: lightgrey;
+
+    width:50%;
+    margin:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    border: 1px black solid;
+    padding: 2%;
+
+    display:flex;
+
+}
+
+.formulairemotdepasseoublie{
+    width:50%;
+    margin:auto;
+}
+
+.titlemotdepasseoublie{
+
+    background-color: lightgrey;
+    border: 1px black solid;
+
+    padding: 0.5%;
+    width:36%;
+    margin: auto;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 23%;
+
+}
+
+.noteemail{
+    background-color: white;
+    border: 1px black solid;
+
+    padding: 1%;
+    width:36%;
+    margin: auto;
+}

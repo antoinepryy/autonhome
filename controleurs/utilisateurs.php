@@ -11,7 +11,7 @@
  */
 
 // on inclut le fichier modèle contenant les appels à la BDD
-include('./modele/requetes.utilisateurs.php');
+include('./modele/users.php');
 
 
 

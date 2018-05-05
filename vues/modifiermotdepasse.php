@@ -7,9 +7,10 @@
  */
 
 
-require ('header.php');        /* modifier par la suite header.php par header_LU.php */
+require ('vues/header_'.$status.'.php');
 ?>
 
+<link rel="stylesheet" type="text/css" href="vues/CSS/changerdemotdepasse.css"/>
 
 <section class="container-modifmdp">
     <h1 class="titlemodifiermotdepasse"> Modifier le mot de passe </h1>
@@ -34,4 +35,4 @@ require ('header.php');        /* modifier par la suite header.php par header_LU
     </form>
 </section>
 
-<?php require('vues/footer.php');
+<?php require('footer.php'); ?>

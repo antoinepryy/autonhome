@@ -5,7 +5,6 @@ body{
 header{
     border-bottom: 1px solid black;
     margin-bottom: 5px;
-
 }
 
 .logo_logo{
@@ -16,25 +15,30 @@ header{
     margin-left: 10px;
 }
 
-nav{
+header nav{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
 
-nav ul{
-    list-style-type: none;
+header nav ul {
     margin-right: 2%;
 }
 
-nav li {
+header nav a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header nav a li{
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
     width: 100%;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    color: white;
 }

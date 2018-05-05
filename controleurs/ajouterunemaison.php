@@ -1,11 +1,11 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Utilisateur
- * Date: 03/05/2018
- * Time: 11:16
+ * User: ASUS
+ * Date: 04/05/2018
+ * Time: 16:46
  */
-$section = 'nosoffres';
+$section = 'ajouterunemaison';
 if (!isset($_SESSION)){
     session_start();
 }
@@ -26,4 +26,4 @@ else{
     $status="UU";
 }
 
-include('vues/nosoffres.php');
+include('vues/ajouterunemaison.php');

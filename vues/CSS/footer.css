@@ -1,16 +1,16 @@
 footer{
     border: 1px solid black;
     display: flex;
-
 }
 
-a{
+footer a{
     color: black;
     text-decoration: none ;
 }
 
 .footer-links{
     display : flex;
+    width: 100%;
 }
 
 .footer-links ul{
@@ -20,25 +20,19 @@ a{
     width: 100%;
 }
 
-.footer-links li{
+.footer-links ul a{
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
-    width: auto;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    color: white;
 }
 
 .droit-reserve{
     font-size : 200%;
     font-weight: bold;
-    line-height: 80px;
-    justify-content: flex-start;
-    display: flex;
     margin-left: 1%;
-
 }
-
-
