@@ -35,7 +35,7 @@ require ('vues/header_'.$status.'.php');
             <span class="close">&times;</span>
             <section class= Mon profil>
 
-                <form class="formulairemonprofil" method="post" action="monprofil.php">
+                <form class="formulairemonprofil" method="post" action="index.php?cible=verifprofilform">
                     <div class="elementsformulairemonprofil">
                         <input type="text" name="lastName" placeholder="nom" value=<?php echo($_SESSION["userLastName"]);?> required>
                         <input type="text" name="firstName" placeholder="prénom" value=<?php echo($_SESSION["userFirstName"]);?> required>
@@ -44,7 +44,7 @@ require ('vues/header_'.$status.'.php');
                         <input type="number"  name="addressNumber" placeholder="Numéro de rue" value=<?php echo($_SESSION["addressNumber"]);?> required/>
                         <input type="text"  name="addressStreet" placeholder="Rue" value=<?php echo($_SESSION["addressStreet"]);?> required/>
                         <input type="text"  name="addressCity" placeholder="Ville" value=<?php echo($_SESSION["addressCity"]);?> required/>
-                        <input type="number" name="adresse postale" placeholder="Adresse postale" value=<?php echo($_SESSION["addressZipCode"]);?> required>
+                        <input type="number" name="addressZipCode" placeholder="Adresse postale" value=<?php echo($_SESSION["addressZipCode"]);?> required>
                         <button class="valider" type="submit" name="submit">valider </button>
                     </div>
 

@@ -22,3 +22,14 @@ function authentify($data){
     $_SESSION["id_subscription"] = $data["id_subscription"];
     $_SESSION["type"] = $data["type"];
 }
+
+function modify($mail, $FN, $LN, $phone, $aNumber,$aStreet, $aZipCode, $aCity){
+    $_SESSION["userMail"] = $mail;
+    $_SESSION["userFirstName"] = $FN;
+    $_SESSION["userLastName"] = $LN;
+    $_SESSION["phoneNumber"] = $phone;
+    $_SESSION["addressNumber"] = $aNumber;
+    $_SESSION["addressStreet"] = $aStreet;
+    $_SESSION["addressZipCode"] = $aZipCode;
+    $_SESSION["addressCity"] = $aCity;
+}

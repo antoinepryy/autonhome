@@ -98,46 +98,38 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
     }
 
     function updateUser($bdd, $data){
-        $verify = $bdd->prepare('SELECT * FROM user WHERE mail = :mail');
-        $verify->bindParam(":mail", $data["mail"]);
-        $verify->execute();
-        $oldUserData = $verify->fetch();
-        if ($oldUserData==false){
-            $cryptedPassword = $data["password"];
-            $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
-            $statement = $bdd->prepare('INSERT INTO user 
-            (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) 
-            VALUES 
-            (NULL, 
-            :firstName, 
-            :lastName, 
-            :mail, 
-            :password, 
-            :phoneNumber, 
-            :addressNumber, 
-            :addressStreet, 
-            :addressZipCode, 
-            :addressCity, 
-            :addressCountry, 
-            "user" , 
-            NULL)');
-            $statement->bindParam(":firstName", $data["firstName"]);
-            $statement->bindParam(":lastName", $data["lastName"]);
-            $statement->bindParam(":mail", $data["mail"]);
-            $statement->bindParam(":password", $cryptedPassword);
-            $statement->bindParam(":phoneNumber", $data["phoneNumber"]);
-            $statement->bindParam(":addressNumber", $data["addressNumber"]);
-            $statement->bindParam(":addressStreet", $data["addressStreet"]);
-            $statement->bindParam(":addressZipCode", $data["addressZipCode"]);
-            $statement->bindParam(":addressCity", $data["addressCity"]);
-            $statement->bindParam(":addressCountry", $data["addressCountry"]);
-            $statement->execute();
-            return true;
 
-        }
-        else{
-            return false;
-        }
+        $statement = $bdd -> prepare(
+        'UPDATE user
+        SET 
+        firstName = :firstName,
+        lastName = :lastName,
+        mail = :mail,
+        phoneNumber = :phoneNumber,
+        addressNumber = :addressNumber,
+        addressStreet = :addressStreet,
+        addressZipCode = :addressZipCode,
+        addressCity = :addressCity
+        WHERE id = :userId '
+        );
+        $statement->bindParam(":firstName", $data["firstName"]);
+        $statement->bindParam(":lastName", $data["lastName"]);
+        $statement->bindParam(":mail", $data["mail"]);
+        $statement->bindParam(":phoneNumber", $data["phoneNumber"]);
+        $statement->bindParam(":addressNumber", $data["addressNumber"]);
+        $statement->bindParam(":addressStreet", $data["addressStreet"]);
+        $statement->bindParam(":addressZipCode", $data["addressZipCode"]);
+        $statement->bindParam(":addressCity", $data["addressCity"]);
+        $statement->bindParam(":userId", $_SESSION["userId"]);
+        $statement->execute();
+        modify($data["mail"],
+        $data["firstName"],
+        $data["lastName"],
+        $data["phoneNumber"],
+        $data["addressNumber"],
+        $data["addressStreet"],
+        $data["addressZipCode"],
+        $data["addressCity"]);
 
     }
 

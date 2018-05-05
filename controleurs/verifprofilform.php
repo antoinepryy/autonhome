@@ -6,26 +6,28 @@
  * Time: 23:47
  */
 
-session_start();
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+if(!function_exists("isLogged")){
+    include('functions.php');
+}
+if(!function_exists("authentify")){
+    include('sessions/user.php');
+}
 include('./modele/users.php');
-if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
-    if (createUser($bdd, $_POST)){
-        $section = 'monprofil';
-        $status;
-        if(isLoggedAsAdmin()){
-            $status="AD";
-        }
-        elseif (isLoggedAsUser()){
-            $status="LU";
-        }
-        include('vues/monprofil.php');
+if(isset($_POST["mail"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
+    $section = 'monprofil';
+    $status;
+    if(isLoggedAsAdmin()){
+        $status="AD";
     }
-    else{
-        $section='inscription';
-        $alerte='Cette addresse mail est déjà enregistrée !';
-        $status='UU';
-        include ('vues/inscription.php');
+    elseif (isLoggedAsUser()){
+        $status="LU";
     }
+    updateUser($bdd, $_POST);
+    include('vues/monprofil.php');
 }
 else{
     require ('erreur404.php');

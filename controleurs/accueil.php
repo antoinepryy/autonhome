@@ -10,8 +10,12 @@ if (!isset($_SESSION)) {
     session_start();
 }
 if(!function_exists("isLogged")){
+    include('functions.php');
+}
+if(!function_exists("authentify")){
     include('sessions/user.php');
 }
+
 
 $status;
 if(isLoggedAsAdmin()){
