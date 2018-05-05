@@ -1,0 +1,22 @@
+.h1{
+    display: flex;
+    height: 8%;
+    width : 15%;
+    margin-right: 75%;
+    border: 2px solid black;
+}
+
+ .formulairemonprofil{
+     display: flex;
+     justify-content: center;
+ }
+
+
+ .elementsformulairemonprofil{
+     margin: auto;
+     width: 30%;
+ }
+
+ .valider{
+     color: green;
+ }
