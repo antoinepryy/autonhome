@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 03 mai 2018 à 10:09
--- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.3
+-- Généré le :  sam. 05 mai 2018 à 11:49
+-- Version du serveur :  10.1.28-MariaDB
+-- Version de PHP :  7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -315,18 +315,18 @@ INSERT INTO `subscription_user` (`ID`, `id_subscription`, `id_user`, `beginningD
 
 CREATE TABLE `user` (
   `ID` int(11) NOT NULL,
-  `firstName` varchar(30) NOT NULL,
-  `lastName` varchar(30) NOT NULL,
-  `mail` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `phoneNumber` int(10) NOT NULL,
+  `firstName` varchar(100) NOT NULL,
+  `lastName` varchar(100) NOT NULL,
+  `mail` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
   `addressNumber` int(4) NOT NULL,
-  `addressStreet` varchar(30) NOT NULL,
+  `addressStreet` varchar(100) NOT NULL,
   `addressZipCode` int(10) NOT NULL,
-  `addressCity` varchar(30) NOT NULL,
-  `addressCountry` varchar(30) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `id_subscription` int(10) NOT NULL
+  `addressCity` varchar(100) NOT NULL,
+  `addressCountry` varchar(100) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `id_subscription` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -334,7 +334,22 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) VALUES
-(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'apirioumdp', 608334474, 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'client', 1);
+(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'pass', '608334474', 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'client', 1),
+(2, 'Antoine', 'Perry', 'test@mail.com', 'pass', '', 0, '', 0, '', '', '', NULL),
+(3, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', '', NULL),
+(4, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', '', NULL),
+(5, 'azd', 'azd', 'azd@test', 'azd', '', 0, '', 0, '', '', '', NULL),
+(6, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 2, '20, rue des couvents', 0, 'Mon', 'france', '', NULL),
+(7, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 0, '20, rue des couvents', 0, 'Mon', 'france', 'user', NULL),
+(8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
+(9, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$SYoKTix0jXxKg/7Iyn2XiOH189.TSjM4pjagpe5zEg3pv0tTkqdCe', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
+(10, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$pnPkmlY1DJPRUJGeQoP4gevZP76BwqUji9guVDV11rKt5yobIoDzW', '674181395', 20, 'rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
+(11, 'Yves-Marie', 'PAUL', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard raspail', 75006, 'Paris', 'france', 'user', NULL),
+(12, 'Yacine', 'Nabti', 'yac@mail.com', '$2y$10$Z3Q8ZB1KfcwEO6mYKUC6WurpuE6QKRpBpgPXoyk7EjkoxSfDCExne', '123456789', 19, 'Rue du blabla ', 57950, 'Metz', 'france', 'user', NULL),
+(13, 'test', 'test', 'antoine.ap.57@gmail.com', '$2y$10$ujIB4iSl7yDOxpA4tWTH2uIZDK6VZaTPNdWHt7ElSuowEo6qjS7FO', '674181395', 10, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
+(14, 'Sylviana', 'Mialisao', 'sylv@mail.com', '$2y$10$B4qJCm8Lgn.X0z5OrXevuu1AVQsOXIDXnfRHLZcnf51tH37zHWKzi', '123456789', 20, 'rue', 57000, 'Metz', 'france', 'user', NULL),
+(15, 'admin', 'admin', 'admin@admin.com', '$2y$10$qqxRYgYrJKixrXbxwCGmAeJTdkls.dnNo.EzDzPPvA36p.OUTuq8C', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL),
+(16, 'admin', 'admin', 'admin@admin.com', '$2y$10$CGYe7d3hXEMU0nHA4vJ9h.JaoxavZm3KXQ3Es/ltJoRHHGInryRcm', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -522,7 +537,7 @@ ALTER TABLE `subscription_user`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
