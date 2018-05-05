@@ -3,3 +3,4 @@ Couleurs en RGB
 orange : 		#ff9900
 bleu : 		0    102  153	#006699
 bleu fonc� : 	47   54   67	#2f3643
+bleu-gris : #21485f
