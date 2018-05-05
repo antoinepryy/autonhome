@@ -1,10 +1,10 @@
 <?php
 
-// on récupère les requêtes génériques
-include('generics.php');
+
+include("modele/connexion.php");
 
 //on définit le nom de la table
-$table = "house";
+$table = "residence";
 
 function createHouse(PDO $bdd, $data)
 {
@@ -35,4 +35,3 @@ function createHouse(PDO $bdd, $data)
 
 }
 
-?>

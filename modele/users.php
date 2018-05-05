@@ -49,7 +49,19 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
             $cryptedPassword = $data["password"];
             $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
             $statement = $bdd->prepare('INSERT INTO user 
-            (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) 
+            (`ID`, 
+            `firstName`, 
+            `lastName`, 
+            `mail`, 
+            `password`, 
+            `phoneNumber`, 
+            `addressNumber`, 
+            `addressStreet`, 
+            `addressZipCode`, 
+            `addressCity`, 
+            `addressCountry`, 
+            `type`, 
+            `id_subscription`) 
             VALUES 
             (NULL, 
             :firstName, 
@@ -82,6 +94,50 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
             return false;
         }
 
+
+    }
+
+    function updateUser($bdd, $data){
+        $verify = $bdd->prepare('SELECT * FROM user WHERE mail = :mail');
+        $verify->bindParam(":mail", $data["mail"]);
+        $verify->execute();
+        $oldUserData = $verify->fetch();
+        if ($oldUserData==false){
+            $cryptedPassword = $data["password"];
+            $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+            $statement = $bdd->prepare('INSERT INTO user 
+            (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) 
+            VALUES 
+            (NULL, 
+            :firstName, 
+            :lastName, 
+            :mail, 
+            :password, 
+            :phoneNumber, 
+            :addressNumber, 
+            :addressStreet, 
+            :addressZipCode, 
+            :addressCity, 
+            :addressCountry, 
+            "user" , 
+            NULL)');
+            $statement->bindParam(":firstName", $data["firstName"]);
+            $statement->bindParam(":lastName", $data["lastName"]);
+            $statement->bindParam(":mail", $data["mail"]);
+            $statement->bindParam(":password", $cryptedPassword);
+            $statement->bindParam(":phoneNumber", $data["phoneNumber"]);
+            $statement->bindParam(":addressNumber", $data["addressNumber"]);
+            $statement->bindParam(":addressStreet", $data["addressStreet"]);
+            $statement->bindParam(":addressZipCode", $data["addressZipCode"]);
+            $statement->bindParam(":addressCity", $data["addressCity"]);
+            $statement->bindParam(":addressCountry", $data["addressCountry"]);
+            $statement->execute();
+            return true;
+
+        }
+        else{
+            return false;
+        }
 
     }
 

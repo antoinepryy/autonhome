@@ -37,18 +37,14 @@ require ('vues/header_'.$status.'.php');
 
                 <form class="formulairemonprofil" method="post" action="monprofil.php">
                     <div class="elementsformulairemonprofil">
-
-                        <label hidden class="nom">nom</label>
-                        <input type="text" name="nom" id="nom" placeholder="Nom">
-                        <label hidden class="prénom"> prénom </label><br>
-                        <input type="text" name="prénom" id="prénom" placeholder="Prénom">
-                        <label hidden class="e-mail"> addresse e-mail</label><br>
-                        <input type="email" name="e-mail" id="e-mail" placeholder="adresse e-mail">
-                        <label hidden class="adresse postale"> adresse postale </label><br>
-                        <input type="tel" name="adresse postale" id="adresse postale" placeholder="adresse postale">
-                        <label hidden class="numéro" > numéro de téléphone </label><br>
-                        <input type="text" name="numéro" id="numéro" placeholder="numéro de téléphone">
-                        <button type="submit" name="submit">Modifier mot de passe </button>
+                        <input type="text" name="lastName" placeholder="nom" value=<?php echo($_SESSION["userLastName"]);?> required>
+                        <input type="text" name="firstName" placeholder="prénom" value=<?php echo($_SESSION["userFirstName"]);?> required>
+                        <input type="email" name="mail" placeholder="e-mail" value=<?php echo($_SESSION["userMail"]);?> required>
+                        <input type="tel" name="phoneNumber" placeholder="numéro" value=<?php echo($_SESSION["phoneNumber"]);?> required>
+                        <input type="number"  name="addressNumber" placeholder="Numéro de rue" value=<?php echo($_SESSION["addressNumber"]);?> required/>
+                        <input type="text"  name="addressStreet" placeholder="Rue" value=<?php echo($_SESSION["addressStreet"]);?> required/>
+                        <input type="text"  name="addressCity" placeholder="Ville" value=<?php echo($_SESSION["addressCity"]);?> required/>
+                        <input type="number" name="adresse postale" placeholder="Adresse postale" value=<?php echo($_SESSION["addressZipCode"]);?> required>
                         <button class="valider" type="submit" name="submit">valider </button>
                     </div>
 

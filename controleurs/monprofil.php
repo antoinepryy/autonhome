@@ -24,9 +24,6 @@ if(isLoggedAsAdmin()){
 elseif (isLoggedAsUser()){
     $status="LU";
 }
-else{
-    $status="UU";
-}
 
 
 include('vues/monprofil.php');

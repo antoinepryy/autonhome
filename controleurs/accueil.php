@@ -6,14 +6,12 @@
  * Time: 18:40
  */
 $section = 'accueil';
-if (!isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
 }
-
 if(!function_exists("isLogged")){
     include('sessions/user.php');
 }
-
 
 $status;
 if(isLoggedAsAdmin()){
