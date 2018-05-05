@@ -11,11 +11,12 @@ include('./modele/users.php');
 
 if(isset($_POST["mail"]) && isset($_POST["password"])){
     $user = identifyUserDatabase($bdd, $_POST["mail"], $_POST["password"]);
-    if($user != 'NULL'){
+    if($user){
         authentify($user);
     }
     else{
-        die(var_dump('fail'));
+        $alerte = "Mot de passe ou login incorrect";
+
     }
 
 

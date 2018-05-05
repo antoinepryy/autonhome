@@ -5,6 +5,9 @@
 ?>
 <section class="form-field">
     <div class="form-container"></div>
+        <?php if(isset($alerte)){
+            echo ($alerte);
+        } ?>
         <form action="index.php?cible=verifconnexionform" method="post">
             <label hidden>Adresse mail</label>
             <input type="text" placeholder="Identifiant" name="mail"/><br/>
