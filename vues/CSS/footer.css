@@ -21,6 +21,7 @@ footer a{
 }
 
 .footer-links ul a{
+    display: block;
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
@@ -29,6 +30,12 @@ footer a{
     padding-right: 3%;
     padding-left: 3%;
 }
+
+.footer-links ul a:hover {
+    background-color: lightskyblue;
+    box-shadow: 2px 2px;
+}
+
 
 .droit-reserve{
     font-size : 200%;

@@ -30,6 +30,7 @@ nav a{
 
 nav a li{
 
+    display: block;
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;
@@ -38,4 +39,10 @@ nav a li{
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    color: black;
+}
+
+nav a :hover{
+    background-color: lightskyblue;
+    box-shadow: 2px 2px;
 }

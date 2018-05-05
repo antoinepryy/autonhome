@@ -24,6 +24,7 @@ header a{
 }
 
 header nav ul{
+    display: block;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid black;
@@ -44,7 +45,11 @@ header nav a {
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+}
 
+header nav a:hover{
+    background-color: lightskyblue;
+    box-shadow: 2px 2px;
 }
 
 
