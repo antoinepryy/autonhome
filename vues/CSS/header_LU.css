@@ -33,6 +33,10 @@ header nav ul {
     margin-right: 2%;
 }
 
+header nav a li{
+    display: block;
+}
+
 
 
 header nav a{
@@ -40,18 +44,16 @@ header nav a{
     list-style-type: none;
 }
 
-header nav a li{
+header nav a{
     margin-right: 5%;
     background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
     width: 100%;
     text-align: center;
-    padding-right: 3%;
-    padding-left: 3%;
 }
 
-header nav a:hover{
+header nav a :hover{
     background-color: lightskyblue;
     box-shadow: 2px 2px;
 }
