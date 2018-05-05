@@ -7,12 +7,6 @@
  */
 require ('vues/header.php');
 ?>
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/nosoffres.css"/>
-</head>
-
 
 <body>
     <h1>
