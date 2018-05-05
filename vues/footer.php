@@ -41,4 +41,4 @@
 </body>
 </html>
 
-<script type="text/javascript" src="vues/JS/<?php echo('.$section.'); ?>.js"></script>
+<script type="text/javascript" src=<?php echo('vues/JS/'.$section.'.js'); ?>></script>
