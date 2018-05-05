@@ -16,6 +16,7 @@ if(!function_exists("isLogged")){
 }
 
 
+
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
