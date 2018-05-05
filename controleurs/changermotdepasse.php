@@ -3,4 +3,4 @@
 $section = 'changermotdepasse';
 
 
-include('vues/changermotdepasse.php');
+include('vues/modifiermotdepasse.php');

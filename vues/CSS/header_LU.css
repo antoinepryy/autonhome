@@ -23,29 +23,23 @@ header a{
     right: 0;
 }
 
-header nav ul{
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+header nav ul {
+    margin-right: 2%;
 }
 
 header nav a{
+    text-decoration: none;
     list-style-type: none;
-    width: 100%;
 }
 
-header nav a {
+header nav a li{
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
-    width: auto;
+    width: 100%;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
-
+    color: white;
 }
-
-
-

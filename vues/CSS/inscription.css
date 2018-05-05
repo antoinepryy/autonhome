@@ -1,5 +1,5 @@
 .principal {
-    background-color: lightgrey;
+    background-color: #21485f;
     margin-left: 3%;
     margin-right: 3%;
     padding : 1%;
@@ -61,6 +61,11 @@ form{
     margin: 1%;
     font-size: 100%;
     border: 1px solid black;
+    background-color: white;
+}
+
+.facturation-address div select span{
+    color: gold;
 }
 
 .inscription-button{
