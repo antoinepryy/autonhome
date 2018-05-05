@@ -9,7 +9,7 @@
  **/
 
 // Appel des fonctions du contrôleur
-include("controleurs/fonctions.php");
+include("controleurs/functions.php");
 // Appel des fonctions liées à l'affichage
 include("vues/fonctions.php");
 

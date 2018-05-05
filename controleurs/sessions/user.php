@@ -6,12 +6,12 @@
  * Time: 11:57
  */
 
-require('start.php');
+
 
 function authentify($data){
     $_SESSION["userId"] = $data["ID"];
     $_SESSION["userMail"] = $data["mail"];
     $_SESSION["userFirstName"] = $data["firstName"];
-    $_SESSION["userLastName"] = $_SESSION["lastName"];
-    return 1;
+    $_SESSION["userLastName"] = $data["lastName"];
+    $_SESSION["type"] = $data["type"];
 }

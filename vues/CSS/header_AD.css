@@ -15,26 +15,29 @@ header{
     margin-left: 10px;
 }
 
-nav{
+header nav{
     display: flex;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
-nav ul{
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    justify-content: flex-end;
+
+header nav ul {
+    margin-right: 2%;
 }
 
-nav li {
+header nav a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header nav a li{
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
-    height: 100%;
-    width: auto;
+    width: 100%;
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
+    color: white;
 }

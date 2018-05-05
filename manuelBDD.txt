@@ -1,0 +1,12 @@
+Tuto pour installer la base de données :
+
+- lancer "http://localhost/phpmyadmin/" dans Google avec Xampp allumé 
+- cliquer sur la BDD nommée "mvc" (à gauche)
+- en haut de l'écran cliquer sur "opérations" puis sur "Supprimer la base de données"
+- Créer une nouvelle BDD avec le même nom "mvc" puis cliquer dessus
+- Cliquer sur "importer" en haut
+- sélectionner le fichier "mvc.sql" présent sur notre git (utiliser l'explorateur de fichiers, pas IntelliJ)
+- Cliquer sur exécuter 
+- C'est parti !
+
+PS : connectez vous sur le site avec le compte utilisateur "yvesdu29@gmail.com" et le MDP "pass"

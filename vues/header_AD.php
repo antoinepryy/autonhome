@@ -10,8 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_AD.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil.css"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_special_AD.css"/>
+
+    <?php
+    echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'.css"/>');
+    if(in_array($section,array("accueil"))){
+        echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'_'.$status.'.css">');
+    }
+
+    ?>
+
+
 
 </head>
 <body>
@@ -25,15 +33,22 @@
 
     <nav>
         <ul>
-            <li><a href="">
-                    Offres et Produits
-                </a></li>
-            <li><a href="">
+
+            <a href="index.php?cible=nosoffres">
+                <li>
+                Offres et Produits
+                </li>
+            </a>
+            <a href="">
+                <li>
                     Espace Admin
-                </a></li>
-            <li><a href="">
+                </li>
+            </a>
+            <a href="index.php?cible=logout">
+                <li>
                     Déconnexion
-                </a></li>
+                </li>
+            </a>
         </ul>
 
     </nav>

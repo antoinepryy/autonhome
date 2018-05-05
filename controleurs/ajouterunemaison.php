@@ -1,12 +1,11 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: antoine
+ * User: ASUS
  * Date: 04/05/2018
- * Time: 15:34
+ * Time: 16:46
  */
-
-$section = 'monprofil';
+$section = 'ajouterunemaison';
 if (!isset($_SESSION)){
     session_start();
 }
@@ -14,7 +13,6 @@ if (!isset($_SESSION)){
 if(!function_exists("isLogged")){
     include('sessions/user.php');
 }
-
 
 
 $status;
@@ -28,7 +26,4 @@ else{
     $status="UU";
 }
 
-
-include('vues/monprofil.php');
-
-
+include('vues/ajouterunemaison.php');

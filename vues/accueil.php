@@ -3,9 +3,10 @@
 * Vue : accueil
 */
 
-require ('vues/header.php');
-require ('vues/accueil_special_UU.php');
+require ('vues/header_'.$status.'.php');
+require ('vues/accueil_'.$status.'.php');
 ?>
+
 
 
     <section class="why-us">

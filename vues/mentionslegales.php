@@ -6,7 +6,7 @@
  * Time: 15:33
  */
 
-require ('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
 <section>

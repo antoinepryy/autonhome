@@ -3,17 +3,17 @@
 * Vue : inscrire un nouvel utilisateur
 */
 
-require ('vues/header.php');
+require ('vues/header_UU.php');
 ?>
 
-<?php
-if (isset($alerte)){
-    echo AfficheAlerte($alerte);
-} ?>
 
-    <link rel="stylesheet" type="text/css" href="vues/CSS/inscription.css"/>
+
 
 <section class="principal">
+    <?php
+    if (isset($alerte)){
+        echo AfficheAlerte($alerte);
+    } ?>
     <form method="POST" action="index.php?cible=verifinscriptionform">
 
         <section class="personnal-informations">
@@ -37,7 +37,7 @@ if (isset($alerte)){
                     <input type="text"  name="addressCity" placeholder="Ville" required/>
                     <label hidden>Country</label>
                     <select name="addressCountry" class="country-choice" required>
-                        <option value="exemple">Pays</option>
+                        <option value="exemple"> Pays</option>
                         <option value="france" >France</option>
                         <option value="germany" >Deutschland</option>
                         <option value="england" >England</option>
@@ -51,7 +51,7 @@ if (isset($alerte)){
 
         <div class="use-case">
             <input class="use-case" type="checkbox" name ="conditions" required/>
-            <p>Accepter les <a href="index.php?cible=conditionsutilisations.php" >Conditions d'utilisation</a></p>
+            <p>Accepter les <a href='index.php?cible=conditionsutilisation' >Conditions d'utilisation</a></p>
         </div>
 
         <div class="inscription-button">

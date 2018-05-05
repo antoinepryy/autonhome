@@ -5,14 +5,8 @@
  * Date: 03/05/2018
  * Time: 09:38
  */
-require ('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="vues/CSS/nosoffres.css"/>
-</head>
-
 
 <body>
     <h1>

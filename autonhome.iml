@@ -5,5 +5,22 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://C:/Windows/System32" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/Windows/System32" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+>>>>>>> d8f78c346ced3af593b04f107a9c12e557c1309e
+>>>>>>> 058446d438352788d7e66993320827cb02e31e9f
   </component>
 </module>
