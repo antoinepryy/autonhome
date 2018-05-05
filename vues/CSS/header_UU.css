@@ -23,11 +23,13 @@ nav{
 }
 
 nav a{
+    text-decoration: none;
     list-style-type: none;
     margin-right: 2%;
 }
 
 nav a li{
+
     margin-right: 5%;
     background-color: lightgrey;
     border: 1px solid black;

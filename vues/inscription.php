@@ -6,13 +6,14 @@
 require ('vues/header_UU.php');
 ?>
 
-<?php
-if (isset($alerte)){
-    echo AfficheAlerte($alerte);
-} ?>
+
 
 
 <section class="principal">
+    <?php
+    if (isset($alerte)){
+        echo AfficheAlerte($alerte);
+    } ?>
     <form method="POST" action="index.php?cible=verifinscriptionform">
 
         <section class="personnal-informations">
