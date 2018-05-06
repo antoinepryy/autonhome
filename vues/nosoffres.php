@@ -8,7 +8,6 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
-<body>
     <h1>
         Nos Offres
     </h1>
@@ -54,4 +53,4 @@ require ('vues/header_'.$status.'.php');
 
     </section>
 
-</body>
+<?php require ('footer.php'); ?>

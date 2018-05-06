@@ -60,7 +60,7 @@ header nav a{
 }
 
 header nav a :hover{
-    background-color: lightskyblue;
+    background-color: #006699;
     box-shadow: 2px 2px;
 }
 
