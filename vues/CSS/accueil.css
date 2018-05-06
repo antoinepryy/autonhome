@@ -59,3 +59,13 @@
 .form-container{
     display: flex;
 }
+
+.header-title a img {
+    animation : opacity 3s 1;
+}
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
