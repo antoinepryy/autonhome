@@ -47,9 +47,9 @@ if (isset($alerte)){
         <label hidden>Surface</label>
         <input type="number"  name="Surface" placeholder="Surface" required/>
         <label hidden>numberOfRoom</label>
-        <input type="number"  name="numberOfRoom" placeholder="Nombre de pièce" required/>
+        <input type="number"  name="numberOfPeople" placeholder="Nombre de pièce" required/>
         <label hidden>numberOfPeople</label>
-        <input type="number"  name="numberOfPeople" placeholder="Nombre de personnes" required/>
+        <input type="texte"  name="secret" placeholder="secret" required/>
 
         <div class="inscription-button">
             <button type="submit" name="submit">Valider</button>

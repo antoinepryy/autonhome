@@ -8,8 +8,8 @@
     position: absolute;
     right: 0;
     margin-right: 3.5%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
@@ -25,7 +25,6 @@
 }
 
 .light input[type="checkbox"]{
-
 
 }
 

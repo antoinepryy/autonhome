@@ -9,23 +9,36 @@ $table = "residence";
 function createHouse(PDO $bdd, $data)
 {
         $statement = $bdd->prepare('INSERT INTO user 
-        (`houseName`,`Surface`,`numberOfRoom`,`NumberOfPeople`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `type`, `id_user`) 
+        (`ID`,
+        `houseName`,
+        `Surface`,
+        `NumberOfPeople`,
+        `secret`, 
+        `addressHouseNumber`, 
+        `addressHouseStreet`, 
+        `addressHouseZipCode`, `addressHouseCity`, 
+        `addressHouseCountry`, 
+        `type`, 
+        `id_owner`
+        `id_tenant`) 
         VALUES 
-        (houseName, 
+        (NULL,
+        :houseName, 
         :Surface, 
-        :numberOfRoom, 
         :NumberOfPeople, 
+        :secret, 
         :addressHouseNumber, 
         :addressHouseStreet, 
         :addressHouseZipCode, 
         :addressHouseCity, 
         :addressHouseCountry, 
         "house" , 
+        NULL
         NULL)');
     $statement->bindParam(":houseName", $data["houseName"]);
     $statement->bindParam(":Surface", $data["Surface"]);
-    $statement->bindParam(":numberOfRoom", $data["numberOfRoom"]);
-    $statement->bindParam(":NumberOfPeople", $data["NumberOfPeople"]);
+    $statement->bindParam(":NumberOfPeople", $data["numberOfRoom"]);
+    $statement->bindParam(":secret", $data["NumberOfPeople"]);
     $statement->bindParam(":addressHouseNumber", $data["addressHouseNumber"]);
     $statement->bindParam(":addressHouseStreet", $data["addressHouseStreet"]);
     $statement->bindParam(":addressHouseZipCode", $data["addressHouseZipCode"]);
