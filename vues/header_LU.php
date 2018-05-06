@@ -25,9 +25,12 @@
 
 <header>
 
-    <div class="ma-maison">
-        <a href=""> Ma maison </a>
-    </div>
+    <a href="" class="ma-maison">
+        <div>
+            Ma maison
+        </div>
+
+    </a>
 
 
     <div class="header-title">

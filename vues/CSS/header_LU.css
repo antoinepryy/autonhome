@@ -13,14 +13,19 @@ header a{
 }
 
 .ma-maison{
+    display: flex;
     background-color: lightgrey;
     border: 1px solid black;
-    line-height: 100px;
-    height: 100px;
+    height: 70px;
     width: 15%;
-    text-align: center;
     position: absolute;
-    right: 0;
+    right: 2%;
+    top : 10px;
+    text-align: center;
+}
+
+.ma-maison div{
+    margin: auto;
 }
 
 
@@ -51,11 +56,15 @@ header nav a{
     line-height: 50px;
     width: 100%;
     text-align: center;
+
 }
 
 header nav a :hover{
     background-color: lightskyblue;
     box-shadow: 2px 2px;
+}
+
+.header-title{
 }
 
 
