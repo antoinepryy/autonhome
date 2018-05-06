@@ -8,6 +8,7 @@
     <title>Autonhome</title>
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vues/CSS/all.css"/>
     <link rel="stylesheet" type="text/css" href="vues/CSS/header_LU.css">
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <?php
