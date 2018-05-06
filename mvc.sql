@@ -177,7 +177,7 @@ CREATE TABLE `residence` (
 --
 
 INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfRoom`, `nomberOfPeople`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
-(1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
+(1, 'Ma maison', 150, 6, 6, 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
 
 -- --------------------------------------------------------
 
