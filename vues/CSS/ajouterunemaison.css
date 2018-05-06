@@ -1,5 +1,5 @@
 .principal {
-    background-color: #21485f;
+    background-color: #ff9900;
     margin-left: 3%;
     margin-right: 3%;
     padding : 1%;
@@ -9,7 +9,6 @@
 }
 
 .principal h1 ,.principal p a{
-    color: white;
     text-decoration: none;
 }
 
