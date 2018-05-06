@@ -1,5 +1,6 @@
 body{
     font-family: 'Muli', sans-serif;
+    background: url("fond.png") fixed;
 }
 
 header{
@@ -36,27 +37,25 @@ header nav ul {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     margin-right: 2%;
+
 }
 
 header nav a li{
     display: block;
+    color: white;
 }
-
-
 
 header nav a{
     text-decoration: none;
     list-style-type: none;
-}
-
-header nav a{
     margin-right: 5%;
     background-color: rgb(47,54,67);
     border: 1px solid black;
     line-height: 50px;
     width: 100%;
     text-align: center;
-
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 header nav a :hover{
