@@ -2,8 +2,10 @@
     display: flex;
     height: 8%;
     width : 15%;
-    margin-right: 75%;
+    margin: auto;
     border: 2px solid black;
+    justify-content:center;
+    text-align:center;
 }
 
  .formulairemonprofil{
