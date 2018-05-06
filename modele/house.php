@@ -1,7 +1,6 @@
 <?php
 
-
-include("modele/connexion.php");
+include('generics.php');
 
 //on définit le nom de la table
 $table = "residence";
@@ -25,8 +24,8 @@ function createHouse(PDO $bdd, $data)
         (NULL,
         :houseName, 
         :Surface, 
-        :NumberOfPeople, 
-        :secret, 
+        :NULL,
+        :NULL;
         :addressHouseNumber, 
         :addressHouseStreet, 
         :addressHouseZipCode, 
@@ -37,14 +36,12 @@ function createHouse(PDO $bdd, $data)
         NULL)');
     $statement->bindParam(":houseName", $data["houseName"]);
     $statement->bindParam(":Surface", $data["Surface"]);
-    $statement->bindParam(":NumberOfPeople", $data["numberOfRoom"]);
-    $statement->bindParam(":secret", $data["NumberOfPeople"]);
+    //$statement->bindParam(":secret", bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)));
     $statement->bindParam(":addressHouseNumber", $data["addressHouseNumber"]);
     $statement->bindParam(":addressHouseStreet", $data["addressHouseStreet"]);
     $statement->bindParam(":addressHouseZipCode", $data["addressHouseZipCode"]);
     $statement->bindParam(":addressHouseCity", $data["addressHouseCity"]);
     $statement->bindParam(":addressHouseCountry", $data["addressHouseCountry"]);
     $statement->execute();
-
 }
 

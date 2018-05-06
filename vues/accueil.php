@@ -7,8 +7,6 @@ require ('vues/header_'.$status.'.php');
 require ('vues/accueil_'.$status.'.php');
 ?>
 
-
-
     <section class="why-us">
         <div>
             <p>
