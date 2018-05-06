@@ -1,16 +1,13 @@
 
 .container-changermdp{
 
-    background-color: lightgrey;
-
+    background-color: #ff9900;
     width:50%;
     margin:auto;
     margin-top: 2%;
     margin-bottom: 2%;
-
     border: 1px black solid;
     padding: 2%;
-
     display:flex;
 
 }
@@ -22,13 +19,11 @@
 
 .titlemotdepasseoublie{
 
-    background-color: lightgrey;
+    background-color: #ff9900;
     border: 1px black solid;
-
     padding: 0.5%;
     width:36%;
     margin: auto;
-
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 23%;

@@ -1,10 +1,8 @@
-.title-mentionslegales
-{
+.title-mentionslegales {
     text-align: center;
 }
 
-h3,.intro, .article1, .article2, .article3, .article4,.article5
-{
+h3,.intro, .article1, .article2, .article3, .article4,.article5 {
     width : 90%;
     margin : auto;
     text-align: justify;

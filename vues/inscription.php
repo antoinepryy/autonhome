@@ -7,8 +7,6 @@ require ('vues/header_UU.php');
 ?>
 
 
-
-
 <section class="principal">
     <?php
     if (isset($alerte)){

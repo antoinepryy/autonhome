@@ -18,7 +18,7 @@ if (isset($alerte)){
         Ajouter une maison
     </h1>
 
-    <form method="POST" action="index.php?cible=MaMaisonPrincipale">
+    <form method="POST" action="index.php?cible=verifajoutmaisonform">
         <label hidden>houseName</label>
         <input type="text"  name="houseName" placeholder="Maison principale" required/>
 
@@ -46,10 +46,6 @@ if (isset($alerte)){
 
         <label hidden>Surface</label>
         <input type="number"  name="Surface" placeholder="Surface" required/>
-        <label hidden>numberOfRoom</label>
-        <input type="number"  name="numberOfRoom" placeholder="Nombre de pièce" required/>
-        <label hidden>numberOfPeople</label>
-        <input type="number"  name="numberOfPeople" placeholder="Nombre de personnes" required/>
 
         <div class="inscription-button">
             <button type="submit" name="submit">Valider</button>
@@ -58,7 +54,6 @@ if (isset($alerte)){
     </form>
 
     <p><a href="index.php">Retour</a></p>
-
 
 </section>
 

@@ -7,6 +7,9 @@
 
 # User-specific stuff:
 .idea/**/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea.misc.xml
 .idea/**/tasks.xml
 .idea/dictionaries
 
@@ -67,6 +70,7 @@ fabric.properties
 .idea/sonarlint
 
 autonhome.iml
+.idea
 
 
 # End of https://www.gitignore.io/api/phpstorm

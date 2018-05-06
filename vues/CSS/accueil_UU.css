@@ -2,20 +2,16 @@
     border: 1px solid black;
     display: flex;
     width: 15%;
-    background-color: #21485f;
+    background-color: #ff9900;
     justify-content: center;
     text-align: center;
     position: absolute;
     right: 0;
     margin-right: 3.5%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     height: 350px;
     flex-direction: column;
-}
-
-.form-field label{
-    color: white;
 }
 
 input, button

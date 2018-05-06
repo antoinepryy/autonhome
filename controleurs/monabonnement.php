@@ -1,17 +1,15 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: yacin
- * Date: 03/05/2018
- * Time: 11:03
- */
 
-$section = 'changermotdepasse';
-if (!isset($_SESSION)){
+$section = 'monabonnement';
+
+
+if (!isset($_SESSION)) {
     session_start();
 }
-
 if(!function_exists("isLogged")){
+    include('functions.php');
+}
+if(!function_exists("authentify")){
     include('sessions/user.php');
 }
 
@@ -26,5 +24,4 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
-include('vues/changermotdepasse.php');
+include('vues/monabonnement.php');

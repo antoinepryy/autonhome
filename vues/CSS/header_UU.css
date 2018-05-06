@@ -1,5 +1,6 @@
 body{
     font-family: 'Muli', sans-serif;
+    background: url("fond.png") fixed ;
 }
 
 header{
@@ -7,12 +8,14 @@ header{
     margin-bottom: 5px;
 }
 
-.logo_logo{
+header .logo_logo{
     margin-top: 100px;
+    size: 100%;
 }
 
-.logo_texte{
+header .logo_texte{
     margin-left: 10px;
+    size: 100%;
 }
 
 header nav{
@@ -41,11 +44,11 @@ header nav a li{
     text-align: center;
     padding-right: 3%;
     padding-left: 3%;
-    color: black;
+    color: white;
 }
 
 nav a :hover{
-    background-color: lightskyblue;
+    background-color: #006699;
     box-shadow: 2px 2px;
 }
 

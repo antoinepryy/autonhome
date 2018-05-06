@@ -158,15 +158,15 @@ INSERT INTO `message` (`ID`, `id_user`, `id_message`, `text`, `dateTime`) VALUES
 
 CREATE TABLE `residence` (
   `ID` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `surface` int(10) NOT NULL,
-  `nbPeople` int(10) NOT NULL,
+  `houseName` varchar(30) NOT NULL,
+  `Surface` int(10) NOT NULL,
+  `nomberOfPeople` int(10) NOT NULL,
   `secret` varchar(30) NOT NULL,
-  `addressNumber` int(10) NOT NULL,
-  `addressStreet` varchar(20) NOT NULL,
-  `addressZipCode` int(10) NOT NULL,
-  `addressCity` varchar(20) NOT NULL,
-  `addressCountry` varchar(20) NOT NULL,
+  `addressHouseNumber` int(10) NOT NULL,
+  `addressHouseStreet` varchar(20) NOT NULL,
+  `addressHouseZipCode` int(10) NOT NULL,
+  `addressHouseCity` varchar(20) NOT NULL,
+  `addressHouseCountry` varchar(20) NOT NULL,
   `id_owner` int(10) NOT NULL,
   `id_tenant` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -175,8 +175,8 @@ CREATE TABLE `residence` (
 -- Déchargement des données de la table `residence`
 --
 
-INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `id_owner`, `id_tenant`) VALUES
-(1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
+INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfPeople`, `secret`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
+(1, 'Ma maison', 150, 6, "mdp", 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
 
 -- --------------------------------------------------------
 

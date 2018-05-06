@@ -13,7 +13,7 @@
             <input type="text" placeholder="Identifiant" name="mail"/><br/>
             <label hidden>Mot de passe</label>
             <input type="password" placeholder="Mot de passe" name="password"/><br />
-            <a class ="link-mdp-oublie" href="">Mot de passe oublié</a><br />
+            <a class ="link-mdp-oublie" href="index.php?cible=changermotdepasse">Mot de passe oublié</a><br />
             <label>Se souvenir de moi</label>
             <input type="checkbox" name="rememberMe"/><br />
             <input type="submit"/><br/>
