@@ -2,12 +2,11 @@ body h1{
     border: 2px solid black;
     height: 8%;
     width : 15%;
-    background-color: #21485f;
+    background-color: #ff9900;
     justify-content: center;
     text-align: center;
     margin-bottom: 2%;
     margin-left:40%;
-    color: white;
     padding: 1%;
 }
 

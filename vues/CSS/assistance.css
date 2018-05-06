@@ -1,0 +1,74 @@
+.introassistance {
+    text-align: center;
+}
+
+.titleassistance{
+    border: 1px black solid;
+    padding: 0.5%;
+    width:15%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    background-color: #ff9900;
+}
+
+.assistancedetail{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin:auto;
+    margin-top: 4%;
+    margin-bottom: 6%;
+}
+
+
+        /* Partie appel*/
+.assistanceappel{
+    display: flex;
+
+}
+.texteassistanceappel{
+    margin-top: 5% ;
+    margin-left: 4%;
+}
+
+        /* Partie mail*/
+.assistancemail{
+    display: flex;
+    margin-top: 5%;
+}
+
+.texteassistancemail{
+    margin-top: 3% ;
+    margin-left: 4%;
+}
+
+
+        /* Partie message*/
+.assistancemessage{
+    display: flex;
+    margin-top: 5%;
+}
+.texteassistancemessage{
+
+    margin-top: 3% ;
+    margin-left: 4%;
+}
+
+
+/*taille des images .     (!) Obligé de faire comme ça car sinon, en faisant *img{ ... } , le logo du header est modifié */
+.logo_assistance_appel{
+    height: 10%;
+    width: 10%;
+}
+
+.logo_assistance_mail{
+    height: 10%;
+    width: 10%;
+}
+
+.logo_assistance_message{
+    height: 10%;
+    width: 10%;
+}
+

@@ -33,7 +33,7 @@ require ('vues/header_'.$status.'.php');
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <section class= Mon profil>
+            <section class="Mon profil">
 
                 <form class="formulairemonprofil" method="post" action="index.php?cible=verifprofilform">
                     <div class="elementsformulairemonprofil">

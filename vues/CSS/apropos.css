@@ -1,14 +1,13 @@
-h1
-{
+h1 {
     text-align: center;
 }
-.lien
-{
+
+.lien {
     color : blue;
     text-decoration: underline;
 }
-#apropos
-{
+
+#apropos {
     display : flex;
     flex-wrap: wrap;
     align-items: center;

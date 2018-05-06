@@ -1,12 +1,10 @@
 .products, .why-us, .assistance, .faq{
     border: 1px solid black;
-    color: white;
-
 }
 .why-us{
     height: 350px;
     width : 70%;
-    background-color: #21485f;
+    background-color: #ff9900;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 3%;
@@ -15,7 +13,7 @@
 }
 
 .products{
-    background-color: #21485f;
+    background-color: #ff9900;
     justify-content: center;
     text-align: center;
     height: 200px;
@@ -43,12 +41,12 @@
     position: absolute;
     right: 0;
     margin-right: 3%;
-    background-color: #21485f;
+    background-color: #ff9900;
 }
 
 .assistance{
     margin-left: 3%;
-    background-color: #21485f;
+    background-color: #ff9900;
 }
 
 .assistance p,.faq p{
@@ -59,3 +57,13 @@
 .form-container{
     display: flex;
 }
+
+.header-title a img {
+    animation : opacity 3s 1;
+}
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
