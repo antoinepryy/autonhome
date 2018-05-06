@@ -160,9 +160,8 @@ CREATE TABLE `residence` (
   `ID` int(11) NOT NULL,
   `houseName` varchar(30) NOT NULL,
   `Surface` int(10) NOT NULL,
-  `nomberOfRoom` int(10) NOT NULL,
   `nomberOfPeople` int(10) NOT NULL,
-  --`secret` varchar(30) NOT NULL,
+  `secret` varchar(30) NOT NULL,
   `addressHouseNumber` int(10) NOT NULL,
   `addressHouseStreet` varchar(20) NOT NULL,
   `addressHouseZipCode` int(10) NOT NULL,
@@ -176,8 +175,8 @@ CREATE TABLE `residence` (
 -- Déchargement des données de la table `residence`
 --
 
-INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfRoom`, `nomberOfPeople`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
-(1, 'Ma maison', 150, 6, 6, 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
+INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfPeople`, `secret`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
+(1, 'Ma maison', 150, 6, "mdp", 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
 
 -- --------------------------------------------------------
 
