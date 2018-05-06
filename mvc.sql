@@ -176,7 +176,7 @@ CREATE TABLE `residence` (
 -- Déchargement des données de la table `residence`
 --
 
-INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
+INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfRoom`, `nomberOfPeople`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
 (1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
 
 -- --------------------------------------------------------
