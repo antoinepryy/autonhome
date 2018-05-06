@@ -67,6 +67,7 @@ fabric.properties
 .idea/sonarlint
 
 autonhome.iml
+.idea
 
 
 # End of https://www.gitignore.io/api/phpstorm
