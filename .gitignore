@@ -7,6 +7,9 @@
 
 # User-specific stuff:
 .idea/**/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea.misc.xml
 .idea/**/tasks.xml
 .idea/dictionaries
 
