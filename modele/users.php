@@ -40,7 +40,6 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
 }
 
     function createUser(PDO $bdd, $data){
-        die(var_dump($data));
         $verify = $bdd->prepare('SELECT * FROM user WHERE mail = :mail');
         $verify->bindParam(":mail", $data["mail"]);
         $verify->execute();
