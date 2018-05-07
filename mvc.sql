@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 05 mai 2018 à 11:49
+-- Généré le :  lun. 07 mai 2018 à 02:44
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -158,25 +158,29 @@ INSERT INTO `message` (`ID`, `id_user`, `id_message`, `text`, `dateTime`) VALUES
 
 CREATE TABLE `residence` (
   `ID` int(11) NOT NULL,
-  `houseName` varchar(30) NOT NULL,
-  `Surface` int(10) NOT NULL,
-  `nomberOfPeople` int(10) NOT NULL,
-  `secret` varchar(30) NOT NULL,
-  `addressHouseNumber` int(10) NOT NULL,
-  `addressHouseStreet` varchar(20) NOT NULL,
-  `addressHouseZipCode` int(10) NOT NULL,
-  `addressHouseCity` varchar(20) NOT NULL,
-  `addressHouseCountry` varchar(20) NOT NULL,
-  `id_owner` int(10) NOT NULL,
-  `id_tenant` int(10) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `surface` int(10) NOT NULL,
+  `nbPeople` int(10) NOT NULL,
+  `secret` varchar(255) NOT NULL,
+  `addressNumber` int(10) NOT NULL,
+  `addressStreet` varchar(255) NOT NULL,
+  `addressZipCode` int(255) NOT NULL,
+  `addressCity` varchar(255) NOT NULL,
+  `addressCountry` varchar(255) NOT NULL,
+  `id_owner` int(255) NOT NULL,
+  `id_tenant` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `residence`
 --
 
-INSERT INTO `residence` (`ID`, `houseName`, `Surface`, `nomberOfPeople`, `secret`, `addressHouseNumber`, `addressHouseStreet`, `addressHouseZipCode`, `addressHouseCity`, `addressHouseCountry`, `id_owner`, `id_tenant`) VALUES
-(1, 'Ma maison', 150, 6, "mdp", 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1);
+INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `id_owner`, `id_tenant`) VALUES
+(1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1),
+(2, 'test', 2, 2, 'sdiecuzec', 2, 'azdoi', 4568, 'uhzd', 'uhzbd', 5, NULL),
+(3, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(4, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(5, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL);
 
 -- --------------------------------------------------------
 
@@ -344,12 +348,16 @@ INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNum
 (8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
 (9, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$SYoKTix0jXxKg/7Iyn2XiOH189.TSjM4pjagpe5zEg3pv0tTkqdCe', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
 (10, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$pnPkmlY1DJPRUJGeQoP4gevZP76BwqUji9guVDV11rKt5yobIoDzW', '674181395', 20, 'rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(11, 'Yves-Marie', 'PAUL', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard raspail', 75006, 'Paris', 'france', 'user', NULL),
+(11, 'Yves-Marie', 'PAULO', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard', 0, 'Paris', 'france', 'user', NULL),
 (12, 'Yacine', 'Nabti', 'yac@mail.com', '$2y$10$Z3Q8ZB1KfcwEO6mYKUC6WurpuE6QKRpBpgPXoyk7EjkoxSfDCExne', '123456789', 19, 'Rue du blabla ', 57950, 'Metz', 'france', 'user', NULL),
 (13, 'test', 'test', 'antoine.ap.57@gmail.com', '$2y$10$ujIB4iSl7yDOxpA4tWTH2uIZDK6VZaTPNdWHt7ElSuowEo6qjS7FO', '674181395', 10, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
 (14, 'Sylviana', 'Mialisao', 'sylv@mail.com', '$2y$10$B4qJCm8Lgn.X0z5OrXevuu1AVQsOXIDXnfRHLZcnf51tH37zHWKzi', '123456789', 20, 'rue', 57000, 'Metz', 'france', 'user', NULL),
 (15, 'admin', 'admin', 'admin@admin.com', '$2y$10$qqxRYgYrJKixrXbxwCGmAeJTdkls.dnNo.EzDzPPvA36p.OUTuq8C', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL),
-(16, 'admin', 'admin', 'admin@admin.com', '$2y$10$CGYe7d3hXEMU0nHA4vJ9h.JaoxavZm3KXQ3Es/ltJoRHHGInryRcm', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL);
+(16, 'admin', 'admin', 'admin@admin.com', '$2y$10$CGYe7d3hXEMU0nHA4vJ9h.JaoxavZm3KXQ3Es/ltJoRHHGInryRcm', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL),
+(17, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$JEY/oEpp6LL/4.Deg1oDTuRcr7Egr.WDxdgGbyuVM.JVFx5y8NaAa', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
+(18, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$9xNhJTRvIOCgPneeOxcGAuGbUNT.7aLUKp63L4ZJWw1C4crA.Jrb6', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
+(19, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$/F4szpAjhzVbBagtdFd1Duy9jqIYlSBtKDajzQ/MWwkvjLvmeEPA2', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
+(20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -495,7 +503,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT pour la table `residence`
 --
 ALTER TABLE `residence`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `room`
@@ -537,7 +545,7 @@ ALTER TABLE `subscription_user`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
