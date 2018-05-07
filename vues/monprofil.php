@@ -25,7 +25,7 @@ require ('vues/header_'.$status.'.php');
 
     </section>
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button id="myBtn">Modifier les informations</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
