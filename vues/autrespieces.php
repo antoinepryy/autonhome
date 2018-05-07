@@ -3,16 +3,16 @@
  * Created by IntelliJ IDEA.
  * User: Utilisateur
  * Date: 06/05/2018
- * Time: 16:14
+ * Time: 16:18
  */
 require ('vues/header_'.$status.'.php');
 ?>
 
 <h1>
-    Cuisine
+    Autres Pièces
 </h1>
 
-<div class="imagecuisine"> <img src="ressources/pictures/cuisine.jpg"> </div>
+<div class="imageautrespieces"> <img src="ressources/pictures/bureau.jpg"> </div>
 
 <form method="post" action="">
 
@@ -26,7 +26,7 @@ require ('vues/header_'.$status.'.php');
 
 </form>
 
-<p> <a href="index.php?cible=ajoutpieces" >Ajouter une cuisine</a> </p>
+<p> <a href="index.php?cible=ajoutpieces" >Ajouter une autre pièce</a> </p>
 <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
 
 <?php

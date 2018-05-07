@@ -2,10 +2,10 @@
 /**
  * Created by IntelliJ IDEA.
  * User: Utilisateur
- * Date: 05/05/2018
- * Time: 16:58
+ * Date: 06/05/2018
+ * Time: 16:20
  */
-$section = 'ajoutpieces';
+$section = 'salledebain';
 if (!isset($_SESSION)){
     session_start();
 }
@@ -26,4 +26,4 @@ else{
     $status="UU";
 }
 
-include('vues/ajoutpieces.php');
+include('vues/salledebain.php');
