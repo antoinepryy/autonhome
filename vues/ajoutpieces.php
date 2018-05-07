@@ -1,6 +1,6 @@
 <?php
 
-require ('vues/header.php');
+require ('vues/header_'.$status.'.php');
 ?>
 
 
