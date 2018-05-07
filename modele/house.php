@@ -5,7 +5,7 @@ $table = "residence";
 
 function createHouse(PDO $bdd, $data)
 {
-    $hashCode = 'test';
+    $hashCode = bin2hex(uniqid());
     $statement = $bdd->prepare('INSERT INTO `residence` 
     (`ID`,
     `name`, 

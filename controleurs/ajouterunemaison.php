@@ -26,4 +26,5 @@ else{
     $status="UU";
 }
 
+
 include('vues/ajouterunemaison.php');
