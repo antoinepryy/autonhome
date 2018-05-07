@@ -34,6 +34,7 @@ else{
 
 if(isset($_POST["addressNumber"])){
     createHouse($bdd, $_POST);
+    die(var_dump('maison créée'));
 }
 
 else{

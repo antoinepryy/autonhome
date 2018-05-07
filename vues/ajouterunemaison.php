@@ -45,7 +45,7 @@ if (isset($alerte)){
         </section></span>
 
         <label hidden>Surface</label>
-        <input type="number"  name="surface" placeholder="Surface" required/>
+        <input type="number"  name="surface" placeholder="surface" required/>
         <input type="number"  name="nbPeople" placeholder="Nombre d'habitants" required/>
 
         <div class="inscription-button">
