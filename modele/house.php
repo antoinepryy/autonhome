@@ -1,5 +1,5 @@
 <?php
-include('generics.php');
+include('connexion.php');
 //on définit le nom de la table
 $table = "residence";
 
@@ -59,10 +59,9 @@ function linkRenter($bdd, $hashCode){
     $statement->execute;
 }
 
-function getAllHouses($bdd){
+function getAllHouses($bdd)
+{
     $statement = $bdd->prepare('SELECT * FROM residence');
     $statement->execute();
     $houses = $statement->fetchAll();
-    return $houses;
 }
-

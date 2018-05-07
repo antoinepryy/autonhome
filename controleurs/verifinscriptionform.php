@@ -5,8 +5,10 @@
  * Date: 03/05/2018
  * Time: 11:31
  */
-session_start();
-include('./modele/users.php');
+if(!function_exists("importAllSessionsAndModels")){
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
+}
 if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
     if (createUser($bdd, $_POST)){
         $section = 'accueil';

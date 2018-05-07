@@ -5,7 +5,7 @@
  */
 
 // on récupère les requêtes génériques
-include('generics.php');
+include('connexion.php');
 
 //on définit le nom de la table
 $table = "sensor";

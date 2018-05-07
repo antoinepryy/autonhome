@@ -6,12 +6,9 @@
  * Time: 16:58
  */
 $section = 'ajoutpieces';
-if (!isset($_SESSION)){
-    session_start();
-}
-
-if(!function_exists("isLogged")){
-    include('sessions/user.php');
+if(!function_exists("importAllSessionsAndModels")){
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
 }
 
 

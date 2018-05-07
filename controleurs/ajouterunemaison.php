@@ -6,12 +6,9 @@
  * Time: 16:46
  */
 $section = 'ajouterunemaison';
-if (!isset($_SESSION)){
-    session_start();
-}
-
-if(!function_exists("isLogged")){
-    include('sessions/user.php');
+if(!function_exists("importAllSessionsAndModels")){
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
 }
 
 

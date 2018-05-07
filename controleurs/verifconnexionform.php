@@ -5,9 +5,10 @@
  * Date: 03/05/2018
  * Time: 11:32
  */
-session_start();
-include ('sessions/user.php');
-include('./modele/users.php');
+if(!function_exists("importAllSessionsAndModels")){
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
+}
 
 if(isset($_POST["mail"]) && isset($_POST["password"])){
     $user = identifyUserDatabase($bdd, $_POST["mail"], $_POST["password"]);

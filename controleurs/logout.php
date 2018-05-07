@@ -6,8 +6,10 @@
  * Time: 16:55
  */
 $section='accueil';
-session_start();
-include ('sessions/user.php');
+if(!function_exists("importAllSessionsAndModels")){
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
+}
 
 session_destroy();
 

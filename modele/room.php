@@ -6,6 +6,7 @@
  * Time: 16:37
  */
 
-include('generics.php');
-//on définit le nom de la table
+
+
 $table = "room";
+include('connexion.php');
