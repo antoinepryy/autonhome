@@ -9,9 +9,7 @@ require ('vues/header_'.$status.'.php');
 ?>
 
     <h1 align="center">Mon profil </h1>
-
-
-    <h1> Mon profil </h1>
+<section>
     <p>
         Nom : <?php echo($_SESSION["userLastName"]);?>
     </p>
@@ -21,11 +19,13 @@ require ('vues/header_'.$status.'.php');
     <p>
         Mail : <?php echo ($_SESSION["userMail"]);?>
     </p>
+    <button id="myBtn">Modifier les informations</button>
+</section>
 
 
     </section>
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Modifier les informations</button>
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
