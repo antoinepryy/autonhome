@@ -18,8 +18,6 @@ if(isset($_POST["mail"]) && isset($_POST["password"])){
         $alerte = "Mot de passe ou login incorrect";
 
     }
-
-
 }
 
 else{

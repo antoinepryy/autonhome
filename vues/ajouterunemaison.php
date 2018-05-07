@@ -20,19 +20,19 @@ if (isset($alerte)){
 
     <form method="POST" action="index.php?cible=verifajoutmaisonform">
         <label hidden>houseName</label>
-        <input type="text"  name="houseName" placeholder="Maison principale" required/>
+        <input type="text"  name="name" placeholder="Nom de la maison" required/>
 
         <span><section class="facturation-address">
-            <h3>Adresse de facturation</h3>
+            <h3>Informations</h3>
             <div>
                 <label hidden>Number</label>
-                <input type="number"  name="addressHouseNumber" placeholder="Numéro" required/>
+                <input type="number"  name="addressNumber" placeholder="Numéro" required/>
                 <label hidden>Road</label>
-                <input type="text"  name="addressHouseStreet" placeholder="Rue" required/>
+                <input type="text"  name="addressStreet" placeholder="Rue" required/>
                 <label hidden>Town</label>
-                <input type="text"  name="addressHouseCity" placeholder="Ville" required/>
+                <input type="text"  name="addressCity" placeholder="Ville" required/>
                 <label hidden>Country</label>
-                <select name="addressHouseCountry" class="country-choice" required>
+                <select name="addressCountry" class="country-choice" required>
                     <option value="exemple">Pays</option>
                     <option value="france" >France</option>
                     <option value="germany" >Deutschland</option>
@@ -45,7 +45,8 @@ if (isset($alerte)){
         </section></span>
 
         <label hidden>Surface</label>
-        <input type="number"  name="Surface" placeholder="Surface" required/>
+        <input type="number"  name="surface" placeholder="Surface" required/>
+        <input type="number"  name="nbPeople" placeholder="Nombre d'habitants" required/>
 
         <div class="inscription-button">
             <button type="submit" name="submit">Valider</button>
@@ -53,7 +54,6 @@ if (isset($alerte)){
 
     </form>
 
-    <p><a href="index.php">Retour</a></p>
 
 </section>
 
