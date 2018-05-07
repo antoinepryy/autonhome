@@ -48,7 +48,7 @@
                 </li>
             </a>
 
-            <a href="index.php?cible=nosoffres">
+            <a href="index.php?cible=monabonnement">
                 <li>
                     Mon abonnement
                 </li>
