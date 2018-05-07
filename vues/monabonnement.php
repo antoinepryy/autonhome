@@ -23,15 +23,14 @@ Mon abonnement
 
     <form class="formulairemonabonnement" method="post">
         <div class="elementsformulairemonabonnement">
-            <input type="text" name="capteurs de température" placeholder="capteurs de température">
-            <input type="text" name="capteurs de lumière" placeholder="capteurs de lumière"><br>
+            <input type="text" name="capteurs de température" placeholder="capteurs de température: 5">
+            <input type="text" name="capteurs de lumière" placeholder="capteurs de lumière: 2"><br>
             <BR>
 
             <h3>
                 Alarme
-            </h3><br>
+            </h3>
 
-            <BR>
 
             <label> micro </label>
             <input type="checkbox" name="micro" placeholder="micro"> <br>
@@ -40,7 +39,6 @@ Mon abonnement
             <label> caméra </label>
             <input type ="checkbox" name="caméra" placeholder="caméra"><br>
 
-        </div>
 
 
     </form>
