@@ -25,7 +25,7 @@
 
 <header>
 
-    <a href="index.php?cible=mamaisonprincipale" class="ma-maison">
+    <a href="index.php?cible=mamaison" class="ma-maison">
         <div>
             Ma maison
         </div>

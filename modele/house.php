@@ -65,3 +65,17 @@ function getAllHouses($bdd)
     $statement->execute();
     $houses = $statement->fetchAll();
 }
+
+function getAllUserHouses($bdd, $id){
+    $ownStatement = $bdd->prepare('SELECT * FROM residence WHERE id_owner = :idOwn');
+    $rentStatement = $bdd->prepare('SELECT * FROM residence WHERE id_tenant = :idRent');
+    $ownStatement->bindParam(':idOwn', $id);
+    $rentStatement->bindParam('idRent', $id);
+    $ownStatement->execute();
+    $rentStatement->execute();
+    $owned = $ownStatement->fetchAll();
+    $rented = $rentStatement->fetchAll();
+    return (array($owned, $rented));
+
+}
+
