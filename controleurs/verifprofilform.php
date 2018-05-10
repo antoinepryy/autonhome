@@ -19,7 +19,7 @@ if(isset($_POST["mail"]) && isset($_POST["firstName"]) && isset($_POST["lastName
         $status="LU";
     }
     updateUser($bdd, $_POST);
-    include('vues/monprofil.php');
+    header("Location: index.php?cible=monprofil");
 }
 else{
     require ('erreur404.php');

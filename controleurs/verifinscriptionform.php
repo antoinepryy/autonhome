@@ -22,13 +22,13 @@ if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName
         else{
             $status="UU";
         }
-        include('vues/accueil.php');
+        header("Location: index.php?cible=accueil");
     }
     else{
         $section='inscription';
         $alerte='Cette addresse mail est déjà enregistrée !';
         $status='UU';
-        include ('vues/inscription.php');
+        header("Location: index.php?cible=inscription");
     }
 }
 else{

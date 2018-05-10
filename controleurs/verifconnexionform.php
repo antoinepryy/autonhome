@@ -25,4 +25,4 @@ else{
     include('vues/erreur404.php');
 }
 
-include('accueil.php');
+header("Location: index.php?cible=accueil");
