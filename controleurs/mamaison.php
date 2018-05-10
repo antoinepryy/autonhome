@@ -26,6 +26,10 @@ else{
 
 $residences = getAllUserHouses($bdd, $_SESSION["userId"]);
 
-if($status=='LU'){
+if($status=='LU' && !isset($_GET['id'])){
     include ('vues/mamaison.php');
+}
+
+if($status=='LU' && isset($_GET['id'])){
+    include ('vues/mamaisonmain.php');
 }

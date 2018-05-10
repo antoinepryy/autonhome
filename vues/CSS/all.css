@@ -1,7 +1,9 @@
 body{
     font-family: 'Muli', sans-serif;
     background: url("../../ressources/pictures/fond.png") fixed ;
+    margin: 0;
 }
+
 
 header nav{
     background-color: antiquewhite;
