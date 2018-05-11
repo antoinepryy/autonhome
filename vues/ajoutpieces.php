@@ -4,13 +4,13 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 
-<form method="post" action="">
+<form method="post" action="index.php?cible=verifajoutpiecesform">
 	
-	<label for="roomname">Nom de la pièce:</label>
+	<label for="roomCategory">Nom de la pièce:</label>
 	<input type="text"  name="roomname" id="roomname" placeholder="Ex : Chambre de Pierre" />
 	
-	<label for="roomtype">Type de la pièce: </label> <br />
-	<select name="'roomtype" id="roomtype">
+	<label for="roomCategory">Type de la pièce: </label> <br />
+	<select name="'roomCategory" id="roomCategory">
         <option value="chambre">Chambre</option>
         <option value="cuisine">Cuisine</option>
         <option value="salon">Salon</option>

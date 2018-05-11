@@ -4,7 +4,7 @@
 .why-us{
     height: 350px;
     width : 70%;
-    background-color: #ff9900;
+    background-color: #E3D3BF;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 3%;
@@ -13,7 +13,7 @@
 }
 
 .products{
-    background-color: #ff9900;
+    background-color: #E3D3BF;
     justify-content: center;
     text-align: center;
     height: 200px;
@@ -41,12 +41,12 @@
     position: absolute;
     right: 0;
     margin-right: 3%;
-    background-color: #ff9900;
+    background-color: #E3D3BF;
 }
 
 .assistance{
     margin-left: 3%;
-    background-color: #ff9900;
+    background-color: #E3D3BF;
 }
 
 .assistance p,.faq p{
