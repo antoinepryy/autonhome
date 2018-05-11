@@ -10,19 +10,32 @@
 require ('vues/header_'.$status.'.php'); ?>
 <section>
     <div class="display-houses">
-        <ul class="owned-houses">
-            <?php foreach ($residences[0] as $residence) { ?>
-                <li> <?php echo ( $residence["name"] );  ?><a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">Voir</a> </li>
-            <?php } ?>
+        <div>Mes maisons :</div>
+        <div class="owned-houses">
+            <ul class="owned-houses-list">
+                <?php foreach ($residences[0] as $residence) { ?>
+                    <li> <?php echo ( $residence["name"] );  ?><a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">Voir</a> </li>
+                <?php } ?>
 
 
-        </ul>
-        <ul class="rented-houses">
-            <?php foreach ($residences[1] as $residence) { ?>
-                <li> <?php echo ( $residence["name"] );  ?> </li>
-            <?php } ?>
+            </ul>
 
-        </ul>
+        </div>
+
+
+
+        <div class="rented-houses">
+
+            <div> En location :</div>
+
+            <ul class="rented-houses-list">
+                <?php foreach ($residences[1] as $residence) { ?>
+                    <li> <?php echo ( $residence["name"] );  ?> </li>
+                <?php } ?>
+
+            </ul>
+
+        </div>
 
     </div>
 

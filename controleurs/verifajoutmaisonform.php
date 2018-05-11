@@ -6,7 +6,6 @@
  * Time: 12:27
  */
 
-$section = 'accueil';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -25,7 +24,7 @@ else{
 
 if(isset($_POST["addressNumber"])){
     createHouse($bdd, $_POST);
-    die(var_dump('maison créée'));
+    header("Location: index.php?cible=mamaison");
 }
 
 else{

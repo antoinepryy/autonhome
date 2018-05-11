@@ -31,5 +31,6 @@ if($status=='LU' && !isset($_GET['id'])){
 }
 
 if($status=='LU' && isset($_GET['id'])){
+    $section='mamaisonmain';
     include ('vues/mamaisonmain.php');
 }
