@@ -5,7 +5,6 @@ $table = "room";
 
 function createRoom(PDO $bdd, $data)
 {
-    $hashCode = bin2hex(uniqid());
     $statement = $bdd->prepare('INSERT INTO `room` 
     (`ID`,
     `name`, 

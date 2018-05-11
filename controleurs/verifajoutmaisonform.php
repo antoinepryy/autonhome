@@ -12,7 +12,6 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
