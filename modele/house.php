@@ -76,6 +76,5 @@ function getAllUserHouses($bdd, $id){
     $owned = $ownStatement->fetchAll();
     $rented = $rentStatement->fetchAll();
     return (array($owned, $rented));
-
 }
 

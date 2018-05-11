@@ -2,17 +2,15 @@
 /**
  * Created by IntelliJ IDEA.
  * User: antoine
- * Date: 04/05/2018
- * Time: 15:34
+ * Date: 05/05/2018
+ * Time: 12:27
  */
 
-$section = 'monprofil';
+$section = 'accueil';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
-
-
 
 $status;
 if(isLoggedAsAdmin()){
@@ -25,7 +23,11 @@ else{
     $status="UU";
 }
 
+if(isset($_POST["name"])){
+    createHouse($bdd, $_POST);
+    die(var_dump('pièce créée'));
+}
 
-include('vues/monprofil.php');
-
-
+else{
+    include('vues/erreur404.php');
+}
