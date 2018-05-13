@@ -46,7 +46,8 @@ function createHouse(PDO $bdd, $data)
 }
 
 function linkRenter($bdd, $hashCode){
-    $statement = $bdd->prepare('SELECT * FROM  residence WHERE secret = :secret');
+    $statement = $bdd->prepare('SELECT * FROM  residence WHERE secret = :secret AND id_owner != :idSession');
+    $statement->bindParam(":id_owner", $_SESSION['userId']);
     $statement->bindParam(":secret", $hashCode);
     $statement->execute();
     $foundResidence = $statement->fetch();
