@@ -17,7 +17,7 @@ require ('vues/header_'.$status.'.php');
 
 
     <form method="post" action="changermotdepasse.php" class="formulairemotdepasseoublie">
-        <label for="email">mon identifiant (adresse mail) :</label>
+        <label for="email">Mon identifiant (ou adresse mail) :</label>
         <input type="email" name="email" id="email" />
 
         <input type="submit" value  ="Continuer" class="bouton" />

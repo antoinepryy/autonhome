@@ -32,11 +32,11 @@ Mon abonnement
             </h3>
 
 
-            <label> micro </label>
+            <label> Microphone </label>
             <input type="checkbox" name="micro" placeholder="micro"> <br>
-            <label> détecteur de mouvement</label>
+            <label> Détecteur de mouvement</label>
             <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
-            <label> caméra </label>
+            <label> Caméra </label>
             <input type ="checkbox" name="caméra" placeholder="caméra"><br>
 
 

@@ -10,7 +10,7 @@ require ('vues/accueil_'.$status.'.php');
     <section class="why-us">
         <div>
             <p>
-                Pourquoi choisir Autonhome ?
+                <img class = "image" src="ressources\pictures\domotique.jpg" alt="Domotique">
             </p>
 
          </div>

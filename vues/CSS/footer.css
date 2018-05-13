@@ -1,5 +1,5 @@
 footer{
-    border: 1px solid black;
+
     display: flex;
 }
 
@@ -41,11 +41,9 @@ footer a{
 
 
 .droit-reserve{
-    font-size : 200%;
+    font-size : 100%;
     font-weight: bold;
-    margin-left: 1%;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
-footer{
-    background-color: antiquewhite;
-}

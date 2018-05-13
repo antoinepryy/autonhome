@@ -1,19 +1,18 @@
-.products, .why-us, .assistance, .faq{
+.products, .assistance, .faq{
     border: 1px solid black;
 }
-.why-us{
-    height: 350px;
+.image {
+    height: 351px;
     width : 70%;
-    background-color: #E3D3BF;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 3%;
     padding-left: 1%;
-    font-size: 110%;
 }
 
+
 .products{
-    background-color: #E3D3BF;
+    background-color: lightgray;
     justify-content: center;
     text-align: center;
     height: 200px;
@@ -29,7 +28,7 @@
 
 .assistance,.faq{
     display: flex;
-    background-color: lightgrey;
+    background-color: lightgray;
     justify-content: center;
     text-align: center;
     height: 200px;
@@ -41,12 +40,12 @@
     position: absolute;
     right: 0;
     margin-right: 3%;
-    background-color: #E3D3BF;
+    background-color: lightgray;
 }
 
 .assistance{
     margin-left: 3%;
-    background-color: #E3D3BF;
+    background-color: lightgray;
 }
 
 .assistance p,.faq p{

@@ -17,8 +17,6 @@ header .logo_texte{
 header nav{
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
 }
 
 header nav ul {
