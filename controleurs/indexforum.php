@@ -5,7 +5,7 @@
  * Date: 13/05/2018
  * Time: 12:18
  */
-$section = 'index_forum';
+$section = 'indexforum';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
