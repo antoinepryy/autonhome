@@ -51,14 +51,21 @@ function linkRenter($bdd, $hashCode){
     $statement->bindParam(":secret", $hashCode);
     $statement->execute();
     $foundResidence = $statement->fetch();
-
-    $statement = $bdd->prepare('UPDATE residence SET 
+    if ($foundResidence){
+        $statement = $bdd->prepare('UPDATE residence SET 
         id_tenant = :idTenant
         WHERE 
         id = :residenceId');
-    $statement->bindParam(":idTenant", $_SESSION["userId"]);
-    $statement->bindParam(":residenceId",$foundResidence["ID"]);
-    $statement->execute();
+        $statement->bindParam(":idTenant", $_SESSION["userId"]);
+        $statement->bindParam(":residenceId",$foundResidence["ID"]);
+        $statement->execute();
+        return true;
+    }
+    else{
+        $alerte = "Impossible d'être locataire de cette maison";
+    }
+
+
 }
 
 function getAllHouses($bdd)
@@ -66,6 +73,7 @@ function getAllHouses($bdd)
     $statement = $bdd->prepare('SELECT * FROM residence');
     $statement->execute();
     $houses = $statement->fetchAll();
+    return $houses;
 }
 
 function getAllUserHouses($bdd, $id){

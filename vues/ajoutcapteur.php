@@ -41,3 +41,7 @@ require ('vues/header_'.$status.'.php');
     </form>
 
 </section>
+
+<?php
+require ('vues/footer.php');
+?>

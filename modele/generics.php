@@ -12,7 +12,7 @@ global $bdd;
  * @param string $table
  * @return array
  */
-function recupereTous(PDO $bdd, string $table): array {
+function getAll(PDO $bdd, string $table): array {
     $query = 'SELECT * FROM ' . $table;
     return $bdd->query($query)->fetchAll();
 }
@@ -24,7 +24,7 @@ function recupereTous(PDO $bdd, string $table): array {
  * @param array $attributs
  * @return array
  */
-function recherche(PDO $bdd, string $table, array $attributs): array {
+function search(PDO $bdd, string $table, array $attributs): array {
     
     $where = "";
     foreach($attributs as $key => $value) {
@@ -51,7 +51,7 @@ function recherche(PDO $bdd, string $table, array $attributs): array {
  * @param string $table
  * @return boolean
  */
-function insertion(PDO $bdd, array $values, string $table): bool {
+function insert(PDO $bdd, array $values, string $table): bool {
 
     $attributs = '';
     $valeurs = '';
