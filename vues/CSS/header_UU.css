@@ -1,6 +1,6 @@
 
 header{
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid black;
     margin-bottom: 5px;
 }
 
@@ -17,10 +17,15 @@ header .logo_texte{
 header nav{
     display: flex;
     justify-content: flex-end;
+    border-top: 0.5px solid black;
+    margin-top :1.5%;
 }
 
 header nav ul {
-    margin-right: 2%;
+
+    display: block;
+    margin-right: 5%;
+
 }
 
 header nav a{
@@ -39,6 +44,7 @@ header nav a li{
     padding-right: 3%;
     padding-left: 3%;
     color: white;
+
 }
 
 nav a :hover{
