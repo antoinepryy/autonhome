@@ -14,9 +14,14 @@ if (isset($alerte)){
 <link rel="stylesheet" type="text/css" href="vues/CSS/ajouterunemaison.css"/>
 
 <section class="principal">
-    <h1>
+    <h1 class="addHouseTitle">
         Ajouter une maison
     </h1>
+
+    <label class="checkboxHouseStatus" class="switch">
+        <input class="checkboxHouseStatus" type="checkbox">
+        <span class="checkboxHouseStatus" class="slider round"></span>
+    </label>
 
     <form method="POST" action="index.php?cible=verifajoutmaisonform">
         <label hidden>houseName</label>
@@ -52,6 +57,10 @@ if (isset($alerte)){
             <button type="submit" name="submit">Valider</button>
         </div>
 
+    </form>
+    <form class="renter-form" action="index.php?cible=verifajoutmaisonform" method="post">
+        <input type="text" name="secret" required>
+        <input type="submit">
     </form>
 
 

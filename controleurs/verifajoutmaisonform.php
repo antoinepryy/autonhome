@@ -26,6 +26,10 @@ if(isset($_POST["addressNumber"])){
     createHouse($bdd, $_POST);
     header("Location: index.php?cible=mamaison");
 }
+elseif (isset($_POST["secret"])){
+    linkHouse($bdd, $_SESSION["userId"],$_POST["secret"]);
+    header("Location: index.php?cible=mamaison");
+}
 
 else{
     include('vues/erreur404.php');
