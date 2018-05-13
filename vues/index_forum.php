@@ -27,6 +27,7 @@ $sql = 'SELECT ID, topic, id_user, dateTime,id_category FROM forum_topic ORDER B
 $req = mysqli_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error());
 
 
+
 }
 
 // on ferme la connexion à la base de données.
