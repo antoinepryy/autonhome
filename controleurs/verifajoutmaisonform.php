@@ -27,7 +27,7 @@ if(isset($_POST["addressNumber"])){
     header("Location: index.php?cible=mamaison");
 }
 elseif (isset($_POST["secret"])){
-    linkHouse($bdd, $_SESSION["userId"],$_POST["secret"]);
+    linkRenter($bdd,$_POST["secret"]);
     header("Location: index.php?cible=mamaison");
 }
 

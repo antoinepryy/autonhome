@@ -46,17 +46,19 @@ function createHouse(PDO $bdd, $data)
 }
 
 function linkRenter($bdd, $hashCode){
-    $statement = $bdd->prepare('SELECT * FROM  residence WHERE secret = :secret');
+    $statement = $bdd->prepare('SELECT * FROM  residence WHERE secret = :secret AND id_owner != :idSession');
+    $statement->bindParam(":id_owner", $_SESSION['userId']);
     $statement->bindParam(":secret", $hashCode);
     $statement->execute();
     $foundResidence = $statement->fetch();
-    $statement = $bdd->prepare('UPDATE residence
-        SET 
+
+    $statement = $bdd->prepare('UPDATE residence SET 
         id_tenant = :idTenant
-        WHERE id = :residenceId');
+        WHERE 
+        id = :residenceId');
     $statement->bindParam(":idTenant", $_SESSION["userId"]);
     $statement->bindParam(":residenceId",$foundResidence["ID"]);
-    $statement->execute;
+    $statement->execute();
 }
 
 function getAllHouses($bdd)
