@@ -14,8 +14,7 @@ header{
 
 header nav{
     display: flex;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border: 0.5px solid black;
 }
 
 header nav ul {

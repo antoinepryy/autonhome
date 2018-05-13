@@ -30,7 +30,7 @@ header nav ul {
     display: block;
     display: flex;
     flex-direction: row;
-
+    border: 0.5px solid black;
 
 }
 
