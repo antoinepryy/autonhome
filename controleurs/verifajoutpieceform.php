@@ -22,25 +22,20 @@ else{
     $status="UU";
 }
 
-$name="nom";
-$id_roomCategory=0;
 
-if(isset($_POST["roomName"])){
-    $name=$_POST['nom'];
-}
 
-if(isset($_POST["roomCategory"])){
-    $id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
-}
-
+$name=$_POST['roomName'];
+$id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
 $id_residency = $_GET['id'];
-$data=[$name,$id_residency,$id_roomCategory];
-
+$data = array(
+    'ID' => NULL,
+    'name' => $name,
+    'id_residency' => $id_residency,
+    'id_roomCategory' => $id_roomCategory,);
 
 if(isset($_POST["name"])){
-    createRoom($bdd, $data);
+    $addRoom = createRoom($bdd, $data);
     die(var_dump('bueno'));
-    //header('Location: index.php?cible=mamaison&id='$_GET['id']);
 }
 
 else{
