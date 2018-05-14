@@ -17,10 +17,19 @@ if (isset($alerte)){
     <h1 class="addHouseTitle">
         Ajouter une maison
     </h1>
-    <form>
-        <label>Slider</label>
-        <input id="slider" type="checkbox" onclick="check()">
-    </form>
+
+    <div class="checkToDisplay">
+        <div>Propriétaire</div>
+        <label class="switch">
+            <input type="checkbox" id="slider" onclick="check()">
+            <span class="slider"></span>
+        </label>
+        <div>Locataire</div>
+
+
+    </div>
+
+
 
 
     <form method="POST" action="index.php?cible=verifajoutmaisonform" id="sectionOne">
