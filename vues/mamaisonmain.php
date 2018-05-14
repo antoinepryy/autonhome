@@ -7,19 +7,33 @@
  */
 
 require ('vues/header_'.$status.'.php'); ?>
-    <section>
-        <?php
-        echo $_GET["id"];
-        ?>
-        <button id="myBtn">Open Modal</button>
 
+<section class="principal">
+
+    <?php $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
+    echo $houseInfo?>
+    <section class="house-info">
+        <div>
+
+        </div>
+
+
+
+   </section>
+
+
+
+
+
+    <section>
+        <?php echo $_GET["id"]; ?>
+        <button id="myBtn">Open Modal</button>
 
     </section>
 
     <div class="create-room">
 
         <div id="modalCreateRoom" class="modal modalCreateRoom">
-
 
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -44,12 +58,8 @@ require ('vues/header_'.$status.'.php'); ?>
 
         </div>
 
-
-
-
-
-
     </div>
+</section>
 
 <?php
 require ('vues/footer.php');
