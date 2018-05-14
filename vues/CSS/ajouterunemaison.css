@@ -157,3 +157,30 @@ input:checked + .slider:before {
     display: flex;
 }
 
+.renter-form{
+    display: none;
+}
+
+.open{
+    animation-name: increaseWidth;
+    animation-duration: 500ms;
+
+}
+
+@keyframes increaseWidth {
+    from {height: 270px}
+    to {height: 707px}
+}
+
+
+
+.close{
+    animation-name: reduceWidth;
+    animation-duration: 500ms;
+
+}
+
+@keyframes reduceWidth {
+    from {height: 707px}
+    to {height: 270px}
+}

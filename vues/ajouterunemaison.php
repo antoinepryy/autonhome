@@ -13,7 +13,7 @@ if (isset($alerte)){
 
 <link rel="stylesheet" type="text/css" href="vues/CSS/ajouterunemaison.css"/>
 
-<section class="principal">
+<section class="principal nope" id="varHeigth">
     <h1 class="addHouseTitle">
         Ajouter une maison
     </h1>
