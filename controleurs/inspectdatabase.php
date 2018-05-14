@@ -34,9 +34,11 @@ if ($status=='AD'){
             break;
         case "residence":
             $list = getAll($bdd, "residence");
+            require ('vues/admin/inspectresidence.php');
             break;
         case "sensor":
             $list = getAll($bdd, 'sensor');
+            require ('vues/admin/inspectsensor.php');
             break;
     }
 

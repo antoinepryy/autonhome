@@ -9,6 +9,7 @@
 
 require ('vues/header_'.$status.'.php'); ?>
 <section>
+    <div class="addHouseLink"><a href="index.php?cible=ajouterunemaison">Ajouter une maison</a></div>
     <div class="display-houses">
         <div>Mes maisons :</div>
         <div class="owned-houses">
