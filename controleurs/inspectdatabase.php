@@ -30,6 +30,7 @@ if ($status=='AD'){
     switch ($_GET["table"]){
         case "user":
             $list = getAll($bdd, "user");
+            require ('vues/admin/inspectuser.php');
             break;
         case "residence":
             $list = getAll($bdd, "residence");
@@ -38,10 +39,8 @@ if ($status=='AD'){
             $list = getAll($bdd, 'sensor');
             break;
     }
-    require ('vues/inspectdatabase.php');
+
 }
 else{
     require ('vues/erreur404.php');
 }
-
-include('vues/accueil.php');

@@ -12,7 +12,7 @@ if(!function_exists("importAllSessionsAndModels")){
 
 if(isset($_POST["mail"]) && isset($_POST["password"])){
     $user = identifyUserDatabase($bdd, $_POST["mail"], $_POST["password"]);
-    if($user){
+    if($user != NULL){
         authentify($user);
     }
     else{

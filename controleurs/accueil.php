@@ -7,7 +7,6 @@
  */
 $section = 'accueil';
 
-
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();

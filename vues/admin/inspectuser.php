@@ -13,10 +13,7 @@ require ('vues/header_'.$status.'.php');
     <section>
         <div class="displayTable">
 
+
+
         </div>
-
-
     </section>
-
-<?php
-require ('vues/footer.php');
