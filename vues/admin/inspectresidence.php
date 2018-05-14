@@ -7,29 +7,56 @@
  */
 
 require ('vues/header_'.$status.'.php');
+?>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nom
+        </th>
+        <th>
+            Addresse
+        </th>
+        <th>
+            ID propriétaire
+        </th>
+        <th>
+            ID locataire
+        </th>
+    </tr>
+
+<?php
+foreach ($list as $element){
+    ?>
+    <tr>
+        <td>
+            <?php echo($element["ID"]); ?>
+        </td>
+        <td>
+            <?php echo($element["name"]); ?>
+        </td>
+        <td>
+            <?php echo($element["addressNumber"]); ?>
+        </td>
+        <td>
+            <?php echo($element["id_owner"]); ?>
+        </td>
+        <td>
+            <?php echo($element["id_tenant"]); ?>
+        </td>
+    </tr>
+<?php
+}
 
 ?>
-<section>
-    <div class="link-tools">
-        <a href="index.php?cible=inspectdatabase&table=user">
-            Gestion des utilisateurs
 
-        </a>
-        <a href="index.php?cible=inspectdatabase&table=residence">
-            Gestion des résidences
-        </a>
-        <a href="index.php?cible=inspectdatabase&table=sensor">
-            Gestion des capteurs
+</table>
 
-        </a>
-
-    </div>
-
-
-</section>
 
 
 
 <?php
-require ('vues/footer.php');
+require('vues/footer.php');
 ?>
