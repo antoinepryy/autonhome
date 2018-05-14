@@ -31,7 +31,7 @@ require ('vues/header_'.$status.'.php'); ?>
 
             <ul class="rented-houses-list">
                 <?php foreach ($residences[1] as $residence) { ?>
-                    <li> <?php echo ( $residence["name"] );  ?> </li>
+                    <li> <?php echo ( $residence["name"] );  ?><a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">Voir</a> </li>
                 <?php } ?>
 
             </ul>
