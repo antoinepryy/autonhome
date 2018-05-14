@@ -6,8 +6,6 @@
  * Time: 11:57
  */
 
-
-
 function authentify($data){
     $_SESSION["userId"] = $data["ID"];
     $_SESSION["userMail"] = $data["mail"];

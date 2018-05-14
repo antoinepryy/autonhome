@@ -4,9 +4,9 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 
-<form method="post" action="index.php?cible=verifajoutpiecesform">
+<form method="post" action="index.php?cible=verifajoutpieceform">
 	
-	<label for="roomCategory">Nom de la pièce:</label>
+	<label for="roomName">Nom de la pièce:</label>
 	<input type="text"  name="roomname" id="roomname" placeholder="Ex : Chambre de Pierre" />
 	
 	<label for="roomCategory">Type de la pièce: </label> <br />

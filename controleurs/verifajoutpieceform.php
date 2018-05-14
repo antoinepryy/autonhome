@@ -6,7 +6,6 @@
  * Time: 12:27
  */
 
-$section = 'accueil';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -23,9 +22,24 @@ else{
     $status="UU";
 }
 
+$name="nom";
+$id_roomCategory=0;
+
+if(isset($_POST["roomName"])){
+    $name=$_POST['nom'];
+}
+
+if(isset($_POST["roomCategory"])){
+    $id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
+}
+
+$id_residency = $residence["ID"];
+$data=[$name,$id_residency,$id_roomCategory];
+
+
 if(isset($_POST["name"])){
-    createHouse($bdd, $_POST);
-    die(var_dump('pièce créée'));
+    createRoom($bdd, $data);
+    header('Location: index.php?cible=mamaison&id='.$residence["ID"]);
 }
 
 else{

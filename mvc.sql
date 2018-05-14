@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 07 mai 2018 à 02:44
--- Version du serveur :  10.1.28-MariaDB
--- Version de PHP :  7.1.11
+-- Généré le :  lun. 14 mai 2018 à 10:19
+-- Version du serveur :  10.1.29-MariaDB
+-- Version de PHP :  7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -191,7 +191,6 @@ INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `address
 CREATE TABLE `room` (
   `ID` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `surface` int(20) NOT NULL,
   `id_residency` int(10) NOT NULL,
   `id_roomCategory` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -200,9 +199,9 @@ CREATE TABLE `room` (
 -- Déchargement des données de la table `room`
 --
 
-INSERT INTO `room` (`ID`, `name`, `surface`, `id_residency`, `id_roomCategory`) VALUES
-(1, 'Chambre de YM', 15, 1, 1),
-(2, 'Salle de bain d\'Antoine', 5, 1, 2);
+INSERT INTO `room` (`ID`, `name`, `id_residency`, `id_roomCategory`) VALUES
+(1, 'Chambre de YM', 1, 1),
+(2, 'Salle de bain d\'Antoine', 1, 2);
 
 -- --------------------------------------------------------
 

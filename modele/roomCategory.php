@@ -5,9 +5,6 @@ include('connexion.php');
 $table = "room_category" ;
 
 
-
-
-
 function getIdRoomCategory($bdd, $name){
     $statement = $bdd->prepare('SELECT id FROM room_category WHERE name = :name');
     $statement->bindParam(':name', $name);
