@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule ^test\.html$ /test.php [L]
+RewriteRule ^test\.html$ /autonhome/test.php [L]
