@@ -17,13 +17,13 @@ if (isset($alerte)){
     <h1 class="addHouseTitle">
         Ajouter une maison
     </h1>
+    <form>
+        <label>Slider</label>
+        <input id="slider" type="checkbox" onclick="check()">
+    </form>
 
-    <label class="checkboxHouseStatus" class="switch">
-        <input class="checkboxHouseStatus" type="checkbox">
-        <span class="checkboxHouseStatus" class="slider round"></span>
-    </label>
 
-    <form method="POST" action="index.php?cible=verifajoutmaisonform">
+    <form method="POST" action="index.php?cible=verifajoutmaisonform" id="sectionOne">
         <label hidden>houseName</label>
         <input type="text"  name="name" placeholder="Nom de la maison" required/>
 
@@ -58,8 +58,8 @@ if (isset($alerte)){
         </div>
 
     </form>
-    <form class="renter-form" action="index.php?cible=verifajoutmaisonform" method="post">
-        <input type="text" name="secret" required>
+    <form class="renter-form" action="index.php?cible=verifajoutmaisonform" method="post" id="sectionTwo">
+        <input type="text" name="secret" placeholder="Code propriétaire" required>
         <input type="submit">
     </form>
 
