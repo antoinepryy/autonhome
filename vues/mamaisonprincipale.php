@@ -9,7 +9,7 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
-    <section class="Ma Maison principale">
+    <section class="ma-maison-principale">
         <div>
             <br>
                 Ma maison principale.</br>

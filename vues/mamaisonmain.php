@@ -7,12 +7,27 @@
  */
 
 require ('vues/header_'.$status.'.php'); ?>
-    <section>
-        <?php
-        echo $_GET["id"];
-        ?>
-        <button id="myBtn">Open Modal</button>
 
+<section class="principal">
+
+    <?php $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
+    echo $houseInfo?>
+    <section class="house-info">
+        <div>
+
+        </div>
+
+
+
+   </section>
+
+
+
+
+
+    <section>
+        <?php echo $_GET["id"]; ?>
+        <button id="myBtn">Open Modal</button>
 
     </section>
 
@@ -20,22 +35,21 @@ require ('vues/header_'.$status.'.php'); ?>
 
         <div id="modalCreateRoom" class="modal modalCreateRoom">
 
-
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p><form method="post" action="index.php?cible=verifajoutpieceform&id=<?php echo ( $_GET['id'] );  ?>">
 
                     <label for="roomCategory">Nom de la pièce:</label>
-                    <input type="text"  name="roomname" id="roomname" placeholder="Ex : Chambre de Pierre" required/>
+                    <input type="text"  name="roomName" id="roomName" placeholder="Ex : Chambre de Pierre" required/>
 
                     <label for="roomCategory">Type de la pièce: </label> <br />
-                    <select name="'roomCategory" id="roomCategory" required>
-                        <option value="chambre">Chambre</option>
-                        <option value="cuisine">Cuisine</option>
-                        <option value="salon">Salon</option>
-                        <option value="salleamanger">Salle à manger</option>
-                        <option value="salledebain">Salle de bain</option>
-                        <option value="autrespieces">Autres pièces</option>
+                    <select name="roomCategory" id="roomCategory" required>
+                        <option value="Chambre">Chambre</option>
+                        <option value="Cuisine">Cuisine</option>
+                        <option value="Salon">Salon</option>
+                        <option value="Salle à manger">Salle à manger</option>
+                        <option value="Salle de bain">Salle de bain</option>
+                        <option value="Autres pièces">Autres pièces</option>
 
                         <input type="submit" value="Submit">
 
@@ -44,12 +58,8 @@ require ('vues/header_'.$status.'.php'); ?>
 
         </div>
 
-
-
-
-
-
     </div>
+</section>
 
 <?php
 require ('vues/footer.php');

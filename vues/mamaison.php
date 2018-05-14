@@ -11,11 +11,17 @@ require ('vues/header_'.$status.'.php'); ?>
 <section>
     <div class="addHouseLink"><a href="index.php?cible=ajouterunemaison">Ajouter une maison</a></div>
     <div class="display-houses">
-        <div>Mes maisons :</div>
+        <div class="mes-maisons">Mes maisons</div>
         <div class="owned-houses">
             <ul class="owned-houses-list">
                 <?php foreach ($residences[0] as $residence) { ?>
-                    <li> <?php echo ( $residence["name"] );  ?><a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">Voir</a> </li>
+                    <li>
+                        <?php echo ( $residence["name"] );  ?>
+                        <a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">
+                        </br>
+                            <img class = "image" src="ressources\pictures\maison.jpg"
+                        </a>
+                    </li>
                 <?php } ?>
 
 
@@ -32,6 +38,7 @@ require ('vues/header_'.$status.'.php'); ?>
             <ul class="rented-houses-list">
                 <?php foreach ($residences[1] as $residence) { ?>
                     <li> <?php echo ( $residence["name"] );  ?><a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">Voir</a> </li>
+
                 <?php } ?>
 
             </ul>

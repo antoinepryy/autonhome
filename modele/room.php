@@ -13,11 +13,11 @@ function createRoom(PDO $bdd, $data)
     VALUES
     (NULL,
     :name, 
-    :idResidency,
-    :idRoomCategory,)');
+    :id_residency,
+    :id_roomCategory,)');
     $statement->bindParam(":name", $data["name"]);
-    $statement->bindParam(":idResidency", $data["residencyId"]);
-    $statement->bindParam(":idRoomCategory", $data["roomCategoryId"]);
+    $statement->bindParam(":id_residency", $data["id_residency"]);
+    $statement->bindParam(":id_roomCategory", $data["id_roomCategory"]);
     $statement->execute();
 }
 
