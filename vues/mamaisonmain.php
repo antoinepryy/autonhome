@@ -23,7 +23,7 @@ require ('vues/header_'.$status.'.php'); ?>
 
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p><form method="post" action="index.php?cible=verifajoutpieceform">
+                <p><form method="post" action="index.php?cible=verifajoutpieceform&id=<?php echo ( $_GET['id'] );  ?>">
 
                     <label for="roomCategory">Nom de la pièce:</label>
                     <input type="text"  name="roomname" id="roomname" placeholder="Ex : Chambre de Pierre" required/>

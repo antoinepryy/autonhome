@@ -33,13 +33,14 @@ if(isset($_POST["roomCategory"])){
     $id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
 }
 
-$id_residency = $residence["ID"];
+$id_residency = $_GET['id'];
 $data=[$name,$id_residency,$id_roomCategory];
 
 
 if(isset($_POST["name"])){
     createRoom($bdd, $data);
-    header('Location: index.php?cible=mamaison&id='.$residence["ID"]);
+    die(var_dump('bueno'));
+    //header('Location: index.php?cible=mamaison&id='$_GET['id']);
 }
 
 else{
