@@ -17,10 +17,19 @@ require ('vues/header_'.$status.'.php'); ?>
 
         </div>
 
-
-
    </section>
 
+    <section class="roomCategory">
+        <div><a class="salon" href="index.php?cible=salon">Salon</a></div>
+        <div><a class="cuisine" href="index.php?cible=cuisine">Cuisine</a></div>
+        <div><a class="chambre" href="index.php?cible=chambre">Chambre</a></div>
+        <div><a class="salle-a-manger" href="index.php?cible=salleamanger">Salle à manger</a></div>
+        <div><a class="salle-de-bain" href="index.php?cible=salledebain">Salle de bain</a></div>
+        <div><a class="autres-pieces" href="index.php?cible=autrespieces">Autres pièces</a></div>
+
+
+
+    </section>
 
 
 
