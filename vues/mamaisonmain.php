@@ -10,10 +10,25 @@ require ('vues/header_'.$status.'.php'); ?>
 
 <section class="principal">
 
-    <?php $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
-    echo ($houseInfo); ?>
+
+
+
     <section class="house-info">
         <div>
+
+            <div class="house-name"><?php echo ($houseInfo['name']); ?></div>
+            <div class="house-address"><?php echo ($houseInfo[3].' '.$houseInfo[4].' '.$houseInfo[5].' '.$houseInfo[6]); ?></div>
+            <div class="user-rent">
+                <?php
+                if(isset($user['firstName'])){
+                    echo ('Loué à '.$user['firstName'].' '.$user['lastName']);
+                }
+                else{
+                    echo ('Non loué');
+                }
+                ?>
+            </div>
+
 
         </div>
 
@@ -35,8 +50,7 @@ require ('vues/header_'.$status.'.php'); ?>
 
 
     <section>
-        <?php echo $_GET["id"]; ?>
-        <button id="myBtn">Open Modal</button>
+        <button id="myBtn">Ajouter une pièce</button>
 
     </section>
 

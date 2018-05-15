@@ -89,7 +89,7 @@ function getAllUserHouses($bdd, $id){
 }
 
 function getHouseInfoFromId($bdd, $id){
-    $statement = $bdd->prepare('SELECT name, surface, nbPeople, addressNumber, addressStreet, addressZipCode, addressCity, addressCountry FROM residence WHERE ID = :ID');
+    $statement = $bdd->prepare('SELECT name, surface, nbPeople, addressNumber, addressStreet, addressZipCode, addressCity, addressCountry, id_tenant FROM residence WHERE ID = :ID');
     $statement->bindParam(':ID', $id);
     $statement->execute();
     return $statement->fetch();

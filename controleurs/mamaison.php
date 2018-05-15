@@ -32,5 +32,7 @@ if($status=='LU' && !isset($_GET['id'])){
 
 if($status=='LU' && isset($_GET['id'])){
     $section='mamaisonmain';
+    $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
+    $user = findUserById($bdd, $houseInfo[8]);
     include ('vues/mamaisonmain.php');
 }
