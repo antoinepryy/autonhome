@@ -22,11 +22,15 @@ require ('vues/header_'.$status.'.php'); ?>
                 <?php
                 if(isset($user['firstName'])){
                     echo ('Loué à '.$user['firstName'].' '.$user['lastName']);
+                    echo('<a href="">Supprimer la location</a>');
                 }
                 else{
                     echo ('Non loué');
+                    echo('<button id="dispSecret">Afficher le code</button>');
+                    echo('<div id="secretCode" >'. $houseInfo["secret"].' </div>');
                 }
                 ?>
+
             </div>
 
 
@@ -63,18 +67,20 @@ require ('vues/header_'.$status.'.php'); ?>
                 <p><form method="post" action="index.php?cible=verifajoutpieceform&id=<?php echo ( $_GET['id'] );  ?>">
 
                     <label for="roomCategory">Nom de la pièce:</label>
-                    <input type="text"  name="roomName" id="roomName" placeholder="Ex : Chambre de Pierre" required/>
+                    <input type="text"  name="roomName" id="roomName" placeholder="Ex : Chambre de Pierre" required/> <br />
 
-                    <label for="roomCategory">Type de la pièce: </label> <br />
+                    <label for="roomCategory">Type de la pièce: </label>
                     <select name="roomCategory" id="roomCategory" required>
                         <option value="Chambre">Chambre</option>
                         <option value="Cuisine">Cuisine</option>
                         <option value="Salon">Salon</option>
                         <option value="Salle à manger">Salle à manger</option>
                         <option value="Salle de bain">Salle de bain</option>
-                        <option value="Autres pièces">Autres pièces</option>
+                        <option value="Autres pièces">Autres pièces</option> <br />
 
-                        <input type="submit" value="Submit">
+                    </select>
+
+                    <input type="submit" value="Submit">
 
                 </form></p>
             </div>
