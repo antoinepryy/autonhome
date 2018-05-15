@@ -79,6 +79,7 @@ require ('vues/header_'.$status.'.php'); ?>
                         <option value="Autres pièces">Autres pièces</option> <br />
 
                     </select>
+                    <input type="number" name="idHouse" value="<?php echo($_GET['id']); ?>" hidden>
 
                     <input type="submit" value="Submit">
 
