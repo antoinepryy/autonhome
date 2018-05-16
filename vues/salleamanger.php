@@ -9,15 +9,15 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 <h1>
-    Salles à Manger
+    Salle(s) à manger
 </h1>
 
 
-<div class="imagesalleamanger"> <img src="ressources/pictures/salleamanger.jpg"> </div>
+<div class="imagesalleamanger"> <img src="ressources\pictures\salleamanger.jpg"> </div>
 
 <form method="post" action="">
 
-    <p>Voulez-vous enclencher le : <p/>
+    <p>Enclencher : <p/>
 
     <div class="use-case">
         <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
