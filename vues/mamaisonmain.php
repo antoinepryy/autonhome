@@ -38,18 +38,35 @@ require ('vues/header_'.$status.'.php'); ?>
 
    </section>
 
-    <section class="roomCategory">
-        <div><a class="salon" href="index.php?cible=salon">Salon</a></div>
-        <div><a class="cuisine" href="index.php?cible=cuisine">Cuisine</a></div>
-        <div><a class="chambre" href="index.php?cible=chambre">Chambre</a></div>
-        <div><a class="salle-a-manger" href="index.php?cible=salleamanger">Salle à manger</a></div>
-        <div><a class="salle-de-bain" href="index.php?cible=salledebain">Salle de bain</a></div>
-        <div><a class="autres-pieces" href="index.php?cible=autrespieces">Autres pièces</a></div>
+   <section class="roomCategory">
+        <div class="salon">
+            <a class="text" href="index.php?cible=cuisine">Salon</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/salon.jpg""></a>
+        </div>
+        <div class="cuisine">
+            <a class="text" href="index.php?cible=cuisine">Cuisine</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/cuisine.jpg""></a>
+        </div>
+        <div class="chambre">
+            <a class="text" href="index.php?cible=chambre">Chambre</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/chambre.jpg""></a>
+        </div>
+        <div class="salle-a-manger">
+            <a class="text" href="index.php?cible=salleamanger">Salle à manger</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/salleamanger.jpg""></a>
+        </div>
+        <div class="salle-de-bain">
+            <a class="text" href="index.php?cible=salledebain">Salle de bain</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/salledebain.jpg""></a>
+        </div>
+        <div class="autres-pieces">
+            <a class="text" href="index.php?cible=autrespieces">Autres pièces</a>
+            <a href="index.php?cible=salon"><img src="ressources/pictures/bureau.jpg""></a>
+        </div>
 
 
 
     </section>
-
 
 
 
