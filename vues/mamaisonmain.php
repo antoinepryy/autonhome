@@ -40,28 +40,28 @@ require ('vues/header_'.$status.'.php'); ?>
 
    <section class="roomCategory">
         <div class="salon">
-            <a class="text" href="index.php?cible=cuisine">Salon</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/salon.jpg""></a>
+            <a class="text" href="index.php?cible=cuisine">Salon</a>
         </div>
         <div class="cuisine">
-            <a class="text" href="index.php?cible=cuisine">Cuisine</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/cuisine.jpg""></a>
+            <a class="text" href="index.php?cible=cuisine">Cuisine</a>
         </div>
         <div class="chambre">
-            <a class="text" href="index.php?cible=chambre">Chambre</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/chambre.jpg""></a>
+            <a class="text" href="index.php?cible=chambre">Chambre</a>
         </div>
         <div class="salle-a-manger">
-            <a class="text" href="index.php?cible=salleamanger">Salle à manger</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/salleamanger.jpg""></a>
+            <a class="text" href="index.php?cible=salleamanger">Salle à manger</a>
         </div>
         <div class="salle-de-bain">
-            <a class="text" href="index.php?cible=salledebain">Salle de bain</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/salledebain.jpg""></a>
+            <a class="text" href="index.php?cible=salledebain">Salle de bain</a>
         </div>
         <div class="autres-pieces">
-            <a class="text" href="index.php?cible=autrespieces">Autres pièces</a>
             <a href="index.php?cible=salon"><img src="ressources/pictures/bureau.jpg""></a>
+            <a class="text" href="index.php?cible=autrespieces">Autres pièces</a>
         </div>
 
 
