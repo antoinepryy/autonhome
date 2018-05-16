@@ -17,14 +17,22 @@ require ('vues/header_'.$status.'.php');
 
 <form method="post" action="">
 
-    <p>Voulez enclencher les : <p/> <br />
+    <p>Voulez-vous enclencher le : <p/>
 
     <div class="use-case">
-        <input type="checkbox" name="volets" id="volets" /> <label for="volets">Volets</label>
+        <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
         <br />
-        <input type="checkbox" name="lumieres" id="lumieres" /> <label for="lumieres"> Lumières </label>
+        <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
+        <br />
     </div>
-
+    <br/>
+    <div class="use-case-volets">
+    <p> Etat des volets</p>
+    <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
+    <br />
+    <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
+    <br />
+    </div>
 </form>
 
 <p> <a href="index.php?cible=ajoutpieces" >Ajouter une salle à manger</a> </p>
