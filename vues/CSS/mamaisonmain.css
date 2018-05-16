@@ -16,31 +16,37 @@
 }
 
 
-.salon, .cuisine, .chambre, .salle-a-manger, .salle-de-bain, .autres-pieces{
+.salon text, .cuisine text, .chambre text, .salle-a-manger text, .salle-de-bain text, .autres-pieces text{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    justify-content: center;
+
+}
+
+.salon a, .cuisine a, .chambre a, .salle-a-manger a, .salle-de-bain a, .autres-pieces a{
     color: black;
     text-decoration: none;
-    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+}
+
+.roomCategory img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
     border : 1px solid black;
-
 }
 
-.roomCategory .salon{
-    background: url("../../ressources/pictures/salon.jpg");
-}
-.roomCategory .cuisine{
-    background: url("../../ressources/pictures/cuisine.jpg");
-}
-.roomCategory .chambre{
-    background: url("../../ressources/pictures/chambre.jpg");
-}
-.roomCategory .salle-a-manger{
-    background: url("../../ressources/pictures/salleamanger.jpg");
-}
-.roomCategory .salle-de-bain{
-    background: url("../../ressources/pictures/salledebain.jpg");
-}
-.roomCategory .autres-pieces{
-    background: url("../../ressources/pictures/bureau.jpg");
+
+.salon, .cuisine, .chambre, .salle-a-manger, .salle-de-bain, .autres-pieces{
+    width: 20%;
+    height: 20%;
+
+    text-align: center;
+    position: relative;
 }
 
 
