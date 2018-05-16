@@ -19,5 +19,7 @@ function importAllSessionsAndModels(){
     include('./modele/roomCategory.php');
     include('./modele/sensors.php');
     include('./modele/users.php');
+    include('./modele/forumMessage.php');
+    include('./modele/forumTopic.php');
 
 }
