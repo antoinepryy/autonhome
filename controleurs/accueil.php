@@ -5,15 +5,15 @@
  * Date: 16/04/2018
  * Time: 18:40
  */
-$section = 'accueil';
+$section = 'accueil'; //section sert à gérer automatiquement le css une fois arrivé dans les vues
 
-if(!function_exists("importAllSessionsAndModels")){
+if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les variables de sessions ainsi que des fcts de BDD
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
 
 
-$status;
+$status; // set l'état de l'utilistateur, principalement pour la config du css des vues
 if(isLoggedAsAdmin()){
     $status="AD";
 }

@@ -44,6 +44,31 @@ if($status=='LU' && isset($_GET['id'])){
 }
 
 if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
-
+    $section = 'mamaisonroom';
+    if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
+        switch ($_GET['idroom']){
+            case 1:
+                //text
+                break;
+            case 2 :
+                //text
+                break;
+            case 3 :
+                //text
+                break;
+            case 4 :
+                //text
+                break;
+            case 5 :
+                //text
+                break;
+            case 6 :
+                //text
+                break;
+        }
+    }
+    else{
+        include ('vues/erreur404.php');
+    }
 
 }
