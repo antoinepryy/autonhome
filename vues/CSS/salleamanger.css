@@ -1,11 +1,23 @@
 h1{
     text-align: center;
-}  
-.imagesalleamanger {
+}
+.display-sallesamanger{
     background-color: lightgrey;
     margin: auto;
     padding : 1%;
     border : 1px solid black;
-    width: 90%;
+    width:90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.display-sallesamanger.imagesalleamanger {
+    height: 90%;
+    width: 50%;
+    padding: 1%;
+    border : 1px solid grey;
 
+}
+.display-sallesamanger.use-case, .display-sallesamanger.use-case-volets {
+    text-align: center;
 }
