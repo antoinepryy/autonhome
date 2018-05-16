@@ -1,4 +1,4 @@
-.ma-maison-principale{
+.principal{
     background-color: lightgrey;
     margin-left: 3%;
     margin-right: 3%;
@@ -6,8 +6,42 @@
     margin-bottom: 2%;
     margin-top: 2%;
     border : 1px solid black;
+
 }
 
+.roomCategory{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.salon, .cuisine, .chambre, .salle-a-manger, .salle-de-bain, .autres-pieces{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border : 1px solid black;
+
+}
+
+.roomCategory .salon{
+    background: url("../../ressources/pictures/salon.jpg");
+}
+.roomCategory .cuisine{
+    background: url("../../ressources/pictures/cuisine.jpg");
+}
+.roomCategory .chambre{
+    background: url("../../ressources/pictures/chambre.jpg");
+}
+.roomCategory .salle-a-manger{
+    background: url("../../ressources/pictures/salleamanger.jpg");
+}
+.roomCategory .salle-de-bain{
+    background: url("../../ressources/pictures/salledebain.jpg");
+}
+.roomCategory .autres-pieces{
+    background: url("../../ressources/pictures/bureau.jpg");
+}
 
 
 
