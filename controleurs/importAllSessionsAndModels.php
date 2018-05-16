@@ -9,9 +9,9 @@
 
 function importAllSessionsAndModels(){
     if (!isset($_SESSION)) {
-        session_start();
+        session_start(); //commence une session si elle n'a pas été activée au préalable
     }
-    include('sessions/user.php');
+    include('sessions/user.php'); // liste des fichiers à import
     include('./modele/connexion.php');
     include('./modele/generics.php');
     include('./modele/house.php');
