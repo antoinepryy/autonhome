@@ -13,7 +13,7 @@ require ('vues/header_'.$status.'.php');
 </h1>
 
 <div class="display-sallesamanger">
-    <div class="imagesalleamanger"> <img src="ressources\pictures\salleamanger.jpg"> </div>
+
 
 <form method="post" action="">
 
@@ -34,6 +34,9 @@ require ('vues/header_'.$status.'.php');
     <br />
     </div>
 </form>
+
+
+
 </div>
 
 <p> <a href="index.php?cible=ajoutpieces" >Ajouter une salle à manger</a> </p>
