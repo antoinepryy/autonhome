@@ -12,7 +12,7 @@ function getIdRoomCategory($bdd, $name){
     return $statement->fetch();
 }
 
-function getIDRoomCategory($bdd,$idroom){
+function getIDRoomCatego($bdd,$idroom){
     $statement = $bdd->prepare('SELECT id_roomCategory FROM room WHERE ID = :ID');
     $statement->bindParam(':ID',$idroom);
     $statement->execute();
