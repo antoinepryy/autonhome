@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 15%;
-    background-color: #E3D3BF;
+    background-color: lightgray;
     justify-content: flex-start;
     position: absolute;
     right: 0;
@@ -28,7 +28,6 @@ input
     display: flex;
     font-weight: bold;
     font-size: 25px;
-    background-color: white;
     height: 15%;
     width: 75%;
     justify-content: center;
@@ -43,4 +42,8 @@ input
     width : 50%;
     background-color: black;
     margin:auto;
+}
+
+.name, .admin{
+    text-align: center;
 }

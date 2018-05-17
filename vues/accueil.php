@@ -10,7 +10,7 @@ require ('vues/accueil_'.$status.'.php');
     <section class="why-us">
         <div>
             <p>
-                <img class = "image" src="ressources\pictures\domotique.jpg" alt="Domotique">
+
             </p>
 
          </div>
@@ -50,7 +50,7 @@ require ('vues/accueil_'.$status.'.php');
                 Assistance
             </h3>
             <p>
-            Une assistance 24h/24 7j/7 pour vous accompagner sur la prise en main et l'utilisation d'Autonhome"
+            Une assistance 24h/24 7j/7 pour vous accompagner sur la prise en main et l'utilisation d'Autonhome
             </p>
         </div>
     </section>

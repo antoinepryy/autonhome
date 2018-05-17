@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+.display-sallesamanger{
+    background-color: lightgrey;
+    margin: auto;
+    padding : 1%;
+    border : 1px solid black;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.display-sallesamanger form{
+    background-image: url("../../ressources/pictures/salleamanger.jpg");
+    width: 20%;
+    height: auto;
+    padding: 2%;
+    border : 1px solid black;
+    background-size: 100%;
+    font-weight: bold;
+}
+
+.display-sallesamanger.use-case, .display-sallesamanger.use-case-volets {
+    text-align: center;
+
+}

@@ -30,7 +30,53 @@ if($status=='LU' && !isset($_GET['id'])){
     include ('vues/mamaison.php');
 }
 
-if($status=='LU' && isset($_GET['id'])){
+elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
     $section='mamaisonmain';
-    include ('vues/mamaisonmain.php');
+
+    if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
+        $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
+        $user = findUserById($bdd, $houseInfo[8]);
+        include ('vues/mamaisonmain.php');
+    }
+    else{
+        include ('vues/erreur404.php');
+    }
+
+}
+
+if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
+    $section = 'mamaisonroom';
+    if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
+        switch ($_GET['idroom']){
+            case 1:
+                $section = 'chambre';
+                include ('vues/chambre.php');
+                break;
+            case 2 :
+                $section = 'salledebain';
+                include ('vues/salledebain.php');
+                break;
+            case 3 :
+                $section = 'salon';
+                include ('vues/salon.php');
+                break;
+            case 4 :
+                $section = 'salleamanger';
+                include ('vues/salleamanger.php');
+                break;
+            case 5 :
+                $section = 'cuisine';
+                include ('vues/cuisine.php');
+                break;
+            case 6 :
+                $section = 'autrespieces';
+                include ('vues/autrespieces.php');
+                break;
+        }
+    }
+    else{
+        include ('vues/erreur404.php');
+    }
+
+
 }

@@ -142,4 +142,13 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
         return $bdd->query($query)->fetchAll();
     }
 
+    function findUserById($bdd, $id){
+        $statement = $bdd->prepare('SELECT * FROM user WHERE ID = :id ');
+        $statement->BindParam(':id', $id);
+        $statement->execute();
+        $user = $statement->fetch();
+        return $user;
+
+    }
+
 ?>

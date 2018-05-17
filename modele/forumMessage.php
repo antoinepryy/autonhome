@@ -8,24 +8,27 @@
 
 include('connexion.php');
 //on définit le nom de la table
-$table = "forum_topic";
+$table = "forum_message";
 
-function createSubject(PDO $bdd, $topic)
+
+function createMessage(PDO $bdd, $text, $id_topic)
 {
     $time = time();
-    $statement = $bdd->prepare('INSERT INTO `forum_topic` 
+    $statement = $bdd->prepare('INSERT INTO `forum_message` 
     (`ID`,
-    `topic`, 
+    `text`, 
     `id_user`,
+    `id_topic`,
     `dateTime`)
     VALUES
     (NULL,
-    :topic, 
+    :text, 
     :id_user,
-    :dateTime)
-    ');
-    $statement->bindParam(":topic", $topic);
+    :id_topic,
+    :dateTime)');
+    $statement->bindParam(":text", $text);
     $statement->bindParam(":id_user", $_SESSION['userId']);
+    $statement->bindParam(":id_topic", $id_topic);
     $statement->bindParam(":dateTime", $time);
     $statement->execute();
 }

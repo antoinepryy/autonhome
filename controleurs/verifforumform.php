@@ -1,16 +1,16 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Utilisateur
- * Date: 06/05/2018
- * Time: 16:22
+ * User: amepi
+ * Date: 15/05/2018
+ * Time: 11:57
  */
-$section = 'autrespieces';
+$section = 'forum';
+
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
-
 
 $status;
 if(isLoggedAsAdmin()){
@@ -23,4 +23,13 @@ else{
     $status="UU";
 }
 
-include('vues/autrespieces.php');
+
+if(isset($_POST["topic"])){
+    createSubject($bdd, $_POST["topic"]);
+    createMessage($bdd,$_POST["text"],0);
+    header("Location: index.php?cible=forum");
+}
+else{
+    require ('vues/erreur404.php');
+}
+

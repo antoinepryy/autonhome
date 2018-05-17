@@ -22,12 +22,12 @@ else{
     $status="UU";
 }
 
-if(isset($_POST["addressNumber"])){
+if(isset($_POST["addressNumber"])){ //quand un proprio ajoute une maison
     createHouse($bdd, $_POST);
     header("Location: index.php?cible=mamaison");
 }
-elseif (isset($_POST["secret"])){
-    linkRenter($bdd,$_POST["secret"]);
+elseif (isset($_POST["secret"])){ //quand un locataire se link à une maison
+    linkRenter($bdd,$_POST);
     header("Location: index.php?cible=mamaison");
 }
 

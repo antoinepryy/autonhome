@@ -1,13 +1,15 @@
-.products, .assistance, .faq{
+.products, .assistance, .faq, .why-us{
     border: 1px solid black;
 }
-.image {
+.why-us {
     height: 351px;
     width : 70%;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
     margin-left: 3%;
     padding-left: 1%;
+    background-image: url("../../ressources/pictures/domotique.JPG");
+    background-size: 100%;
 }
 
 

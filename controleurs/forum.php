@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Utilisateur
- * Date: 06/05/2018
- * Time: 16:13
+ * User: amepi
+ * Date: 15/05/2018
+ * Time: 12:07
  */
+$section = 'forum';
 
-$section = 'cuisine';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -24,4 +24,4 @@ else{
     $status="UU";
 }
 
-include('vues/cuisine.php');
+include('vues/forum.php');
