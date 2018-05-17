@@ -30,7 +30,12 @@ if($status=='LU' && !isset($_GET['id'])){
     include ('vues/mamaison.php');
 }
 
-if($status=='LU' && isset($_GET['id'])){
+elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom']){
     $section='mamaisonmain';
     include ('vues/mamaisonmain.php');
+}
+
+if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
+    $roomcategory = getIdRoomCategory($bdd,$_GET['idroom']);
+
 }

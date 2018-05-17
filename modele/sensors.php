@@ -25,4 +25,14 @@ function rechercheParType(PDO $bdd, string $table, string $type): array {
     
 }
 
+function getAllSensors(PDO $bdd){
+
+    $statement = $bdd->prepare('SELECT * FROM sensors');
+    $statement->execute();
+    $sensors = $statement->fetch();
+}
+
+function getAllResidentsSensors(PDO $bdd, $id){
+
+}
 ?>
