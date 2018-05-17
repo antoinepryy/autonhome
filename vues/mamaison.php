@@ -30,7 +30,6 @@ require ('vues/header_'.$status.'.php'); ?>
         </div>
 
 
-
         <div class="rented-houses">
 
             <div> En location :</div>

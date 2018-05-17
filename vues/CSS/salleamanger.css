@@ -12,9 +12,8 @@ h1{
     justify-content: space-around;
 }
 .display-sallesamanger.imagesalleamanger {
-    height: 90%;
-    width: 50%;
-    padding: 1%;
+    max-width:50%;
+    max-height:50%;
     border : 1px solid grey;
 
 }
