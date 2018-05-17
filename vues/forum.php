@@ -17,20 +17,15 @@ if (isset($alerte)){
     echo AfficheAlerte($alerte);
 } ?>
 
-    <link rel="stylesheet" type="text/css" href="vues/CSS/forum.css"/>
-
     <section class="principal nope" id="varHeigth">
-        <h1 class="addMessageTitle">
-            Ecrire un post
-        </h1>
+        <h1>Créer une discussion</h1>
 
         <form method="POST" action="index.php?cible=verifforumform" >
-            <input type="text"  name="topic" placeholder="Titre du post" required/>
-            <input type="text"  name="text" placeholder="Texte" required/>
+            <p class="titre"> <input type="text"  name="topic" placeholder="Titre du post" required/></p>
+            <p class="texte"> <textarea rows = '5' cols = '80' name = 'text'></textarea> </p>
+
 
         </section>
-
-
             <div class="post-button">
                 <button type="submit" name="submit">Valider</button>
             </div>
