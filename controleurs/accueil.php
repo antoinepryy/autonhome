@@ -18,6 +18,7 @@ if(isLoggedAsAdmin()){
     $status="AD";
 }
 elseif (isLoggedAsUser()){
+    $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
     $status="LU";
 }
 else{

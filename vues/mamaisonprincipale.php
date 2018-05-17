@@ -9,6 +9,7 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
+
     <section class="ma-maison-principale">
         <div>
             <br>
