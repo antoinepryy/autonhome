@@ -29,6 +29,7 @@
     font-weight: bold;
     position: relative;
     z-index: 2;
+    position: absolute;
 }
 
 .roomCategory img{
@@ -47,7 +48,6 @@
     margin-left: 3%;
     margin-top: 2%;
 }
-
 
 
 
