@@ -40,28 +40,28 @@ require ('vues/header_'.$status.'.php'); ?>
 
     <section class="roomCategory">
         <div class="salon">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/salon.jpg""></a>
-            <a class="text" href="index.php?cible=salon">Salon</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=1"); ?> > <img src="ressources/pictures/salon.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=1"); ?>>Salon</a>
         </div>
         <div class="cuisine">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/cuisine.jpg""></a>
-            <a class="text" href="index.php?cible=cuisine">Cuisine</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=2"); ?>> <img src="ressources/pictures/cuisine.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=2"); ?>>Cuisine</a>
         </div>
         <div class="chambre">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/chambre.jpg""></a>
-            <a class="text" href="index.php?cible=chambre">Chambre</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=3"); ?>><img src="ressources/pictures/chambre.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=3"); ?>>Chambre</a>
         </div>
         <div class="salle-a-manger">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/salleamanger.jpg""></a>
-            <a class="text" href="index.php?cible=salleamanger">Salle à manger</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=4"); ?>><img src="ressources/pictures/salleamanger.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=4"); ?>>Salle à manger</a>
         </div>
         <div class="salle-de-bain">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/salledebain.jpg""></a>
-            <a class="text" href="index.php?cible=salledebain">Salle de bain</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?>><img src="ressources/pictures/salledebain.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?>>Salle de bain</a>
         </div>
         <div class="autres-pieces">
-            <a href="index.php?cible=salon"><img src="ressources/pictures/bureau.jpg""></a>
-            <a class="text" href="index.php?cible=autrespieces">Autres pièces</a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=6"); ?>><img src="ressources/pictures/bureau.jpg""></a>
+            <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=6"); ?>>Autres pièces</a>
         </div>
 
 

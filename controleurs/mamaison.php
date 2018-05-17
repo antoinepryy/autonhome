@@ -30,15 +30,9 @@ if($status=='LU' && !isset($_GET['id'])){
     include ('vues/mamaison.php');
 }
 
-elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom']){
+elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
     $section='mamaisonmain';
-<<<<<<< HEAD
-    include ('vues/mamaisonmain.php');
-}
 
-if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
-    $roomcategory = getIdRoomCategory($bdd,$_GET['idroom']);
-=======
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
         $user = findUserById($bdd, $houseInfo[8]);
@@ -55,28 +49,34 @@ if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         switch ($_GET['idroom']){
             case 1:
-                //text
+                $section = 'chambre';
+                include ('vues/chambre.php');
                 break;
             case 2 :
-                //text
+                $section = 'salledebain';
+                include ('vues/salledebain.php');
                 break;
             case 3 :
-                //text
+                $section = 'salon';
+                include ('vues/salon.php');
                 break;
             case 4 :
-                //text
+                $section = 'salleamanger';
+                include ('vues/salleamanger.php');
                 break;
             case 5 :
-                //text
+                $section = 'cuisine';
+                include ('vues/cuisine.php');
                 break;
             case 6 :
-                //text
+                $section = 'autrespieces';
+                include ('vues/autrespieces.php');
                 break;
         }
     }
     else{
         include ('vues/erreur404.php');
     }
->>>>>>> b7d094a250f4ec442e2fc2e66c97a36c436022f1
+
 
 }
