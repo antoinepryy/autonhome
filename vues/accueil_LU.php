@@ -9,8 +9,29 @@
 <section class="my-house-state">
 
     <select name="house" class="house-choice">
-        <option value="ma maison principale" selected>Ma maison principale</option>
+        <?php /*foreach($myHouses as $home) {*/
+
+            echo(
+            '<option selected>Maison principale</option>'
+            );
+            echo ( $home["ID"] );  ?>
+        <?php?>
+
+         <?php /*foreach(myHouses as $home) { */
+            echo (
+            '<option selected >Maison de vacances</option>'
+            );
+
+            echo ( $home["ID"] );  ?>
+
+        <?php?>
     </select>
+
+
+
+
+
+
 
     <h3>
         Etat de votre maison
