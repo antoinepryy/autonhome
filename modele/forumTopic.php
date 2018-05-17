@@ -10,9 +10,8 @@ include('connexion.php');
 //on définit le nom de la table
 $table = "forum_topic";
 
-function createSubject(PDO $bdd, $data)
+function createSubject(PDO $bdd, $topic)
 {
-    die(var_dump($_SESSION));
     $time = time();
     $statement = $bdd->prepare('INSERT INTO `forum_topic` 
     (`ID`,
@@ -25,7 +24,7 @@ function createSubject(PDO $bdd, $data)
     :id_user,
     :dateTime)
     ');
-    $statement->bindParam(":topic", $data["topic"]);
+    $statement->bindParam(":topic", $topic);
     $statement->bindParam(":id_user", $_SESSION['userId']);
     $statement->bindParam(":dateTime", $time);
     $statement->execute();

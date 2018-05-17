@@ -25,9 +25,8 @@ else{
 
 
 if(isset($_POST["topic"])){
-
-    createSubject($bdd, $_POST);
-    createMessage($bdd,$_POST);
+    createSubject($bdd, $_POST["topic"]);
+    createMessage($bdd,$_POST["text"],0);
     header("Location: index.php?cible=forum");
 }
 else{

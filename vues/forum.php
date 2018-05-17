@@ -26,7 +26,7 @@ if (isset($alerte)){
 
         <form method="POST" action="index.php?cible=verifforumform" >
             <input type="text"  name="topic" placeholder="Titre du post" required/>
-            <input type="text"  name="message" placeholder="Message" required/>
+            <input type="text"  name="text" placeholder="Texte" required/>
 
         </section>
 

@@ -11,10 +11,10 @@ include('connexion.php');
 $table = "forum_message";
 
 
-function createMessage(PDO $bdd, $data)
+function createMessage(PDO $bdd, $text, $id_topic)
 {
     $time = time();
-    $statement = $bdd->prepare('INSERT INTO `forum_topic` 
+    $statement = $bdd->prepare('INSERT INTO `forum_message` 
     (`ID`,
     `text`, 
     `id_user`,
@@ -26,9 +26,9 @@ function createMessage(PDO $bdd, $data)
     :id_user,
     :id_topic,
     :dateTime)');
-    $statement->bindParam(":text", $data["text"]);
+    $statement->bindParam(":text", $text);
     $statement->bindParam(":id_user", $_SESSION['userId']);
-    $statement->bindParam(":id_topic", $_SESSION['id_topic']);
+    $statement->bindParam(":id_topic", $id_topic);
     $statement->bindParam(":dateTime", $time);
     $statement->execute();
 }

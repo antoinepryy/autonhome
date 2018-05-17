@@ -10,9 +10,8 @@
         Mon profil
     </h3>
     <div>
-        <a class="my-picture"> <img src="" alt="Photo"></a><br/>
-        <input name="Nom" value="a"><br/>
-        <input name="Prénom" value="b"<br/>
+        <p class="name"> <?php echo $_SESSION["userFirstName"]?> <?php echo $_SESSION["userLastName"]?></p>
+        <p class="admin"> ADMIN</p>
     </div>
 
 </section>
