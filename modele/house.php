@@ -89,8 +89,23 @@ function getAllUserHouses($bdd, $id){
 }
 
 function getHouseInfoFromId($bdd, $id){
-    $statement = $bdd->prepare('SELECT name, surface, nbPeople, addressNumber, addressStreet, addressZipCode, addressCity, addressCountry FROM residence WHERE ID = :ID');
+    $statement = $bdd->prepare('SELECT name, surface, nbPeople, addressNumber, addressStreet, addressZipCode, addressCity, addressCountry, id_tenant, secret FROM residence WHERE ID = :ID');
     $statement->bindParam(':ID', $id);
     $statement->execute();
     return $statement->fetch();
+}
+
+function belongToUser($bdd, $idUser, $idHouse){
+    $statement = $bdd->prepare('SELECT * FROM residence WHERE ID = :idHouse AND (id_owner = :id OR id_tenant = :id)');
+    $statement->bindParam('id', $idUser);
+    $statement->bindParam('idHouse', $idHouse);
+    $statement->execute();
+    $result = $statement->fetch();
+    if($result){
+        return true;
+    }
+    else{
+        return false;
+    }
+
 }

@@ -26,16 +26,17 @@ else{
 
 $name=$_POST['roomName'];
 $id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
-$id_residency = $_GET['id'];
+$id_residency = $_POST['idHouse'];
 $data = array(
     'ID' => NULL,
     'name' => $name,
     'id_residency' => $id_residency,
-    'id_roomCategory' => $id_roomCategory,);
+    'id_roomCategory' => $id_roomCategory);
 
-if(isset($_POST["name"])){
+if(isset($_POST["roomName"])){
     $addRoom = createRoom($bdd, $data);
-    die(var_dump('bueno'));
+    header("Location: index.php?cible=mamaison&id=".$id_residency);
+
 }
 
 else{

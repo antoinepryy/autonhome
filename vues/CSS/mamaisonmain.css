@@ -1,4 +1,4 @@
-.ma-maison-principale{
+.principal{
     background-color: lightgrey;
     margin-left: 3%;
     margin-right: 3%;
@@ -6,8 +6,47 @@
     margin-bottom: 2%;
     margin-top: 2%;
     border : 1px solid black;
+
 }
 
+.roomCategory{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+}
+
+
+.salon text, .cuisine text, .chambre text, .salle-a-manger text, .salle-de-bain text, .autres-pieces text{
+    padding: 10%;
+
+}
+
+.salon a, .cuisine a, .chambre a, .salle-a-manger a, .salle-de-bain a, .autres-pieces a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.roomCategory img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    border : 1px solid black;
+}
+
+
+.salon, .cuisine, .chambre, .salle-a-manger, .salle-de-bain, .autres-pieces{
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 3%;
+    margin-top: 2%;
+}
 
 
 

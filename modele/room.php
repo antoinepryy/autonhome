@@ -14,7 +14,7 @@ function createRoom(PDO $bdd, $data)
     (NULL,
     :name, 
     :id_residency,
-    :id_roomCategory,)');
+    :id_roomCategory)');
     $statement->bindParam(":name", $data["name"]);
     $statement->bindParam(":id_residency", $data["id_residency"]);
     $statement->bindParam(":id_roomCategory", $data["id_roomCategory"]);
