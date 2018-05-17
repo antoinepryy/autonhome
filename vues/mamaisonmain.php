@@ -38,10 +38,10 @@ require ('vues/header_'.$status.'.php'); ?>
 
    </section>
 
-   <section class="roomCategory">
+    <section class="roomCategory">
         <div class="salon">
             <a href="index.php?cible=salon"><img src="ressources/pictures/salon.jpg""></a>
-            <a class="text" href="index.php?cible=cuisine">Salon</a>
+            <a class="text" href="index.php?cible=salon">Salon</a>
         </div>
         <div class="cuisine">
             <a href="index.php?cible=salon"><img src="ressources/pictures/cuisine.jpg""></a>
