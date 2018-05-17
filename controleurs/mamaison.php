@@ -30,15 +30,9 @@ if($status=='LU' && !isset($_GET['id'])){
     include ('vues/mamaison.php');
 }
 
-elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom']){
+elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
     $section='mamaisonmain';
-<<<<<<< HEAD
-    include ('vues/mamaisonmain.php');
-}
 
-if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
-    $roomcategory = getIdRoomCategory($bdd,$_GET['idroom']);
-=======
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
         $user = findUserById($bdd, $houseInfo[8]);
@@ -77,6 +71,6 @@ if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
     else{
         include ('vues/erreur404.php');
     }
->>>>>>> b7d094a250f4ec442e2fc2e66c97a36c436022f1
+
 
 }
