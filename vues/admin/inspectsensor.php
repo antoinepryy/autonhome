@@ -7,30 +7,64 @@
  */
 
 require ('vues/header_'.$status.'.php');
-
 ?>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nom
+        </th>
+        <th>
+            Etat
+        </th>
+        <th>
+            Numéro de série
+        </th>
+        <th>
+            ID chambre
+        </th>
+        <th>
+            ID type de capteur
+        </th>
+    </tr>
 
-    <section>
-        <div class="link-tools">
-            <a href="index.php?cible=inspectdatabase&table=user">
-                Gestion des utilisateurs
+    <?php
+    foreach ($list as $element) {
+        ?>
+        <tr>
+            <td>
+            <?php echo($element["ID"]); ?>
+            </td>
+            <td>
+                <?php echo($element["name"]); ?>
+            </td>
+            <td>
+                <?php echo($element["state"]); ?>
+            </td>
+            <td>
+                <?php echo($element["serial"]); ?>
+            </td>
+            <td>
+                <?php echo($element["id_room"]); ?>
+            </td>
+            <td>
+                <?php echo($element["id_sensorType"]); ?>
+            </td>
+        </tr>
 
-            </a>
-            <a href="index.php?cible=inspectdatabase&table=residence">
-                Gestion des résidences
-            </a>
-            <a href="index.php?cible=inspectdatabase&table=sensor">
-                Gestion des capteurs
 
-            </a>
-
-        </div>
+        <?php
+    }
+    ?>
 
 
-    </section>
+
+
+</table>
 
 
 
 <?php
-require ('vues/footer.php');
-?>
+require ('vues/footer.php');?>
