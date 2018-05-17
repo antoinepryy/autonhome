@@ -35,3 +35,12 @@ function getAllResidenceRooms($bdd, $id){
     $inHouse = $residencyStatement->fetchAll();;
     return (array($inHouse));
 }
+
+function getAllRoomCategoryRooms ($bdd, $id, $id_category){
+    $residencyStatement = $bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency AND id_roomCategory = :idRoomCategory');
+    $residencyStatement->bindParam(':idResidency', $id);
+    $residencyStatement->bindParam(':idRoomCategory', $id_category);
+    $residencyStatement->execute();
+    $inHouse = $residencyStatement->fetchAll();;
+    return (array($inCategory));
+}

@@ -1,7 +1,8 @@
+
 h1{
     text-align: center;
 }
-.display-sallesamanger{
+.display-salon{
     background-color: lightgrey;
     margin: auto;
     padding : 1%;
@@ -13,8 +14,8 @@ h1{
 }
 
 
-.display-sallesamanger form{
-    background-image: url("../../ressources/pictures/salleamanger.jpg");
+.display-salon form{
+    background-image: url("../../ressources/pictures/salon.jpg");
     width: 20%;
     height: auto;
     padding: 2%;
@@ -23,10 +24,10 @@ h1{
     font-weight: bold;
 }
 
-.display-sallesamanger.use-case, .display-sallesamanger.use-case-volets {
+.display-salon.use-case, .display-salon.use-case-volets {
     text-align: center;
 }
 
-.display-sallesamanger ul{
+.display-salon ul{
     list-style-type: none;
 }
