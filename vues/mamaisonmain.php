@@ -48,19 +48,19 @@ require ('vues/header_'.$status.'.php'); ?>
             <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=2"); ?>>Cuisine</a>
         </div>
         <div class="chambre">
-            <a <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=3"); ?>><img src="ressources/pictures/chambre.jpg""></a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=3"); ?>><img src="ressources/pictures/chambre.jpg""></a>
             <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=3"); ?>>Chambre</a>
         </div>
         <div class="salle-a-manger">
-            <a <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=4"); ?>><img src="ressources/pictures/salleamanger.jpg""></a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=4"); ?>><img src="ressources/pictures/salleamanger.jpg""></a>
             <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=4"); ?>>Salle à manger</a>
         </div>
         <div class="salle-de-bain">
-            <a <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?>><img src="ressources/pictures/salledebain.jpg""></a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?>><img src="ressources/pictures/salledebain.jpg""></a>
             <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?>>Salle de bain</a>
         </div>
         <div class="autres-pieces">
-            <a <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=6"); ?>><img src="ressources/pictures/bureau.jpg""></a>
+            <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=6"); ?>><img src="ressources/pictures/bureau.jpg""></a>
             <a class="text" <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=6"); ?>>Autres pièces</a>
         </div>
 
