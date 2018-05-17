@@ -49,22 +49,22 @@ if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         switch ($_GET['idroom']){
             case 1:
-                //text
+                include ('vues/salon.php');
                 break;
             case 2 :
-                //text
+                include ('vues/cuisine.php');
                 break;
             case 3 :
-                //text
+                include ('vues/chambre.php');
                 break;
             case 4 :
-                //text
+                include ('vues/salleamanger.php');
                 break;
             case 5 :
-                //text
+                include ('vues/salledebain.php');
                 break;
             case 6 :
-                //text
+                include ('vues/autrespieces.php');
                 break;
         }
     }
