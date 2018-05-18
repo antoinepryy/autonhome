@@ -5,26 +5,16 @@
 ?>
 
 
-
 <section class="my-house-state">
 
     <select name="house" class="house-choice">
-        <?php /*foreach($myHouses as $home) {*/
+        <?php foreach($myHouses as $home) {
 
-            echo(
-            '<option selected>Maison principale</option>'
-            );
-            echo ( $home["ID"] );  ?>
-        <?php?>
+//            echo('<option>'.$home['ID'].'</option>');
 
-         <?php /*foreach(myHouses as $home) { */
-            echo (
-            '<option selected >Maison de vacances</option>'
-            );
+        }
+        ?>
 
-            echo ( $home["ID"] );  ?>
-
-        <?php?>
     </select>
 
 
