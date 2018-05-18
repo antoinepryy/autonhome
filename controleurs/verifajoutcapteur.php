@@ -24,6 +24,46 @@ else{
     $status="UU";
 }
 
-if (isset($_POST[capteurlumiereLDR]) && $_POST[capteurtemperatureLM32] && $_POST[microelectret]){
-
+if($_POST[capteurlumiereLDR]= true){
+    $here = true;
+    $name = $_POST['namelumiere'];
+    $serial = $_POST[seriallumiere];
+    $state = "OFF";
+    $id_room = $_POST[$id_room];
+    $id_sensortype = 1;
+    $numbrerSensors +=
 }
+
+if($_POST[capteurtemperatureLM32]= true){
+    $here = true;
+    $name = $_POST['namelumiere'];
+    $serial = $_POST[seriallumiere];
+    $state = "OFF";
+    $id_room = $_POST[$id_room];
+    $id_sensortype = 1;
+}
+
+if($_POST[microphoneelectret]= true){
+    $here = true;
+    $name = $_POST['namelumiere'];
+    $serial = $_POST[seriallumiere];
+    $state = "OFF";
+    $id_room = $_POST[$id_room];
+    $id_sensortype = 1;
+}
+
+$name=$_POST['roomName'];
+$id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
+$id_residency = $_POST['idHouse'];
+$newsensors = array(
+    'Here' => $here
+
+)
+$data = array(
+    'ID' => NULL,
+    'name' => $name,
+    'id_residency' => $id_residency,
+    'id_roomCategory' => $id_roomCategory);
+
+for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
+{
