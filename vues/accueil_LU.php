@@ -9,8 +9,8 @@
 
     <select name="house" class="house-choice">
         <?php foreach($myHouses as $home) {
-
-//            echo('<option>'.$home['ID'].'</option>');
+//            echo('<option>'.'Bouh'.'</option>');
+            die(var_dump($home));
 
         }
         ?>

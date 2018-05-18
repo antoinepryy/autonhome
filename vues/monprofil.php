@@ -20,9 +20,9 @@ require ('vues/header_'.$status.'.php');
         Mail : <?php echo ($_SESSION["userMail"]);?>
     </p>
     <button id="myBtn">Modifier les informations</button>
-    <form action="index.php?cible=changermotdepasse" method="post">
+    <form action="index.php?cible=modifiermotdepasse" method="post">
         <div>
-            <button class="forgot-password" type="submit">Changer mot de passe</button>
+            <button class="changermotdepasse" type="submit">Changer mot de passe</button>
         </div>
     </form>
 </section>
