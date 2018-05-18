@@ -3,28 +3,46 @@
  * Created by IntelliJ IDEA.
  * User: Utilisateur
  * Date: 06/05/2018
- * Time: 16:14
+ * Time: 16:17
  */
 require ('vues/header_'.$status.'.php');
 ?>
 
 <h1>
-    Cuisine
+    Cuisine(s)
 </h1>
 
-<div class="imagecuisine"> <img src="ressources/pictures/cuisine.jpg"> </div>
+<div class="display-cuisine">
 
-<form method="post" action="">
+    <ul class="cuisine-list">
+        <?php foreach ($inCategory as $roomInCategory) { ?>
+            <li>
+                <?php echo ( $roomInCategory["name"]);  ?>
 
-    <p>Voulez enclencher les : <p/> <br />
+                <form method="post" action="">
 
-    <div class="use-case">
-        <input type="checkbox" name="volets" id="volets" /> <label for="volets">Volets</label>
-        <br />
-        <input type="checkbox" name="lumieres" id="lumieres" /> <label for="lumieres"> Lumières </label>
-    </div>
+                    <p>Enclencher : <p/>
 
-</form>
+                    <div class="use-case">
+                        <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
+                        <br />
+                        <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
+                        <br />
+                    </div>
+                    <br/>
+                    <div class="use-case-volets">
+                        <p> Etat des volets</p>
+                        <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
+                        <br />
+                        <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
+                        <br />
+                    </div>
+                </form>
+
+            </li>
+        <?php } ?>
+    </ul>
+</div>
 
 <p> <a href="index.php?cible=ajoutpieces" >Ajouter une cuisine</a> </p>
 <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
