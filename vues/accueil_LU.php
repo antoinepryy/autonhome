@@ -8,12 +8,12 @@
 <section class="my-house-state">
 
     <select name="house" class="house-choice">
-        <?php foreach($myHouses as $home) {
-//            echo('<option>'.'Bouh'.'</option>');
-            die(var_dump($home));
-
-        }
-        ?>
+<!--        --><?php //foreach($myHouses as $home) {
+////            echo('<option>'.'Bouh'.'</option>');
+//            die(var_dump($home));
+//
+//        }
+//        ?>
 
     </select>
 
