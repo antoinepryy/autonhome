@@ -11,9 +11,7 @@ require ('vues/header_'.$status.'.php'); ?>
 <section class="principal">
 
 
-    <?php $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
 
-    echo ($house[addressStreet]); ?>
 
 
 
