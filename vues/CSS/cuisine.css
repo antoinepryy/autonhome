@@ -1,16 +1,32 @@
-.use-case{
-    font-size: 110%;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    margin-top: 1%;
-}
-
-.use-case input{
-    width: 3%;
-    margin-top: 2%;
-}
-
-.use-case label{
+h1{
     text-align: center;
+}
+.display-cuisine{
+    background-color: lightgrey;
+    margin: auto;
+    padding : 1%;
+    border : 1px solid black;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.display-cuisine form{
+    background-image: url("../../ressources/pictures/cuisine.jpg");
+    width: 20%;
+    height: auto;
+    padding: 2%;
+    border : 1px solid black;
+    background-size: 100%;
+    font-weight: bold;
+}
+
+.display-cuisine.use-case, .display-cuisine.use-case-volets {
+    text-align: center;
+}
+
+.display-cuisine ul{
+    list-style-type: none;
 }

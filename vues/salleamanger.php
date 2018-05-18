@@ -14,29 +14,34 @@ require ('vues/header_'.$status.'.php');
 
 <div class="display-sallesamanger">
 
+    <ul class="salle-a-manger-list">
+        <?php foreach ($inCategory as $roomInCategory) { ?>
+        <li>
+            <?php echo ( $roomInCategory["name"]);  ?>
 
-<form method="post" action="">
+            <form method="post" action="">
 
-    <p>Enclencher : <p/>
+                <p>Enclencher : <p/>
 
-    <div class="use-case">
-        <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
-        <br />
-        <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
-        <br />
-    </div>
-    <br/>
-    <div class="use-case-volets">
-    <p> Etat des volets</p>
-    <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
-    <br />
-    <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
-    <br />
-    </div>
-</form>
+                <div class="use-case">
+                    <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
+                    <br />
+                    <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
+                    <br />
+                </div>
+                <br/>
+                <div class="use-case-volets">
+                <p> Etat des volets</p>
+                <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
+                <br />
+                <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
+                <br />
+                </div>
+            </form>
 
-
-
+        </li>
+        <?php } ?>
+    </ul>
 </div>
 
 <p> <a href="index.php?cible=ajoutpieces" >Ajouter une salle à manger</a> </p>
