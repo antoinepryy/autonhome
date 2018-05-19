@@ -28,15 +28,18 @@ else{
 
 if ($status=='AD'){
     switch ($_GET["table"]){
-        case "user":
+        case "inspectuser":
+            $section = 'user';
             $list = getAll($bdd, "user");
             require ('vues/admin/inspectuser.php');
             break;
         case "residence":
+            $section = 'inspectresidence';
             $list = getAll($bdd, "residence");
             require ('vues/admin/inspectresidence.php');
             break;
         case "sensor":
+            $section = 'inspectsensor';
             $list = getAll($bdd, 'sensor');
             require ('vues/admin/inspectsensor.php');
             break;
