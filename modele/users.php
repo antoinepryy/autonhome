@@ -37,11 +37,11 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
     }
 }
 
-    function createUser(PDO $bdd, $data){
-        $verify = $bdd->prepare('SELECT * FROM user WHERE mail = :mail');
-        $verify->bindParam(":mail", $data["mail"]);
-        $verify->execute();
-        $newUserVerif = $verify->fetch();
+    function createUser(PDO $bdd, $data){                                                        // $data (table en paramètre)
+        $verify = $bdd->prepare('SELECT * FROM user WHERE mail = :mail');               // preparer la requete SQL
+        $verify->bindParam(":mail", $data["mail"]);                            //
+        $verify->execute();                                                                     // lancer la requete
+        $newUserVerif = $verify->fetch();                                                       // récuperer la requete SQL
         if ($newUserVerif==false){
             $cryptedPassword = $data["password"];
             $cryptedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
@@ -148,6 +148,17 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
         $statement->execute();
         $user = $statement->fetch();
         return $user;
+    }
+
+
+    function updatePassword($bdd, $id, $password){
+        $statement = $bdd->prepare(
+            'UPDATE user
+            SET
+            password = :password,
+            id = id,
+            
+        ');
 
     }
 

@@ -13,4 +13,4 @@ if(!function_exists("importAllSessionsAndModels")){
 
 //Mission de Yacine
 
-die(var_dump('test'));
+die(var_dump($_POST));

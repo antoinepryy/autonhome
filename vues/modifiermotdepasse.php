@@ -26,7 +26,7 @@ require ('vues/header_'.$status.'.php');
             <input type="password" name="passNew" id="passNew" required placeholder="Nouveau mot de passe" minlength="6"/>    <br/>
 
             <label hidden>nouveau mot de passe</label>
-            <input type="password" name="passNew" id="passNew" required placeholder="Confirmation mot de passe" minlength="6"/>    <br/>
+            <input type="password" name="passNewPlain" id="passNew" required placeholder="Confirmation mot de passe" minlength="6"/>    <br/>
 
             <input type="submit" value  ="Valider" class="bouton" />
         </div>
