@@ -12,7 +12,7 @@ require ('vues/header_'.$status.'.php');
     Salle(s) de bain
 </h1>
 
-<div class="display-sallesdebain">
+<div class="display-salledebain">
 
     <ul class="salle-de-bain-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>

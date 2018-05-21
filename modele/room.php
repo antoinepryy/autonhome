@@ -41,6 +41,6 @@ function getAllRoomCategoryRooms ($bdd, $id, $id_category){
     $residencyStatement->bindParam(':idResidency', $id);
     $residencyStatement->bindParam(':idRoomCategory', $id_category);
     $residencyStatement->execute();
-    $inHouse = $residencyStatement->fetchAll();;
+    $inCategory = $residencyStatement->fetchAll();;
     return (array($inCategory));
 }

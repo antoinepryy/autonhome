@@ -1,7 +1,7 @@
 h1{
     text-align: center;
 }
-.display-cuisine{
+.display-autrespieces{
     background-color: lightgrey;
     margin: auto;
     padding : 1%;
@@ -13,8 +13,8 @@ h1{
 }
 
 
-.display-cuisine form{
-    background-image: url("../../ressources/pictures/cuisine2.jpg");
+.display-autrespieces form{
+    background-image: url("../../ressources/pictures/bureau2.jpg");
     width: 20%;
     height: auto;
     padding: 2%;
@@ -23,10 +23,10 @@ h1{
     font-weight: bold;
 }
 
-.display-cuisine.use-case, .display-cuisine.use-case-volets {
+.display-autrespieces.use-case, .display-chambre.use-case-volets {
     text-align: center;
 }
 
-.display-cuisine ul{
+.display-autrespieces ul{
     list-style-type: none;
 }
