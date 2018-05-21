@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: yacin
- * Date: 03/05/2018
- * Time: 11:03
+ * User: Utilisateur
+ * Date: 17/05/2018
+ * Time: 10:26
  */
 
-$section = 'modifiermotdepasse';
+$section = 'ajoutcapteur';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -23,7 +23,4 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
-
-
-include('vues/modifiermotdepasse.php');
+include('vues/ajoutcapteur.php');

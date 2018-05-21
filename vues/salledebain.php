@@ -44,7 +44,7 @@ require ('vues/header_'.$status.'.php');
     </ul>
 </div>
 
-<p> <a href="index.php?cible=ajoutpieces" >Ajouter une salle de bain</a> </p>
+
 <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
 
 <?php

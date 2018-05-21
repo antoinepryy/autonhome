@@ -14,14 +14,14 @@ require ('vues/header_'.$status.'.php');
         <a href="index.php?cible=inspectdatabase&table=user">
             Gestion des utilisateurs
 
-        </a>
+        </a><br>
         <a href="index.php?cible=inspectdatabase&table=residence">
             Gestion des résidences
-        </a>
+        </a><br>
         <a href="index.php?cible=inspectdatabase&table=sensor">
             Gestion des capteurs
 
-        </a>
+        </a><br>
 
     </div>
 

@@ -2,37 +2,25 @@
 /**
  * Vue : Etat de ma maison
  */
-?>
 
+
+?>
 
 
 <section class="my-house-state">
 
     <select name="house" class="house-choice">
-        <?php /*foreach($myHouses as $home) {*/
+        <?php foreach($myHouses[0] as $key => $home) {
+            if($key==0){?>
+                <option selected> <?php echo ($home['name']); ?> </option>
+            <?php }
+            else { ?>
+                <option > <?php echo ($home['name']); ?> </option>
+            <?php }
 
-            echo(
-            '<option selected>Maison principale</option>'
-            );
-            echo ( $home["ID"] );  ?>
-        <?php?>
-
-         <?php /*foreach(myHouses as $home) { */
-            echo (
-            '<option selected >Maison de vacances</option>'
-            );
-
-            echo ( $home["ID"] );  ?>
-
-        <?php?>
+        }
+        ?>
     </select>
-
-
-
-
-
-
-
     <h3>
         Etat de votre maison
     </h3>

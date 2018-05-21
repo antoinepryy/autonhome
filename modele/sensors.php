@@ -32,7 +32,25 @@ function getAllSensors(PDO $bdd){
     $sensors = $statement->fetch();
 }
 
-function getAllResidentsSensors(PDO $bdd, $id){
+function createSensor(PDO $bdd, $data){
+    $statement = $bdd->prepare('INSERT INTO `sensor` 
+    (`ID`,
+    `name`, 
+    `state`, 
+    `serial`
+    `id_room`,
+    `id_sensortype`,)
+    VALUES
+    (NULL,
+    :name, 
+    :state,
+    :serial,
+    :id_room,
+    :id_sensortype)');
+    $statement->bindParam(":name", $data["name"]);
+    $statement->bindParam(":id_residency", $data["id_residency"]);
+    $statement->bindParam(":id_roomCategory", $data["id_roomCategory"]);
+    $statement->execute();
 
 }
 ?>
