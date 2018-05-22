@@ -30,3 +30,10 @@ h1{
 .display-salledebain ul{
     list-style-type: none;
 }
+
+.salle-de-bain-list h4{
+    font-weight: bold;
+    margin-bottom: 1%;
+    text-align: center;
+    width: 25%;
+}

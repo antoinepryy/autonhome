@@ -90,7 +90,7 @@ require ('vues/header_'.$status.'.php'); ?>
 
                     <label for="roomCategory">Type de la pièce: </label>
                     <select name="roomCategory" id="roomCategory" required>
-                        <option value="Chambre">Chambre</option>
+                        <option value="Chambre" selected >Chambre </option>
                         <option value="Cuisine">Cuisine</option>
                         <option value="Salon">Salon</option>
                         <option value="Salle à manger">Salle à manger</option>

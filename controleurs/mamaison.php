@@ -46,8 +46,9 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 
 if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
     $section = 'mamaisonroom';
+    $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'],$_GET['idroom'])[0];
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
-        $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'],$_GET['idroom']);
+
         switch ($_GET['idroom']){
             case 1:
                 $section = 'chambre';

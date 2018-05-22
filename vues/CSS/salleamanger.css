@@ -30,3 +30,10 @@ h1{
 .display-sallesamanger ul{
     list-style-type: none;
 }
+
+.salle-a-manger-list h4{
+    font-weight: bold;
+    margin-bottom: 1%;
+    text-align: center;
+    width: 25%;
+}

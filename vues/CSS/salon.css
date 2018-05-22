@@ -31,3 +31,10 @@ h1{
 .display-salon ul{
     list-style-type: none;
 }
+
+.salon-list h4{
+    font-weight: bold;
+    margin-bottom: 1%;
+    text-align: center;
+    width: 25%;
+}
