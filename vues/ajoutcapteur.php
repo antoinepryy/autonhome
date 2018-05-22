@@ -14,35 +14,39 @@ require ('vues/header_'.$status.'.php');
 </h1>
 
 <section class="capteurs">
+
+
     <h2>
         Nos Capteurs
     </h2>
 
     <form action="index.php?cible=verifajoutcapteur" method="post">
 
-        <div class="lumierelegende"> <img class="capteurlumiere" src="ressources/pictures/capteurdelumiereLDR.jpg">
+        <div id= "lumierelegende" class="lumierelegende"> <img class="capteurlumiere" src="ressources/pictures/capteurdelumiereLDR.jpg">
 
-            <input type="checkbox" name="capteurlumiereLDR" id="capteurlumiereLDR" /> <label for="capteurlumiereLDR">Capteur de lumière LDR</label>
-            <input type="text"  name="namelumiere" placeholder="Nom du capteur" required/>
-            <input type="text"  name="seriallumiere" placeholder="Serial number" required/>
+            <input type="number"  name="lightquantity" id="lightQuantity" placeholder="Quantité" />
+
+            <div id="inputCapteurLumiere"></div>
 
         </div>
 
-        <div class="temperaturelegende"> <img class="capteurtemperature" src="ressources/pictures/capteurdetemperature.JPG">
+        <div  id= "temperaturelegende" class="temperaturelegende"> <img class="capteurtemperature" src="ressources/pictures/capteurdetemperature.JPG">
 
-            <input type="checkbox" name="capteurtemperatureLM32" id="capteurtemperatureLM32" /> <label for="capteurtemperatureLM32">Capteur de température LM35</label>
-            <input type="text"  name="nametemperature" placeholder="Nom du capteur" required/>
-            <input type="text"  name="serialtemperature" placeholder="Serial number" required/>
+            <input type="number"  name="temperatureQuantity" placeholder="Quantité" />
+
+            <div id="inputCapteurTemperature"></div>
 
         </div>
 
         <div class="microlegende"> <img class="microelectret" src="ressources/pictures/microelectret.jpg">
 
-            <input type="checkbox" name="microphoneelectret" id="microphoneelectret" /> <label for="microphoneelectret">Microphone electret</label>
-            <input type="text"  name="namemicro" placeholder="Nom du capteur" required/>
-            <input type="text"  name="serialmicro" placeholder="Serial number" required/>
+            <input type="number"  name="microQuantity" placeholder="Quantité" />
+
+            <div id="inputCapteurMicro"></div>
 
         </div>
+
+        <button type="button" class="DisplayInput" onclick="createViewInput()">Submit</button>
 
         <input type="number" name="idRoom" value="<?php echo($_GET['id_room']); ?>" hidden>
 
