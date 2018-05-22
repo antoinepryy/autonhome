@@ -7,12 +7,9 @@
  */
 require ('vues/header_'.$status.'.php');
 ?>
-
-<h1>
-    Cuisine(s)
-</h1>
-
 <div class="display-cuisine">
+
+    <h1> Cuisine(s)</h1>
 
     <ul class="cuisine-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
@@ -42,11 +39,10 @@ require ('vues/header_'.$status.'.php');
             </li>
         <?php } ?>
     </ul>
+
+    <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+
 </div>
-
-
-<p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
-
 <?php
 
 require ('vues/footer.php');

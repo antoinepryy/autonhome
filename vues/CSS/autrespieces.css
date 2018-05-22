@@ -3,7 +3,7 @@ h1{
 }
 .display-autrespieces{
     background-color: lightgrey;
-    margin: auto;
+    margin: 1%;
     padding : 1%;
     border : 1px solid black;
     margin-right: 3%;
@@ -12,10 +12,9 @@ h1{
     flex-direction: column;
 }
 
-
 .display-autrespieces form{
     background-image: url("../../ressources/pictures/bureau2.jpg");
-    width: 20%;
+    width: 200%;
     height: auto;
     padding: 2%;
     border : 1px solid black;
@@ -23,17 +22,22 @@ h1{
     font-weight: bold;
 }
 
-.display-autrespieces.use-case, .display-chambre.use-case-volets {
+.display-autrespieces.use-case, .display-autrespieces.use-case-volets {
     text-align: center;
 }
 
 .display-autrespieces ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.display-autrespieces li{
+    margin-right: 15%;
 }
 
 .autres-pieces-list h4{
     font-weight: bold;
-    margin-bottom: 1%;
-    text-align: center;
-    width: 25%;
+    margin-bottom: 5%;
 }

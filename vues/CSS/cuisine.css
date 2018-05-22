@@ -3,7 +3,7 @@ h1{
 }
 .display-cuisine{
     background-color: lightgrey;
-    margin: auto;
+    margin: 1%;
     padding : 1%;
     border : 1px solid black;
     margin-right: 3%;
@@ -12,10 +12,9 @@ h1{
     flex-direction: column;
 }
 
-
 .display-cuisine form{
     background-image: url("../../ressources/pictures/cuisine2.jpg");
-    width: 20%;
+    width: 200%;
     height: auto;
     padding: 2%;
     border : 1px solid black;
@@ -29,11 +28,16 @@ h1{
 
 .display-cuisine ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.display-cuisine li{
+    margin-right: 15%;
 }
 
 .cuisine-list h4{
     font-weight: bold;
-    margin-bottom: 1%;
-    text-align: center;
-    width: 25%;
+    margin-bottom: 5%;
 }

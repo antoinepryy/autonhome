@@ -44,3 +44,9 @@ function getAllRoomCategoryRooms ($bdd, $id, $id_category){
     $inCategory = $residencyStatement->fetchAll();;
     return (array($inCategory));
 }
+
+function deleteRoom ($bdd, $id){
+    $roomStatement = $bdd->prepare ('DELETE FROM room WHERE id= :id');
+    $roomStatement->bindParam(':idRoom', $id);
+    $roomStatement->execute();
+}
