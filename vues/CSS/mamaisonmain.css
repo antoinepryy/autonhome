@@ -22,15 +22,11 @@
     color: black;
     text-decoration: none;
     font-weight: bold;
-    position: relative;
-    z-index: 2;
 }
 
 .roomCategory img{
     width: 100px;
     height: 100px;
-    position: relative;
-    z-index: 1;
     border : 1px solid black;
 }
 

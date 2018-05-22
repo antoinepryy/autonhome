@@ -17,7 +17,7 @@ require ('vues/header_'.$status.'.php');
     <ul class="autres-pieces-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
             <li>
-                <?php echo ( $roomInCategory["name"]);  ?>
+                <?php echo ( $roomInCategory['name']);  ?>
 
                 <form method="post" action="">
 

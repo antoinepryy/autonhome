@@ -47,31 +47,26 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
     $section = 'mamaisonroom';
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
-
+        $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'],$_GET['idroom']);
         switch ($_GET['idroom']){
             case 1:
                 $section = 'chambre';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'],1);
                 include ('vues/chambre.php');
                 break;
             case 2 :
                 $section = 'salledebain';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'], 2);
                 include ('vues/salledebain.php');
                 break;
             case 3 :
                 $section = 'salon';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'], 3);
                 include ('vues/salon.php');
                 break;
             case 4 :
                 $section = 'salleamanger';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'], 4);
                 include ('vues/salleamanger.php');
                 break;
             case 5 :
                 $section = 'cuisine';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'], 5);
                 include ('vues/cuisine.php');
                 break;
             case 6 :
