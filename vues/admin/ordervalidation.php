@@ -13,7 +13,7 @@ require ('vues/header_'.$status.'.php');
     <div class="link-tools">
         <?php
         foreach ($avaitingOrders as $element){
-            echo ('<div>'.$element["name"].'<a href="">Valider cette commande</a></div><br>');
+            echo ('<div>'.$element["name"].'<a href="index.php?cible=espaceadmin&mode=validateorder&id=">Valider cette commande</a></div><br>');
         }
 
         ?>
