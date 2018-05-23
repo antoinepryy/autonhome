@@ -26,4 +26,11 @@ else{
     $status="UU";
 }
 
-include('vues/admin/espaceadmin.php');
+if(!isset($_GET['mode'])){
+    include('vues/admin/espaceadmin.php');
+
+}
+elseif ($_GET['mode']=='ordervalidation'){
+    $avaitingOrders = findSensorsByState($bdd, "ORDER");
+    include('vues/admin/ordervalidation.php');
+}

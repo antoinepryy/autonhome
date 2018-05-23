@@ -57,8 +57,7 @@ $id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
 $id_residency = $_POST['idHouse'];
 $newsensors = array(
     'Here' => $here
-
-)
+);
 $data = array(
     'ID' => NULL,
     'name' => $name,
