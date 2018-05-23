@@ -26,7 +26,7 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $status="LU";
-    if ($_GET["table"]='forumMessage') {
+    if () {
         $section = 'forumMessage';
         $value = getAll($bdd, "forum_message");
         require('vues/indexforum.php');
