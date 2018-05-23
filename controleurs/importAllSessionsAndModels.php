@@ -20,6 +20,6 @@ function importAllSessionsAndModels(){
     include('./modele/sensors.php');
     include('./modele/users.php');
     include('./modele/forumMessage.php');
-    include('./modele/forumTopic.php');
+    include('./modele/forumDiscussion.php');
 
 }

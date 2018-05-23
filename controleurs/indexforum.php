@@ -26,16 +26,10 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $status="LU";
-    if () {
-        $section = 'forumMessage';
-        $value = getAll($bdd, "forum_message");
-        require('vues/indexforum.php');
-    }
-    else {
-        $section = 'forumTopic';
-        $value = getAll($bdd, "forum_topic");
-        require('vues/indexforum.php');
-    }
+    $section = 'forumMessage';
+    $value = getAll($bdd, "forum_discussion");
+    require('vues/indexforum.php');
+
 }
 else{
     $status="UU";
