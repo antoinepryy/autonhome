@@ -26,8 +26,9 @@
     <div class="header-title">
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo.png"/></a>
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo_texte.png"/></a>
-
     </div>
+
+
 
     <nav>
         <ul>
