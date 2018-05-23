@@ -10,6 +10,8 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
+    <a href="vues/forum.php"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
+
     <table>
         <tr>
             <th>
@@ -25,7 +27,7 @@ require ('vues/header_'.$status.'.php');
             ?>
             <tr>
                 <td>
-                    <?php echo($element["id_topic"]); ?>
+                    <?php echo($element["topic"]); ?>
                 </td>
                 <td>
                     <?php echo($element["text"]); ?>

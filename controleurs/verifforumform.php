@@ -24,10 +24,9 @@ else{
 }
 
 
-if(isset($_POST["topic"])){
-    createSubject($bdd, $_POST["topic"]);
-    createMessage($bdd,$_POST["text"],0);
-    header("Location: index.php?cible=forum");
+if(isset($_POST["topic"])&&isset($_POST["text"])){
+    createDiscussion($bdd, $_POST["topic"], $_POST["text"]);
+    header("Location: index.php?cible=indexforum");
     require('vues/indexforum.php');
 }
 else{
