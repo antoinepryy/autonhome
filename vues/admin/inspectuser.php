@@ -4,7 +4,7 @@
 require ('vues/header_'.$status.'.php');
 
 
-?>
+    ?>
     <table>
         <tr>
             <th>

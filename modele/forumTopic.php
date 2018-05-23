@@ -29,3 +29,6 @@ function createSubject(PDO $bdd, $topic)
     $statement->bindParam(":dateTime", $time);
     $statement->execute();
 }
+function afficheMessage(PDO $bdd) {
+
+}

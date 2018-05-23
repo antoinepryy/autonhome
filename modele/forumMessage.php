@@ -32,3 +32,13 @@ function createMessage(PDO $bdd, $text, $id_topic)
     $statement->bindParam(":dateTime", $time);
     $statement->execute();
 }
+
+function messageParTopic(PDO $bdd, $id_topic) {
+
+    $statement = $bdd->prepare('SELECT text FROM  forum_message WHERE id_topic = :id_topic ORDER BY dateTime DESC');
+    $statement->bindParam(":id_topic", $id_topic);
+    $statement->execute();
+
+    return $statement->fetchAll();
+
+}

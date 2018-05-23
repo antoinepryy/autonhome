@@ -58,4 +58,7 @@ header nav a :hover{
 .header-title{
 }
 
-
+.forum-logo{
+    size: 50px;
+    margin-right: 10px;
+}
