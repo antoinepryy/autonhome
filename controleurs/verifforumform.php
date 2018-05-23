@@ -28,6 +28,7 @@ if(isset($_POST["topic"])){
     createSubject($bdd, $_POST["topic"]);
     createMessage($bdd,$_POST["text"],0);
     header("Location: index.php?cible=forum");
+    require('vues/indexforum.php');
 }
 else{
     require ('vues/erreur404.php');

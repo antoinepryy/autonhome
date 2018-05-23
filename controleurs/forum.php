@@ -25,3 +25,4 @@ else{
 }
 
 include('vues/forum.php');
+
