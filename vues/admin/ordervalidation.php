@@ -13,7 +13,7 @@ require ('vues/header_'.$status.'.php');
     <div class="link-tools">
         <?php
         foreach ($avaitingOrders as $element){
-            echo ($element["name"]);
+            echo ('<div>'.$element["name"].'<a href="">Valider cette commande</a></div><br>');
         }
 
         ?>
