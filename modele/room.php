@@ -50,3 +50,10 @@ function deleteRoom ($bdd, $id){
     $roomStatement->bindParam(':idRoom', $id);
     $roomStatement->execute();
 }
+
+function getIdRoom($bdd, $name){
+    $statement = $bdd->prepare('SELECT ID FROM room_category WHERE name = :name');
+    $statement->bindParam(':name', $name);
+    $statement->execute();
+    return $statement->fetch();
+}
