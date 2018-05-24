@@ -64,5 +64,5 @@ $data = array(
     'id_residency' => $id_residency,
     'id_roomCategory' => $id_roomCategory);
 
-for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
-{
+
+
