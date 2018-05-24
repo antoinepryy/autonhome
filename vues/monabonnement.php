@@ -39,7 +39,7 @@ Mon Abonnement
             <label> Détecteur de mouvement</label>
             <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
             <label>Caméra</label>
-            <input type ="checkbox" name="Caméra" placeholder="<?php echo ($element["id_sensorType"])?>> <br>
+            <input type ="checkbox" name="Caméra"> <br>
 
 
 

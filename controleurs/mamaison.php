@@ -35,7 +35,7 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
-        $user = findUserById($bdd, $houseInfo[8]);
+        $user = findUserById($bdd, $houseInfo[9]);
         include ('vues/mamaisonmain.php');
     }
     else{
