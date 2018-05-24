@@ -31,9 +31,7 @@
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo_texte.png"/></a>
     </div>
 
-    <div class="forum-logo">
-        <a href="index.php?cible=indexforum"><img src="ressources/logo/forum.jpg"/></a>
-    </div>
+    <a href="index.php?cible=indexforum" ><img src="ressources/logo/forum.jpg" class="forum-logo"/></a>
 
     <nav>
         <ul>

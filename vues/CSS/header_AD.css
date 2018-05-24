@@ -49,3 +49,11 @@ header nav a{
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
+.forum-logo{
+    position: absolute;
+    top : 15%;
+    right: 2%;
+    width: 4%;
+    height: auto;
+}

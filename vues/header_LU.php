@@ -25,13 +25,13 @@
 
 <header>
 
-    <a href="index.php?cible=mamaison" class="ma-maison">
-        <div>
-            Ma maison
-        </div>
+        <a href="index.php?cible=mamaison" class="ma-maison">
+            <div>
+                Ma maison
+            </div>
 
-    </a>
-
+        </a>
+            <a href="index.php?cible=indexforum" ><img src="ressources/logo/forum.jpg" class="forum-logo"/></a>
 
     <div class="header-title">
         <a href="index.php?cible=accueil"><img src="ressources/logo/logodomisep_logo.png"/></a>
@@ -39,9 +39,7 @@
 
     </div>
 
-    <div class="forum-logo">
-        <a href="index.php?cible=indexforum"><img src="ressources/logo/forum.jpg"/></a>
-    </div>
+
 
     <nav>
         <ul>
