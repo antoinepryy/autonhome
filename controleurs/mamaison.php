@@ -44,7 +44,7 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 
 }
 
-elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])) {
+elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_GET['roomchoice'])) {
     $section = 'mamaisonroom';
     $inCategory = getAllRoomCategoryRooms($bdd, $_GET['id'], $_GET['idroom'])[0];
     if (belongToUser($bdd, $_SESSION['userId'], $_GET['id'])) {
@@ -82,7 +82,8 @@ elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])) {
 
 
 elseif($status == 'LU' && isset($_GET['id']) && isset($_GET['idroom']) && isset($_GET['roomchoice'])){
-    //todo
+    $devices = findAllDevicesByRoom($bdd,$_GET['roomchoice']);
+    include('vues/roomsensor.php');
 
 
 }
