@@ -6,13 +6,11 @@
  * Time: 14:53
  */
 
-$section = 'mamaison';
+$section = 'supprimerunepiece';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
-
-
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
@@ -24,6 +22,7 @@ else{
     $status="UU";
 }
 
-if(isset($_POST["roomName"])){
 
-}
+$id=getIdRoom($bdd,$_POST['choix']);
+die (var_dump($id));
+deleteRoom($bdd,$id);

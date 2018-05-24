@@ -33,7 +33,6 @@ $data = array(
 if(isset($_POST["roomName"])){
     $addRoom = createRoom($bdd, $data);
     header("Location: index.php?cible=mamaison&id=".$id_residency);
-
 }
 
 else{
