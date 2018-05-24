@@ -1,37 +1,47 @@
 
-var j =1;
 var contenuLumiere = "";
 var contenuTemperature = "";
 var contenuMicro = "";
 
-function createViewInput(){
-    var numberOfDisplaysLight =document.getElementById("lightQuantity").value ;
-    var numberOfDisplaysTemperature =document.getElementById("temperatureQuantity").value ;
-    var numberOfDisplaysMicro =document.getElementById("microQuantity").value ;
+var disp = document.getElementById('disp');
 
-    alert(numberOfDisplaysLight);
-    document.getElementById("DisplayInput").style.display = "none";
+
+
+function createViewInputLight(){
+    console.log('1');
+
+    var numberOfDisplaysLight = document.getElementById("lightQuantity").value ;
+    document.getElementById('inputCapteurLumiere').innerHTML = "";
 
 
     for(var i = 1; i <= numberOfDisplaysLight; i++){
         contenuLumiere = contenuLumiere + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuLumiere = contenuLumiere + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+
     }
+    document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
+
+}
+
+function createViewInputTemperature(){
+    console.log('2');
+    var numberOfDisplaysTemperature = document.getElementById("temperatureQuantity").value ;
+
 
     for(var i = 1; i <= numberOfDisplaysTemperature; i++){
         contenuTemperature = contenuTemperature + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuTemperature = contenuTemperature + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+
     }
+    document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
+}
+
+function createViewInputMicro() {
+    console.log('3');
+    var numberOfDisplaysMicro = document.getElementById("microQuantity").value ;
 
     for(var i = 1; i <= numberOfDisplaysMicro; i++){
         contenuMicro = contenuMicro + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuMicro = contenuMicro + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+
     }
+    document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;
 
-
-    document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
-    document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
-    document.getElementById('InputCapteurMicro').innerHTML = contenuMicro;
 }
-
-

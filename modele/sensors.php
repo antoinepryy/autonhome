@@ -59,6 +59,8 @@ function createSensor(PDO $bdd, $data){
 function getAllResidenceSensors($bdd, $id){
     $residencyStatement=$bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
+    $residencyStatement->execute();
+
     }
 
 function findSensorsByState($bdd, $state){
