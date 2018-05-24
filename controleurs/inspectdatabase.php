@@ -29,7 +29,7 @@ else{
 if ($status=='AD'){
     switch ($_GET["table"]){
         case "user":
-            $section = 'user';
+            $section = 'inspectuser';
             $list = getAll($bdd, "user");
             require ('vues/admin/inspectuser.php');
             break;

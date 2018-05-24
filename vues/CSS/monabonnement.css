@@ -3,6 +3,8 @@ h1{
     height: 8%;
     width : 23%;
     text-align: center;
+    border: 2px solid black;
+
 }
 
 .formulairemonabonnement{
@@ -12,14 +14,14 @@ h1{
 
 
 h2{
-    display:flex;
     height: 5%;
     width:20%;
     font-size: 100%;
     margin:auto;
     justify-content: center;
-}
+    border: 2px solid black;
 
+}
 
 
 

@@ -54,7 +54,6 @@ require ('vues/header_'.$status.'.php');
             </td>
         </tr>
 
-
         <?php
     }
     ?>
