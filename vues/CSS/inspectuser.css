@@ -1,0 +1,27 @@
+
+tr th {
+    border: 2px solid black;
+    justify-content: center;
+    text-align: center;
+    margin-left:30%;
+    padding: 1%;
+}
+
+td{
+    border: 2px solid black;
+    justify-content: center;
+    text-align: center;
+    margin-left:30%;
+    padding: 1%;
+    border-collapse: collapse;
+}
+
+
+table{
+    display: flex;
+    margin-right: 10%;
+    justify-content: center;
+    border-collapse: collapse;
+
+
+}

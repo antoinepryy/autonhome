@@ -12,7 +12,7 @@ require ('vues/header_'.$status.'.php');
 
 
 <h1>
-Mon abonnement
+Mon Abonnement
 </h1>
 
 
@@ -23,8 +23,10 @@ Mon abonnement
 
     <form class="formulairemonabonnement" method="post">
         <div class="elementsformulairemonabonnement">
-            <input type="text" name="capteurs de température" placeholder="capteurs de température: 5">
-            <input type="text" name="capteurs de lumière" placeholder="capteurs de lumière: 2"><br>
+            <input type="text" name="capteurs de température" placeholder="">
+            <input type="text" name="capteur de lumière" placeholder="capteur de lumière">
+
+
             <BR>
 
             <h3>
@@ -36,8 +38,9 @@ Mon abonnement
             <input type="checkbox" name="micro" placeholder="micro"> <br>
             <label> Détecteur de mouvement</label>
             <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
-            <label> Caméra </label>
-            <input type ="checkbox" name="caméra" placeholder="caméra"><br>
+            <label>Caméra</label>
+            <input type ="checkbox" name="Caméra" placeholder="<?php echo ($element["id_sensorType"])?>> <br>
+
 
 
 
