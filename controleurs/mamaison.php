@@ -72,7 +72,6 @@ if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
                 break;
             case 6 :
                 $section = 'autrespieces';
-                $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'], 6);
                 include ('vues/autrespieces.php');
                 break;
         }

@@ -1,35 +1,50 @@
+<?php
 /**
  * Created by IntelliJ IDEA.
  * User: amepi
- * Date: 11/05/2018
- * Time: 10:59
+ * Date: 23/05/2018
+ * Time: 19:28
  */
 
-<html>
-<head>
-<title>Index de notre forum</title>
-</head>
-<body>
 
-<!-- on place un lien permettant d'accéder à la page contenant le formulaire d'insertion d'un nouveau sujet -->
-<a href="forum.php">Insérer un sujet</a>
+require ('vues/header_'.$status.'.php');
+?>
 
-<br /><br />
+    <a href="vues/forum.php"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
+
+    <table>
+        <tr>
+            <th>
+                Topic
+            </th>
+            <th>
+                Message
+            </th>
+        </tr>
+
+        <?php
+        foreach ($value as $element){
+            ?>
+            <tr>
+                <td>
+                    <?php echo($element["topic"]); ?>
+                </td>
+                <td>
+                    <?php echo($element["text"]); ?>
+                </td>
+            </tr>
+            <?php
+        }
+
+        ?>
+
+    </table>
+
+
+
+
+
 
 <?php
-// on se connecte à notre base de données
-$bdd = new PDO('mysql:host=localhost:3306;dbname=mvc;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-// préparation de la requete
-$sql = 'SELECT ID, topic, id_user, dateTime,id_category FROM forum_topic ORDER BY dateTime DESC';
-
-// on lance la requête (mysql_query) et on impose un message d'erreur si la requête ne se passe pas bien (or die)
-$req = mysqli_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error());
-
-
-
-// on ferme la connexion à la base de données.
-
+require('vues/footer.php');
 ?>
-</body>
-</html>

@@ -41,7 +41,7 @@ require ('vues/header_'.$status.'.php'); ?>
                         <?php echo ( $residence["name"] );  ?>
                         <a class="house-info" href="index.php?cible=mamaison&id=<?php echo ( $residence["ID"] );  ?>">
                             </br>
-                            <img class = "image" src="ressources\pictures\maison.jpg"
+                            <img class = "image" src="ressources\pictures\maison.jpg">
                         </a>
                     </li>
                 <?php } ?>

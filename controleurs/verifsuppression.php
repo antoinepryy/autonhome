@@ -1,14 +1,12 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: antoine
+ * User: Utilisateur
  * Date: 11/05/2018
- * Time: 19:58
+ * Time: 14:53
  */
 
-$section = 'espaceadmin';
-
-
+$section = 'mamaison';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -26,11 +24,6 @@ else{
     $status="UU";
 }
 
-if(!isset($_GET['mode'])){
-    include('vues/admin/espaceadmin.php');
+if(isset($_POST["roomName"])){
 
-}
-elseif ($_GET['mode']=='ordervalidation'){
-    $avaitingOrders = findSensorsByState($bdd, "ORDER");
-    include('vues/admin/ordervalidation.php');
 }

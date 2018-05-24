@@ -39,6 +39,10 @@
 
     </div>
 
+    <div class="forum-logo">
+        <a href="index.php?cible=indexforum"><img src="ressources/logo/forum.jpg"/></a>
+    </div>
+
     <nav>
         <ul>
 

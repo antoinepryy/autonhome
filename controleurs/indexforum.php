@@ -2,10 +2,18 @@
 /**
  * Created by IntelliJ IDEA.
  * User: amepi
- * Date: 13/05/2018
- * Time: 12:18
+ * Date: 23/05/2018
+ * Time: 20:10
+ */
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: amepi
+ * Date: 15/05/2018
+ * Time: 12:07
  */
 $section = 'indexforum';
+
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -18,9 +26,14 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $status="LU";
+    $section = 'forumMessage';
+    $value = getAll($bdd, "forum_discussion");
+    require('vues/indexforum.php');
+
 }
 else{
     $status="UU";
 }
 
-include('vues/index_forum.php');
+include('vues/forum.php');
+

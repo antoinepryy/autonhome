@@ -11,15 +11,12 @@ require ('vues/header_'.$status.'.php'); ?>
 <section class="principal">
 
 
-
-
-
-
     <section class="house-info">
         <div>
 
             <div class="house-name"><?php echo ($houseInfo['name']); ?></div>
             <div class="house-address"><?php echo ($houseInfo[3].' '.$houseInfo[4].' '.$houseInfo[5].' '.$houseInfo[6]); ?></div>
+            <div class="house-surface">Surface : <?php echo ($houseInfo['surface']); ?> m²</div>
             <div class="user-rent">
                 <?php
                 if(isset($user['firstName'])){

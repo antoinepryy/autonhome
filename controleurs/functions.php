@@ -86,3 +86,7 @@ function setStatus(){
 
 }
 
+function mergeIntoOrder($sensorList){
+
+}
+

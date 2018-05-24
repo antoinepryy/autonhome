@@ -3,7 +3,7 @@ h1{
 }
 .display-salledebain{
     background-color: lightgrey;
-    margin: auto;
+    margin: 1%;
     padding : 1%;
     border : 1px solid black;
     margin-right: 3%;
@@ -12,10 +12,9 @@ h1{
     flex-direction: column;
 }
 
-
 .display-salledebain form{
     background-image: url("../../ressources/pictures/salledebain2.jpg");
-    width: 20%;
+    width: 200%;
     height: auto;
     padding: 2%;
     border : 1px solid black;
@@ -29,11 +28,16 @@ h1{
 
 .display-salledebain ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.salle-de-bain-list h4{
+.display-salledebain li{
+    margin-right: 15%;
+}
+
+.salledebain-list h4{
     font-weight: bold;
-    margin-bottom: 1%;
-    text-align: center;
-    width: 25%;
+    margin-bottom: 2%;
 }

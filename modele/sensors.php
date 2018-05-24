@@ -29,7 +29,8 @@ function getAllSensors(PDO $bdd){
 
     $statement = $bdd->prepare('SELECT * FROM sensors');
     $statement->execute();
-    $sensors = $statement->fetch();
+    $sensors = $statement->fetchAll();
+    return $sensors;
 }
 
 function createSensor(PDO $bdd, $data){
@@ -37,9 +38,9 @@ function createSensor(PDO $bdd, $data){
     (`ID`,
     `name`, 
     `state`, 
-    `serial`
+    `serial`,
     `id_room`,
-    `id_sensortype`,)
+    `id_sensortype`)
     VALUES
     (NULL,
     :name, 
@@ -58,11 +59,24 @@ function createSensor(PDO $bdd, $data){
 function getAllResidenceSensors($bdd, $id){
     $residencyStatement=$bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
-    
-
-
-
-
-
     }
+
+function findSensorsByState($bdd, $state){
+    $statement = $bdd->prepare('SELECT * from sensor WHERE state = :state');
+    $statement->bindParam(':state', $state);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    if(count($result)==0){
+        return false;
+    }
+    else{
+        return $result;
+    }
+}
+
+
+function validateSensorAdmin($bdd,$id ){
+    //todo
+}
+
 ?>
