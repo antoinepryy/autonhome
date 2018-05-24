@@ -151,15 +151,26 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
     }
 
 
-    function updatePassword($bdd, $id, $password){
-        $statement = $bdd->prepare(
-            'UPDATE user
-            SET
-            password = :password,
-            id = id,
-            
-        ');
 
+    function updatePassword($bdd, $ID, $password){
+
+        $statement = $bdd->prepare(
+            'UPDATE user 
+            SET
+            password = :password 
+            WHERE ID = :id '
+        );
+
+        /*
+        $statement->execute(array(
+            'password' => $password,
+            'ID' => $ID)
+        ); */
+
+        $statement->BindParam(':id', $ID);
+        $statement->BindParam(':password', $password);
+
+        $statement->execute();
     }
 
 ?>

@@ -11,6 +11,22 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-//Mission de Yacine
 
-die(var_dump($_POST));
+
+$infoUser = findUserById($bdd, $_SESSION['userId']);
+
+
+
+
+if(isset($_POST)){
+    if(password_verify($_POST['pass'], $infoUser['password']) AND ($_POST['passNew'] == $_POST['passNewPlain']))
+    {
+
+        $cryptedPassword = password_hash($_POST['passNew'], PASSWORD_DEFAULT);
+        updatePassword($bdd, $_SESSION['userId'], $cryptedPassword);
+    }
+
+}
+
+
+

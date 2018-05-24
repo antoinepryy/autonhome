@@ -10,10 +10,16 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
-    <a href="vues/forum.php"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
+    <a href="index.php?cible=forum"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
 
     <table>
         <tr>
+            <th>
+                ID user
+            </th>
+            <th>
+                Date
+            </th>
             <th>
                 Topic
             </th>
@@ -26,6 +32,12 @@ require ('vues/header_'.$status.'.php');
         foreach ($value as $element){
             ?>
             <tr>
+                <td>
+                    <?php echo($element["id_user"]); ?>
+                </td>
+                <td>
+                    <?php echo($element["dateTime"]); ?>
+                </td>
                 <td>
                     <?php echo($element["topic"]); ?>
                 </td>
