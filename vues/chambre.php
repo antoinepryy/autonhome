@@ -38,6 +38,12 @@ require ('vues/header_'.$status.'.php');
                         <br />
                     </div>
 
+                    <div>
+                        <a href="index.php?cible=mamaison">
+                            Voir les informations
+                        </a>
+                    </div>
+
                     <div class="delete">
                         <button id="myBtn">Supprimer</button>
                     </div>
