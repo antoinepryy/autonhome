@@ -22,7 +22,9 @@ else{
     $status="UU";
 }
 
+$id_residency=$_GET['id'];
+$id_category=$_GET['idroom'];
 
-$id=getIdRoom($bdd,$_POST['choix']);
-die (var_dump($id));
+$id=getIdRoom($bdd,$_POST['choix'])[0];
 deleteRoom($bdd,$id);
+header("Location: index.php?cible=mamaison&id=".$id_residency);

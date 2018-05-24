@@ -24,7 +24,9 @@
 }
 
 .light input[type="checkbox"]{
-
+    width: 10%;
+    height: auto;
+    margin-left: 60%;
 }
 
 .my-house-state h3{

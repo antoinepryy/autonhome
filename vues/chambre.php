@@ -37,18 +37,6 @@ require ('vues/header_'.$status.'.php');
                         <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
                         <br />
                     </div>
-
-
-                    <div>
-                        <a href="index.php?cible=mamaison">
-                            Voir les informations
-                        </a>
-                    </div>
-
-                    <div class="delete">
-                        <button id="myBtn">Supprimer</button>
-                    </div>
-
                 </form>
 
             </li>

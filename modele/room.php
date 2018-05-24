@@ -29,7 +29,7 @@ function getAllRooms($bdd)
 }
 
 function getAllResidenceRooms($bdd, $id){
-    $residencyStatement = $bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency');
+    $residencyStatement = $bdd->prepare('SELECT name FROM room WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
     $residencyStatement->execute();
     $inHouse = $residencyStatement->fetchAll();;
@@ -47,12 +47,12 @@ function getAllRoomCategoryRooms ($bdd, $id, $id_category){
 
 function deleteRoom ($bdd, $id){
     $roomStatement = $bdd->prepare ('DELETE FROM room WHERE id= :id');
-    $roomStatement->bindParam(':idRoom', $id);
+    $roomStatement->bindParam(':id', $id);
     $roomStatement->execute();
 }
 
 function getIdRoom($bdd, $name){
-    $statement = $bdd->prepare('SELECT ID FROM room_category WHERE name = :name');
+    $statement = $bdd->prepare('SELECT ID FROM room WHERE name = :name');
     $statement->bindParam(':name', $name);
     $statement->execute();
     return $statement->fetch();
