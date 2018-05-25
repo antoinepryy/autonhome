@@ -10,10 +10,32 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
-<?php
 
-die(var_dump($devices));
-?>
+<section>
+    <div class="sensor-container">
+        <?php
+
+        foreach ($devices[0] as $sensor){?>
+        <ul>
+            <li><?php echo($sensor['name'].' : '.$sensor['value']);?></li>
+        </ul>
+        <?php }
+        ?>
+    </div>
+    <div class="effector-container">
+        <?php
+
+        foreach ($devices[1] as $effector){?>
+            <ul>
+                <li><?php echo($effector['name'].' : '.$action['value']);?></li>
+            </ul>
+        <?php }
+        ?>
+
+
+    </div>
+</section>
+
 
 
 <?php require ('footer.php'); ?>
