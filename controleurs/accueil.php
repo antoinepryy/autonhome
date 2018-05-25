@@ -19,7 +19,8 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
-    $myRooms=getAllResidenceRooms($bdd,5)[0];
+    $id_residency=$_POST['house'];
+    $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
     $status="LU";
 }
 else{
