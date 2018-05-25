@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 17 mai 2018 à 10:57
--- Version du serveur :  10.1.29-MariaDB
--- Version de PHP :  7.1.12
+-- Généré le :  ven. 25 mai 2018 à 14:56
+-- Version du serveur :  10.1.31-MariaDB
+-- Version de PHP :  7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -91,6 +91,30 @@ INSERT INTO `effector_type` (`ID`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `forum_discussion`
+--
+
+CREATE TABLE `forum_discussion` (
+  `ID` int(11) NOT NULL,
+  `topic` text NOT NULL,
+  `text` text NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `dateTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `forum_discussion`
+--
+
+INSERT INTO `forum_discussion` (`ID`, `topic`, `text`, `id_user`, `dateTime`) VALUES
+(14, 'Capteur de température mal configuré', 'Bonjour, mon capteur de température indique la température en degrés °F, comment le configurer en °C ?\r\nMerci par avance', 11, '2018-05-24 10:13:39'),
+(15, 'Ventilateur en panne', 'Bonjour, mon ventilateur semble être en panne après avoir été activé toute cette nuit, suite à un pic de chaleur. Peut-être a-t-il été en marche trop longtemps?\r\nMerci par avance', 11, '2018-05-24 10:15:14'),
+(16, 'Volets bloqués', 'Bonjour, mes volets sont bloqués en position fermée. Une idée pour les monter ?\r\nMerci par avance', 23, '2018-05-24 10:17:38'),
+(19, 'Alarme ne sonne plus', 'Bonjour, mon alarme ne sonne qu\'une fois sur deux lorsque mon chien passe devant le capteur... Peut-être ai-je un problème de capteur de mouvement ? Merci par avance', 11, '2018-05-24 11:24:01');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `forum_message`
 --
 
@@ -98,36 +122,26 @@ CREATE TABLE `forum_message` (
   `ID` int(11) NOT NULL,
   `text` text NOT NULL,
   `id_user` int(10) NOT NULL,
-  `id_forumDiscussion` int(10) NOT NULL,
-  `dateTime` varchar(30) NOT NULL
+  `id_discussion` int(10) NOT NULL,
+  `dateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `forum_message`
 --
 
-INSERT INTO `forum_message` (`ID`, `text`, `id_user`, `id_forumDiscussion`, `dateTime`) VALUES
-(1, 'Bonjour à tous,\r\n\r\nJe rencontre actuellement des soucis lors de l\'ajout d\'un capteur dans mon appartement.\r\nJe possède un abonnement PACK 1 maison, et je souhaiterai y ajouter un capteur de mouvement dans mon entrée.\r\nEst-ce que quelqu\'un a rencontré le même problème que moi ?\r\n\r\nMerci par avance pour votre aide,\r\n\r\nAmélie', 1, 1, '2018-05-03-12h00');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `forum_topic`
---
-
-CREATE TABLE `forum_topic` (
-  `ID` int(11) NOT NULL,
-  `topic` varchar(50) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `dateTime` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `forum_topic`
---
-
-INSERT INTO `forum_topic` (`ID`, `topic`, `id_user`, `dateTime`) VALUES
-(1, 'Ajout d\'un capteur à mon abonnement', 1, '2018-05-03-12h00');
+INSERT INTO `forum_message` (`ID`, `text`, `id_user`, `id_discussion`, `dateTime`) VALUES
+(1, 'Bonjour à tous,\r\n\r\nJe rencontre actuellement des soucis lors de l\'ajout d\'un capteur dans mon appartement.\r\nJe possède un abonnement PACK 1 maison, et je souhaiterai y ajouter un capteur de mouvement dans mon entrée.\r\nEst-ce que quelqu\'un a rencontré le même problème que moi ?\r\n\r\nMerci par avance pour votre aide,\r\n\r\nAmélie', 1, 1, '2018-05-03 12:00:00'),
+(2, 'Array', 11, 1, '0000-00-00 00:00:00'),
+(3, 'Array', 11, 0, '0000-00-00 00:00:00'),
+(4, 'monmessage', 11, 0, '0000-00-00 00:00:00'),
+(5, 'monmessage23', 11, 0, '0000-00-00 00:00:00'),
+(6, 'Texte de moi', 11, 0, '0000-00-00 00:00:00'),
+(7, 'Texte de moi teste teste', 11, 0, '0000-00-00 00:00:00'),
+(8, 'c\'est mon texte', 11, 0, '0000-00-00 00:00:00'),
+(9, 'tdtreseyrudifuiohgyutfdrseyztqesyduriftuygh', 11, 0, '0000-00-00 00:00:00'),
+(10, 'qrzwestxycuvibn,o,ubvcwqz<rwetxdvbnj', 11, 0, '0000-00-00 00:00:00'),
+(11, 'qrzwestxycuvibn,o,ubvcwqz<rwetxdvbnj', 11, 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -355,7 +369,9 @@ INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNum
 (17, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$JEY/oEpp6LL/4.Deg1oDTuRcr7Egr.WDxdgGbyuVM.JVFx5y8NaAa', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
 (18, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$9xNhJTRvIOCgPneeOxcGAuGbUNT.7aLUKp63L4ZJWw1C4crA.Jrb6', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
 (19, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$/F4szpAjhzVbBagtdFd1Duy9jqIYlSBtKDajzQ/MWwkvjLvmeEPA2', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user', NULL);
+(20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user', NULL),
+(21, 'Yacine', 'Nabti', 'yasco@gmail.com', '$2y$10$9sS6.AiKxwb7yyoAexV2DO7F2VJNy8d5mQaQ0KtWkQMEMD.WOqTqi', '0708334474', 10, 'rue de vanves', 92170, 'issy', 'france', 'user', NULL),
+(23, 'Yves-Marie', 'Paul', 'yvespasteque@fruitz.com', '$2y$10$utAmBAld0EoFCsorjPdlVOouYaH3Zn388ob73qGWuC7PDyqPcdNAu', '0789654332', 10, 'rue de Vanves', 92130, 'Issy', 'france', 'admin', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -386,15 +402,15 @@ ALTER TABLE `effector_type`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `forum_message`
+-- Index pour la table `forum_discussion`
 --
-ALTER TABLE `forum_message`
+ALTER TABLE `forum_discussion`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `forum_topic`
+-- Index pour la table `forum_message`
 --
-ALTER TABLE `forum_topic`
+ALTER TABLE `forum_message`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -480,16 +496,16 @@ ALTER TABLE `effector_type`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT pour la table `forum_discussion`
+--
+ALTER TABLE `forum_discussion`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- AUTO_INCREMENT pour la table `forum_message`
 --
 ALTER TABLE `forum_message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `forum_topic`
---
-ALTER TABLE `forum_topic`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `message`
@@ -507,13 +523,13 @@ ALTER TABLE `residence`
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `room_category`
 --
 ALTER TABLE `room_category`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `sensor`
@@ -543,7 +559,7 @@ ALTER TABLE `subscription_user`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
