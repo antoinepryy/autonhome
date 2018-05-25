@@ -24,6 +24,7 @@ else{
     $status="UU";
 }
 
+
 if($_POST[capteurlumiereLDR]= true){
     $here = true;
     $name = $_POST['namelumiere'];
