@@ -57,39 +57,16 @@ function createSensor(PDO $bdd, $data){
 }
 
 
-<<<<<<< HEAD
-function getLumièreSensors($bdd, $id){
-    $residencyStatement=$bdd->prepare('SELECT * FROM sensor WHERE id_sensortype=1');
-    $statement->execute();
-    $lumière = $statement->fetchAll();
-    return $lumière;
-=======
 function getAllResidenceSensors($bdd, $id){
-    $residencyStatement=$bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency');
+    $residencyStatement=$bdd->prepare('SELECT * FROM sensors WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
     $residencyStatement->execute();
->>>>>>> 3bd39cd8a662ab5d30cb8112b280a45d0f9aa2a5
-
-    }
-
-
-
-function getTempératureSensors($bdd, $id){
-    $residencyStatement=$bdd->prepare('SELECT * FROM sensor WHERE id_sensortype=2');
-    $statement->execute();
-    $lumière = $statement->fetchAll();
-    return $lumière;
 
 }
 
 
-function getMouvementSensors($bdd, $id){
-    $residencyStatement=$bdd->prepare('SELECT * FROM sensor_type WHERE type=Mouvement');
-    $statement->execute();
-    $lumière = $statement->fetchAll();
-    return $lumière;
 
-}
+
 
 function findSensorsByState($bdd, $state){
     $statement = $bdd->prepare('SELECT * from sensor WHERE state = :state');
@@ -103,7 +80,6 @@ function findSensorsByState($bdd, $state){
         return $result;
     }
 }
-
 
 
 function validateSensorAdmin($bdd,$id ){
