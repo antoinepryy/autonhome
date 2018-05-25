@@ -5,9 +5,7 @@
  * Date: 13/05/2018
  * Time: 12:07
  */
-/**
- * Vue : inscrire une nouvelle maison
- */
+
 
 require ('vues/header_'.$status.'.php');
 ?>

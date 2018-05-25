@@ -24,5 +24,6 @@ else{
     $status="UU";
 }
 
+
 include('vues/forum.php');
 

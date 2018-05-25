@@ -42,10 +42,34 @@ require ('vues/header_'.$status.'.php');
             </li>
         <?php } ?>
     </ul>
+    <section>
+        <button id="myBtn">Supprimer une pièce</button>
+    </section>
+    <div class="delete-room">
 
+<<<<<<< HEAD
     <p> <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?> >Ajouter un capteur</a> </p>
+        
+=======
+        <div id="modalDeleteRoom" class="modal modalDeleteRoom">
 
-    
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form method="post" action="index.php?cible=verifsuppression&id=<?php echo ( $_GET['id'] );?>">
+                    <select name="choix">
+                        <?php foreach ($inCategory as $roomInCategory) { ?>
+                            <option value="<?php echo ( $roomInCategory['name']);  ?>">
+                                <?php echo ( $roomInCategory['name']);  ?>
+                            </option>
+                        <?php } ?>
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+>>>>>>> fb0f1d23a96582ff18719441368ee593dbcde62b
 
 </div>
 <?php

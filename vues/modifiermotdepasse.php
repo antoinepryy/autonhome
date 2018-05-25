@@ -15,7 +15,6 @@ require ('vues/header_'.$status.'.php');
 <section class="container-modifmdp">
     <h1 class="titlemodifiermotdepasse"> Modifier le mot de passe </h1>
 
-    <!-- <div class="container modif"></div> -->
 
     <form class="formulairemodifiermotdepasse" method="post" action="index.php?cible=verifmodifpassword">
         <div class="elementsformulairemodifiermotdepasse">

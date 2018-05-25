@@ -30,6 +30,7 @@ elseif (isLoggedAsUser()){
     $status="LU";
     $section = 'forumMessage';
     $value = getAll($bdd, "forum_discussion");
+    orderDiscussions($bdd);
 
 }
 else{

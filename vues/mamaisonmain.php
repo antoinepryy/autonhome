@@ -19,15 +19,25 @@ require ('vues/header_'.$status.'.php'); ?>
             <div class="house-surface">Surface : <?php echo ($houseInfo['surface']); ?> m²</div>
             <div class="user-rent">
                 <?php
-                if(isset($user['firstName'])){
-                    echo ('Loué à '.$user['firstName'].' '.$user['lastName']);
-                    echo('<a href="">Supprimer la location</a>');
+
+
+                if ($houseInfo['id_owner']==$_SESSION["userId"]){
+                    if(isset($user['firstName'])){
+                        echo ('Loué à '.$user['firstName'].' '.$user['lastName']);
+                        echo('<a href="">Supprimer la location</a>');
+                    }
+                    else{
+                        echo ('Non loué');
+                        echo('<button id="dispSecret">Afficher le code</button>');
+                        echo('<div id="secretCode" >'. $houseInfo["secret"].' </div>');
+                    }
                 }
                 else{
-                    echo ('Non loué');
-                    echo('<button id="dispSecret">Afficher le code</button>');
-                    echo('<div id="secretCode" >'. $houseInfo["secret"].' </div>');
+                    echo('Vous êtes locataire !');
                 }
+
+
+
                 ?>
 
             </div>

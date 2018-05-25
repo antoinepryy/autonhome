@@ -35,7 +35,7 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 
     if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
         $houseInfo = getHouseInfoFromId($bdd,$_GET["id"]);
-        $user = findUserById($bdd, $houseInfo[8]);
+        $user = findUserById($bdd, $houseInfo[9]);
         include ('vues/mamaisonmain.php');
     }
     else{
@@ -44,41 +44,46 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
 
 }
 
-if($status=='LU' && isset($_GET['id']) && isset($_GET['idroom'])){
+elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_GET['roomchoice'])) {
     $section = 'mamaisonroom';
-    $inCategory=getAllRoomCategoryRooms($bdd, $_GET['id'],$_GET['idroom'])[0];
-    if(belongToUser($bdd, $_SESSION['userId'], $_GET['id'])){
+    $inCategory = getAllRoomCategoryRooms($bdd, $_GET['id'], $_GET['idroom'])[0];
+    if (belongToUser($bdd, $_SESSION['userId'], $_GET['id'])) {
 
-        switch ($_GET['idroom']){
+        switch ($_GET['idroom']) {
             case 1:
                 $section = 'chambre';
-                include ('vues/chambre.php');
+                include('vues/chambre.php');
                 break;
             case 2 :
                 $section = 'salledebain';
-                include ('vues/salledebain.php');
+                include('vues/salledebain.php');
                 break;
             case 3 :
                 $section = 'salon';
-                include ('vues/salon.php');
+                include('vues/salon.php');
                 break;
             case 4 :
                 $section = 'salleamanger';
-                include ('vues/salleamanger.php');
+                include('vues/salleamanger.php');
                 break;
             case 5 :
                 $section = 'cuisine';
-                include ('vues/cuisine.php');
+                include('vues/cuisine.php');
                 break;
             case 6 :
                 $section = 'autrespieces';
-                include ('vues/autrespieces.php');
+                include('vues/autrespieces.php');
                 break;
         }
+    } else {
+        include('vues/erreur404.php');
     }
-    else{
-        include ('vues/erreur404.php');
-    }
+}
+
+
+elseif($status == 'LU' && isset($_GET['id']) && isset($_GET['idroom']) && isset($_GET['roomchoice'])){
+    $devices = findAllDevicesByRoom($bdd,$_GET['roomchoice']);
+    include('vues/roomsensor.php');
 
 
 }
