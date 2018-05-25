@@ -2,8 +2,8 @@
 /**
  * Created by IntelliJ IDEA.
  * User: amepi
- * Date: 23/05/2018
- * Time: 19:28
+ * Date: 25/05/2018
+ * Time: 14:01
  */
 
 
@@ -33,14 +33,13 @@ require ('vues/header_'.$status.'.php');
             ?>
             <tr>
                 <td>
-
                     <?php echo($element["id_user"]); ?>
                 </td>
                 <td>
                     <?php echo($element["dateTime"]); ?>
                 </td>
                 <td>
-                   <a href="controleurs/forummessage.php"> <?php echo($element["topic"]); ?> </a>
+                    <?php echo($element["topic"]); ?>
                 </td>
                 <td>
                     <?php echo($element["text"]); ?>
