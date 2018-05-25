@@ -47,6 +47,10 @@ require ('vues/header_'.$status.'.php');
     </section>
     <div class="delete-room">
 
+<<<<<<< HEAD
+    <p> <a href=<?php echo("index.php?cible=mamaison&id=".$_GET['id']."&idroom=5"); ?> >Ajouter un capteur</a> </p>
+        
+=======
         <div id="modalDeleteRoom" class="modal modalDeleteRoom">
 
             <div class="modal-content">
@@ -65,6 +69,7 @@ require ('vues/header_'.$status.'.php');
         </div>
     </div>
     <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+>>>>>>> fb0f1d23a96582ff18719441368ee593dbcde62b
 
 </div>
 <?php

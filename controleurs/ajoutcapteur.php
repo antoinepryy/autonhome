@@ -23,4 +23,6 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
+
+
 include('vues/ajoutcapteur.php');
