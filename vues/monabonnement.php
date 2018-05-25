@@ -23,8 +23,8 @@ Mon Abonnement
 
     <form class="formulairemonabonnement" method="post">
         <div class="elementsformulairemonabonnement">
-            <input type="text" name="capteurs de température" placeholder="">
-            <input type="text" name="capteur de lumière" placeholder="capteur de lumière">
+            <input type="text" name="capteurs de température" placeholder="Capteur de température">
+            <input type="text" name="capteur de lumière" placeholder="Capteur de lumière">
 
 
             <BR>

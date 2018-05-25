@@ -72,7 +72,6 @@ function findSensorsByState($bdd, $state){
 }
 
 
-
 function validateSensorAdmin($bdd,$id ){
     //todo
 }
