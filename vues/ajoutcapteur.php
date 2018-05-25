@@ -24,7 +24,7 @@ require ('vues/header_'.$status.'.php');
 
         <div id= "lumierelegende" class="lumierelegende"> <img class="capteurlumiere" src="ressources/pictures/capteurdelumiereLDR.jpg">
 
-            <input type="number"  name="lightquantity" id="lightQuantity" placeholder="Quantité" />
+            <input type="number"  id="lightQuantity" name="lightquantity"  placeholder="Quantité" oninput="createViewInputLight()"/>
 
             <div id="inputCapteurLumiere"></div>
 
@@ -32,7 +32,7 @@ require ('vues/header_'.$status.'.php');
 
         <div  id= "temperaturelegende" class="temperaturelegende"> <img class="capteurtemperature" src="ressources/pictures/capteurdetemperature.JPG">
 
-            <input type="number"  name="temperatureQuantity" placeholder="Quantité" />
+            <input type="number"  id="temperatureQuantity" placeholder="Quantité" oninput="createViewInputTemperature()"/>
 
             <div id="inputCapteurTemperature"></div>
 
@@ -40,15 +40,15 @@ require ('vues/header_'.$status.'.php');
 
         <div class="microlegende"> <img class="microelectret" src="ressources/pictures/microelectret.jpg">
 
-            <input type="number"  name="microQuantity" placeholder="Quantité" />
+            <input type="number"  id="microQuantity" placeholder="Quantité" oninput="createViewInputMicro()" />
 
             <div id="inputCapteurMicro"></div>
 
         </div>
 
-        <button type="button" class="DisplayInput" onclick="createViewInput()">Submit</button>
 
         <input type="number" name="idRoom" value="<?php echo($_GET['id_room']); ?>" hidden>
+
 
     </form>
 

@@ -12,7 +12,7 @@ $table = "forum_topic";
 
 function createDiscussion(PDO $bdd, $topic, $text)
 {
-    $time = time();
+    $time = date('Y-m-d H:i:s');
     $statement = $bdd->prepare('INSERT INTO `forum_discussion` 
     (`ID`,
     `topic`, 
@@ -31,4 +31,10 @@ function createDiscussion(PDO $bdd, $topic, $text)
     $statement->bindParam(":id_user", $_SESSION['userId']);
     $statement->bindParam(":dateTime", $time);
     $statement->execute();
+}
+
+function orderDiscussions(PDO $bdd){
+    $statement = $bdd->prepare('SELECT id_user, dateTime, topic, text  FROM  forum_discussion ORDER BY dateTime DESC');
+    $statement->execute();
+    return $statement->fetchAll();
 }

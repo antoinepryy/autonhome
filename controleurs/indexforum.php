@@ -23,7 +23,6 @@ if(!function_exists("importAllSessionsAndModels")){
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
-    $status="LU";
     $section = 'forumMessage';
     $value = getAll($bdd, "forum_discussion");
 }
@@ -31,6 +30,7 @@ elseif (isLoggedAsUser()){
     $status="LU";
     $section = 'forumMessage';
     $value = getAll($bdd, "forum_discussion");
+    orderDiscussions($bdd);
 
 }
 else{

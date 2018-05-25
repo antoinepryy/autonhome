@@ -24,6 +24,7 @@ else{
     $status="UU";
 }
 
+
 if($_POST[capteurlumiereLDR]= true){
     $here = true;
     $name = $_POST['namelumiere'];
@@ -63,5 +64,9 @@ $data = array(
     'id_residency' => $id_residency,
     'id_roomCategory' => $id_roomCategory);
 
+<<<<<<< HEAD
 //for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
+=======
+
+>>>>>>> 3bd39cd8a662ab5d30cb8112b280a45d0f9aa2a5
 

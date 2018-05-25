@@ -27,7 +27,8 @@ if(isset($_POST["addressNumber"])){ //quand un proprio ajoute une maison
     header("Location: index.php?cible=mamaison");
 }
 elseif (isset($_POST["secret"])){ //quand un locataire se link à une maison
-    linkRenter($bdd,$_POST);
+
+    linkRenter($bdd,$_POST['secret']);
     header("Location: index.php?cible=mamaison");
 }
 

@@ -1,37 +1,61 @@
 
-var j =1;
 var contenuLumiere = "";
 var contenuTemperature = "";
 var contenuMicro = "";
 
-function createViewInput(){
-    var numberOfDisplaysLight =document.getElementById("lightQuantity").value ;
-    var numberOfDisplaysTemperature =document.getElementById("temperatureQuantity").value ;
-    var numberOfDisplaysMicro =document.getElementById("microQuantity").value ;
 
-    alert(numberOfDisplaysLight);
-    document.getElementById("DisplayInput").style.display = "none";
+function createViewInputLight(){
+    contenuLumiere = "";
 
+    var numberOfDisplaysLight = document.getElementById("lightQuantity").value ;
 
-    for(var i = 1; i <= numberOfDisplaysLight; i++){
-        contenuLumiere = contenuLumiere + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuLumiere = contenuLumiere + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+    if(numberOfDisplaysLight <=10){
+        for(var i = 1; i <= numberOfDisplaysLight; i++){
+            contenuLumiere = contenuLumiere + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+
+        }
+        document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
     }
 
-    for(var i = 1; i <= numberOfDisplaysTemperature; i++){
-        contenuTemperature = contenuTemperature + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuTemperature = contenuTemperature + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+    else{
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
     }
 
-    for(var i = 1; i <= numberOfDisplaysMicro; i++){
-        contenuMicro = contenuMicro + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-        contenuMicro = contenuMicro + "<label for='serialNumberSensor" + i + "'>Numéro de série du capteur "+ i +"</label> : <input type='text' name='serialNumberSensor" + i + "' id='serialNumberSensor" + i + " '/><br />";
+}
+
+function createViewInputTemperature() {
+    contenuTemperature = "";
+
+    var numberOfDisplaysTemperature = document.getElementById("temperatureQuantity").value;
+
+    if (numberOfDisplaysTemperature <= 10) {
+        for (var i = 1; i <= numberOfDisplaysTemperature; i++) {
+            contenuTemperature = contenuTemperature + "<label for='nameSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+
+        }
+        document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
     }
 
-
-    document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
-    document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
-    document.getElementById('InputCapteurMicro').innerHTML = contenuMicro;
+    else {
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
+    }
 }
 
 
+function createViewInputMicro() {
+    contenuMicro = "";
+
+    var numberOfDisplaysMicro = document.getElementById("microQuantity").value;
+
+    if (numberOfDisplaysMicro <= 10) {
+        for (var i = 1; i <= numberOfDisplaysMicro; i++) {
+            contenuMicro = contenuMicro + "<label for='nameSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+
+        }
+        document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;
+    }
+
+    else {
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
+    }
+}

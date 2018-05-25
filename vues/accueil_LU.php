@@ -37,18 +37,10 @@
     </h4>
 
     <div class="light">
-        <label>Salon</label>
-        <input type="checkbox"/><br />
-        <label>Cuisine</label>
-        <input type="checkbox"/><br />
-        <label>Chambre 1</label>
-        <input type="checkbox"/><br />
-        <label>Chambre 2</label>
-        <input type="checkbox"/><br />
-        <label>Salle de bain</label>
-        <input type="checkbox"/><br />
-        <label>Salle à manger</label>
-        <input type="checkbox"/><br />
+        <?php foreach ($myRooms as $roomInResidence) { ?>
+            <label><?php echo ( $roomInResidence['name']);  ?></label>
+            <input type="checkbox"/><br />
+        <?php } ?>
     </div>
 
 </section>
