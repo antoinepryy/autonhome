@@ -33,6 +33,7 @@ function getAllSensors(PDO $bdd){
     return $sensors;
 }
 
+
 function createSensor(PDO $bdd, $data){
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
@@ -56,10 +57,32 @@ function createSensor(PDO $bdd, $data){
 }
 
 
-function getAllResidenceSensors($bdd, $id){
-    $residencyStatement=$bdd->prepare('SELECT * FROM room WHERE id_residency = :idResidency');
-    $residencyStatement->bindParam(':idResidency', $id);
+function getLumièreSensors($bdd, $id){
+    $residencyStatement=$bdd->prepare('SELECT * FROM sensor WHERE id_sensortype=1');
+    $statement->execute();
+    $lumière = $statement->fetchAll();
+    return $lumière;
+
     }
+
+
+
+function getTempératureSensors($bdd, $id){
+    $residencyStatement=$bdd->prepare('SELECT * FROM sensor WHERE id_sensortype=2');
+    $statement->execute();
+    $lumière = $statement->fetchAll();
+    return $lumière;
+
+}
+
+
+function getMouvementSensors($bdd, $id){
+    $residencyStatement=$bdd->prepare('SELECT * FROM sensor_type WHERE type=Mouvement');
+    $statement->execute();
+    $lumière = $statement->fetchAll();
+    return $lumière;
+
+}
 
 function findSensorsByState($bdd, $state){
     $statement = $bdd->prepare('SELECT * from sensor WHERE state = :state');
@@ -75,8 +98,8 @@ function findSensorsByState($bdd, $state){
 }
 
 
+
 function validateSensorAdmin($bdd,$id ){
     //todo
 }
-
 ?>

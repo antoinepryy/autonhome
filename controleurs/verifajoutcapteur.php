@@ -31,7 +31,6 @@ if($_POST[capteurlumiereLDR]= true){
     $state = "OFF";
     $id_room = $_POST[$id_room];
     $id_sensortype = 1;
-    $numbrerSensors +=
 }
 
 if($_POST[capteurtemperatureLM32]= true){
@@ -64,5 +63,5 @@ $data = array(
     'id_residency' => $id_residency,
     'id_roomCategory' => $id_roomCategory);
 
-for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
-{
+//for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
+
