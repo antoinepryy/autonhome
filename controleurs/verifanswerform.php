@@ -3,30 +3,32 @@
  * Created by IntelliJ IDEA.
  * User: amepi
  * Date: 25/05/2018
- * Time: 14:13
+ * Time: 16:43
  */
-$section = 'forummessage';
+$section = 'verifanswerform';
 
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
 
-
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
 }
 elseif (isLoggedAsUser()){
-    $status="LU";;
-    $section = 'forumMessage';
-    $value = getAll($bdd, "forum_discussion");
-    $text = getMessages($bdd);
-
+    $status="LU";
 }
 else{
     $status="UU";
 }
 
 
-include('vues/forummessage.php');
+if(isset($_POST["text"])){
+    answerDiscussion($bdd, $_POST["text"],1);
+    header("Location: index.php?cible=forummessage");
+    require('vues/forummessage.php');
+}
+else{
+    require ('vues/erreur404.php');
+}

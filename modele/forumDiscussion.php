@@ -34,7 +34,6 @@ function createDiscussion(PDO $bdd, $topic, $text)
 }
 
 function afficheNom(PDO $bdd){
-    $statement = $bdd->prepare('SELECT user.firstName, user.lastName FROM user, forum_discussion WHERE user.ID = forum_discussion.id_user');
-    $statement->execute();
-    return $statement->fetchAll();
+    $query = 'SELECT user.firstName, user.lastName FROM user, forum_discussion WHERE user.ID = forum_discussion.id_user';
+    return $bdd->query($query)->fetchAll();
 }

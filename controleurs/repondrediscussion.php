@@ -3,9 +3,9 @@
  * Created by IntelliJ IDEA.
  * User: amepi
  * Date: 25/05/2018
- * Time: 14:13
+ * Time: 16:40
  */
-$section = 'forummessage';
+$section = 'repondrediscussion';
 
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
@@ -18,15 +18,11 @@ if(isLoggedAsAdmin()){
     $status="AD";
 }
 elseif (isLoggedAsUser()){
-    $status="LU";;
-    $section = 'forumMessage';
-    $value = getAll($bdd, "forum_discussion");
-    $text = getMessages($bdd);
-
+    $status="LU";
 }
 else{
     $status="UU";
 }
 
 
-include('vues/forummessage.php');
+include('vues/repondrediscussion.php');
