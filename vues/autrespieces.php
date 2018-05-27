@@ -47,7 +47,7 @@ require ('vues/header_'.$status.'.php');
         <button id="myBtn">Supprimer une pièce</button>
     </section>
     <div class="delete-room">
-
+        
         <div id="modalDeleteRoom" class="modal modalDeleteRoom">
 
             <div class="modal-content">

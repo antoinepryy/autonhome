@@ -32,7 +32,7 @@ require ('vues/header_'.$status.'.php');
 
         <div  id= "temperaturelegende" class="temperaturelegende"> <img class="capteurtemperature" src="ressources/pictures/capteurdetemperature.JPG">
 
-            <input type="number"  id="temperatureQuantity" placeholder="Quantité" oninput="createViewInputTemperature()"/>
+            <input type="number"  id="temperatureQuantity" name="temperaturequantity" placeholder="Quantité" oninput="createViewInputTemperature()"/>
 
             <div id="inputCapteurTemperature"></div>
 
@@ -40,14 +40,15 @@ require ('vues/header_'.$status.'.php');
 
         <div class="microlegende"> <img class="microelectret" src="ressources/pictures/microelectret.jpg">
 
-            <input type="number"  id="microQuantity" placeholder="Quantité" oninput="createViewInputMicro()" />
+            <input type="number"  id="microQuantity" name="microquantity" placeholder="Quantité" oninput="createViewInputMicro()" />
 
             <div id="inputCapteurMicro"></div>
 
         </div>
 
+        <input type="submit" value="Submit">
 
-        <input type="number" name="idRoom" value="<?php echo($_GET['id_room']); ?>" hidden>
+        <input type="number" name="idRoom" value="<?php echo($_GET['idRoom']); ?>" hidden>
 
 
     </form>
