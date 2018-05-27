@@ -173,4 +173,18 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
         $statement->execute();
     }
 
+    function getUsersByFirstLetters($bdd, $txt){
+        $allUsers = findAllUsers($bdd);
+        $found=array();
+        foreach ($allUsers as $user){
+            $cutFirstName = substr($user['firstName'],0, count($txt));
+            $cutLastName = substr($user['lastName'],0, count($txt));;
+            if($cutFirstName == $txt || $cutLastName == $txt){
+                array_push($found,$user);
+            }
+        }
+
+        return $found;
+    }
+
 ?>

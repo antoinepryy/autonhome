@@ -15,7 +15,7 @@ function showUsers(){
                 output.innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "././controleurs/AJAX/InspectDatabase.php", true);
+        xmlhttp.open("GET", "././controleurs/AJAX/InspectDatabase.php?txt=" + input.value.toString(), true);
         xmlhttp.send();
     }
 }

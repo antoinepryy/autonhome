@@ -6,6 +6,10 @@
  * Time: 10:18
  */
 
-echo (2);
+include('../../modele/users.php');
 
+
+$array = getUsersByFirstLetters($bdd, $_GET['txt']);
+
+echo('2');
 ?>
