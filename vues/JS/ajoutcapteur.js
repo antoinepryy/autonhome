@@ -11,7 +11,7 @@ function createViewInputLight(){
 
     if(numberOfDisplaysLight <=10){
         for(var i = 1; i <= numberOfDisplaysLight; i++){
-            contenuLumiere = contenuLumiere + "<label for='nameLightSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameLightSensor" + i + "' id='nameLightSensor" + i + " '/><br />";
+            contenuLumiere = contenuLumiere + "<label for='nameLightSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameLightSensor" + i + "' id='nameLightSensor" + i + " ' required/><br />";
 
         }
         document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
@@ -31,7 +31,7 @@ function createViewInputTemperature() {
 
     if (numberOfDisplaysTemperature <= 10) {
         for (var i = 1; i <= numberOfDisplaysTemperature; i++) {
-            contenuTemperature = contenuTemperature + "<label for='nameTemperatureSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameTemperatureSensor" + i + "' id='nameTemperatureSensor" + i + " '/><br />";
+            contenuTemperature = contenuTemperature + "<label for='nameTemperatureSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameTemperatureSensor" + i + "' id='nameTemperatureSensor" + i + " ' required/><br />";
 
         }
         document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
@@ -51,7 +51,7 @@ function createViewInputMicro() {
 
     if (numberOfDisplaysMicro <= 10) {
         for (var i = 1; i <= numberOfDisplaysMicro; i++) {
-            contenuMicro = contenuMicro + "<label for='nameMicroSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameMicroSensor" + i + "' id='nameMicroSensor" + i + " '/><br />";
+            contenuMicro = contenuMicro + "<label for='nameMicroSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameMicroSensor" + i + "' id='nameMicroSensor" + i + " ' required/><br />";
 
         }
         document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;

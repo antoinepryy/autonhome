@@ -70,9 +70,3 @@ if(isset($_POST["microquantity"],$_POST['nameMicroSensor'.$number_temperatureSen
 }
 
 
-<<<<<<< HEAD
-//for ($nbr_de_lignes = 1; $ <= 100; $nombre_de_lignes++)
-=======
-
->>>>>>> 3bd39cd8a662ab5d30cb8112b280a45d0f9aa2a5
-

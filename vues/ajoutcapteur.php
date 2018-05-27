@@ -46,8 +46,9 @@ require ('vues/header_'.$status.'.php');
 
         </div>
 
+        <input type="submit" value="Submit">
 
-        <input type="number" name="idRoom" value="<?php echo($_GET['id_room']); ?>" hidden>
+        <input type="number" name="idRoom" value="<?php echo($_GET['idRoom']); ?>" hidden>
 
 
     </form>
