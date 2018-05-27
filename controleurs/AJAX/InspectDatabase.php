@@ -10,6 +10,11 @@ include('../../modele/users.php');
 
 
 $array = getUsersByFirstLetters($bdd, $_GET['txt']);
-
-echo('2');
+$result='';
+foreach($array as $element){
+    $result = $result . '
+    <h1>'.$element["firstName"].'</h1>
+    ';
+}
+echo($result);
 ?>
