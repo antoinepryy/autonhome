@@ -25,6 +25,7 @@ function rechercheParType(PDO $bdd, string $table, string $type): array {
     
 }
 
+
 function getAllSensors(PDO $bdd){
 
     $statement = $bdd->prepare('SELECT * FROM sensors');
@@ -34,8 +35,12 @@ function getAllSensors(PDO $bdd){
 }
 
 
-function createSensor(PDO $bdd, $data)
-{
+//function createSensor(PDO $bdd, $data)
+//{
+//}
+
+function createSensor(PDO $bdd, $data){
+
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
     `name`, 
@@ -51,15 +56,31 @@ function createSensor(PDO $bdd, $data)
     :id_room,
     :id_sensortype)');
     $statement->bindParam(":name", $data["name"]);
-    $statement->bindParam(":id_residency", $data["id_residency"]);
-    $statement->bindParam(":id_roomCategory", $data["id_roomCategory"]);
+    $statement->bindParam(":state", $data["state"]);
+    $statement->bindParam(":serial", $data["serial"]);
+    $statement->bindParam(":id_room", $data["id_room"]);
+    $statement->bindParam(":id_sensortype", $data["id_sensortype"]);
     $statement->execute();
 
 }
 
 
+function getAllSensorsFromRoom(PDO $bdd){
+    $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID ' );
+    $statement->execute();
+    $roomSensors = $statement ->fetchAll();
+    return $roomSensors;
+}
 
 
+
+function getAllSensorsFromRoomInput($bdd, $id){
+    $residencyStatement=$bdd->prepare('SELECT * FROM sensors WHERE id_room = :idRoom');
+    $residencyStatement->bindParam(':idRoom', $id);
+    $residencyStatement->execute();
+    $residenceSensors = $residencyStatement->fetchAll();
+    return $residenceSensors;
+}
 
 
 function findSensorsByState($bdd, $state){
@@ -80,6 +101,7 @@ function validateSensorAdmin($bdd,$id ){
     //todo
 }
 
+
 function getAllUserSensors($bdd){
     $statement = $bdd->prepare('SELECT * FROM user INNER JOIN residence ON user.key=residence.key');
     $statement = $bdd->prepare('SELECT * FROM residence INNER JOIN room ON residence.key=room.key');
@@ -90,6 +112,7 @@ function getAllUserSensors($bdd){
 
 
 }
+
 
 
 ?>

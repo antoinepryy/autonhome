@@ -9,18 +9,20 @@
 
 <section class="my-house-state">
 
-    <select name="house" class="house-choice">
-        <?php foreach($myHouses[0] as $key => $home) {
-            if($key==0){?>
-                <option selected> <?php echo ($home['name']); ?> </option>
-            <?php }
-            else { ?>
-                <option > <?php echo ($home['name']); ?> </option>
-            <?php }
-
-        }
-        ?>
-    </select>
+    <form method="post" action="index.php?cible=accueil">
+        <select name="house" class="house-choice">
+            <?php foreach($myHouses[0] as $key => $home) {
+                if($key==0){?>
+                    <option value="<?php echo ($home['ID']); ?>" selected> <?php echo ($home['name']); ?> </option>
+                <?php }
+                else { ?>
+                    <option value="<?php echo ($home['ID']); ?>" > <?php echo ($home['name']); ?> </option>
+                <?php }
+            }
+            ?>
+        </select>
+        <input type="submit">
+    </form>
     <h3>
         Etat de votre maison
     </h3>

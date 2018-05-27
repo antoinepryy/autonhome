@@ -1,11 +1,37 @@
 .principal {
     background-color: white;
-    margin-left: 3%;
-    margin-right: 3%;
-    padding : 1%;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    justify-content: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+
+.checkToDisplay{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.owner .renter{
+    padding: 5px;
+}
+
+
+.form form{
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.form form *{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .principal h1 ,.principal p a{
@@ -16,10 +42,9 @@ form{
     display: flex;
     flex-direction: column;
     font-size: 110%;
-    margin-right: 20%;
-    margin-left: 20%;
     width: 100%;
     justify-content: center;
+    overflow: hidden;
 }
 
 form input{
@@ -67,7 +92,7 @@ form input{
     border: 1px solid black;
     text-align: left;
     width: 40%;
-    margin-right: 0%;
+
     background-color: white;
 }
 

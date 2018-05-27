@@ -8,49 +8,21 @@
 
 
 require ('vues/header_'.$status.'.php');
+
+
 ?>
+    <a href="index.php?cible=repondrediscussion"> <button class="repondre_discussion" type="submit" name="submit"> Répondre à la discussion </button> </a>
+        <h1> <?php echo($value["topic"]); ?> </h1>
+        <h2> <?php echo($value["id_user"]); ?> </br> <?php echo($value["dateTime"]); ?> </h2>
 
-    <a href="index.php?cible=forum"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
+        <?php foreach ($text as $element){ ?>
+        <p> <?php echo($element["id_user"]);?></p>
+        <p> <?php echo($element["dateTime"]);?></p>
+        <p> <?php echo($element["text"]);?> </p>
+        <?php } ?>
 
-    <table>
-        <tr>
-            <th>
-                Utilisateur
-            </th>
-            <th>
-                Date
-            </th>
-            <th>
-                Topic
-            </th>
-            <th>
-                Message
-            </th>
-        </tr>
 
-        <?php
-        foreach ($value as $element){
-            ?>
-            <tr>
-                <td>
-                    <?php echo($element["id_user"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["dateTime"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["topic"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["text"]); ?>
-                </td>
-            </tr>
-            <?php
-        }
 
-        ?>
-
-    </table>
 
 
 
@@ -58,5 +30,5 @@ require ('vues/header_'.$status.'.php');
 
 
 <?php
-require('vues/footer.php');
+    require('vues/footer.php');
 ?>
