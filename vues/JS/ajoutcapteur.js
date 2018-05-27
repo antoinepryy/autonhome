@@ -11,13 +11,14 @@ function createViewInputLight(){
 
     if(numberOfDisplaysLight <=10){
         for(var i = 1; i <= numberOfDisplaysLight; i++){
-            contenuLumiere = contenuLumiere + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+            contenuLumiere = contenuLumiere + "<label for='nameLightSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameLightSensor" + i + "' id='nameLightSensor" + i + " '/><br />";
 
         }
         document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
     }
 
     else{
+        contenuLumiere = "";
         alert("Mettez moins de 10 capteurs ou 10 capteurs");
     }
 
@@ -30,13 +31,14 @@ function createViewInputTemperature() {
 
     if (numberOfDisplaysTemperature <= 10) {
         for (var i = 1; i <= numberOfDisplaysTemperature; i++) {
-            contenuTemperature = contenuTemperature + "<label for='nameSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+            contenuTemperature = contenuTemperature + "<label for='nameTemperatureSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameTemperatureSensor" + i + "' id='nameTemperatureSensor" + i + " '/><br />";
 
         }
         document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
     }
 
     else {
+        contenuTemperature = "";
         alert("Mettez moins de 10 capteurs ou 10 capteurs");
     }
 }
@@ -49,13 +51,14 @@ function createViewInputMicro() {
 
     if (numberOfDisplaysMicro <= 10) {
         for (var i = 1; i <= numberOfDisplaysMicro; i++) {
-            contenuMicro = contenuMicro + "<label for='nameSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+            contenuMicro = contenuMicro + "<label for='nameMicroSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameMicroSensor" + i + "' id='nameMicroSensor" + i + " '/><br />";
 
         }
         document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;
     }
 
     else {
+        contenuMicro = "";
         alert("Mettez moins de 10 capteurs ou 10 capteurs");
     }
 }
