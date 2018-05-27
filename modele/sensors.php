@@ -34,7 +34,8 @@ function getAllSensors(PDO $bdd){
 }
 
 
-function createSensor(PDO $bdd, $data){
+function createSensor(PDO $bdd, $data)
+{
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
     `name`, 
@@ -58,6 +59,9 @@ function createSensor(PDO $bdd, $data){
 
 
 
+
+
+
 function findSensorsByState($bdd, $state){
     $statement = $bdd->prepare('SELECT * from sensor WHERE state = :state');
     $statement->bindParam(':state', $state);
@@ -75,4 +79,17 @@ function findSensorsByState($bdd, $state){
 function validateSensorAdmin($bdd,$id ){
     //todo
 }
+
+function getAllUserSensors($bdd){
+    $statement = $bdd->prepare('SELECT * FROM user INNER JOIN residence ON user.key=residence.key');
+    $statement = $bdd->prepare('SELECT * FROM residence INNER JOIN room ON residence.key=room.key');
+    $statement = $bdd->prepare('SELECT * FROM room INNER JOIN sensor ON room.key=sensor.key');
+    $statement->execute();
+    $sensor = $statement->fetchAll();
+    return $sensor;
+
+
+}
+
+
 ?>

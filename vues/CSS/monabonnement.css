@@ -14,14 +14,26 @@ h1{
 
 
 h2{
+    display: flex;
     height: 5%;
     width:20%;
-    font-size: 100%;
     margin:auto;
     justify-content: center;
+    text-align: center;
     border: 2px solid black;
 
 }
 
+.temperature{
+    display: flex;
+    border: 2px solid black;
+    font-size: small;
+}
+
+.movement{
+    display: flex;
+    border: 2px solid black;
+    font-size: small;
+}
 
 
