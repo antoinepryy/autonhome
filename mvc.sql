@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 17 mai 2018 à 10:57
--- Version du serveur :  10.1.29-MariaDB
--- Version de PHP :  7.1.12
+-- Généré le :  lun. 28 mai 2018 à 14:20
+-- Version du serveur :  10.1.28-MariaDB
+-- Version de PHP :  7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -67,7 +67,7 @@ CREATE TABLE `effector` (
 --
 
 INSERT INTO `effector` (`ID`, `name`, `action`, `state`, `serial`, `id_room`, `id_effectorType`) VALUES
-(1, 'Volets chambre YM', 'IN', 'OFF', 236756, 1, 5);
+(1, 'Volets chambre YM', 'ON', 'OFF', 236756, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,8 @@ CREATE TABLE `room` (
 
 INSERT INTO `room` (`ID`, `name`, `id_residency`, `id_roomCategory`) VALUES
 (1, 'Chambre de YM', 1, 1),
-(2, 'Salle de bain d\'Antoine', 1, 2);
+(2, 'Salle de bain d\'Antoine', 1, 2),
+(3, 'Test', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -236,6 +237,7 @@ CREATE TABLE `sensor` (
   `ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `state` varchar(10) NOT NULL,
+  `value` varchar(255) DEFAULT NULL,
   `serial` int(30) NOT NULL,
   `id_room` int(10) NOT NULL,
   `id_sensorType` int(10) NOT NULL
@@ -245,9 +247,10 @@ CREATE TABLE `sensor` (
 -- Déchargement des données de la table `sensor`
 --
 
-INSERT INTO `sensor` (`ID`, `name`, `state`, `serial`, `id_room`, `id_sensorType`) VALUES
-(1, 'Capteur lumière chambre YM', 'IN', 27936138, 1, 1),
-(2, 'Capteur température salle de bain Antoine', 'IN', 26153616, 2, 2);
+INSERT INTO `sensor` (`ID`, `name`, `state`, `value`, `serial`, `id_room`, `id_sensorType`) VALUES
+(1, 'Capteur lumière chambre YM', 'IN', '100', 27936138, 1, 1),
+(2, 'Capteur température salle de bain Antoine', 'IN', NULL, 26153616, 2, 2),
+(3, 'Température', 'OK', '20', 6527292, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -507,19 +510,19 @@ ALTER TABLE `residence`
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `room_category`
 --
 ALTER TABLE `room_category`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `sensor`
 --
 ALTER TABLE `sensor`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `sensor_type`

@@ -5,6 +5,12 @@ require ('vues/header_'.$status.'.php');
 
 
     ?>
+
+<section>
+    <input type="text" id="findUser" oninput="showUsers()">
+    <div id="results">
+    </div>
+</section>
     <table>
         <tr>
             <th>

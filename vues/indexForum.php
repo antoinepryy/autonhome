@@ -10,47 +10,19 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
+<h1> Forum </h1>
+
     <a href="index.php?cible=forum"> <button class="nouvelle_discussion" type="submit" name="submit"> Créer une discussion </button> </a>
 
-    <table>
-        <tr>
-            <th>
-                ID user
-            </th>
-            <th>
-                Date
-            </th>
-            <th>
-                Topic
-            </th>
-            <th>
-                Message
-            </th>
-        </tr>
+    <?php foreach ($value as $element) { ?>
+    <h3> <a href="index.php?cible=forummessage"> <?php echo($element["topic"]); ?> </a> </h3>
+    <p> <?php echo($element["id_user"]); ?> </br> <?php echo($element["dateTime"]); ?> </p>
+    <p><?php echo($element["text"]) ?></p>
 
-        <?php
-        foreach ($value as $element){
-            ?>
-            <tr>
-                <td>
-                    <?php echo($element["id_user"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["dateTime"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["topic"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["text"]); ?>
-                </td>
-            </tr>
-            <?php
-        }
+<?php
+}
+?>
 
-        ?>
-
-    </table>
 
 
 

@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Utilisateur
- * Date: 17/05/2018
- * Time: 10:26
+ * User: amepi
+ * Date: 25/05/2018
+ * Time: 16:40
  */
+$section = 'repondrediscussion';
 
-$section = 'ajoutcapteur';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -25,4 +25,4 @@ else{
 }
 
 
-include('vues/ajoutcapteur.php');
+include('vues/repondrediscussion.php');

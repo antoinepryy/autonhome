@@ -4,7 +4,7 @@
 
 .container-modifmdp{
 
-  background-color: #21485f;
+  background-color: lightgray;
   width:50%;
   margin:auto;
   margin-top: 2%;
@@ -21,9 +21,6 @@
 }
 
 .titlemodifiermotdepasse{
-
-  background-color: white;
-  border: 1px black solid;
   padding: 0.5%;
   width:36%;
   margin: auto;

@@ -3,45 +3,62 @@ var contenuLumiere = "";
 var contenuTemperature = "";
 var contenuMicro = "";
 
-var disp = document.getElementById('disp');
-
-
 
 function createViewInputLight(){
-    console.log('1');
+    contenuLumiere = "";
 
     var numberOfDisplaysLight = document.getElementById("lightQuantity").value ;
-    document.getElementById('inputCapteurLumiere').innerHTML = "";
 
+    if(numberOfDisplaysLight <=10){
+        for(var i = 1; i <= numberOfDisplaysLight; i++){
+            contenuLumiere = contenuLumiere + "<label for='nameLightSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameLightSensor" + i + "' id='nameLightSensor" + i + " ' required/><br />";
 
-    for(var i = 1; i <= numberOfDisplaysLight; i++){
-        contenuLumiere = contenuLumiere + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
-
+        }
+        document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
     }
-    document.getElementById('inputCapteurLumiere').innerHTML = contenuLumiere;
+
+    else{
+        contenuLumiere = "";
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
+    }
 
 }
 
-function createViewInputTemperature(){
-    console.log('2');
-    var numberOfDisplaysTemperature = document.getElementById("temperatureQuantity").value ;
+function createViewInputTemperature() {
+    contenuTemperature = "";
 
+    var numberOfDisplaysTemperature = document.getElementById("temperatureQuantity").value;
 
-    for(var i = 1; i <= numberOfDisplaysTemperature; i++){
-        contenuTemperature = contenuTemperature + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+    if (numberOfDisplaysTemperature <= 10) {
+        for (var i = 1; i <= numberOfDisplaysTemperature; i++) {
+            contenuTemperature = contenuTemperature + "<label for='nameTemperatureSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameTemperatureSensor" + i + "' id='nameTemperatureSensor" + i + " ' required/><br />";
 
+        }
+        document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
     }
-    document.getElementById('inputCapteurTemperature').innerHTML = contenuTemperature;
+
+    else {
+        contenuTemperature = "";
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
+    }
 }
+
 
 function createViewInputMicro() {
-    console.log('3');
-    var numberOfDisplaysMicro = document.getElementById("microQuantity").value ;
+    contenuMicro = "";
 
-    for(var i = 1; i <= numberOfDisplaysMicro; i++){
-        contenuMicro = contenuMicro + "<label for='nameSensor" + i + "'>Nom du capteur "+ i +"</label> : <input type='text' name='nameSensor" + i + "' id='nameSensor" + i + " '/><br />";
+    var numberOfDisplaysMicro = document.getElementById("microQuantity").value;
 
+    if (numberOfDisplaysMicro <= 10) {
+        for (var i = 1; i <= numberOfDisplaysMicro; i++) {
+            contenuMicro = contenuMicro + "<label for='nameMicroSensor" + i + "'>Nom du capteur " + i + "</label> : <input type='text' name='nameMicroSensor" + i + "' id='nameMicroSensor" + i + " ' required/><br />";
+
+        }
+        document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;
     }
-    document.getElementById('inputCapteurMicro').innerHTML = contenuMicro;
 
+    else {
+        contenuMicro = "";
+        alert("Mettez moins de 10 capteurs ou 10 capteurs");
+    }
 }

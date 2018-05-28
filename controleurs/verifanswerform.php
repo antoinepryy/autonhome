@@ -1,17 +1,16 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: Utilisateur
- * Date: 17/05/2018
- * Time: 10:26
+ * User: amepi
+ * Date: 25/05/2018
+ * Time: 16:43
  */
+$section = 'verifanswerform';
 
-$section = 'ajoutcapteur';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
-
 
 $status;
 if(isLoggedAsAdmin()){
@@ -25,4 +24,11 @@ else{
 }
 
 
-include('vues/ajoutcapteur.php');
+if(isset($_POST["text"])){
+    answerDiscussion($bdd, $_POST["text"],1);
+    header("Location: index.php?cible=forummessage");
+    require('vues/forummessage.php');
+}
+else{
+    require ('vues/erreur404.php');
+}

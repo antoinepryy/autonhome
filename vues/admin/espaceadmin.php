@@ -11,18 +11,29 @@ require ('vues/header_'.$status.'.php');
 
 <section>
     <div class="link-tools">
-        <a href="index.php?cible=espaceadmin&mode=ordervalidation">
-            Valider les commandes
-        </a><br>
-        <a href="index.php?cible=inspectdatabase&table=user">
-            Gestion des utilisateurs
-        </a><br>
-        <a href="index.php?cible=inspectdatabase&table=residence">
-            Gestion des résidences
-        </a><br>
-        <a href="index.php?cible=inspectdatabase&table=sensor">
-            Gestion des capteurs
-        </a><br>
+        <ul>
+            <a href="index.php?cible=espaceadmin&mode=ordervalidation">
+                <li>
+                    Valider les commandes
+                </li>
+            </a>
+
+            <a href="index.php?cible=inspectdatabase&table=user">
+                <li>
+                    Gestion des utilisateurs
+                </li>
+            </a>
+            <a href="index.php?cible=inspectdatabase&table=residence">
+                <li>
+                    Gestion des résidences
+                </li>
+            </a>
+            <a href="index.php?cible=inspectdatabase&table=sensor">
+                <li>
+                    Gestion des capteurs
+                </li>
+            </a>
+        </ul>
 
     </div>
 

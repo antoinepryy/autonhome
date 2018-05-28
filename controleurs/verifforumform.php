@@ -24,7 +24,7 @@ else{
 }
 
 
-if(isset($_POST["topic"])&&isset($_POST["text"])){
+if(isset($_POST["topic"]) && isset($_POST["text"])){
     createDiscussion($bdd, $_POST["topic"], $_POST["text"]);
     header("Location: index.php?cible=indexforum");
     require('vues/indexforum.php');

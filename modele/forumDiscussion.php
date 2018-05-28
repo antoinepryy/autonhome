@@ -33,8 +33,7 @@ function createDiscussion(PDO $bdd, $topic, $text)
     $statement->execute();
 }
 
-function orderDiscussions(PDO $bdd){
-    $statement = $bdd->prepare('SELECT id_user, dateTime, topic, text  FROM  forum_discussion ORDER BY dateTime DESC');
-    $statement->execute();
-    return $statement->fetchAll();
+function afficheNom(PDO $bdd){
+    $query = 'SELECT user.firstName, user.lastName FROM user, forum_discussion WHERE user.ID = forum_discussion.id_user';
+    return $bdd->query($query)->fetchAll();
 }

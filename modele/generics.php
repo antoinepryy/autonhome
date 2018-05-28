@@ -17,6 +17,7 @@ function getAll(PDO $bdd, string $table): array {
     return $bdd->query($query)->fetchAll();
 }
 
+
 /**
  * Recherche des éléments en fonction des attributs passés en paramètre
  * @param PDO $bdd

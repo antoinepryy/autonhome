@@ -24,45 +24,49 @@ else{
     $status="UU";
 }
 
-if($_POST[capteurlumiereLDR]= true){
-    $here = true;
-    $name = $_POST['namelumiere'];
-    $serial = $_POST[seriallumiere];
-    $state = "OFF";
-    $id_room = $_POST[$id_room];
-    $id_sensortype = 1;
-    $numbrerSensors +=
+if(isset($_POST["lightquantity"],$_POST['nameLightSensor'.$number_lightSensor],$_POST['idRoom'])){
+    for ($number_lightSensor = 1; $number_lightSensor <= $_POST['lightquantity']; $number_lightSensor++){
+
+        $data = array(
+            'name' => $_POST['nameLightSensor'.$number_lightSensor],
+            'state' => "OFF",
+            'serial' => 11111111,
+            'id_room' => $_POST['idRoom'],
+            'id_sensortype' => 1,
+        );
+        $addSensor = createSensor($bdd,$data);
+
+    }
 }
 
-if($_POST[capteurtemperatureLM32]= true){
-    $here = true;
-    $name = $_POST['namelumiere'];
-    $serial = $_POST[seriallumiere];
-    $state = "OFF";
-    $id_room = $_POST[$id_room];
-    $id_sensortype = 1;
+if(isset($_POST["temperaturequantity"],$_POST['nameTemperatureSensor'.$number_temperatureSensor],$_POST['idRoom'])){
+    for ($number_temperatureSensor = 1; $number_temperatureSensor <= $_POST['temperaturequantity']; $number_temperatureSensor++){
+
+        $data = array(
+            'name' => $_POST['nameTemperatureSensor'.$number_temperatureSensor],
+            'state' => "OFF",
+            'serial' => 11111112,
+            'id_room' => $_POST['idRoom'],
+            'id_sensortype' => 2,
+        );
+        $addSensor = createSensor($bdd,$data);
+
+    }
 }
 
-if($_POST[microphoneelectret]= true){
-    $here = true;
-    $name = $_POST['namelumiere'];
-    $serial = $_POST[seriallumiere];
-    $state = "OFF";
-    $id_room = $_POST[$id_room];
-    $id_sensortype = 1;
+if(isset($_POST["microquantity"],$_POST['nameMicroSensor'.$number_temperatureSensor],$_POST['idRoom'])){
+    for ($number_microSensor = 1; $number_microSensor <= $_POST['microquantity']; $number_microSensor++){
+
+        $data = array(
+            'name' => $_POST['nameMicroSensor'.$number_temperatureSensor],
+            'state' => "OFF",
+            'serial' => 11111113,
+            'id_room' => $_POST['idRoom'],
+            'id_sensortype' => 3,
+        );
+        $addSensor = createSensor($bdd,$data);
+
+    }
 }
-
-$name=$_POST['roomName'];
-$id_roomCategory=getIdRoomCategory($bdd,$_POST['roomCategory']);
-$id_residency = $_POST['idHouse'];
-$newsensors = array(
-    'Here' => $here
-);
-$data = array(
-    'ID' => NULL,
-    'name' => $name,
-    'id_residency' => $id_residency,
-    'id_roomCategory' => $id_roomCategory);
-
 
 
