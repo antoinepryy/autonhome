@@ -22,6 +22,7 @@ elseif (isLoggedAsUser()){
 }
 else{
     $status="UU";
+
 }
 
 if(isset($_POST["lightquantity"],$_POST['idRoom'])){
