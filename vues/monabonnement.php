@@ -22,19 +22,19 @@ Mon Abonnement
 
     <BR>
 
+    <h3 class="temperature">
+        Capteur de Température : <?php echo ''?>
+    </h3>
+
+    <h3 class="movement">
+        Capteur de Mouvement : <?php echo ''?>
+    </h3>
+
 
 <section>
 
     <form class="formulairemonabonnement" method="post">
         <div class="elementsformulairemonabonnement">
-            <h3 class="temperature">
-                Capteur de Température : <?php echo ''?>
-            </h3>
-
-            <h3 class="movement">
-                Capteur de Mouvement : <?php echo ''?>
-            </h3>
-
 
             <h5>
                 Alarme
