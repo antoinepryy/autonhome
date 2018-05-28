@@ -34,6 +34,11 @@ require ('vues/header_'.$status.'.php');
 
 
     </div>
+
+    <div class="ajoutCapteur">
+        <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+    </div>
+
 </section>
 
 

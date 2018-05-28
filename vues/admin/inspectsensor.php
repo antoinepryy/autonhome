@@ -65,5 +65,7 @@ require ('vues/header_'.$status.'.php');
 
 
 
+
+
 <?php
 require ('vues/footer.php');?>

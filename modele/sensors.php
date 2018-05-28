@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /**
  * Liste des fonctions spécifiques à la table des capteurs
@@ -29,7 +29,8 @@ function createSensor(PDO $bdd, $data){
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
     `name`, 
-    `state`, 
+    `state`,
+    `value`,
     `serial`,
     `id_room`,
     `id_sensortype`)
@@ -37,12 +38,12 @@ function createSensor(PDO $bdd, $data){
     (NULL,
     :name, 
     :state,
-    :serial,
+    NULL,
+    NULL,
     :id_room,
     :id_sensortype)');
     $statement->bindParam(":name", $data["name"]);
     $statement->bindParam(":state", $data["state"]);
-    $statement->bindParam(":serial", $data["serial"]);
     $statement->bindParam(":id_room", $data["id_room"]);
     $statement->bindParam(":id_sensortype", $data["id_sensortype"]);
     $statement->execute();
@@ -70,6 +71,12 @@ function getAllSensorsFromRoomInput($bdd, $id){
     $residencyStatement->execute();
     $residenceSensors = $residencyStatement->fetchAll();
     return $residenceSensors;
+}
+
+function deleteSensor ($bdd, $id){
+    $roomStatement = $bdd->prepare ('DELETE FROM sensor WHERE id= :id');
+    $roomStatement->bindParam(':id', $id);
+    $roomStatement->execute();
 }
 
 

@@ -22,5 +22,6 @@ function importAllSessionsAndModels(){
     include('./modele/forummessage.php');
     include('./modele/forumDiscussion.php');
     include('./modele/device.php');
+    include('./modele/indexforum.php');
 
 }

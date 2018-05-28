@@ -74,6 +74,7 @@ require ('vues/header_'.$status.'.php');
     <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
 
 
+
 </div>
 <?php
 
