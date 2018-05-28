@@ -20,7 +20,7 @@ require ('vues/header_'.$status.'.php');
         Nos Capteurs
     </h2>
 
-    <form action="index.php?cible=verifajoutcapteur" method="post">
+    <form action="index.php?cible=verifajoutcapteur&roomchoice=<?php echo($_GET['roomchoice']); ?>" method="post">
 
         <div id= "lumierelegende" class="lumierelegende"> <img class="capteurlumiere" src="ressources/pictures/capteurdelumiereLDR.jpg">
 
@@ -48,7 +48,6 @@ require ('vues/header_'.$status.'.php');
 
         <input type="submit" value="Submit">
 
-        <input type="number" name="idRoom" value="<?php echo($_GET['idRoom']); ?>" hidden>
 
 
     </form>
