@@ -42,12 +42,28 @@ require ('vues/header_'.$status.'.php');
             </li>
         <?php } ?>
     </ul>
+<<<<<<< HEAD
 
     <section>
         <button id="myBtn">Supprimer une pièce</button>
     </section>
     <div class="delete-room">
 
+=======
+    <?php
+    if(count($inCategory)!= 0){
+        echo('
+            <section>
+            <button id="myBtn">Supprimer une pièce</button>
+            </section>'
+        );
+    }
+    ?>
+
+    <div class="delete-room">
+
+
+>>>>>>> 1ffc7e6e4c624b44f2201c081f875ba65dc7ae93
         <div id="modalDeleteRoom" class="modal modalDeleteRoom">
 
             <div class="modal-content">
@@ -65,7 +81,12 @@ require ('vues/header_'.$status.'.php');
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <p> <a href="index.php?cible=ajoutcapteur" >+ Ajouter un capteur</a> </p>
+=======
+    <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+
+>>>>>>> 1ffc7e6e4c624b44f2201c081f875ba65dc7ae93
 
 </div>
 <?php
