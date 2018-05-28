@@ -34,7 +34,6 @@ elseif (isLoggedAsUser()){
     $value = getAll($bdd, "forum_discussion");
     $value = array_reverse($value);
     $nom = afficheNom($bdd);
-
 }
 else{
     $status="UU";

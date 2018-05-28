@@ -33,5 +33,19 @@ function createDiscussion(PDO $bdd, $topic, $text)
     $statement->execute();
 }
 
+function afficheNom(PDO $bdd) {
+    $statement = $bdd->prepare('
+    SELECT 
+    user.firstName, 
+    user.lastName 
+    FROM user INNER JOIN 
+    forum_discussion
+    ON 
+    user.ID = forum_discussion.id_user');
+    $statement->execute();
+    $nom = $statement->fetch();
+    return ($nom);
+}
+
 
 
