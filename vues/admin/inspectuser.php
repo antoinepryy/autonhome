@@ -8,54 +8,13 @@ require ('vues/header_'.$status.'.php');
 
 <section>
     <input type="text" id="findUser" oninput="showUsers()">
-    <div id="results">
-    </div>
-</section>
-    <table>
-        <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Nom
-            </th>
-            <th>
-                Prénom
-            </th>
-            <th>
-                Mail
-            </th>
-            <th>
-                Numéro de téléphone
-            </th>
-        </tr>
 
-        <?php
-        foreach ($list as $element){
-            ?>
-            <tr>
-                <td>
-                    <?php echo($element["ID"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["lastName"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["firstName"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["mail"]); ?>
-                </td>
-                <td>
-                    <?php echo($element["phoneNumber"]); ?>
-                </td>
-            </tr>
-            <?php
-        }
 
-        ?>
-
+    <table id="results">
     </table>
+
+
+</section>
 
 
 
