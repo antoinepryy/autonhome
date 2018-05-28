@@ -34,6 +34,15 @@ function answerDiscussion(PDO $bdd, $text, $id_discussion)
 }
 
 function getMessages(PDO $bdd) {
+    $statement = $bdd->prepare('SELECT id_user, dateTime, text FROM forum_message WHERE id_discussion= id_user');
+    $statement->bindParam(":id_user", $_GET['ID']);
+    $statement->execute();
+    $message = $statement->fetchAll();;
+    return (array($message));
+}
+
+function get(PDO $bdd) {
     $query = 'SELECT id_user, dateTime, text FROM forum_message WHERE id_discussion= 1';
     return $bdd->query($query)->fetchAll();
 }
+
