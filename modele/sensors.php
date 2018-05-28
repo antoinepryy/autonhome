@@ -62,7 +62,6 @@ function createSensor(PDO $bdd, $data){
     $statement->bindParam(":id_room", $data["id_room"]);
     $statement->bindParam(":id_sensortype", $data["id_sensortype"]);
     $statement->execute();
-
 }
 
 
