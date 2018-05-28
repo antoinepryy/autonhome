@@ -52,21 +52,17 @@ if(isset($_POST["temperaturequantity"],$_POST['idRoom'])){
     }
 }
 
-if(isset($_POST["microquantity"],$_POST['idRoom'])){
-    for ($number_microSensor = 1; $number_microSensor <= $_POST['microquantity']; $number_microSensor++){
+if(isset($_POST["microquantity"],$_POST['idRoom'])) {
+    for ($number_microSensor = 1; $number_microSensor <= $_POST['microquantity']; $number_microSensor++) {
 
-<<<<<<< HEAD
-=======
+
         $data = array(
-            'name' => $_POST['nameMicroSensor'.$number_microSensor],
+            'name' => $_POST['nameMicroSensor' . $number_microSensor],
             'state' => "ORD",
             'id_room' => $_POST['idRoom'],
             'id_sensortype' => 3,
         );
-        $addSensor = createSensor($bdd,$data);
+        $addSensor = createSensor($bdd, $data);
 
     }
 }
-
-
->>>>>>> 89ba9862bf30ee55dc32fab036896a7f3fb23f7f
