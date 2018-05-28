@@ -26,13 +26,14 @@ if(isLoggedAsAdmin()){
     $section = 'forumMessage';
     $value = getAll($bdd, "forum_discussion");
     $value = array_reverse($value);
+    $nom = afficheNom($bdd);
 }
 elseif (isLoggedAsUser()){
     $status="LU";
     $section = 'forumMessage';
     $value = getAll($bdd, "forum_discussion");
     $value = array_reverse($value);
-    afficheNom($bdd);
+    $nom = afficheNom($bdd);
 
 }
 else{
