@@ -102,7 +102,7 @@ function validateSensorAdmin($bdd,$id ){
 }
 
 
-function getAllUserSensors(PDO $bdd){
+function getAllUserSensors(PDO $bdd,$id){
     $statement = $bdd->prepare('SELECT * FROM user INNER JOIN residence ON user.key=residence.key');
     $statement = $bdd->prepare('SELECT * FROM residence INNER JOIN room ON residence.key=room.key');
     $statement = $bdd->prepare('SELECT * FROM room INNER JOIN sensor ON room.key=sensor.key');
