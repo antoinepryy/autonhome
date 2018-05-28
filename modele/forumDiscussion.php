@@ -47,5 +47,11 @@ function afficheNom(PDO $bdd) {
     return ($nom);
 }
 
+function getAllMessagesWithNames($bdd){
+$statement = $bdd->prepare('SELECT firstName, lastName, topic, text, dateTime FROM user INNER JOIN forum_discussion ON user.ID = forum_discussion.id_user');
+$statement->execute();
+return $statement->fetchAll();
+}
+
 
 
