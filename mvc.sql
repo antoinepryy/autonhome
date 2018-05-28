@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 28 mai 2018 à 16:30
--- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.3
+-- Généré le :  lun. 28 mai 2018 à 17:06
+-- Version du serveur :  10.1.28-MariaDB
+-- Version de PHP :  7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -247,6 +247,7 @@ CREATE TABLE `sensor` (
   `ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `state` varchar(10) NOT NULL,
+  `value` varchar(255) DEFAULT NULL,
   `serial` int(30) NOT NULL,
   `id_room` int(10) NOT NULL,
   `id_sensorType` int(10) NOT NULL
@@ -256,9 +257,9 @@ CREATE TABLE `sensor` (
 -- Déchargement des données de la table `sensor`
 --
 
-INSERT INTO `sensor` (`ID`, `name`, `state`, `serial`, `id_room`, `id_sensorType`) VALUES
-(1, 'Capteur lumière chambre YM', 'IN', 27936138, 1, 1),
-(2, 'Capteur température salle de bain Antoine', 'IN', 26153616, 2, 2);
+INSERT INTO `sensor` (`ID`, `name`, `state`, `value`, `serial`, `id_room`, `id_sensorType`) VALUES
+(1, 'Capteur lumière chambre YM', 'IN', NULL, 27936138, 1, 1),
+(2, 'Capteur température salle de bain Antoine', 'IN', '4', 26153616, 4, 2);
 
 -- --------------------------------------------------------
 
