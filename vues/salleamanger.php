@@ -12,8 +12,6 @@ require ('vues/header_'.$status.'.php');
         Salle(s) à manger
     </h1>
 
-
-
     <ul class="salle-a-manger-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
         <li>
@@ -36,6 +34,12 @@ require ('vues/header_'.$status.'.php');
                 <br />
                 <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
                 <br />
+                </div>
+                <div>
+
+                    <a href="<?php echo('index.php?cible=mamaison&id='.$_GET["id"].'&idroom='.$_GET['idroom'].'&roomchoice='.$roomInCategory['id']); ?>" >
+                        Voir les informations
+                    </a>
                 </div>
             </form>
 
@@ -70,7 +74,9 @@ require ('vues/header_'.$status.'.php');
             </div>
         </div>
     </div>
-    <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+
+    <p> <a href="index.php?cible=ajoutcapteur" >+ Ajouter un capteur</a> </p>
+
 
 </div>
 <?php

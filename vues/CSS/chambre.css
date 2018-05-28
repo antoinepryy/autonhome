@@ -31,10 +31,20 @@ h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 90%;
 }
 
 .display-chambre li{
     margin-right: 15%;
+}
+
+.display-chambre p a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color : #e1e1e1;
+    padding: 1%;
 }
 
 .chambre-list h4{

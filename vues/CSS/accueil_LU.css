@@ -3,11 +3,12 @@
     display: flex;
     flex-direction: column;
     width: 15%;
-    background-color: lightgray;
+    background-color: #e1e1e1;
     justify-content: flex-start;
     position: absolute;
     right: 0;
-    margin-right: 3.5%;
+    top: 56%;
+    margin-right: 5%;
     margin-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;

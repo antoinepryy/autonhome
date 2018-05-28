@@ -1,27 +1,68 @@
+
 h1{
+
+    justify-content: center;
+    /*height: 8%;*/
+    /*width : 23%;*/
+    text-align: center;
+
+}
+
+
+
+.formulairemonabonnement{
+    display:flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 1%;
+    margin-left: 40%;
+    height: 5%;
+    width: 20%;
+
+}
+
+
+h2{
     display: flex;
-    height: 8%;
-    width : 23%;
+    height: 5%;
+    width:20%;
+    margin:auto;
+    justify-content: center;
     text-align: center;
     border: 2px solid black;
 
 }
 
-.formulairemonabonnement{
-    display:flex;
-    justify-content: center;
-}
 
+.temperature{
 
-h2{
+    text-align: center;
+    margin: 1%;
+    margin-left: 40%;
+    padding:auto;
     height: 5%;
-    width:20%;
-    font-size: 100%;
-    margin:auto;
+    width: 20%;
+    font-size: small;
     justify-content: center;
-    border: 2px solid black;
-
 }
 
 
+
+.movement{
+
+    text-align: center;
+    margin: 1%;
+    margin-left: 40%;
+    padding: auto;
+    height: 5%;
+    width: 20%;
+    font-size: small;
+    justify-content: center;
+
+}
+
+.movement, .temperature {
+
+    border: 2px solid black;
+}
 

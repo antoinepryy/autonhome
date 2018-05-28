@@ -68,3 +68,48 @@
     to {opacity: 1;}
 }
 
+.my-house-state{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: lightgray;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    margin-right: 3.5%;
+    margin-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    height: 58.5%;
+}
+
+.my-house-state input[type="checkbox"]
+{
+    font-size: 100%;
+    width: 100%;
+    position: absolute;
+    left: 20%;
+}
+
+.light input[type="checkbox"]{
+    width: 10%;
+    height: auto;
+    margin-left: 60%;
+}
+
+.my-house-state h3{
+    font-weight: bold;
+}
+
+.my-house-state h4{
+    text-decoration: underline;
+}
+
+.house-choice{
+    font-size: 17px;
+}
+
+
+

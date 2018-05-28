@@ -15,23 +15,30 @@ require ('vues/header_'.$status.'.php');
 Mon Abonnement
 </h1>
 
+<h2>
+        Pack une maison
+</h2><br>
+
+
+    <BR>
+
+    <h3 class="temperature">
+        Capteur de Température : <?php echo ''?>
+    </h3>
+
+    <h3 class="movement">
+        Capteur de Mouvement : <?php echo ''?>
+    </h3>
+
 
 <section>
-<h2>
-    Pack une maison
-</h2><br>
 
     <form class="formulairemonabonnement" method="post">
         <div class="elementsformulairemonabonnement">
-            <input type="text" name="capteurs de température" placeholder="Capteur de température">
-            <input type="text" name="capteur de lumière" placeholder="Capteur de lumière">
 
-
-            <BR>
-
-            <h3>
+            <h5>
                 Alarme
-            </h3>
+            </h5>
 
 
             <label> Microphone </label>
