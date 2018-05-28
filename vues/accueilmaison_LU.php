@@ -5,23 +5,12 @@
 
 ?>
 
-
+<link rel="stylesheet" type="text/css" href="vues/CSS/accueil_LU.css"/>
 <section class="my-house-state">
 
-    <form method="post" action="index.php?cible=accueil">
         <select name="house" class="house-choice">
-            <?php foreach($myHouses[0] as $key => $home) {
-                if($key==0){?>
-                    <option value="<?php echo ($home['ID']); ?>" selected> <?php echo ($home['name']); ?> </option>
-                <?php }
-                else { ?>
-                    <option value="<?php echo ($home['ID']); ?>" > <?php echo ($home['name']); ?> </option>
-                <?php }
-            }
-            ?>
+            <option value="<?php echo ($id_residency); ?>" selected> <?php echo ($name); ?> </option>
         </select>
-        <input type="submit">
-    </form>
     <h3>
         Etat de votre maison
     </h3>

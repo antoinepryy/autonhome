@@ -12,8 +12,6 @@ require ('vues/header_'.$status.'.php');
         Salon(s)
     </h1>
 
-
-
     <ul class="salon-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
             <li>

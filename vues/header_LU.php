@@ -13,9 +13,6 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <?php
     echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'.css"/>');
-    if(in_array($section,array("accueil"))){
-        echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'_'.$status.'.css">');
-    }
 
     ?>
 

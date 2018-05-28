@@ -9,48 +9,56 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 
+
 <div class="display-chambre">
     <h1>
         Chambre(s)
     </h1>
 
-    <ul class="chambre-list">
-        <?php foreach ($inCategory as $roomInCategory) { ?>
-            <li>
-                <h4> <?php echo ( $roomInCategory['name']);  ?> </h4>
+    <div class="list-LU">
 
-                <form method="post" action="">
+        <div class="accueil_LU">
 
-                    <p>Enclencher : <p/>
-
-                    <div class="use-case">
-                        <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
-                        <br />
-                        <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
-                        <br />
-                    </div>
-                    <br/>
-                    <div class="use-case-volets">
-                        <p> Etat des volets</p>
-                        <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
-                        <br />
-                        <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
-                        <br />
-                    </div>
-                    <div>
+        </div>
 
 
-                        <a href="<?php echo('index.php?cible=mamaison&id='.$_GET["id"].'&idroom='.$_GET['idroom'].'&roomchoice='.$roomInCategory['id']); ?>" >
-                            Voir les informations
-                        </a>
-                    </div>
-                </form>
+        <ul class="chambre-list">
+            <?php foreach ($inCategory as $roomInCategory) { ?>
+                <li>
+                    <h4> <?php echo ( $roomInCategory['name']);  ?> </h4>
 
-            </li>
+                    <form method="post" action="">
 
-        <?php } ?>
-    </ul>
+                        <p>Enclencher : <p/>
 
+                        <div class="use-case">
+                            <input type="checkbox" name="ventilateur" id="Ventilateur" /> <label for="lumieres"> Ventilateur </label>
+                            <br />
+                            <input type="checkbox" name="lumieres" id="Lumières" /> <label for="lumieres"> Lumière </label>
+                            <br />
+                        </div>
+                        <br/>
+                        <div class="use-case-volets">
+                            <p> Etat des volets</p>
+                            <input type="checkbox" name="voletsouverts" id="VoletsOuverts" /> <label for="voletsouverts">Ouverts</label>
+                            <br />
+                            <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
+                            <br />
+                        </div>
+                        <div>
+
+
+                            <a href="<?php echo('index.php?cible=mamaison&id='.$_GET["id"].'&idroom='.$_GET['idroom'].'&roomchoice='.$roomInCategory['id']); ?>" >
+                                Voir les informations
+                            </a>
+                        </div>
+                    </form>
+
+                </li>
+
+            <?php } ?>
+        </ul>
+    </div>
     <?php
     if(count($inCategory)!= 0){
         echo('

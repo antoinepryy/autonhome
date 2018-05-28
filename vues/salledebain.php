@@ -12,8 +12,6 @@ require ('vues/header_'.$status.'.php');
         Salle(s) de bain
     </h1>
 
-
-
     <ul class="salledebain-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
             <li>
