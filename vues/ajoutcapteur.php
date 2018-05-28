@@ -49,7 +49,6 @@ require ('vues/header_'.$status.'.php');
         <input type="submit" value="Submit">
 
 
-
     </form>
 
 </section>
