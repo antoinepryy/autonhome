@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /**
  * Liste des fonctions spécifiques à la table des capteurs
