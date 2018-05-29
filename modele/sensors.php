@@ -25,7 +25,22 @@ function rechercheParType(PDO $bdd, string $table, string $type): array {
     
 }
 
+
+function getAllSensors(PDO $bdd){
+
+    $statement = $bdd->prepare('SELECT * FROM sensors');
+    $statement->execute();
+    $sensors = $statement->fetchAll();
+    return $sensors;
+}
+
+
+//function createSensor(PDO $bdd, $data)
+//{
+//}
+
 function createSensor(PDO $bdd, $data){
+
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
     `name`, 
@@ -47,16 +62,8 @@ function createSensor(PDO $bdd, $data){
     $statement->bindParam(":id_room", $data["id_room"]);
     $statement->bindParam(":id_sensortype", $data["id_sensortype"]);
     $statement->execute();
-
 }
 
-function getAllSensors(PDO $bdd){
-
-    $statement = $bdd->prepare('SELECT * FROM sensors');
-    $statement->execute();
-    $sensors = $statement->fetchAll();
-    return $sensors;
-}
 
 function getAllSensorsFromRoom(PDO $bdd){
     $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID ' );
@@ -64,6 +71,7 @@ function getAllSensorsFromRoom(PDO $bdd){
     $roomSensors = $statement ->fetchAll();
     return $roomSensors;
 }
+
 
 
 function getAllSensorsFromRoomInput($bdd, $id){
@@ -98,6 +106,18 @@ function findSensorsByState($bdd, $state){
 function validateSensorAdmin($bdd,$id ){
     //todo
 }
+
+
+function getAllUserSensors(PDO $bdd,$id){
+    $statement = $bdd->prepare('SELECT * FROM user INNER JOIN residence ON user.key=residence.key');
+    $statement = $bdd->prepare('SELECT * FROM residence INNER JOIN room ON residence.key=room.key');
+    $statement = $bdd->prepare('SELECT * FROM room INNER JOIN sensor ON room.key=sensor.key');
+    $statement->execute();
+    $usersensor = $statement->fetchAll();
+    return $usersensor;
+
+}
+
 
 
 ?>

@@ -12,8 +12,6 @@ require ('vues/header_'.$status.'.php');
         Salle(s) de bain
     </h1>
 
-
-
     <ul class="salledebain-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
             <li>
@@ -77,6 +75,8 @@ require ('vues/header_'.$status.'.php');
         </div>
     </div>
 
+
+    <p> <a href="index.php?cible=ajoutcapteur" >+ Ajouter un capteur</a> </p>
 
 </div>
 

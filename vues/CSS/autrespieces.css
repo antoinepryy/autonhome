@@ -31,6 +31,7 @@ h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 90%;
 }
 
 .display-autrespieces li{
@@ -40,6 +41,15 @@ h1{
 .autres-pieces-list h4{
     font-weight: bold;
     margin-bottom: 5%;
+}
+
+.display-autrespieces p a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color : #e1e1e1;
+    padding: 1%;
 }
 
 .modal {

@@ -27,7 +27,7 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){?>
             <ul>
-                <li><?php echo($effector['name'].' : '.$action['value']);?></li>
+                <li><?php echo($effector['name'].' : '.$effector['action']);?></li>
             </ul>
         <?php }
         ?>
@@ -35,8 +35,11 @@ require ('vues/header_'.$status.'.php');
 
     </div>
 
-    <div class="ajoutcapteur">
-        <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&roomchoice=".$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+    <div class="ajoutCapteur">
+        <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+    </div>
+    <div class="ajoutEffector">
+        <a class="text" href=<?php echo("index.php?cible=ajouteffector&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un actionneur</a>
     </div>
 
 </section>

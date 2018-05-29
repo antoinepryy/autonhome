@@ -1,0 +1,22 @@
+.effectorlumiere{
+    border: 2px solid black;
+    height: 30%;
+    width : 15%;
+}
+
+.shutter{
+    border: 2px solid black;
+    height: 20%;
+    width : 15%;
+}
+
+.fan{
+    border: 2px solid black;
+    height: 3%;
+    width : 15%;
+}
+
+.effector {
+    display : flex;
+    flex-direction: column;
+}

@@ -33,16 +33,18 @@ function answerDiscussion(PDO $bdd, $text, $id_discussion)
     $statement->execute();
 }
 
-function getMessages(PDO $bdd) {
-    $statement = $bdd->prepare('SELECT id_user, dateTime, text FROM forum_message WHERE id_discussion= id_user');
-    $statement->bindParam(":id_user", $_GET['ID']);
-    $statement->execute();
-    $message = $statement->fetchAll();;
-    return (array($message));
-}
+function getInfos(PDO $bdd, $id_topic){
+    $statement = $bdd->prepare('SELECT id_user, dateTime, topic FROM forum_discussion WHERE ID = :id_topic');
+    $statement ->bindParam(":id_topic", $id_topic);
+    $statement -> execute();
+    $infos = $statement->fetchAll();;
+    return ($infos);
 
-function get(PDO $bdd) {
-    $query = 'SELECT id_user, dateTime, text FROM forum_message WHERE id_discussion= 1';
-    return $bdd->query($query)->fetchAll();
+}
+function getMessages(PDO $bdd) {
+    $statement = $bdd->prepare('SELECT forum_message.id_user, forum_message.dateTime, forum_message.text FROM forum_message INNER JOIN forum_discussion ON forum_discussion.ID = forum_message.id_discussion');
+    $statement->execute();
+    $messages = $statement->fetchAll();;
+    return ($messages);
 }
 

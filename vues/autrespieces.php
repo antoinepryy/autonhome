@@ -12,8 +12,6 @@ require ('vues/header_'.$status.'.php');
         Autre(s) pièce(s)
     </h1>
 
-
-
     <ul class="autres-pieces-list">
         <?php foreach ($inCategory as $roomInCategory) { ?>
             <li>
@@ -42,6 +40,7 @@ require ('vues/header_'.$status.'.php');
             </li>
         <?php } ?>
     </ul>
+
     <?php
     if(count($inCategory)!= 0){
         echo('
@@ -53,7 +52,6 @@ require ('vues/header_'.$status.'.php');
     ?>
 
     <div class="delete-room">
-
 
         <div id="modalDeleteRoom" class="modal modalDeleteRoom">
 
@@ -72,6 +70,9 @@ require ('vues/header_'.$status.'.php');
             </div>
         </div>
     </div>
+
+    <p> <a href="index.php?cible=ajoutcapteur" >Ajouter un capteur</a> </p>
+
 
 
 </div>
