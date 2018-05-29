@@ -4,19 +4,19 @@
     width : 15%;
 }
 
-.capteurtemperature{
+.shutter{
     border: 2px solid black;
     height: 20%;
     width : 15%;
 }
 
-.microelectret{
+.fan{
     border: 2px solid black;
     height: 3%;
     width : 15%;
 }
 
-.capteurs {
+.effector {
     display : flex;
     flex-direction: column;
 }
