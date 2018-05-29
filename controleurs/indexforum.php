@@ -23,13 +23,13 @@ if(!function_exists("importAllSessionsAndModels")){
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
-    $section = 'forumMessage';
+    $section = 'indexforum';
     $value = getAllMessagesWithNames($bdd);
     $value = array_reverse($value);
 }
 elseif (isLoggedAsUser()){
     $status="LU";
-    $section = 'forumMessage';
+    $section = 'indexforum';
     $value = getAllMessagesWithNames($bdd);
     $value = array_reverse($value);
 }
