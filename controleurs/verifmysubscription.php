@@ -14,5 +14,11 @@ if(!function_exists("importAllSessionsAndModels")){
 
 $infoUserAbonnement = findUserById($bdd, $_SESSION['userId']);
 
-if()
+if(isset($_POST)){
+    if($_POST['choixPackAbonnement']=='packUneMaison'){
 
+
+    }
+
+};
+?>

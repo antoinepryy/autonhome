@@ -150,38 +150,7 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
         return $user;
     }
 
-    function findUserByIdInSubscription($bdd, $id)
-    {
-        $statement = $bdd->prepare('SELECT * FROM subscription_user WHERE ID = :id ');
-        $statement->BindParam(':id', $id);
-        $statement->execute();
-        $subscriptionUser = $statement->fetch();
-        return $subscriptionUser;
-    }
 
-
-
-
-    function updateIdSubscription($bdd, $ID, $id_subscription ){
-
-        $statement = $bdd->prepare(
-            'UPDATE user_subscription 
-                SET
-                id_subscription = :id_subscription 
-                WHERE ID = :id '
-        );
-
-        /*
-        $statement->execute(array(
-            'password' => $password,
-            'ID' => $ID)
-        ); */
-
-        $statement->BindParam(':id', $ID);
-        $statement->BindParam(':id_subscription', $id_subscription);
-
-    $statement->execute();
-}
 
 
 
