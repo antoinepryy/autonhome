@@ -10,7 +10,7 @@ include('connexion.php');
 //on définit le nom de la table
 $table = "effector";
 
-function createSensor(PDO $bdd, $data){
+function createEffector(PDO $bdd, $data){
 
     $statement = $bdd->prepare('INSERT INTO `effector` 
     (`ID`,

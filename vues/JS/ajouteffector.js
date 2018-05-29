@@ -3,9 +3,10 @@ var contenuShutter = "";
 var contenuFan = "";
 
 
+
 function createViewEffectorLight(){
     contenuEffectorLumiere = "";
-    alert('Ca passe');
+
 
     var numberOfDisplaysLightEffector = document.getElementById("effectorlightQuantity").value ;
 
