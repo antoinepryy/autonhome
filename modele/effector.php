@@ -31,7 +31,7 @@ function createEffector(PDO $bdd, $data){
     $statement->bindParam(":name", $data["name"]);
     $statement->bindParam(":state", $data["state"]);
     $statement->bindParam(":id_room", $data["id_room"]);
-    $statement->bindParam(":id_effectortype", $data["id_effectortype"]);
+    $statement->bindParam(":id_effectorType", $data["id_effectorType"]);
     $statement->execute();
 }
 

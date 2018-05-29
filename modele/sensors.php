@@ -35,9 +35,6 @@ function getAllSensors(PDO $bdd){
 }
 
 
-//function createSensor(PDO $bdd, $data)
-//{
-//}
 
 function createSensor(PDO $bdd, $data){
 

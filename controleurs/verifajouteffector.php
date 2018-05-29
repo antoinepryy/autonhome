@@ -31,7 +31,7 @@ if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
             'name' => $_POST['nameLightEffector'.$number_lightEffector],
             'state' => "ORD",
             'id_room' => $_GET['roomchoice'],
-            'id_sensortype' => 6,
+            'id_effectorType' => 6,
         );
         $addSensor = createEffector($bdd,$data);
 
@@ -45,7 +45,7 @@ if(isset($_POST["shutterquantity"],$_GET['roomchoice'])){
             'name' => $_POST['nameShutter'.$number_shutter],
             'state' => "ORD",
             'id_room' => $_GET['roomchoice'],
-            'id_effectortype' => 5,
+            'id_effectorType' => 5,
         );
         $addSensor = createEffector($bdd,$data);
 
@@ -61,7 +61,7 @@ if(isset($_POST["fanquantity"],$_GET['roomchoice'])){
             'name' => $_POST['nameFan' . $number_fan],
             'state' => "ORD",
             'id_room' => $_GET['roomchoice'],
-            'id_effectortype' => 4,
+            'id_effectorType' => 4,
         );
         $addSensor = createEffector($bdd, $data);
 
