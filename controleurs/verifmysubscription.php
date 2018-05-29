@@ -30,7 +30,7 @@ else{
 
 $infoUserAbonnement = findUserById($bdd, $_SESSION['userId']);
 
-if(isset($_POST[""]) ){
+if(isset($_POST["choixPackAbonnement"] ) ){
 
 };
 
