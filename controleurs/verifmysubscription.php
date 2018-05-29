@@ -31,7 +31,8 @@ else{
 $infoUserAbonnement = findUserById($bdd, $_SESSION['userId']);
 
 if(isset($_POST["choixPackAbonnement"] ) ){
-
+//PackuneMaison
+//PackplusieursMaison
 };
 
 
