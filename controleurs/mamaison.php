@@ -101,7 +101,7 @@ elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_
 
 elseif($status == 'LU' && isset($_GET['id']) && isset($_GET['idroom']) && isset($_GET['roomchoice'])){
     $devices = findAllDevicesByRoom($bdd,$_GET['roomchoice']);
-    include('vues/roomsensor.php');
+    include('vues/roomeffector.php');
 
 
 }

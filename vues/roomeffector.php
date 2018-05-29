@@ -27,7 +27,7 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){?>
             <ul>
-                <li><?php echo($effector['name'].' : '.$action['value']);?></li>
+                <li><?php echo($effector['name'].' : '.$effector['action']);?></li>
             </ul>
         <?php }
         ?>
