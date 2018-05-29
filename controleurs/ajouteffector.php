@@ -3,12 +3,10 @@
  * Created by IntelliJ IDEA.
  * User: Utilisateur
  * Date: 28/05/2018
- * Time: 15:24
+ * Time: 16:44
  */
 
-
-
-$section = 'mamaison';
+$section = 'ajouteffector';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -27,5 +25,4 @@ else{
 }
 
 
-
-
+include('vues/ajouteffector.php');

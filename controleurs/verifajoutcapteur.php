@@ -56,9 +56,6 @@ if(isset($_POST["temperaturequantity"],$_GET['roomchoice'])){
 }
 
 
-if(isset($_POST["microquantity"],$_POST['idRoom'])) {
-    for ($number_microSensor = 1; $number_microSensor <= $_POST['microquantity']; $number_microSensor++) {
-
 
 if(isset($_POST["microquantity"],$_GET['roomchoice'])){
     for ($number_microSensor = 1; $number_microSensor <= $_POST['microquantity']; $number_microSensor++){
@@ -75,7 +72,14 @@ if(isset($_POST["microquantity"],$_GET['roomchoice'])){
 
 }
 
+<<<<<<< HEAD
+
+header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);
+=======
 }
-header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);}
+header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);
+
+}
+>>>>>>> d81b73c9f047bbdbaff08f3490d1e74b894ef21d
 
 
