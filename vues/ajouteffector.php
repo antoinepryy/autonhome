@@ -5,6 +5,7 @@
  * Date: 28/05/2018
  * Time: 16:30
  */
+require ('vues/header_'.$status.'.php');
 ?>
 
 <h1>
@@ -50,3 +51,7 @@ Nos Actionneurs
     </form>
 
 </section>
+
+<?php
+include ('footer.php');
+?>

@@ -43,6 +43,11 @@ if ($status=='AD'){
             $list = getAll($bdd, 'sensor');
             require ('vues/admin/inspectsensor.php');
             break;
+        case "effector":
+            $section = 'inspecteffector';
+            $list = getAll($bdd, "effector");
+            require ('vues/admin/inspecteffector.php');
+            break;
     }
 
 }

@@ -33,6 +33,12 @@ require ('vues/header_'.$status.'.php');
                     Gestion des capteurs
                 </li>
             </a>
+
+            <a href="index.php?cible=inspectdatabase&table=effector">
+                <li>
+                    Gestion des effecteurs
+                </li>
+            </a>
         </ul>
 
     </div>

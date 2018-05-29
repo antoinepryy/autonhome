@@ -23,3 +23,48 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
+
+if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
+    for ($number_lightEffector = 1; $number_lightEffector <= $_POST['effectorlightquantity']; $number_lightEffector++){
+
+        $data = array(
+            'name' => $_POST['nameLightEffector'.$number_lightEffector],
+            'state' => "ORD",
+            'id_room' => $_GET['roomchoice'],
+            'id_sensortype' => 6,
+        );
+        $addSensor = createEffector($bdd,$data);
+
+    }
+}
+
+if(isset($_POST["shutterquantity"],$_GET['roomchoice'])){
+    for ($number_shutter = 1; $number_shutter <= $_POST['shutterquantity']; $number_shutter++){
+
+        $data = array(
+            'name' => $_POST['nameShutter'.$number_shutter],
+            'state' => "ORD",
+            'id_room' => $_GET['roomchoice'],
+            'id_effectortype' => 5,
+        );
+        $addSensor = createEffector($bdd,$data);
+
+    }
+}
+
+
+
+if(isset($_POST["fanquantity"],$_GET['roomchoice'])){
+    for ($number_fan = 1; $number_fan <= $_POST['fanquantity']; $number_fan++){
+
+        $data = array(
+            'name' => $_POST['nameFan' . $number_fan],
+            'state' => "ORD",
+            'id_room' => $_GET['roomchoice'],
+            'id_effectortype' => 4,
+        );
+        $addSensor = createEffector($bdd, $data);
+
+    }
+
+}
