@@ -8,31 +8,14 @@
 
 
 function findAllDevicesByRoom($bdd, $idRoom){
-    $sensors = $bdd->prepare(
-        'SELECT * FROM sensor WHERE id_room = :room'
-    );
-
-    $effectors = $bdd->prepare(
-        'SELECT * FROM effector WHERE id_room = :room'
-    );
-
-    $sensors->bindParam(':room', $idRoom);
-    $effectors->bindParam(':room', $idRoom);
-    $sensors->execute();
-    $effectors->execute();
-    return array($sensors->fetchAll(), $effectors->fetchAll());
-
-}
-
-function findAllDevicesByRoom2($bdd, $idroom){
     $sensors = $bdd->prepare('
-    select name, state, value, dateTime, sensor_type.type from sensor
+    select name, state, cardNumber, objectNumber value, dateTime, sensor_type.type from sensor
     inner join
     data on data.id_sensor = sensor.ID
     inner join
     sensor_type on sensor.id_sensorType = sensor_type.ID
     where id_room = :idroom');
-    $sensors->bindParam(':idroom', $idroom);
+    $sensors->bindParam(':idroom', $idRoom);
 
     $effectors = $bdd->prepare('
     select name, action, state, effector_type.type from effector
@@ -40,7 +23,30 @@ function findAllDevicesByRoom2($bdd, $idroom){
     effector_type on  effector_type.ID = effector.id_effectorType
     where id_room = :idroom
     ');
-    $effectors = $bdd->bindParam('idroom',$idroom);
+    $effectors->bindParam('idroom',$idRoom);
+    $sensors->execute();
+    $effectors->execute();
+    return array($sensors->fetchAll(), $effectors->fetchAll());
+
+}
+
+function findAllDevicesByRoom2($bdd, $idRoom){
+    $sensors = $bdd->prepare('
+    select name, state, cardNumber, objectNumber value, dateTime, sensor_type.type from sensor
+    inner join
+    data on data.id_sensor = sensor.ID
+    inner join
+    sensor_type on sensor.id_sensorType = sensor_type.ID
+    where id_room = :idroom');
+    $sensors->bindParam(':idroom', $idRoom);
+
+    $effectors = $bdd->prepare('
+    select name, action, state, effector_type.type from effector
+    inner join
+    effector_type on  effector_type.ID = effector.id_effectorType
+    where id_room = :idroom
+    ');
+    $effectors->bindParam('idroom',$idRoom);
     $sensors->execute();
     $effectors->execute();
     return array($sensors->fetchAll(), $effectors->fetchAll());
