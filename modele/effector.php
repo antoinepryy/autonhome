@@ -45,6 +45,15 @@ function getAllEffectorFromRoom(PDO $bdd){
     return $roomEffectors;
 }
 
+function getAllEffectorFromRoomFromType ($bdd,$id_room,$id_type){
+    $statement = $bdd->prepare('SELECT id, name FROM effector WHERE id_room = :idRoom AND id_effectorType = :idEffectorType');
+    $statement->bindParam(':idRoom', $id_room);
+    $statement->bindParam(':idEffectorType', $id_type);
+    $statement->execute();
+    $roomEffectors = $statement->fetchAll();;
+    return (array($roomEffectors));
+}
+
 
 function changeEffectorAction ($bdd,$id,$action){
     $effectorStatement = $bdd->prepare ('UPDATE effector SET action= :action WHERE id= :id');
