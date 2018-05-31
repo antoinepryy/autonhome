@@ -55,9 +55,10 @@ function findAllDevicesByRoom2($bdd, $idRoom){
     $sensors->execute();
     $effectors->execute();
     return array($sensors->fetchAll(), $effectors->fetchAll());
+}
 
-    function getDataFromDevices($bdd,$idRoom){
-        $statement = $bdd->prepare('
+    function getDataFromRoomId($bdd,$idRoom){
+        $sensors = $bdd->prepare('
             SELECT data.ID,name, dateTime, data.value, state, cardNumber, objectNumber
             FROM data
               INNER JOIN
@@ -73,11 +74,21 @@ function findAllDevicesByRoom2($bdd, $idRoom){
               inner join sensor_type on sensor.id_sensorType = sensor_type.ID
             where id_room = :idroom
         ');
-        $statement->bindParam('idroom', $idRoom);
-        $statement->execute();
-        return $statement->fetchAll();
+        $effectors = $bdd->prepare('
+        select name, action, state, effector_type.type from effector
+        inner join
+        effector_type on  effector_type.ID = effector.id_effectorType
+        where id_room = :idroom
+        ');
+        $sensors->bindParam('idroom', $idRoom);
+        $effectors->bindParam('idroom',$idRoom);
 
-    }
+        $sensors->execute();
+        $effectors->execute();
+
+        return array($sensors->fetchAll(), $effectors->fetchAll());
+
+
 
 
 
