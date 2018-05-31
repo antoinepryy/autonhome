@@ -5,7 +5,10 @@
  * Date: 23/05/2018
  * Time: 23:21
  */
-
+if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les variables de sessions ainsi que des fcts de BDD
+    include('importAllSessionsAndModels.php');
+    importAllSessionsAndModels();
+}
 $ch = curl_init();
 curl_setopt(
     $ch,
@@ -20,12 +23,18 @@ curl_close($ch);
 
 $data_tab = str_split($data,33);
 
+
+
 for($i=0, $size=count($data_tab); $i<$size; $i++) {
+    if(strlen($data_tab[$i]) == 33){
+        $statusFrame = readFrame($bdd, $data_tab[$i]);
+    }
+    else{
 
-    list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
-    sscanf($data_tab[$i],"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-    echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
-
+        break;
+    }
 }
+
+
 
 
