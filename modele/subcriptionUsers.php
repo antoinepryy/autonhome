@@ -44,25 +44,6 @@ function joinIdUserSubscription(PDO $bdd){
 };
 
 
-;
-;
-;
-;
-;
-;;
-;
-;
-;
-;
-;
-;
-;
-
-;
-;
-;
-;
-;
 
 /*
 function insertIdSubscription($bdd, $ID, $id_subscription ){
