@@ -26,7 +26,7 @@ require ('vues/header_'.$status.'.php');
                 ID chambre
             </th>
             <th>
-                ID type d'effecteur
+                ID type d'actionneur
             </th>
         </tr>
 

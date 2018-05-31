@@ -118,6 +118,20 @@ function getAllUserSensors(PDO $bdd,$id){
 
 }
 
+    function getAllSensorsFromHouse(PDO $bdd){
+        $statement = $bdd ->prepare('SELECT residence.name , sensor.residence FROM residence INNER JOIN sensor ON sensor.ID=residence.ID');
+        $statement->execute();
+        $residenceSensors = $statement ->fetchAll();
+        return $residenceSensors;
+}
 
+
+function sensorStateFromsensortype(PDO $bdd){
+    $statement = $bdd -> prepare('SELECT name, state, type FROM sensor INNER JOIN sensor_type ON sensor.id_sensorType=sensor_type.ID');
+    $statement->execute();
+    $stateSensortype = $statement ->fetchAll();
+    return $stateSensortype;
+
+}
 
 ?>
