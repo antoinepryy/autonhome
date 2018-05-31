@@ -14,7 +14,7 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-/*
+
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
@@ -26,28 +26,24 @@ else{
     $status="UU";
 
 }
-*/
 
-$infoUserAbonnement = findUserById($bdd, $_SESSION['userId']);
+
+$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
 
 
 // faire un insert id dans user if il clique sur abonnement
-if(isset($_POST)) {
-    $section = 'monabonnement';
-    $status;
-
-    $status;
-    if (isLoggedAsAdmin()) {
-        $status = "AD";
-    } elseif (isLoggedAsUser()) {
-        $status = "LU";
-        updateUser($bdd, $_POST);
-        header("Location: index.php?cible=monabonnement");
-
-
-    } else {
-        require('erreur404.php');
+if(isset($_POST)){
+    if($_POST['choixPackAbonnement']=='packUneMaison'){
+    header("Location: index.php?cible=monabonnement");
     }
+
+    else($_POST['choixPackAbonnement']=='packPlusieursMaison'){
+        header("Location: index.php?cible=monabonnement");
+    }
+
+
+
+
 
 
 }
