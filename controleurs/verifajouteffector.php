@@ -35,7 +35,7 @@ if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
             'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
             'id_effectorType' => 6,   //type interrupteur de lumiere
         );
-        $addSensor = createEffector($bdd,$data); //Fonction pour creer les actionneurs
+        $addEffector = createEffector($bdd,$data); //Fonction pour creer les actionneurs
 
     }
 }
@@ -50,7 +50,7 @@ if(isset($_POST["shutterquantity"],$_GET['roomchoice'])){
             'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
             'id_effectorType' => 5,  //type volets
         );
-        $addSensor = createEffector($bdd,$data);
+        $addEffector = createEffector($bdd,$data);
 
     }
 }
@@ -67,7 +67,7 @@ if(isset($_POST["fanquantity"],$_GET['roomchoice'])){
             'id_room' => $_GET['roomchoice'],
             'id_effectorType' => 4,  //type ventilateur
         );
-        $addSensor = createEffector($bdd, $data);
+        $addEffector = createEffector($bdd, $data);
 
     }
 
