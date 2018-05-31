@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 28 mai 2018 à 17:06
+-- Généré le :  jeu. 31 mai 2018 à 09:12
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -41,10 +41,20 @@ CREATE TABLE `action` (
 
 CREATE TABLE `data` (
   `ID` int(11) NOT NULL,
-  `dateTime` varchar(30) NOT NULL,
+  `dateTime` datetime NOT NULL,
   `value` int(50) NOT NULL,
   `id_sensor` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `data`
+--
+
+INSERT INTO `data` (`ID`, `dateTime`, `value`, `id_sensor`) VALUES
+(1, '2018-05-30 07:00:00', 2, 2),
+(2, '2018-05-22 00:00:00', 3, 2),
+(3, '2018-03-06 00:21:00', 7, 1),
+(4, '2018-04-10 02:16:29', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -54,10 +64,11 @@ CREATE TABLE `data` (
 
 CREATE TABLE `effector` (
   `ID` int(11) NOT NULL,
+  `cardNumber` int(255) DEFAULT NULL,
+  `objectNumber` int(255) DEFAULT NULL,
   `name` varchar(30) NOT NULL,
   `action` varchar(30) NOT NULL,
   `state` varchar(20) NOT NULL,
-  `serial` int(40) NOT NULL,
   `id_room` int(10) NOT NULL,
   `id_effectorType` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -66,8 +77,8 @@ CREATE TABLE `effector` (
 -- Déchargement des données de la table `effector`
 --
 
-INSERT INTO `effector` (`ID`, `name`, `action`, `state`, `serial`, `id_room`, `id_effectorType`) VALUES
-(1, 'Volets chambre YM', 'IN', 'OFF', 236756, 1, 5);
+INSERT INTO `effector` (`ID`, `cardNumber`, `objectNumber`, `name`, `action`, `state`, `id_room`, `id_effectorType`) VALUES
+(1, NULL, NULL, 'Volets chambre YM', 'IN', 'OFF', 4, 5);
 
 -- --------------------------------------------------------
 
@@ -245,10 +256,10 @@ INSERT INTO `room_category` (`ID`, `name`) VALUES
 
 CREATE TABLE `sensor` (
   `ID` int(11) NOT NULL,
+  `cardNumber` int(255) DEFAULT NULL,
+  `objectNumber` int(255) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `state` varchar(10) NOT NULL,
-  `value` varchar(255) DEFAULT NULL,
-  `serial` int(30) NOT NULL,
   `id_room` int(10) NOT NULL,
   `id_sensorType` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -257,9 +268,9 @@ CREATE TABLE `sensor` (
 -- Déchargement des données de la table `sensor`
 --
 
-INSERT INTO `sensor` (`ID`, `name`, `state`, `value`, `serial`, `id_room`, `id_sensorType`) VALUES
-(1, 'Capteur lumière chambre YM', 'IN', NULL, 27936138, 1, 1),
-(2, 'Capteur température salle de bain Antoine', 'IN', '4', 26153616, 4, 2);
+INSERT INTO `sensor` (`ID`, `cardNumber`, `objectNumber`, `name`, `state`, `id_room`, `id_sensorType`) VALUES
+(1, 1000, 50, 'Capteur lumière chambre YM', 'IN', 1, 1),
+(2, 500, 25, 'Capteur température salle de bain Antoine', 'IN', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -298,7 +309,8 @@ CREATE TABLE `subscription` (
 --
 
 INSERT INTO `subscription` (`ID`, `name`, `price`) VALUES
-(1, 'Pack 1 maison', 100);
+(1, 'Pack 1 maison', 100),
+(2, 'Pack 2 maison', 150);
 
 -- --------------------------------------------------------
 
@@ -339,37 +351,36 @@ CREATE TABLE `user` (
   `addressZipCode` int(10) NOT NULL,
   `addressCity` varchar(100) NOT NULL,
   `addressCountry` varchar(100) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `id_subscription` int(10) DEFAULT NULL
+  `type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`, `id_subscription`) VALUES
-(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'pass', '608334474', 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'client', 1),
-(2, 'Antoine', 'Perry', 'test@mail.com', 'pass', '', 0, '', 0, '', '', '', NULL),
-(3, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', '', NULL),
-(4, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', '', NULL),
-(5, 'azd', 'azd', 'azd@test', 'azd', '', 0, '', 0, '', '', '', NULL),
-(6, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 2, '20, rue des couvents', 0, 'Mon', 'france', '', NULL),
-(7, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 0, '20, rue des couvents', 0, 'Mon', 'france', 'user', NULL),
-(8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
-(9, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$SYoKTix0jXxKg/7Iyn2XiOH189.TSjM4pjagpe5zEg3pv0tTkqdCe', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user', NULL),
-(10, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$pnPkmlY1DJPRUJGeQoP4gevZP76BwqUji9guVDV11rKt5yobIoDzW', '674181395', 20, 'rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(11, 'Yves-Marie', 'PAUL', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard', 0, 'Paris', 'france', 'user', NULL),
-(12, 'Yacine', 'Nabti', 'yac@mail.com', '$2y$10$Z3Q8ZB1KfcwEO6mYKUC6WurpuE6QKRpBpgPXoyk7EjkoxSfDCExne', '123456789', 19, 'Rue du blabla ', 57950, 'Metz', 'france', 'user', NULL),
-(13, 'test', 'test', 'antoine.ap.57@gmail.com', '$2y$10$ujIB4iSl7yDOxpA4tWTH2uIZDK6VZaTPNdWHt7ElSuowEo6qjS7FO', '674181395', 10, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(14, 'Sylviana', 'Mialisao', 'sylv@mail.com', '$2y$10$B4qJCm8Lgn.X0z5OrXevuu1AVQsOXIDXnfRHLZcnf51tH37zHWKzi', '123456789', 20, 'rue', 57000, 'Metz', 'france', 'user', NULL),
-(15, 'admin', 'admin', 'admin@admin.com', '$2y$10$qqxRYgYrJKixrXbxwCGmAeJTdkls.dnNo.EzDzPPvA36p.OUTuq8C', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL),
-(16, 'admin', 'admin', 'admin@admin.com', '$2y$10$CGYe7d3hXEMU0nHA4vJ9h.JaoxavZm3KXQ3Es/ltJoRHHGInryRcm', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin', NULL),
-(17, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$JEY/oEpp6LL/4.Deg1oDTuRcr7Egr.WDxdgGbyuVM.JVFx5y8NaAa', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(18, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$9xNhJTRvIOCgPneeOxcGAuGbUNT.7aLUKp63L4ZJWw1C4crA.Jrb6', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(19, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$/F4szpAjhzVbBagtdFd1Duy9jqIYlSBtKDajzQ/MWwkvjLvmeEPA2', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user', NULL),
-(20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user', NULL),
-(21, 'Yacine', 'Nabti', 'yasco@gmail.com', '$2y$10$9sS6.AiKxwb7yyoAexV2DO7F2VJNy8d5mQaQ0KtWkQMEMD.WOqTqi', '0708334474', 10, 'rue de vanves', 92170, 'issy', 'france', 'user', NULL),
-(23, 'Yves-Marie', 'Paul', 'yvespasteque@fruitz.com', '$2y$10$utAmBAld0EoFCsorjPdlVOouYaH3Zn388ob73qGWuC7PDyqPcdNAu', '0789654332', 10, 'rue de Vanves', 92130, 'Issy', 'france', 'admin', NULL);
+INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`) VALUES
+(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'pass', '608334474', 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'client'),
+(2, 'Antoine', 'Perry', 'test@mail.com', 'pass', '', 0, '', 0, '', '', ''),
+(3, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', ''),
+(4, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', ''),
+(5, 'azd', 'azd', 'azd@test', 'azd', '', 0, '', 0, '', '', ''),
+(6, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 2, '20, rue des couvents', 0, 'Mon', 'france', ''),
+(7, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 0, '20, rue des couvents', 0, 'Mon', 'france', 'user'),
+(8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user'),
+(9, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$SYoKTix0jXxKg/7Iyn2XiOH189.TSjM4pjagpe5zEg3pv0tTkqdCe', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user'),
+(10, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$pnPkmlY1DJPRUJGeQoP4gevZP76BwqUji9guVDV11rKt5yobIoDzW', '674181395', 20, 'rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
+(11, 'Yves-Marie', 'PAUL', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard', 0, 'Paris', 'france', 'user'),
+(12, 'Yacine', 'Nabti', 'yac@mail.com', '$2y$10$Z3Q8ZB1KfcwEO6mYKUC6WurpuE6QKRpBpgPXoyk7EjkoxSfDCExne', '123456789', 19, 'Rue du blabla ', 57950, 'Metz', 'france', 'user'),
+(13, 'test', 'test', 'antoine.ap.57@gmail.com', '$2y$10$ujIB4iSl7yDOxpA4tWTH2uIZDK6VZaTPNdWHt7ElSuowEo6qjS7FO', '674181395', 10, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
+(14, 'Sylviana', 'Mialisao', 'sylv@mail.com', '$2y$10$B4qJCm8Lgn.X0z5OrXevuu1AVQsOXIDXnfRHLZcnf51tH37zHWKzi', '123456789', 20, 'rue', 57000, 'Metz', 'france', 'user'),
+(15, 'admin', 'admin', 'admin@admin.com', '$2y$10$qqxRYgYrJKixrXbxwCGmAeJTdkls.dnNo.EzDzPPvA36p.OUTuq8C', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin'),
+(16, 'admin', 'admin', 'admin@admin.com', '$2y$10$CGYe7d3hXEMU0nHA4vJ9h.JaoxavZm3KXQ3Es/ltJoRHHGInryRcm', '123456789', 0, 'nop', 0, 'nop', 'france', 'admin'),
+(17, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$JEY/oEpp6LL/4.Deg1oDTuRcr7Egr.WDxdgGbyuVM.JVFx5y8NaAa', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
+(18, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$9xNhJTRvIOCgPneeOxcGAuGbUNT.7aLUKp63L4ZJWw1C4crA.Jrb6', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
+(19, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$/F4szpAjhzVbBagtdFd1Duy9jqIYlSBtKDajzQ/MWwkvjLvmeEPA2', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
+(20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user'),
+(21, 'Yacine', 'Nabti', 'yasco@gmail.com', '$2y$10$9sS6.AiKxwb7yyoAexV2DO7F2VJNy8d5mQaQ0KtWkQMEMD.WOqTqi', '0708334474', 10, 'rue de vanves', 92170, 'issy', 'france', 'user'),
+(23, 'Yves-Marie', 'Paul', 'yvespasteque@fruitz.com', '$2y$10$utAmBAld0EoFCsorjPdlVOouYaH3Zn388ob73qGWuC7PDyqPcdNAu', '0789654332', 10, 'rue de Vanves', 92130, 'Issy', 'france', 'admin');
 
 --
 -- Index pour les tables déchargées
@@ -479,7 +490,7 @@ ALTER TABLE `action`
 -- AUTO_INCREMENT pour la table `data`
 --
 ALTER TABLE `data`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `effector`
@@ -545,7 +556,7 @@ ALTER TABLE `sensor_type`
 -- AUTO_INCREMENT pour la table `subscription`
 --
 ALTER TABLE `subscription`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `subscription_user`

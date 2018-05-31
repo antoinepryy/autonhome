@@ -1,0 +1,1 @@
+onChange="this.form.submit()"

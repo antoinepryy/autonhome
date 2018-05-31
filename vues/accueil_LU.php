@@ -8,11 +8,11 @@
 
 <section class="my-house-state">
 
-    <form method="post" action="index.php?cible=accueil">
-        <select name="house" class="house-choice">
+    <form id="choice" method="post" action="index.php?cible=accueil">
+        <select name="house" class="house-choice" onchange="this.form.submit()">
             <?php foreach($myHouses[0] as $key => $home) {
-                if($key==0){?>
-                    <option value="<?php echo ($home['ID']); ?>" selected> <?php echo ($home['name']); ?> </option>
+                if($home['ID']==$id_residency){?>
+                    <option value="<?php echo ($id_residency); ?>" selected> <?php echo ($houseName); ?> </option>
                 <?php }
                 else { ?>
                     <option value="<?php echo ($home['ID']); ?>" > <?php echo ($home['name']); ?> </option>
@@ -20,8 +20,11 @@
             }
             ?>
         </select>
-        <input type="submit">
+
+        <noscript><input type="submit" value="Submit"></noscript>
     </form>
+
+
     <h3>
         Etat de votre maison
     </h3>
@@ -37,11 +40,12 @@
         Lumières :
     </h4>
 
-    <div class="light">
+    <form class="light" method="post" action="index.php?cible=accueil">
         <?php foreach ($myRooms as $roomInResidence) { ?>
             <label><?php echo ( $roomInResidence['name']);  ?></label>
-            <input type="checkbox"/><br />
+            <input type="checkbox" onchange="document.getElementById('formName').submit()" /><br />
         <?php } ?>
-    </div>
+        <input type="submit">
+    </form>
 
 </section>

@@ -23,12 +23,13 @@ function createEffector(PDO $bdd, $data){
     VALUES
     (NULL,
     :name, 
-    NULL,
+    :action,
     :state,
     NULL,
     :id_room,
     :id_effectorType)');
     $statement->bindParam(":name", $data["name"]);
+    $statement->bindParam(":action", $data["action"]);
     $statement->bindParam(":state", $data["state"]);
     $statement->bindParam(":id_room", $data["id_room"]);
     $statement->bindParam(":id_effectorType", $data["id_effectorType"]);
@@ -40,4 +41,12 @@ function getAllEffectorFromRoom(PDO $bdd){
     $statement->execute();
     $roomEffectors = $statement ->fetchAll();
     return $roomEffectors;
+}
+
+
+function changeEffectorAction ($bdd,$id,$action){
+    $effectorStatement = $bdd->prepare ('UPDATE effector SET action= :action WHERE id= :id');
+    $effectorStatement->bindParam(':action', $action);
+    $effectorStatement->bindParam(':id', $id);
+    $effectorStatement->execute();
 }

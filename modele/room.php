@@ -29,7 +29,7 @@ function getAllRooms($bdd)
 }
 
 function getAllResidenceRooms($bdd, $id){
-    $residencyStatement = $bdd->prepare('SELECT name FROM room WHERE id_residency = :idResidency');
+    $residencyStatement = $bdd->prepare('SELECT id, name FROM room WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
     $residencyStatement->execute();
     $inHouse = $residencyStatement->fetchAll();;
