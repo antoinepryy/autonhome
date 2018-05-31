@@ -69,12 +69,16 @@ if(isset($_POST["microquantity"],$_GET['roomchoice'])){
         $addSensor = createSensor($bdd, $data);
 
     }
-
 }
 
 
 
 header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 74f6c0cb64f9aebb21dfaa3225c613fe5d22795c
 
 

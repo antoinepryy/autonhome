@@ -35,8 +35,7 @@ require ('vues/header_'.$status.'.php');
                         <input type="checkbox" name="voletsfermes" id="VoletsFermes" /> <label for="voletsfermes">Fermés</label>
                         <br />
                     </div>
-                    <div>
-
+                    <div class="info">
                         <a href="<?php echo('index.php?cible=mamaison&id='.$_GET["id"].'&idroom='.$_GET['idroom'].'&roomchoice='.$roomInCategory['id']); ?>" >
                             Voir les informations
                         </a>

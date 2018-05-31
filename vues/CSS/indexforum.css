@@ -6,3 +6,17 @@ h1 {
 .nouvelle_discussion {
     text-align: center ;
 }
+
+.discussion{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discussion-infos a{
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.discussion-infos{
+    width: 20%;
+}

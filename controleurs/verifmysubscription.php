@@ -22,10 +22,28 @@ $infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
 
 if(isset($_POST)) {
 
+
+$status;
+if(isLoggedAsAdmin()){
+    $status="AD";
+}
+elseif (isLoggedAsUser()){
+    $status="LU";
+}
+else{
+    $status="UU";
+
+}
+
+
+$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
+
+
     joinIdSubscription;
     header("Location: index.php?cible=monabonnement");
 
 // faire un insert id dans user if il clique sur abonnement
+
 
 }
 // faire un insert id dans user if il clique sur abonnement
@@ -35,22 +53,15 @@ if(isset($_POST)) {
     $section = 'monabonnement';
     $status;
 
-    $status;
-    if (isLoggedAsAdmin()) {
-        $status = "AD";
-    } elseif (isLoggedAsUser()) {
-        $status = "LU";
-        updateUser($bdd, $_POST);
-        header("Location: index.php?cible=monabonnement");
+    if (isset($_POST)) {
+        if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
+            header("Location: index.php?cible=monabonnement");
+        } else($_POST['choixPackAbonnement'] == 'packPlusieursMaison'){
+        header("Location: index.php?cible=monabonnement")
+        };
 
 
-    } else {
-        require('erreur404.php');
     }
-
+    header("Location: index.php?cible=monabonnement");
 }
 ?>
-
-header("Location: index.php?cible=monabonnement");
-
-
