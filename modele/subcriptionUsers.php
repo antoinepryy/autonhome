@@ -8,7 +8,7 @@
 
 
 
-/*
+
 function findUserByIdInSubscription($bdd, $id)
 {
     $statement = $bdd->prepare('SELECT * FROM subscription_user WHERE ID = :id ');
@@ -17,23 +17,22 @@ function findUserByIdInSubscription($bdd, $id)
     $subscriptionUser = $statement->fetch();
     return $subscriptionUser;
 }
-*/
 
-function insertIdSubscription($bdd, $ID, $id_subscription ){
-    $req = $bdd->prepare('INSERT INTO subscription_user(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
-}
-$req->execute(array(
-	'nom' => $nom,
-	'possesseur' => $possesseur,
-	'console' => $console,
-	'prix' => $prix,
-	'nbre_joueurs_max' => $nbre_joueurs_max,
-	'commentaires' => $commentaires
-	));
 
-echo 'Le jeu a bien été ajouté !';
-?>
-<?php
+
+
+function joinIdSubscription(PDO $bdd){
+    $statement = $bdd->prepare('SELECT subscription_user.id_subscription, subscription.ID
+    FROM subscription
+    INNER JOIN subscription_user
+    ON subscription_user.id_subscription = subscription.id_subscription ');
+
+    $statement->execute();
+    $idSubscriptionUser = $statement ->fetchAll();
+    return $idSubscriptionUser;
+};
+
+/*
 function insertIdSubscription($bdd, $ID, $id_subscription ){
 
     $statement = $bdd->prepare(
@@ -43,11 +42,13 @@ function insertIdSubscription($bdd, $ID, $id_subscription ){
                 WHERE ID = :id '
     );
 
-    /*
+    // ---------------
     $statement->execute(array(
         'password' => $password,
         'ID' => $ID)
-    ); */
+    );
+
+    // ---------------
 
     $statement->BindParam(':id', $ID);
     $statement->BindParam(':id_subscription', $id_subscription);
@@ -55,7 +56,7 @@ function insertIdSubscription($bdd, $ID, $id_subscription ){
     $statement->execute();
 }
 
-
+*/
 
 
 ?>
