@@ -56,19 +56,29 @@ function findAllDevicesByRoom2($bdd, $idRoom){
     $effectors->execute();
     return array($sensors->fetchAll(), $effectors->fetchAll());
 
+    function getDataFromDevices($bdd,$idRoom){
+        $statement = $bdd->prepare('
+            SELECT data.ID,name, dateTime, data.value, state, cardNumber, objectNumber
+            FROM data
+              INNER JOIN
+              (
+                Select MAX(dateTime) as latestDate, value, id_sensor
+                FROM data
+                Group by id_sensor
+              ) max
+                on data.dateTime = max.latestDate
+                   and data.id_sensor = max.id_sensor
+              inner join sensor
+                on data.id_sensor = sensor.ID
+              inner join sensor_type on sensor.id_sensorType = sensor_type.ID
+            where id_room = :idroom
+        ');
+        $statement->bindParam('idroom', $idRoom);
+        $statement->execute();
+        return $statement->fetchAll();
 
-//    SELECT data.ID,name, dateTime, data.value, state, cardNumber, objectNumber
-//FROM data
-//  INNER JOIN
-//    (
-//        Select MAX(dateTime) as latestDate, value, id_sensor
-//    FROM data
-//    Group by id_sensor
-//  ) max
-//    on data.dateTime = max.latestDate
-//    and data.id_sensor = max.id_sensor
-//  inner join sensor
-//    on data.id_sensor = sensor.ID
-//  inner join sensor_type on sensor.id_sensorType = sensor_type.ID;
+    }
+
+
 
 }
