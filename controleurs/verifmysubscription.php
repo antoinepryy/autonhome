@@ -30,21 +30,23 @@ else{
 
 $infoUserAbonnement = findUserById($bdd, $_SESSION['userId']);
 
-<<<<<<< HEAD
+joinIdSubscription;
+
+// faire un insert id dans user if il clique sur abonnement
 if(isset($_POST)){
+
+
     if($_POST['choixPackAbonnement']=='packUneMaison'){
 
 
     }
 
 };
+
+header("Location: index.php?cible=......");
 ?>
-=======
+
 if(isset($_POST["choixPackAbonnement"] ) ){
 //PackuneMaison
 //PackplusieursMaison
 };
-
-
-?>
->>>>>>> 4ee9c90a7377786370e513b3e02d3a09a0550ac7
