@@ -8,6 +8,7 @@
 
 
 require ('vues/header_'.$status.'.php');
+
 ?>
 
 

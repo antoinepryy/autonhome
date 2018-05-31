@@ -100,8 +100,6 @@ elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_
 
 
 elseif($status == 'LU' && isset($_GET['id']) && isset($_GET['idroom']) && isset($_GET['roomchoice'])){
-    $devices = findAllDevicesByRoom2($bdd,$_GET['roomchoice']);
+    $devices = getDataFromRoomId($bdd,$_GET['roomchoice']);
     include('vues/roomeffector.php');
-
-
 }
