@@ -38,8 +38,8 @@ if(isset($_POST)){
     }
 
     else($_POST['choixPackAbonnement']=='packPlusieursMaison'){
-        header("Location: index.php?cible=monabonnement");
-    }
+        header("Location: index.php?cible=monabonnement")
+    };
 
 
 
