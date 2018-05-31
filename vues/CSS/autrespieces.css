@@ -52,6 +52,11 @@ h1{
     padding: 1%;
 }
 
+.info a{
+    color: blue;
+}
+
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
