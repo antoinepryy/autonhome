@@ -29,6 +29,7 @@ if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
 
         $data = array(
             'name' => $_POST['nameLightEffector'.$number_lightEffector],  // Recupere le nom entré
+            
             'state' => "ORD",
             'action' => "OFF",
             'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
