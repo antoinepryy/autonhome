@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 31 mai 2018 à 09:12
--- Version du serveur :  10.1.28-MariaDB
--- Version de PHP :  7.1.11
+-- Généré le :  jeu. 31 mai 2018 à 10:30
+-- Version du serveur :  10.1.31-MariaDB
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -97,7 +97,8 @@ CREATE TABLE `effector_type` (
 
 INSERT INTO `effector_type` (`ID`, `type`) VALUES
 (4, 'ventilateur'),
-(5, 'volets');
+(5, 'volets'),
+(6, 'lumiere');
 
 -- --------------------------------------------------------
 
@@ -502,7 +503,7 @@ ALTER TABLE `effector`
 -- AUTO_INCREMENT pour la table `effector_type`
 --
 ALTER TABLE `effector_type`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `forum_discussion`

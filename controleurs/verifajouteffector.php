@@ -25,15 +25,15 @@ else{
 }
 
 if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
-    for ($number_lightEffector = 1; $number_lightEffector <= $_POST['effectorlightquantity']; $number_lightEffector++){
+    for ($number_lightEffector = 1; $number_lightEffector <= $_POST['effectorlightquantity']; $number_lightEffector++){ //Un for pour creer les actionneurs interrupteur lumiere entrés par l'utilisateur
 
         $data = array(
-            'name' => $_POST['nameLightEffector'.$number_lightEffector],
+            'name' => $_POST['nameLightEffector'.$number_lightEffector],  // Recupere le nom entré
             'state' => "ORD",
-            'id_room' => $_GET['roomchoice'],
-            'id_sensortype' => 6,
+            'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
+            'id_effectorType' => 6,   //type interrupteur de lumiere
         );
-        $addSensor = createEffector($bdd,$data);
+        $addSensor = createEffector($bdd,$data); //Fonction pour creer les actionneurs
 
     }
 }
@@ -44,8 +44,8 @@ if(isset($_POST["shutterquantity"],$_GET['roomchoice'])){
         $data = array(
             'name' => $_POST['nameShutter'.$number_shutter],
             'state' => "ORD",
-            'id_room' => $_GET['roomchoice'],
-            'id_effectortype' => 5,
+            'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
+            'id_effectorType' => 5,  //type volets
         );
         $addSensor = createEffector($bdd,$data);
 
@@ -61,7 +61,7 @@ if(isset($_POST["fanquantity"],$_GET['roomchoice'])){
             'name' => $_POST['nameFan' . $number_fan],
             'state' => "ORD",
             'id_room' => $_GET['roomchoice'],
-            'id_effectortype' => 4,
+            'id_effectorType' => 4,
         );
         $addSensor = createEffector($bdd, $data);
 
