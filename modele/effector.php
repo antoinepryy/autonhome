@@ -14,18 +14,20 @@ function createEffector(PDO $bdd, $data){
 
     $statement = $bdd->prepare('INSERT INTO `effector` 
     (`ID`,
+    `cardNumber`,
+    `objectNumber`,
     `name`, 
     `action`,
     `state`,
-    `serial`,
     `id_room`,
     `id_effectorType`)
     VALUES
     (NULL,
+    NULL,
+    NULL,
     :name, 
     :action,
     :state,
-    NULL,
     :id_room,
     :id_effectorType)');
     $statement->bindParam(":name", $data["name"]);

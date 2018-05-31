@@ -40,18 +40,18 @@ function createSensor(PDO $bdd, $data){
 
     $statement = $bdd->prepare('INSERT INTO `sensor` 
     (`ID`,
+    `cardNumber`,
+    `objectNumber`,
     `name`, 
     `state`,
-    `value`,
-    `serial`,
     `id_room`,
     `id_sensortype`)
     VALUES
     (NULL,
+    NULL,
+    NULL,
     :name, 
     :state,
-    NULL,
-    NULL,
     :id_room,
     :id_sensortype)');
     $statement->bindParam(":name", $data["name"]);
@@ -62,8 +62,9 @@ function createSensor(PDO $bdd, $data){
 }
 
 
-function getAllSensorsFromRoom(PDO $bdd){
-    $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID ' );
+function getAllSensorsFromRoom(PDO $bdd,$idroom){
+    $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID WHERE id_room = :idroom' );
+    $statement->bindParam(':idroom', $idroom);
     $statement->execute();
     $roomSensors = $statement ->fetchAll();
     return $roomSensors;
