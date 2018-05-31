@@ -72,14 +72,9 @@ if(isset($_POST["microquantity"],$_GET['roomchoice'])){
 
 }
 
-<<<<<<< HEAD
+
 
 header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);
-=======
-}
-header("Location: index.php?cible=mamaison&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']);
 
-}
->>>>>>> d81b73c9f047bbdbaff08f3490d1e74b894ef21d
 
 
