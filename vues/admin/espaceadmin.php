@@ -36,7 +36,7 @@ require ('vues/header_'.$status.'.php');
 
             <a href="index.php?cible=inspectdatabase&table=effector">
                 <li>
-                    Gestion des effecteurs
+                    Gestion des actionneurs
                 </li>
             </a>
         </ul>
