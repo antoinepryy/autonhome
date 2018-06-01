@@ -25,7 +25,7 @@ require ('vues/header_'.$status.'.php');
 </section> <br/>
 
 <div class="formulaireInscription">
-    <form action="verifmysubscription.php" method="post">
+    <form action="index.php?cible=verifmysubcription" method="post">
         <label > Je m'abonne au </label>
         <select name="choixPackAbonnement" class="choixPackAbonnement" required>
             <option value=""> -- -- </option>

@@ -14,8 +14,11 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 09f603aab4d3d65ab087ed656daeeb5111d93962
 if(isset($_POST)) {
 
 
@@ -25,12 +28,34 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $status="LU";
+    if(isset($_POST)) {
+
+        $section = 'monabonnement';
+
+        if (isset($_POST)) {
+            if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
+                header("Location: index.php?cible=monabonnement");
+
+            }
+
+            else{
+                header("Location: index.php?cible=monabonnement");
+            }
+
+
+        }
+
+    }
 }
 else{
     $status="UU";
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09f603aab4d3d65ab087ed656daeeb5111d93962
 // faire un insert id dans user if il clique sur abonnement
 
 
