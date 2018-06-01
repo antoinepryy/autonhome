@@ -9,12 +9,12 @@
 
 require ('vues/header_'.$status.'.php');
 
-
-
 ?>
-    <a href="index.php?cible=repondrediscussion"> <button class="repondre_discussion" type="submit" name="submit"> Répondre à la discussion </button> </a>
-        <h1> <?php echo($value["topic"]); ?> </h1>
-        <h2> <?php echo($value["id_user"]); ?> </br> <?php echo($value["dateTime"]); ?> </h2>
+    <a href="index.php?cible=repondrediscussion&id=<?php echo($_GET["id"]) ?>"> <button class="repondre_discussion" type="submit" name="submit"> Répondre à la discussion </button> </a>
+        <?php foreach ($value as $element){ ?>
+        <h1> <?php echo($element["topic"]); ?> </h1>
+        <h2> <?php echo($element["firstName"]); ?>   <?php echo($element["lastName"]); ?> </br> <?php echo($element["dateTime"]); ?> </h2>
+        <?php } ?>
 
         <?php foreach ($text as $element){ ?>
         <p> <?php echo($element[0]);?></p>
