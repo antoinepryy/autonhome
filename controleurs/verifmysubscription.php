@@ -14,11 +14,7 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 09f603aab4d3d65ab087ed656daeeb5111d93962
 if(isset($_POST)) {
 
 
@@ -52,10 +48,8 @@ else{
 
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 09f603aab4d3d65ab087ed656daeeb5111d93962
+
 // faire un insert id dans user if il clique sur abonnement
 
 
