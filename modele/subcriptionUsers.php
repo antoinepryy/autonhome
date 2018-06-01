@@ -35,7 +35,10 @@ function joinIdUserSubscription(PDO $bdd){
     $iduserSubscription = $statement ->fetchAll();
     return $iduserSubscription;
 
+}
 
+
+function createSubsciption(PDO $bdd){
 
 }
 
