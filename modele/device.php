@@ -75,7 +75,7 @@ function findAllDevicesByRoom2($bdd, $idRoom){
             where id_room = :idroom
         ');
         $effectors = $bdd->prepare('
-        select name, action, state, effector_type.type from effector
+        select effector.ID, name, action, state, effector_type.type from effector
         inner join
         effector_type on  effector_type.ID = effector.id_effectorType
         where id_room = :idroom
@@ -85,6 +85,7 @@ function findAllDevicesByRoom2($bdd, $idRoom){
 
         $sensors->execute();
         $effectors->execute();
+
 
         return array($sensors->fetchAll(), $effectors->fetchAll());
 

@@ -26,9 +26,31 @@ require ('vues/header_'.$status.'.php');
     <div class="effector-container">
         <?php
 
-        foreach ($devices[1] as $effector){?>
+        foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><?php echo($effector['name'].' : '.$effector['action'].$effector['type']);?></li>
+                <li><?php echo($effector['name'].' : '.$effector['action'].$effector['type']);
+
+                    switch ($effector['type']){
+                        case 'Volet':
+                            echo('<label class="switch">
+                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label>');
+                            break;
+                        case 'Ventilateur':
+                            echo('<label class="switch">
+                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label>');
+                            break;
+                        case 'Lumière':
+                            echo('<label class="switch">
+                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label>');
+                            break;
+                    };?></li>
+
             </ul>
         <?php }
         ?>
