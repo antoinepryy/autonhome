@@ -11,7 +11,7 @@ require ('vues/header_'.$status.'.php');
 ?>
 <section>
     <br/>
-    <h1> À propos </h1>
+    <h1> À PROPOS </h1>
     <div id="apropos">
         <img class="logo" src="ressources/logo/DOMISEP.png" alt="logo domisep"/>
         <p class="text"> Autonhome est un service proposé par la sociéte Domisep, fondée en 2002. </br>

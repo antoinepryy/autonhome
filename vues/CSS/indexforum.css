@@ -3,10 +3,6 @@ h1 {
     text-align: center;
 }
 
-.nouvelle_discussion {
-    text-align: center ;
-}
-
 .discussion{
     display: flex;
     flex-wrap: wrap;

@@ -22,26 +22,26 @@ function findUserByIdInSubscription($bdd, $id)
 
 
 function joinIdSubscription(PDO $bdd){
-    $statement = $bdd->prepare('SELECT subscription_user.id_subscription, subscription.ID
-    FROM subscription
-    INNER JOIN subscription_user
-    ON subscription_user.id_subscription = subscription.id_subscription ');
-
+    $statement = $bdd->prepare('SELECT subscription_user.id_subscription, subscription.ID FROM subscription_user INNER JOIN subscription ON subscription_user.id_subscription = subscription.id_subscription ');
     $statement->execute();
     $idSubscriptionUser = $statement ->fetchAll();
     return $idSubscriptionUser;
-};
+}
+
 
 function joinIdUserSubscription(PDO $bdd){
-    $statement = $bdd->prepare('SELECT subscription_user.id_user, user.ID
-    FROM 
-    INNER JOIN subscription_user
-    ON subscription_user.id_user = user.ID ');
-
+    $statement = $bdd->prepare('SELECT user.ID FROM subscription_user INNER JOIN user ON subscription_user.id_user = user.ID ');
     $statement->execute();
     $iduserSubscription = $statement ->fetchAll();
     return $iduserSubscription;
-};
+
+}
+
+
+function createSubsciption(PDO $bdd){
+
+}
+
 
 
 

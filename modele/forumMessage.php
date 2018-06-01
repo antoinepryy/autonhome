@@ -34,15 +34,34 @@ function answerDiscussion(PDO $bdd, $text, $id_discussion)
 }
 
 function getInfos(PDO $bdd, $id_topic){
-    $statement = $bdd->prepare('SELECT id_user, dateTime, topic FROM forum_discussion WHERE ID = :id_topic');
+    $statement = $bdd->prepare('SELECT firstName, lastName, dateTime, topic FROM forum_discussion JOIN user ON user.ID = forum_discussion.id_user WHERE forum_discussion.ID = :id_topic');
     $statement ->bindParam(":id_topic", $id_topic);
     $statement -> execute();
-    $infos = $statement->fetchAll();;
+    $infos = $statement->fetchAll();
     return ($infos);
 
 }
-function getMessages(PDO $bdd) {
-    $statement = $bdd->prepare('SELECT forum_message.id_user, forum_message.dateTime, forum_message.text FROM forum_message INNER JOIN forum_discussion ON forum_discussion.ID = forum_message.id_discussion');
+
+function getNames(PDO $bdd, $id_topic){
+    $statement = $bdd->prepare('SELECT firstName, lastName, dateTime, topic FROM forum_discussion JOIN user ON user.ID = forum_discussion.id_user WHERE forum_discussion.ID = :id_topic');
+    $statement ->bindParam(":id_topic", $id_topic);
+    $statement -> execute();
+    $infos = $statement->fetchAll();
+    return ($infos);
+
+}
+
+function getDate(PDO $bdd, $id_topic){
+    $statement = $bdd->prepare('SELECT firstName, lastName, dateTime, topic FROM forum_discussion JOIN user ON user.ID = forum_discussion.id_user WHERE forum_discussion.ID = :id_topic');
+    $statement ->bindParam(":id_topic", $id_topic);
+    $statement -> execute();
+    $infos = $statement->fetchAll();
+    return ($infos);
+
+}
+function getMessages(PDO $bdd,$id_discussion ) {
+    $statement = $bdd->prepare('SELECT forum_message.id_user, forum_message.dateTime, forum_message.text FROM forum_message INNER JOIN forum_discussion ON forum_discussion.ID = forum_message.id_discussion WHERE forum_discussion.ID = :id_discussion');
+    $statement ->bindParam(":id_discussion", $id_discussion);
     $statement->execute();
     $messages = $statement->fetchAll();;
     return ($messages);

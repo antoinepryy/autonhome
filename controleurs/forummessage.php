@@ -20,8 +20,8 @@ if(isLoggedAsAdmin()){
 elseif (isLoggedAsUser()){
     $status="LU";;
     $section = 'forumMessage';
-    $value = getAll($bdd, "forum_discussion");
-    $text = getMessages($bdd);
+    $value = getInfos($bdd, $_GET["id"]);
+    $text = getMessages($bdd, $_GET["id"]);
 
 }
 else{

@@ -25,9 +25,10 @@ else{
 
 
 if(isset($_POST["text"])){
-    answerDiscussion($bdd, $_POST["text"],1);
-    header("Location: index.php?cible=forummessage");
+    answerDiscussion($bdd, $_POST["text"],$_GET["id"]);
+    header("Location: index.php?cible=forummessage&id=".$_GET['id']);
     require('vues/forummessage.php');
+
 }
 else{
     require ('vues/erreur404.php');
