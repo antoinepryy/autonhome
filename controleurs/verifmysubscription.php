@@ -14,12 +14,6 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-
-
-$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
-
-
-
 if(isset($_POST)) {
 
 
@@ -29,18 +23,30 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $status="LU";
+    if(isset($_POST)) {
+
+        $section = 'monabonnement';
+
+        if (isset($_POST)) {
+            if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
+                header("Location: index.php?cible=monabonnement");
+
+            }
+
+            else{
+                header("Location: index.php?cible=monabonnement");
+            }
+
+
+        }
+
+    }
 }
 else{
     $status="UU";
 
 }
 
-
-$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
-
-
-    joinIdSubscription;
-    header("Location: index.php?cible=monabonnement");
 
 // faire un insert id dans user if il clique sur abonnement
 
