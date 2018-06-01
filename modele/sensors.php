@@ -70,7 +70,22 @@ function getAllSensorsFromRoom(PDO $bdd,$idroom){
     return $roomSensors;
 }
 
+function getAllSensorsFromResidence ($bdd,$id_residence){
+    $statement = $bdd->prepare('SELECT room.id_residency , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID WHERE id_residency = :idResidence' );
+    $statement->bindParam(':idResidence', $id_residence);
+    $statement->execute();
+    $residenceSensors = $statement ->fetchAll();
+    return $residenceSensors;
+}
 
+function getAllTypeSensorsFromResidence ($bdd,$id_residence,$id_type){
+    $statement = $bdd->prepare('SELECT sensor.ID  FROM room INNER JOIN sensor ON sensor.id_room = room.ID WHERE id_residency = :idResidence AND id_SensorType=:idType ');
+    $statement->bindParam(':idResidence', $id_residence);
+    $statement->bindParam(':idType', $id_type);
+    $statement->execute();
+    $residenceSensors = $statement ->fetchAll();
+    return $residenceSensors;
+}
 
 function getAllSensorsFromRoomInput($bdd, $id){
     $residencyStatement=$bdd->prepare('SELECT * FROM sensors WHERE id_room = :idRoom');
