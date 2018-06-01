@@ -97,3 +97,43 @@ input:checked + .slider:before {
 .switch{
     vertical-align: middle;
 }
+
+.device-container{
+    display: flex;
+}
+
+.add-button{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-button div{
+    border: 1px solid lightgrey;
+    background-color: white;
+    border-radius: 3px;
+    padding: 3px;
+
+}
+
+.add-button div a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.add-button div:hover{
+    background-color: aliceblue;
+}
+
+.effector-container, .sensor-container{
+    width: 50%;
+}
+
+.device-container div li{
+    list-style: none;
+}
+
+

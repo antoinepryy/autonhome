@@ -13,6 +13,9 @@ require ('vues/header_'.$status.'.php');
 
 
 <section>
+    <div class="device-container">
+
+
     <div class="sensor-container">
         <?php
 
@@ -28,26 +31,28 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><?php echo($effector['name'].' : '.$effector['action'].$effector['type']);
+                <li><span><?php echo($effector['name'].' : '.$effector['action'].$effector['type']);?></span>
+
+                    <?php
 
                     switch ($effector['type']){
                         case 'Volet':
-                            echo('<label class="switch">
-                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                            echo('<span><label class="switch">
+                              </sp><input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
-                              </label>');
+                              </label></span>');
                             break;
                         case 'Ventilateur':
-                            echo('<label class="switch">
+                            echo('<span><label class="switch">
                               <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
-                              </label>');
+                              </label></span>');
                             break;
                         case 'Lumière':
-                            echo('<label class="switch">
+                            echo('<span><label class="switch">
                               <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
-                              </label>');
+                              </label></span>');
                             break;
                     };?></li>
 
@@ -57,13 +62,20 @@ require ('vues/header_'.$status.'.php');
 
 
     </div>
+    </div>
 
-    <div class="ajoutCapteur">
-        <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+    <div class="add-button">
+        <div class="ajoutCapteur">
+            <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+        </div>
+        <div class="ajoutEffector">
+            <a class="text" href=<?php echo("index.php?cible=ajouteffector&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un actionneur</a>
+        </div>
+
     </div>
-    <div class="ajoutEffector">
-        <a class="text" href=<?php echo("index.php?cible=ajouteffector&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un actionneur</a>
-    </div>
+
+
+
 
 </section>
 

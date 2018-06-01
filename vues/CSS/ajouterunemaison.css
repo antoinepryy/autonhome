@@ -47,6 +47,16 @@ form{
     overflow: hidden;
 }
 
+.form1 input{
+    text-align: center;
+}
+
+
+
+.form2{
+    text-align: center;
+}
+
 form input{
     text-align: center;
     padding-bottom: 1%;
@@ -107,7 +117,7 @@ form input{
 
 .inscription-button button{
     font-size: 100%;
-    width: 15%;
+
 }
 
 .facturation-address div input{
@@ -209,3 +219,5 @@ input:checked + .slider:before {
     from {height: 707px}
     to {height: 270px}
 }
+
+
