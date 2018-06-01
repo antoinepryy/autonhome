@@ -38,7 +38,6 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
         $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
         $id_residency=$_GET['id'];
         $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
-        //die(var_dump($myEffectors));
         $user = findUserById($bdd, $houseInfo[9]);
         include ('vues/mamaisonmain.php');
         include ('controleurs/accueilmaison_LU.php');
