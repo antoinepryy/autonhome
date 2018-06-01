@@ -15,6 +15,14 @@ if(!function_exists("importAllSessionsAndModels")){
 }
 
 
+
+$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
+
+
+
+if(isset($_POST)) {
+
+
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
@@ -31,45 +39,32 @@ else{
 $infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
 
 
-// faire un insert id dans user if il clique sur abonnement
-if(isset($_POST)){
-    if($_POST['choixPackAbonnement']=='packUneMaison'){
+    joinIdSubscription;
     header("Location: index.php?cible=monabonnement");
-    }
 
-    else($_POST['choixPackAbonnement']=='packPlusieursMaison'){
-        header("Location: index.php?cible=monabonnement")
-    };
-
-
-
-
+// faire un insert id dans user if il clique sur abonnement
 
 
 }
+// faire un insert id dans user if il clique sur abonnement
 
+if(isset($_POST)) {
 
+    $section = 'monabonnement';
+    $status;
 
-    /*
+    if (isset($_POST)) {
+        if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
+            header("Location: index.php?cible=monabonnement");
 
+        }
 
-    if($_POST['choixPackAbonnement']=='packUneMaison'){
-        subscription_user['id_subscription'] = 1;
+        else($_POST['choixPackAbonnement'] == 'packPlusieursMaison'){
+            header("Location: index.php?cible=monabonnement")
+        };
 
 
     }
-
-    else ($_POST['choixPackAbonnement']=='packUneMaison'){
-
-    }
-
-};
-*/
-header("Location: index.php?cible=......");
+    header("Location: index.php?cible=monabonnement");
+}
 ?>
-
-if(isset($_POST["choixPackAbonnement"] ) ){
-//PackuneMaison
-//PackplusieursMaison
-};
-

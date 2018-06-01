@@ -61,3 +61,13 @@ body h1{
     border: 2px solid black;
     padding :1%;
 }
+
+
+@media screen and (max-width: 600px) {
+    section{
+        background: #2196F3;
+
+    }
+
+}
+
