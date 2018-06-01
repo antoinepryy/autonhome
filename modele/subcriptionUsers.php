@@ -32,6 +32,7 @@ function joinIdSubscription(PDO $bdd){
     return $idSubscriptionUser;
 };
 
+
 function joinIdUserSubscription(PDO $bdd){
     $statement = $bdd->prepare('SELECT subscription_user.id_user, user.ID
     FROM 
@@ -41,6 +42,8 @@ function joinIdUserSubscription(PDO $bdd){
     $statement->execute();
     $iduserSubscription = $statement ->fetchAll();
     return $iduserSubscription;
+
+
 };
 
 

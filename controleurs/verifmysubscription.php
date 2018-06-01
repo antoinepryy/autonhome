@@ -16,10 +16,6 @@ if(!function_exists("importAllSessionsAndModels")){
 
 
 
-$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
-
-
-
 if(isset($_POST)) {
 
 
@@ -35,13 +31,6 @@ else{
 
 }
 
-
-$infoUserAbonnement = findUserByIdInSubscription($bdd, $_SESSION['userId']);
-
-
-    joinIdSubscription;
-    header("Location: index.php?cible=monabonnement");
-
 // faire un insert id dans user if il clique sur abonnement
 
 
@@ -54,13 +43,15 @@ if(isset($_POST)) {
     $status;
 
     if (isset($_POST)) {
+
         if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
             header("Location: index.php?cible=monabonnement");
 
         }
 
-        else($_POST['choixPackAbonnement'] == 'packPlusieursMaison'){
-            header("Location: index.php?cible=monabonnement")
+        else
+            {
+            header("Location: index.php?cible=monabonnement");
         };
 
 
