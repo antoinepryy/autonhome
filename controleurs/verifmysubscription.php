@@ -56,8 +56,11 @@ if(isset($_POST)) {
     if (isset($_POST)) {
         if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
             header("Location: index.php?cible=monabonnement");
-        } else($_POST['choixPackAbonnement'] == 'packPlusieursMaison'){
-        header("Location: index.php?cible=monabonnement")
+
+        }
+
+        else($_POST['choixPackAbonnement'] == 'packPlusieursMaison'){
+            header("Location: index.php?cible=monabonnement")
         };
 
 
