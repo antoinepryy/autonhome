@@ -23,11 +23,11 @@ Mon Abonnement
     <BR>
 
     <h3 class="temperature">
-        Capteur de Température : <?php echo ''?>
+        Capteur de Température : <?php echo ($i) ?>
     </h3>
 
     <h3 class="movement">
-        Capteur de Mouvement : <?php echo ''?>
+        Capteur de Mouvement : <?php echo ($j) ?>
     </h3>
 
 
