@@ -29,18 +29,9 @@ if(isset($_POST["effectorlightquantity"],$_GET['roomchoice'])){
 
         $data = array(
             'name' => $_POST['nameLightEffector'.$number_lightEffector],  // Recupere le nom entré
-<<<<<<< HEAD
-            
-            'state' => "ORD",
-<<<<<<< HEAD
-            'id_room' => $_GET['roomchoice'],  //on recupere l'id de la chambre
-=======
-=======
->>>>>>> 1f18f4df47e9d50254bf3dc42290376c343c5379
             'action' => "OFF",
             'state' => "ORD",
             'id_room' => $_GET['roomchoice'],  //on recuere l'id de la chambre
->>>>>>> 74f6c0cb64f9aebb21dfaa3225c613fe5d22795c
             'id_effectorType' => 6,   //type interrupteur de lumiere
         );
         $addEffector = createEffector($bdd,$data); //Fonction pour creer les actionneurs
