@@ -43,9 +43,9 @@
     <form class="light" method="post" action="index.php?cible=accueil">
         <?php foreach ($myRooms as $roomInResidence) { ?>
             <label><?php echo ( $roomInResidence['name']);  ?></label>
-            <input type="checkbox" onchange="document.getElementById('formName').submit()" /><br />
-        <?php } ?>
-        <input type="submit">
+                    <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" /><br />
+                <?php } ?>
+
     </form>
 
 </section>

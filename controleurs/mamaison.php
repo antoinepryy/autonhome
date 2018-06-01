@@ -38,7 +38,6 @@ elseif ($status=='LU' && isset($_GET['id']) && !isset($_GET['idroom'])){
         $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
         $id_residency=$_GET['id'];
         $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
-        $myEffectors=getAllEffectorFromRoomFromType($bdd,4,6)[0][0];
         die(var_dump($myEffectors));
         $user = findUserById($bdd, $houseInfo[9]);
         include ('vues/mamaisonmain.php');
@@ -54,6 +53,7 @@ elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_
     $section = 'mamaisonroom';
     $inCategory = getAllRoomCategoryRooms($bdd, $_GET['id'], $_GET['idroom'])[0];
     $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
+
     if (!isset($_POST['house'])){
         $id_residency=$myHouses[0][0][0];
     }

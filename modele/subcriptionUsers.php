@@ -32,6 +32,19 @@ function joinIdSubscription(PDO $bdd){
     return $idSubscriptionUser;
 };
 
+function joinIdUserSubscription(PDO $bdd){
+    $statement = $bdd->prepare('SELECT subscription_user.id_user, user.ID
+    FROM 
+    INNER JOIN subscription_user
+    ON subscription_user.id_user = user.ID ');
+
+    $statement->execute();
+    $iduserSubscription = $statement ->fetchAll();
+    return $iduserSubscription;
+};
+
+
+
 /*
 function insertIdSubscription($bdd, $ID, $id_subscription ){
 
