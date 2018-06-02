@@ -43,7 +43,7 @@ function getInfos(PDO $bdd, $id_topic){
 }
 
 function getMessages(PDO $bdd,$id_discussion ) {
-    $statement = $bdd->prepare('SELECT forum_message.id_user, forum_message.dateTime, forum_message.text FROM forum_message INNER JOIN forum_discussion ON forum_discussion.ID = forum_message.id_discussion WHERE forum_discussion.ID = :id_discussion');
+    $statement = $bdd->prepare('SELECT firstName, lastName, forum_message.dateTime, forum_message.text FROM forum_message INNER JOIN forum_discussion ON forum_discussion.ID = forum_message.id_discussion INNER JOIN user ON user.ID = forum_message.id_user WHERE forum_discussion.ID = :id_discussion');
     $statement ->bindParam(":id_discussion", $id_discussion);
     $statement->execute();
     $messages = $statement->fetchAll();;
