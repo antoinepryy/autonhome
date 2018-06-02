@@ -38,19 +38,19 @@ require ('vues/header_'.$status.'.php');
                     switch ($effector['type']){
                         case 'Volet':
                             echo('<span><label class="switch">
-                              </sp><input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              </sp><input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;
                         case 'Ventilateur':
                             echo('<span><label class="switch">
-                              <input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).'type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;
                         case 'Lumière':
                             echo('<span><label class="switch">
-                              <input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).'type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;
