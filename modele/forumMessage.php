@@ -34,9 +34,8 @@ function answerDiscussion(PDO $bdd, $text, $id_discussion)
 }
 
 function getInfos(PDO $bdd, $id_topic){
-    $statement = $bdd->prepare('SELECT firstName, lastName, dateTime, topic FROM forum_discussion JOIN user ON user.ID = forum_discussion.id_user WHERE forum_discussion.ID = :id_topic');
+    $statement = $bdd->prepare('SELECT firstName, lastName, dateTime, topic, text FROM forum_discussion JOIN user ON user.ID = forum_discussion.id_user WHERE forum_discussion.ID = :id_topic');
     $statement ->bindParam(":id_topic", $id_topic);
-    
     $statement -> execute();
     $infos = $statement->fetchAll();
     return ($infos);

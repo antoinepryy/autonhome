@@ -15,6 +15,7 @@ require ('vues/header_'.$status.'.php');
         <h1> <?php echo($element["topic"]); ?> </h1>
         <h2> <?php echo($element["firstName"]); ?>   <?php echo($element["lastName"]); ?> </br> <?php echo($element["dateTime"]); ?> </h2>
         <?php } ?>
+        <p><?php echo($element["text"]); ?></p>
 
         <?php foreach ($text as $element){ ?>
         <p> <?php echo($element[0]);?></p>
