@@ -31,26 +31,26 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><span><?php echo($effector['name'].' : '.$effector['action'].$effector['type']);?></span>
+                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.$effector['action'].'</span>'.$effector['type']);?></span>
 
                     <?php
 
                     switch ($effector['type']){
                         case 'Volet':
                             echo('<span><label class="switch">
-                              </sp><input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              </sp><input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;
                         case 'Ventilateur':
                             echo('<span><label class="switch">
-                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).'type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;
                         case 'Lumière':
                             echo('<span><label class="switch">
-                              <input type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <input onchange="postAction(this.id)" '.($effector["action"]=="ON"?"checked":null).'type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
                               <span class="slider"></span>
                               </label></span>');
                             break;

@@ -90,3 +90,16 @@ function mergeIntoOrder($sensorList){
 
 }
 
+function secureRequest($element){
+    switch (gettype($element)){
+        case "string":
+            return htmlentities($element);
+            break;
+        case "array":
+            foreach ($element as $item){
+                $item = htmlentities($item);
+            }
+            break;
+    }
+}
+
