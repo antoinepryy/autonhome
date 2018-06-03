@@ -1,0 +1,35 @@
+h2 {
+    text-align: center;
+    color: #ff9900;
+}
+
+h5 {
+    text-align: right;
+}
+
+.text{
+    text-align: center;
+}
+
+.topic {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5px solid black;
+    margin: auto;
+    height: auto;
+    width: 80%;
+    background-color: lightgray;
+}
+
+.answers p{
+    text-align: center;
+}
+
+.date {
+    font-style: italic;
+}
+
+.name{
+    font-weight: bold;
+}
