@@ -22,8 +22,14 @@ h5 {
     background-color: lightgray;
 }
 
-.answers p{
+.answers {
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: auto;
+    width: 80%;
 }
 
 .date {
