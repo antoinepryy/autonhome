@@ -2,6 +2,28 @@ h2 {
     text-align: center;
     color: #ff9900;
 }
+h3{
+    display: flex;
+    height: 5%;
+    width:20%;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+
+}
+h4 {
+
+    display: flex;
+    height: 5%;
+    width:20%;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+
+}
+
 
 h5 {
     text-align: right;
