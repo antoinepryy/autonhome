@@ -13,6 +13,9 @@ require ('vues/header_'.$status.'.php');
 
 
 <section>
+    <div class="device-container">
+
+
     <div class="sensor-container">
         <?php
 
@@ -26,22 +29,53 @@ require ('vues/header_'.$status.'.php');
     <div class="effector-container">
         <?php
 
-        foreach ($devices[1] as $effector){?>
+        foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><?php echo($effector['name'].' : '.$effector['action']);?></li>
+                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.$effector['action'].'</span>'.$effector['type']);?></span>
+
+                    <?php
+
+                    switch ($effector['type']){
+                        case 'Volet':
+                            echo('<span><label class="switch">
+                              </sp><input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label></span>');
+                            break;
+                        case 'Ventilateur':
+                            echo('<span><label class="switch">
+                              <input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label></span>');
+                            break;
+                        case 'Lumière':
+                            echo('<span><label class="switch">
+                              <input onchange="postActionTOR(this.id)" '.($effector["action"]=="ON"?"checked":"").' type="checkbox" class="sliderEffector" id='.$effector["ID"].'>
+                              <span class="slider"></span>
+                              </label></span>');
+                            break;
+                    };?></li>
+
             </ul>
         <?php }
         ?>
 
 
     </div>
+    </div>
 
-    <div class="ajoutCapteur">
-        <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+    <div class="add-button">
+        <div class="ajoutCapteur">
+            <a class="text" href=<?php echo("index.php?cible=ajoutcapteur&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un capteur</a>
+        </div>
+        <div class="ajoutEffector">
+            <a class="text" href=<?php echo("index.php?cible=ajouteffector&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un actionneur</a>
+        </div>
+
     </div>
-    <div class="ajoutEffector">
-        <a class="text" href=<?php echo("index.php?cible=ajouteffector&id=".$_GET['id'].'&idroom='.$_GET['idroom'].'&roomchoice='.$_GET['roomchoice']); ?>>Ajouter un actionneur</a>
-    </div>
+
+
+
 
 </section>
 

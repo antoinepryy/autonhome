@@ -35,7 +35,7 @@ if (isset($alerte)){
 
     <div class="form">
 
-    <form method="POST" action="index.php?cible=verifajoutmaisonform" id="sectionOne">
+    <form class="form1" method="POST" action="index.php?cible=verifajoutmaisonform" id="sectionOne">
         <label hidden>houseName</label>
         <input type="text"  name="name" placeholder="Nom de la maison" required/>
 
@@ -71,7 +71,7 @@ if (isset($alerte)){
 
     </form>
     </div>
-    <div class="form">
+    <div class="form form2">
         <form class="renter-form" action="index.php?cible=verifajoutmaisonform" method="post" id="sectionTwo">
             <input type="text" name="secret" placeholder="Code propriétaire" required>
             <input type="submit">

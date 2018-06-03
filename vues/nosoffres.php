@@ -9,12 +9,12 @@ require ('vues/header_'.$status.'.php');
 ?>
 
     <h1>
-        Nos Offres
+        OFFRES ET PRODUITS
     </h1>
 
     <section class="capteurs">
         <h2>
-            Nos Capteurs
+            Capteurs
         </h2>
 
         <div class="lumierelegende"> <img class="capteurlumiere" src="ressources/pictures/capteurdelumiereLDR.jpg">
@@ -40,7 +40,7 @@ require ('vues/header_'.$status.'.php');
     </section>
 
     <section class="subscription">
-        <h2> Nos Abonnements </h2>
+        <h2> Abonnements </h2>
 
         <div class="descriptionsubscription"> PACK UNE MAISON:<br/>
             Installation des capteurs de votre choix dans une maison + 15 euros / mois pour l'utilisation de la plateforme<br/>

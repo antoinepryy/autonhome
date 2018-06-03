@@ -8,7 +8,7 @@
 require ('vues/header_'.$status.'.php');
 ?>
 
-    <h1 align="center">Mon profil </h1>
+    <h1>MON PROFIL </h1>
 <section>
     <p>
         Nom : <?php echo($_SESSION["userLastName"]);?>
