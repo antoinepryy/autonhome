@@ -23,21 +23,34 @@ if(isLoggedAsAdmin()){
     $status="AD";
 }
 elseif (isLoggedAsUser()){
+
     $status="LU";
+
+
     if(isset($_POST)) {
         $section = 'monabonnement';
             if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
+                $data=array(
+                    'ID=>NULL',
+                    'id_subscription'=>1,
+                    'beginningDate'=>NULL,
+                    'endingDate'=>NULL,
+                    'id_user'=>$_SESSION['ID']);
 
-                include ('vues/monabonnemment.php');
+                createSubsciption($bdd, $data);
+
+                header("Location: index.php?cible=monabonnement");
             }
             else{
-                header("Location: index.php?cible=monabonnement");
+
+                header("Location: index.php?cible=AbonnementPlusieursMaisons");
             }
         }
     }
 else{
     $status="UU";
 }
+
 
 
 
@@ -62,6 +75,8 @@ if(isset($_POST)) {
 
         else
             {
+
+            header("Location: index.php?cible=AbonnementPlusieursMaisons");
             header("Location: index.php?cible=monabonnement");
         };
 

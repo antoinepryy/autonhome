@@ -31,7 +31,7 @@ require ('vues/header_'.$status.'.php');
     </h3>
 
 
-    <section>
+    <section class = ma-maison-principale>
 
         <form class="formulairemonabonnement" method="post">
             <div class="elementsformulairemonabonnement">
@@ -40,7 +40,6 @@ require ('vues/header_'.$status.'.php');
                     Alarme
                 </h5>
 
-
                 <label> Microphone </label>
                 <input type="checkbox" name="micro" placeholder="micro"> <br>
                 <label> Détecteur de mouvement</label>
@@ -48,8 +47,25 @@ require ('vues/header_'.$status.'.php');
                 <label>Caméra</label>
                 <input type ="checkbox" name="Caméra"> <br>
 
+        </form>
+
+    </section>
 
 
+    <section class="ma maison-secondaire">
+
+        <form class="formulairemonabonnement" method="post">
+            <div class="elementsformulairemonabonnement">
+
+                <h5>
+                    Alarme
+                </h5>
+                <label> Microphone </label>
+                <input type="checkbox" name="micro" placeholder="micro"> <br>
+                <label> Détecteur de mouvement</label>
+                <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
+                <label>Caméra</label>
+                <input type ="checkbox" name="Caméra"> <br>
 
         </form>
 
