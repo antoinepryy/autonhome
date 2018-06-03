@@ -27,10 +27,23 @@ elseif (isLoggedAsUser()){
     if(isset($_POST)) {
         $section = 'monabonnement';
             if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
-
-                include ('vues/monabonnemment.php');
+                $data = array(
+                    'ID' => NULL,
+                    'id_subscription' => 1,
+                    'id_user' => $_SESSION['id'],
+                    'beginningDate' => NULL,
+                    'endingDate' => NULL,);
+                createSubscription($bdd,$date);
+                header("Location: index.php?cible=monabonnement");
             }
             else{
+                $data = array(
+                    'ID' => NULL,
+                    'id_subscription' => 2,
+                    'id_user' => $_SESSION['id'],
+                    'beginningDate' => NULL,
+                    'endingDate' => NULL,);
+                createSubscription($bdd,$date);
                 header("Location: index.php?cible=monabonnement");
             }
         }
