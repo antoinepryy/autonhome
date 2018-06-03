@@ -35,11 +35,35 @@ function joinIdUserSubscription(PDO $bdd){
     $iduserSubscription = $statement ->fetchAll();
     return $iduserSubscription;
 
-
-
 }
 
 
+function createSubsciption(PDO $bdd, $data){
+    $statement = $bdd->prepare('INSERT INTO `subscription_user` 
+    (`ID`,
+    `id_subscription`,
+    `beginningDate`, 
+    `endingDate`,
+    `id_user`)
+    VALUES
+    (NULL,
+    :id_subscription ,
+    NULL,
+    NULL,
+    :id_user,');
+    $statement->bindParam(":id_subcription", $data["id_subcription"]);
+    $statement->bindParam(":id_user", $data["id_user"]);
+    $statement->execute();
+
+}
+
+function deleteInscription(PDO $bdd){
+
+    $statement = $bdd -> prepare('DELETE subscription_user.id_subscription, subscription.ID FROM subscription_user ');
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+
+}
 
 
 /*

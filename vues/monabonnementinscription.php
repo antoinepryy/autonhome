@@ -11,7 +11,7 @@ require ('vues/header_'.$status.'.php');
 
 
 <section class="subscription">
-    <h2> Nos Abonnements </h2>
+    <h2> MON ABONNEMENT </h2> </br>
 
     <div class="descriptionsubscription"> PACK UNE MAISON:<br/>
         Installation des capteurs de votre choix dans une maison + 15 euros / mois pour l'utilisation de la plateforme<br/>

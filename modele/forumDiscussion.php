@@ -33,7 +33,7 @@ function createDiscussion(PDO $bdd, $topic, $text)
     $statement->execute();
 }
 
-function afficheNom(PDO $bdd) {
+function getNames(PDO $bdd) {
     $statement = $bdd->prepare('
     SELECT 
     user.firstName, 

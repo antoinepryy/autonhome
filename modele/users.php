@@ -57,8 +57,7 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
             `addressZipCode`, 
             `addressCity`, 
             `addressCountry`, 
-            `type`, 
-            `id_subscription`) 
+            `type`) 
             VALUES 
             (NULL, 
             :firstName, 
@@ -71,8 +70,7 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
             :addressZipCode, 
             :addressCity, 
             :addressCountry, 
-            "user" , 
-            NULL)');
+            "user")');
             $statement->bindParam(":firstName", $data["firstName"]);
             $statement->bindParam(":lastName", $data["lastName"]);
             $statement->bindParam(":mail", $data["mail"]);

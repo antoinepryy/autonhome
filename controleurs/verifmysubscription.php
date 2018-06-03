@@ -23,34 +23,35 @@ if(isLoggedAsAdmin()){
     $status="AD";
 }
 elseif (isLoggedAsUser()){
+
     $status="LU";
+
+
     if(isset($_POST)) {
         $section = 'monabonnement';
             if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
-                $data = array(
-                    'ID' => NULL,
-                    'id_subscription' => 1,
-                    'id_user' => $_SESSION['id'],
-                    'beginningDate' => NULL,
-                    'endingDate' => NULL,);
-                createSubscription($bdd,$date);
+
+                $data=array(
+                    'ID=>NULL',
+                    'id_subscription'=>1,
+                    'beginningDate'=>NULL,
+                    'endingDate'=>NULL,
+                    'id_user'=>$_SESSION['ID']);
+
+                createSubsciption($bdd, $data);
+
                 header("Location: index.php?cible=monabonnement");
             }
             else{
-                $data = array(
-                    'ID' => NULL,
-                    'id_subscription' => 2,
-                    'id_user' => $_SESSION['id'],
-                    'beginningDate' => NULL,
-                    'endingDate' => NULL,);
-                createSubscription($bdd,$date);
-                header("Location: index.php?cible=monabonnement");
+
+                header("Location: index.php?cible=AbonnementPlusieursMaisons");
             }
         }
     }
 else{
     $status="UU";
 }
+
 
 
 
@@ -63,6 +64,7 @@ else{
 if(isset($_POST)) {
 
     $section = 'monabonnement';
+
     $status;
 
     if (isset($_POST)) {
@@ -74,6 +76,8 @@ if(isset($_POST)) {
 
         else
             {
+
+            header("Location: index.php?cible=AbonnementPlusieursMaisons");
             header("Location: index.php?cible=monabonnement");
         };
 

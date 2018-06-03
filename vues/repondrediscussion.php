@@ -16,7 +16,7 @@ if (isset($alerte)){
     <section class="principal nope" id="varHeigth">
         <h1>Répondre à la discussion</h1>
 
-        <form method="POST" action="index.php?cible=verifanswerform" >
+        <form method="POST" action="index.php?cible=verifanswerform&id=<?php echo($_GET["id"]) ?>" >
             <p class="texte"> <textarea rows = '5' cols = '80' name = 'text'></textarea> </p>
 
 
