@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 31 mai 2018 à 10:30
--- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.4
+-- Généré le :  lun. 04 juin 2018 à 14:43
+-- Version du serveur :  10.1.28-MariaDB
+-- Version de PHP :  7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -78,7 +78,9 @@ CREATE TABLE `effector` (
 --
 
 INSERT INTO `effector` (`ID`, `cardNumber`, `objectNumber`, `name`, `action`, `state`, `id_room`, `id_effectorType`) VALUES
-(1, NULL, NULL, 'Volets chambre YM', 'IN', 'OFF', 4, 5);
+(1, NULL, NULL, 'Volets chambre YM', 'ON', 'OK', 4, 5),
+(2, NULL, NULL, 'test', 'OFF', 'ORD', 4, 6),
+(3, NULL, NULL, '3', 'OFF', 'ORD', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -96,9 +98,9 @@ CREATE TABLE `effector_type` (
 --
 
 INSERT INTO `effector_type` (`ID`, `type`) VALUES
-(4, 'ventilateur'),
-(5, 'volets'),
-(6, 'lumiere');
+(4, 'Ventilateur'),
+(5, 'Volet'),
+(6, 'Lumière');
 
 -- --------------------------------------------------------
 
@@ -119,14 +121,15 @@ CREATE TABLE `forum_discussion` (
 --
 
 INSERT INTO `forum_discussion` (`ID`, `topic`, `text`, `id_user`, `dateTime`) VALUES
-(14, 'Capteur de température mal configuré', 'Bonjour, mon capteur de température indique la température en degrés °F, comment le configurer en °C ?\r\nMerci par avance', 11, '2018-05-24 10:13:39'),
-(15, 'Ventilateur en panne', 'Bonjour, mon ventilateur semble être en panne après avoir été activé toute cette nuit, suite à un pic de chaleur. Peut-être a-t-il été en marche trop longtemps?\r\nMerci par avance', 11, '2018-05-24 10:15:14'),
-(16, 'Volets bloqués', 'Bonjour, mes volets sont bloqués en position fermée. Une idée pour les monter ?\r\nMerci par avance', 23, '2018-05-24 10:17:38'),
-(19, 'Alarme ne sonne plus', 'Bonjour, mon alarme ne sonne qu\'une fois sur deux lorsque mon chien passe devant le capteur... Peut-être ai-je un problème de capteur de mouvement ? Merci par avance', 11, '2018-05-24 11:24:01'),
-(20, 'salut', 'esrtdfyuihojkp', 11, '2018-05-26 19:47:35'),
+(1, 'Capteur de température mal configuré', 'Bonjour, mon capteur de température indique la température en degrés °F, comment le configurer en °C ?\r\nMerci par avance', 11, '2018-05-24 10:13:39'),
+(15, 'Ventilateur en panne', 'Bonjour, mon ventilateur semble être en panne après avoir été activé toute cette nuit, suite à un pic de chaleur. Peut-être a-t-il été en marche trop longtemps?\r\nMerci par avance', 1, '2018-05-24 10:15:14'),
+(16, 'Volets bloqués', 'Bonjour, mes volets sont bloqués en position fermée. Une idée pour les monter ?\r\nMerci par avance', 14, '2018-05-24 10:17:38'),
+(19, 'Alarme ne sonne plus', 'Bonjour, mon alarme ne sonne qu\'une fois sur deux lorsque mon chien passe devant le capteur... Peut-être ai-je un problème de capteur de mouvement ? Merci par avance', 21, '2018-05-24 11:24:01'),
 (21, 'Je suis un admin', 'Salut c\'est moi\r\n', 23, '2018-05-28 14:47:26'),
 (22, 'Je suis un autre admin', 'Salut salut\r\n', 15, '2018-05-28 14:48:06'),
-(23, 'qwsxdcfvgbhnj,kl;m:!ù', 'wxdcfvyuniop^m$\r\n', 15, '2018-05-28 15:11:00');
+(24, 'Mon YM de compagnie ne fonctionne plus', 'Help me', 20, '2018-06-01 15:29:16'),
+(25, 'Je m\'appelle ToinouKatyGareth', 'Mon surnom me pose problème', 2, '2018-06-01 15:30:24'),
+(26, 'Votez Canard ISEP d\'or', 'IL faut voter voter pour moi!!!!!!', 24, '2018-06-01 15:53:25');
 
 -- --------------------------------------------------------
 
@@ -147,9 +150,16 @@ CREATE TABLE `forum_message` (
 --
 
 INSERT INTO `forum_message` (`ID`, `text`, `id_user`, `id_discussion`, `dateTime`) VALUES
-(1, 'Je rencontre le même problème que vous ! Help', 12, 1, '0000-00-00 00:00:00'),
-(13, 'qzsedrctvybuni,o;m', 11, 1, '2018-05-25 16:48:41'),
-(14, 'serdtfyguijop^:!ù', 11, 1, '2018-05-26 19:48:39');
+(26, 'Salut ouayème', 11, 21, '2018-06-01 15:28:32'),
+(27, 'votez pour moi', 11, 26, '2018-06-01 15:53:44'),
+(28, 'Bonjour Sylviana, \r\n\r\nPour ce genre de cas, il existe une manivelle cachée dans le coffre des volets. Elle vous permettra d\'ouvrir ou de fermer vos volets de manière mécanique.\r\nContactez nous afin que nous puissions établir un rendez-vous dans les plus brefs délais pour vous dépanner.\r\n\r\nBonne journée !', 15, 16, '2018-06-03 17:46:18'),
+(29, 'Bonjour Yves-Marie,\r\n\r\nLa démarche à suivre est présente à la page 29 du manuel d\'utilisation.\r\nSi vous rencontrez des problèmes après l\'avoir lu, dîtes-moi.\r\n\r\nBonne journée !', 15, 1, '2018-06-03 17:49:49'),
+(30, 'Bonjour Antoine,\r\n\r\nJ\'ai voté pour vous !\r\n\r\nBonne continuation', 15, 26, '2018-06-03 17:50:30'),
+(31, 'Bonjour Antoine, \r\n\r\nJe ne peux malheureusement rien n\'y faire.\r\n\r\nBonne journée !', 15, 25, '2018-06-03 17:51:07'),
+(32, 'Bonjour Fanny,\r\n\r\nNous ne vendons pas de capteur YM. Ainsi, je ne peux vous dépanner.\r\nBonne journée !', 15, 24, '2018-06-03 17:51:37'),
+(33, 'Bonjour Amélie,\r\n\r\nIl semblerait que votre ventilateur ait été en surchauffe. Effectuez une demande de remplacement et votre nouveau ventilateur vous sera livré dans les plus brefs délais. Bonne journée !', 15, 15, '2018-06-03 17:52:36'),
+(34, 'Bonjour Yacine,\r\n\r\nQuelle taille fait votre chien? Il se peut que le capteur soit plus haut que lui.\r\nBonne journée !', 15, 19, '2018-06-03 17:53:21'),
+(35, 'Pas un Terre-Neuve je suppose ;)', 11, 19, '2018-06-03 18:13:51');
 
 -- --------------------------------------------------------
 
@@ -199,10 +209,11 @@ CREATE TABLE `residence` (
 
 INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `id_owner`, `id_tenant`) VALUES
 (1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1),
-(2, 'test', 2, 2, 'sdiecuzec', 2, 'azdoi', 4568, 'uhzd', 'uhzbd', 5, NULL),
-(3, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
-(4, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
-(5, 'iuze', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL);
+(2, 'test', 2, 2, 'sdiecuzec', 2, 'azdoi', 4568, 'uhzd', 'uhzbd', 5, 11),
+(3, 'Maison 1', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(4, 'Maison 2', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(5, 'Maison 3', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(6, 'Addresse principale', 150, 2, '35623132653536663937613566', 10, 'Rue des roses', 57000, 'Marly', 'france', 25, 11);
 
 -- --------------------------------------------------------
 
@@ -224,7 +235,8 @@ CREATE TABLE `room` (
 INSERT INTO `room` (`ID`, `name`, `id_residency`, `id_roomCategory`) VALUES
 (1, 'Chambre de YM', 1, 1),
 (2, 'Salle de bain d\'Antoine', 1, 2),
-(4, 'Chambre de Canard', 3, 1);
+(4, 'Chambre de Canard', 3, 1),
+(5, 'Cuisine', 4, 5);
 
 -- --------------------------------------------------------
 
@@ -270,8 +282,9 @@ CREATE TABLE `sensor` (
 --
 
 INSERT INTO `sensor` (`ID`, `cardNumber`, `objectNumber`, `name`, `state`, `id_room`, `id_sensorType`) VALUES
-(1, 1000, 50, 'Capteur lumière chambre YM', 'IN', 1, 1),
-(2, 500, 25, 'Capteur température salle de bain Antoine', 'IN', 4, 2);
+(1, 0, 50, 'Capteur lumière chambre YM', 'IN', 1, 1),
+(2, 500, 25, 'Capteur température salle de bain Antoine', 'IN', 4, 2),
+(3, NULL, NULL, '3', 'ORD', 4, 3);
 
 -- --------------------------------------------------------
 
@@ -360,11 +373,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNumber`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `type`) VALUES
-(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'pass', '608334474', 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'client'),
+(1, 'Amélie', 'Piriou', 'amepiriou@gmail.com', 'pass', '608334474', 112, 'Chaptal', 92300, 'Levallois-Perret', 'France', 'user'),
 (2, 'Antoine', 'Perry', 'test@mail.com', 'pass', '', 0, '', 0, '', '', ''),
 (3, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', ''),
 (4, 'azd', 'ad', 'antoine.ap.57@gmail.com', 'azd', '', 0, '', 0, '', '', ''),
-(5, 'azd', 'azd', 'azd@test', 'azd', '', 0, '', 0, '', '', ''),
+(5, 'azd', 'azd', 'azd@test', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '', 0, '', 0, '', '', ''),
 (6, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 2, '20, rue des couvents', 0, 'Mon', 'france', ''),
 (7, 'as', 'as', 'antoine.ap.57@gmail.com', 'as', '674181395', 0, '20, rue des couvents', 0, 'Mon', 'france', 'user'),
 (8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user'),
@@ -381,7 +394,9 @@ INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNum
 (19, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$/F4szpAjhzVbBagtdFd1Duy9jqIYlSBtKDajzQ/MWwkvjLvmeEPA2', '674181395', 5, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
 (20, 'Fanny', 'Streiff', 'fanny@gmail.com', '$2y$10$EumVtBZsvybf2tjjZri1ZOOas3ToRVFctWGTz7DQ6DFC7TymAhBU2', '123456789', 20, 'Rue de Vanves', 75000, 'Paris', 'france', 'user'),
 (21, 'Yacine', 'Nabti', 'yasco@gmail.com', '$2y$10$9sS6.AiKxwb7yyoAexV2DO7F2VJNy8d5mQaQ0KtWkQMEMD.WOqTqi', '0708334474', 10, 'rue de vanves', 92170, 'issy', 'france', 'user'),
-(23, 'Yves-Marie', 'Paul', 'yvespasteque@fruitz.com', '$2y$10$utAmBAld0EoFCsorjPdlVOouYaH3Zn388ob73qGWuC7PDyqPcdNAu', '0789654332', 10, 'rue de Vanves', 92130, 'Issy', 'france', 'admin');
+(23, 'Yves-Marie', 'Paul', 'yvespasteque@fruitz.com', '$2y$10$utAmBAld0EoFCsorjPdlVOouYaH3Zn388ob73qGWuC7PDyqPcdNAu', '0789654332', 10, 'rue de Vanves', 92130, 'Issy', 'france', 'admin'),
+(24, 'kazd', '<strong>test</strong>', 'abcd@gmail.com', '$2y$10$xpE1EVrCqXUV/VaQce1JdufGL29QzdtXasLVP9kaA3JMz2/7Bvbt2', '123456789', 20, 'rue des tilleuls', 67890, '56778', 'france', 'user'),
+(25, 'Gareth', 'Bale', 'gbale@gmail.com', '$2y$10$ToWPZxLv77pbL1qIAEwPPu6hGGFxDI5dYP1IrS2Cj2TI9a4rvr9Qm', '123456789', 9, 'rue des lilas', 57950, 'Metz', 'france', 'user');
 
 --
 -- Index pour les tables déchargées
@@ -497,25 +512,25 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT pour la table `effector`
 --
 ALTER TABLE `effector`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `effector_type`
 --
 ALTER TABLE `effector_type`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `forum_discussion`
 --
 ALTER TABLE `forum_discussion`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `forum_message`
 --
 ALTER TABLE `forum_message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT pour la table `message`
@@ -527,13 +542,13 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT pour la table `residence`
 --
 ALTER TABLE `residence`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `room_category`
@@ -545,7 +560,7 @@ ALTER TABLE `room_category`
 -- AUTO_INCREMENT pour la table `sensor`
 --
 ALTER TABLE `sensor`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `sensor_type`
@@ -569,7 +584,7 @@ ALTER TABLE `subscription_user`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
