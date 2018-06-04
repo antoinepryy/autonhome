@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+
+.art{
+    font-weight: bold;
+}
+div {
+    height: auto;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}

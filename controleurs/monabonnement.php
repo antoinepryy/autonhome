@@ -1,6 +1,5 @@
 <?php
 
-$section = 'monabonnement';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -14,7 +13,9 @@ if(isLoggedAsAdmin()){
 elseif (isLoggedAsUser()){
     $status="LU";
     $clients=joinIdUserSubscription($bdd);
-    if (in_array($_SESSION['userId'],joinIdUserSubscription($bdd),true)){
+    $array=array('ID'=>$_SESSION['userId'],'0'=>$_SESSION['userId']);
+    if (in_array($array,joinIdUserSubscription($bdd))){
+        $session='monabonnement';
         $myHouses = getAllUserHouses($bdd, $_SESSION['userId'])[0];
         $i=0;
         $j=0;
@@ -25,17 +26,21 @@ elseif (isLoggedAsUser()){
             $j=$j+count($sensorMouvementInHouse);
 
 
+
         include('vues/monabonnement.php');
+
+            include ('vues/monabonnement.php');
+
         }
     }
 
     else {
-        include('vues/monabonnementinscription.php');
+        $session='monabonnementinscription';
+        include ('vues/monabonnementinscription.php');
+
     }
 
 }
 else{
     $status="UU";
 }
-
-include('vues/monabonnement.php');
