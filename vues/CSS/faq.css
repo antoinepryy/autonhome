@@ -7,20 +7,19 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    width: 90%;
+    margin-bottom: 5%;
 }
 
 .question{
     text-align: left;
-    font-size: 150%;
+    font-size: 130%;
     margin-left: 2%;
     margin-right: 2%;
+    color: #ff9900;
+    font-weight: bold;
+    margin-bottom: 2%;
 }
 
-.question1,.question2,.question3
-{
-    font-weight:bold ;
-}
 
 .réponse{
     text-align: -moz-center;

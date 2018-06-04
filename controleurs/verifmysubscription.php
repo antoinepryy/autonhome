@@ -14,11 +14,6 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-
-if(isset($_POST)) {
-
-
-$status;
 if(isLoggedAsAdmin()){
     $status="AD";
 }
@@ -34,8 +29,12 @@ elseif (isLoggedAsUser()){
                 header("Location: index.php?cible=monabonnement");
             }
             else{
-
-                header("Location: index.php?cible=AbonnementPlusieursMaisons");
+                $data=array(
+                    'ID=>NULL',
+                    'id_subscription'=>2,
+                    'id_user'=>$_SESSION['userId']);
+                createSubscription($bdd, $data);
+                header("Location: index.php?cible=monabonnement");
             }
         }
     }
@@ -43,15 +42,5 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
-
-
-
-// faire un insert id dans user if il clique sur abonnement
-
-
-}
-// faire un insert id dans user if il clique sur abonnement
-
 
 ?>
