@@ -1,31 +1,34 @@
 .FAQ{
     padding-top: 1%;
     padding-bottom: 1%;
+
 }
 
 .FAQ h1{
     display: flex;
     margin: auto;
     justify-content: center;
+
     width: 90%;
 }
 
 .question{
+    font-weight: bold;
     text-align: left;
     font-size: 150%;
     margin-left: 2%;
     margin-right: 2%;
+
 }
 
-.question1,.question2,.question3
-{
-    font-weight:bold ;
-}
 
 .réponse{
-    text-align: -moz-center;
+    display: flex;
+    width: 80%;
+    height: auto;
     font-size: 120%;
     margin-left: 11%;
     margin-right:2%;
     margin-bottom: 1%;
+    text-align: justify;
 }
