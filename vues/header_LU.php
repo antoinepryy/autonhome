@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="vues/CSS/footer.css"/>
     <?php
     echo ('<link rel="stylesheet" type="text/css" href="vues/CSS/'.$section.'.css"/>');
-
     ?>
 
 

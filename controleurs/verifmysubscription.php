@@ -42,5 +42,4 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
 ?>
