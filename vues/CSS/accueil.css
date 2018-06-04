@@ -33,7 +33,7 @@
     background-color: lightgray;
     justify-content: center;
     text-align: center;
-    height: 200px;
+    height: 250px;
     margin-bottom: 2%;
     width: 47%;
 }
@@ -50,9 +50,9 @@
     background-color: lightgray;
 }
 
-.assistance p,.faq p{
-    margin-right: 7%;
-    margin-left: 7%;
+.assistance p{
+    width: 60%;
+    margin: auto;
 }
 
 .form-container{
@@ -111,5 +111,30 @@
     font-size: 17px;
 }
 
+.logo_Assistance{
+    height: 50%;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    margin-top: 4.7%;
+    margin-bottom: 1%;
+
+}
+
+.logo_FAQ{
+    height: 50%;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
 
 
