@@ -29,10 +29,6 @@ elseif (isLoggedAsUser()){
     }
     $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
 
-
-
-
-
     $status="LU";
 }
 else{

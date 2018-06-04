@@ -7,13 +7,21 @@
     justify-content: flex-start;
     position: absolute;
     right: 0;
-    top: 56%;
+    top: 52%;
     margin-right: 5%;
     margin-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
     height: 58.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.my-house-state section{
+    font-weight: bold;
+    color: #21485f;
+    font-size: 120%;
 }
 
 .my-house-state input[type="checkbox"]
