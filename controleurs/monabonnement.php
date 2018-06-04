@@ -1,12 +1,12 @@
 <?php
 
+$section = 'monabonnement';
+
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
 
-
-$status;
 if(isLoggedAsAdmin()){
     $status="AD";
 }
