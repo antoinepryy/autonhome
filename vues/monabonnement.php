@@ -10,7 +10,6 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 
-
 <h1>Mon Abonnement</h1>
 
     <h2>
@@ -20,44 +19,42 @@ else { echo("Pack plusieurs maisons");} ?>
     </h2>
 
 
-<div class="house">
+<div class="display-houses">
 
-    <?php foreach ($myHouses as $house){
-        $sensorTemperatureInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],2);
-        $sensorMouvementInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],3);
-        $i=$i+count($sensorTemperatureInHouse);
-        $j=$j+count($sensorMouvementInHouse);?>
-        <h3>
-            <?php echo ($house['name']);?>
-        </h3>
-        <h4 class="temperature">
-            Capteur de Température : <?php echo ($i) ?>
-        </h4>
+    <ul class="my-house-list">
+        <?php foreach ($myHouses as $house){?>
+            <li>
+                <?php$sensorTemperatureInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],2);
+                $sensorMouvementInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],3);
+                $i=$i+count($sensorTemperatureInHouse);
+                $j=$j+count($sensorMouvementInHouse);?>
 
-        <h4 class="movement">
-            Capteur de Mouvement : <?php echo ($j) ?>
-        </h4>
+                <h3>
+                    <?php echo ($house['name']);?>
+                </h3>
+                <h4 class="temperature">
+                    Capteur de Température : <?php echo ($i) ?>
+                </h4>
 
-        <section>
+                <h4 class="movement">
+                    Capteur de Mouvement : <?php echo ($j) ?>
+                </h4>
 
-            <form class="formulairemonabonnement" method="post">
-                <div class="elementsformulairemonabonnement">
-
-                    <h5>
-                        Alarme
-                    </h5>
-
-                    <label> Microphone </label>
-                    <input type="checkbox" name="micro" placeholder="micro"> <br>
-                    <label> Détecteur de mouvement</label>
-                    <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
-                    <label>Caméra</label>
-                    <input type ="checkbox" name="Caméra"> <br>
-
-            </form>
-
-        </section>
-    <?php } ?>
+                <section>
+                    <form class="formulairemonabonnement" method="post">
+                        <div class="elementsformulairemonabonnement">
+                            <h5>Alarme</h5>
+                            <label> Microphone </label>
+                            <input type="checkbox" name="micro" placeholder="micro"> <br>
+                            <label> Détecteur de mouvement</label>
+                            <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
+                            <label>Caméra</label>
+                            <input type ="checkbox" name="Caméra"> <br>
+                    </form>
+                </section>
+            </li>
+        <?php } ?>
+    </ul>
 
 </div>
 
