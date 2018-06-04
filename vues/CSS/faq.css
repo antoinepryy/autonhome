@@ -1,6 +1,9 @@
 .FAQ{
     padding-top: 1%;
     padding-bottom: 1%;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
 
 }
 
@@ -23,6 +26,7 @@
     color: #ff9900;
     font-weight: bold;
     margin-bottom: 2%;
+    width: 80%;
 }
 
 
@@ -36,4 +40,5 @@
     margin-right:2%;
     margin-bottom: 1%;
     text-align: justify;
+    width: 80%;
 }

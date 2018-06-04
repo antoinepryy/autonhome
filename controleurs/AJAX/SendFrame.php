@@ -8,10 +8,15 @@
 
 include('../../modele/effector.php');
 
-changeEffectorAction($bdd, $_REQUEST['id'], $_REQUEST['value']=='true'?"ON":"OFF");
 
-//$array = getUsersByFirstLetters($bdd, $_GET['txt']);
-//$result='';
+switch ($_REQUEST['command']){
+    case "modifyOne":
+        changeEffectorAction($bdd, $_REQUEST['id'], $_REQUEST['value']=='true'?"ON":"OFF");
+        echo ($_REQUEST['value']=='true'?"ON":"OFF");
+        break;
+    case "VinceP":
+        break;
 
-echo ($_REQUEST['value']=='true'?"ON":"OFF");
+}
+
 
