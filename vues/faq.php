@@ -17,7 +17,9 @@ require ('vues/header_'.$status.'.php');
 
 
         <p class="question">
+
             Question 1 : Comment s'inscrire ? </br>
+
         </p>
 
         <p class="réponse">
@@ -28,7 +30,9 @@ require ('vues/header_'.$status.'.php');
         </p>
 
         <p class="question">
+
             Question 2 : Comment modifier mes informations personnelles ?</br>
+
         </p>
 
         <p class="réponse">
@@ -37,7 +41,9 @@ require ('vues/header_'.$status.'.php');
         </p>
 
         <p class="question">
+
             Question 3 : Comment puis-je ajouter une maison dont je suis propriétaire ?  </br>
+
         </p>
 
         <p class="réponse">
