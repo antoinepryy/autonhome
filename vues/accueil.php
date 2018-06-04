@@ -32,7 +32,7 @@ require ('vues/accueil_'.$status.'.php');
 
 <section class="faq">
     <div>
-        <a href="index.php?cible=faq"><img class="logo_Assistance" src="ressources/pictures/logo_Assistance.png" title="logo_Assistance" alt="logo_Assistance"></a>
+        <a href="index.php?cible=faq"><img class="logo_FAQ" src="ressources/pictures/logo_FAQ.png" title="logo_Assistance" alt="logo_Assistance"></a>
         <h3>
             FAQ
         </h3>
@@ -45,7 +45,7 @@ require ('vues/accueil_'.$status.'.php');
 
     <section class="assistance">
         <div>
-            <a href="index.php?cible=assistance"><img class="logo_FAQ" src="ressources/pictures/logo_FAQ.png" title="logo_FAQ" alt="logo_FAQ"></a>
+            <a href="index.php?cible=assistance"><img class="logo_Assistance" src="ressources/pictures/logo_Assistance.png" title="logo_FAQ" alt="logo_FAQ"></a>
             <h3>
                 Assistance
             </h3>

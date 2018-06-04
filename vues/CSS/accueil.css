@@ -51,7 +51,8 @@
 }
 
 .assistance p{
-    width: 60%;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 
@@ -129,8 +130,6 @@
 
 .logo_FAQ{
     height: 50%;
-
-
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -52,6 +52,7 @@ elseif($status=='LU' && isset($_GET['id']) && isset($_GET['idroom']) &&!isset($_
     $inCategory = getAllRoomCategoryRooms($bdd, $_GET['id'], $_GET['idroom'])[0];
     $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
 
+
     if (!isset($_POST['house'])){
         $id_residency=$myHouses[0][0][0];
     }
