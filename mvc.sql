@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 04 juin 2018 à 14:43
+-- Généré le :  lun. 04 juin 2018 à 15:18
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -64,8 +64,8 @@ INSERT INTO `data` (`ID`, `dateTime`, `value`, `id_sensor`) VALUES
 
 CREATE TABLE `effector` (
   `ID` int(11) NOT NULL,
-  `cardNumber` int(255) DEFAULT NULL,
-  `objectNumber` int(255) DEFAULT NULL,
+  `cardNumber` varchar(255) DEFAULT NULL,
+  `objectNumber` varchar(255) DEFAULT NULL,
   `name` varchar(30) NOT NULL,
   `action` varchar(30) NOT NULL,
   `state` varchar(20) NOT NULL,
@@ -78,9 +78,9 @@ CREATE TABLE `effector` (
 --
 
 INSERT INTO `effector` (`ID`, `cardNumber`, `objectNumber`, `name`, `action`, `state`, `id_room`, `id_effectorType`) VALUES
-(1, NULL, NULL, 'Volets chambre YM', 'ON', 'OK', 4, 5),
-(2, NULL, NULL, 'test', 'OFF', 'ORD', 4, 6),
-(3, NULL, NULL, '3', 'OFF', 'ORD', 4, 4);
+(1, 'G10B', '12', 'Volets chambre YM', 'ON', 'OK', 4, 5),
+(2, 'G10B', '17', 'test', 'OFF', 'ORD', 4, 6),
+(3, 'G10B', '76', '3', 'OFF', 'ORD', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -236,7 +236,8 @@ INSERT INTO `room` (`ID`, `name`, `id_residency`, `id_roomCategory`) VALUES
 (1, 'Chambre de YM', 1, 1),
 (2, 'Salle de bain d\'Antoine', 1, 2),
 (4, 'Chambre de Canard', 3, 1),
-(5, 'Cuisine', 4, 5);
+(5, 'Cuisine', 4, 5),
+(6, 'Chambre de Toinou', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -269,8 +270,8 @@ INSERT INTO `room_category` (`ID`, `name`) VALUES
 
 CREATE TABLE `sensor` (
   `ID` int(11) NOT NULL,
-  `cardNumber` int(255) DEFAULT NULL,
-  `objectNumber` int(255) DEFAULT NULL,
+  `cardNumber` varchar(255) DEFAULT NULL,
+  `objectNumber` varchar(255) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `state` varchar(10) NOT NULL,
   `id_room` int(10) NOT NULL,
@@ -282,9 +283,9 @@ CREATE TABLE `sensor` (
 --
 
 INSERT INTO `sensor` (`ID`, `cardNumber`, `objectNumber`, `name`, `state`, `id_room`, `id_sensorType`) VALUES
-(1, 0, 50, 'Capteur lumière chambre YM', 'IN', 1, 1),
-(2, 500, 25, 'Capteur température salle de bain Antoine', 'IN', 4, 2),
-(3, NULL, NULL, '3', 'ORD', 4, 3);
+(1, 'G10B', '50', 'Capteur lumière chambre YM', 'IN', 1, 1),
+(2, 'G10B', '25', 'Capteur température salle de bain Antoine', 'IN', 4, 2),
+(3, 'G10B', '10', '3', 'ORD', 4, 3);
 
 -- --------------------------------------------------------
 
@@ -548,7 +549,7 @@ ALTER TABLE `residence`
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `room_category`
