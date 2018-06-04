@@ -12,7 +12,7 @@ require ('vues/header_'.$status.'.php');
 
 <div class="introassistance">
     <h1 class="titleassistance">ASSISTANCE</h1>
-    <p class="noteservice assistance">Si vous rencontrez un problème, vous pouvez contacter contre service Assistance 24h/24 et 7j/7</p>
+    <p class="noteservice assistance">Si vous rencontrez un problème, vous pouvez contacter notre service Assistance 24h/24 et 7j/7</p>
 </div>
 
 <div class="assistancedetail">
@@ -27,8 +27,8 @@ require ('vues/header_'.$status.'.php');
     </div>
 
     <div class="assistancemessage">
-        <img class="logo_assistance_message" src="ressources/pictures/Assistance_message.png" title="logo_assistance_appel" alt="logo_assistance_appel">
-        <p class="texteassistancemessage">En envoyant un message instantané dans le chatbox : un technicien vous reprendra dans la minute !</p>
+        <img class="logo_assistance_message" src="ressources/logo/forumnoir.jpg" title="logo_assistance_appel" alt="logo_assistance_appel">
+        <p class="texteassistancemessage">En postant un message dans le forum : un administrateur vous répondra dans l'heure !</p>
     </div>
 </div>
 
