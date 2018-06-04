@@ -33,19 +33,19 @@ elseif (isLoggedAsUser()){
                 $data=array(
                     'ID=>NULL',
                     'id_subscription'=>1,
-                    'beginningDate'=>NULL,
-                    'endingDate'=>NULL,
-                    'id_user'=>1);
+                    //'beginningDate'=>NULL,
+                    //'endingDate'=>NULL,
+                    'id_user'=>$_SESSION['userId']);
 
                 createSubscription($bdd, $data);
 
                 header("Location: index.php?cible=monabonnement");
-                require('vues/monabonnement.php');
+                //require('vues/monabonnement.php');
             }
             else{
 
                 header("Location: index.php?cible=AbonnementPlusieursMaisons");
-                require('vues/AbonnementPlusieursMaisons.php');
+                //require('vues/AbonnementPlusieursMaisons.php');
             }
         }
     }
