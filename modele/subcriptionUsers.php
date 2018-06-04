@@ -41,7 +41,6 @@ function joinIdUserSubscription(PDO $bdd){
 function createSubscription(PDO $bdd, $data){
     $beginningDate = date('Y-m-d H:i:s');
     $endingDate=date("Y-m-d",strtotime("+365days", strtotime($beginningDate)));
-
     $statement = $bdd->prepare('INSERT INTO `subscription_user` 
     (`ID`,
     `id_subscription`,
