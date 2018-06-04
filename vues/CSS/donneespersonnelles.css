@@ -10,14 +10,7 @@
 }
 
 .titledonneespersonnelles{
-    border: 2px black solid;
-
-    padding: 0.5%;
-    width:25%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    background-color: white;
+    text-align: center;
 }
 
 
@@ -26,6 +19,7 @@
     margin: auto;
     margin-top: 2%;
     margin-bottom: 3%;
+    text-align: justify;
 }
 
 

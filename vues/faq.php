@@ -17,7 +17,7 @@ require ('vues/header_'.$status.'.php');
 
 
         <p class="question">
-            <span class="question1"> Question 1 : </span> Comment s'inscrire ? <br>
+            <span class="question1"></span> Comment s'inscrire ? <br>
         </p>
 
         <p class="réponse">
@@ -25,7 +25,7 @@ require ('vues/header_'.$status.'.php');
         </p>
 
         <p class="question">
-            <span class="question2"> Question 2 :</span> Comment configurer mon compte ?<br>
+            <span class="question2"></span> Comment configurer mon compte ?<br>
         </p>
 
         <p class="réponse">
@@ -34,7 +34,7 @@ require ('vues/header_'.$status.'.php');
         </p>
 
         <p class="question">
-            <span class="question3"> Question 3 : </span> Comment payer ?  <br>
+            <span class="question3"></span> Comment payer ?  <br>
         </p>
 
         <p class="réponse">

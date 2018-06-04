@@ -14,10 +14,13 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
+<<<<<<< HEAD
 
 if(isset($_POST)) {
 
 
+=======
+>>>>>>> 8a437de1d523a2801c79bf95b58451436648d190
 if(isLoggedAsAdmin()){
     $status="AD";
 }
@@ -34,9 +37,18 @@ elseif (isLoggedAsUser()){
 
             }
             else{
+<<<<<<< HEAD
 
                 header("Location: index.php?cible=AbonnementPlusieursMaisons");
 
+=======
+                $data=array(
+                    'ID=>NULL',
+                    'id_subscription'=>2,
+                    'id_user'=>$_SESSION['userId']);
+                createSubscription($bdd, $data);
+                header("Location: index.php?cible=monabonnement");
+>>>>>>> 8a437de1d523a2801c79bf95b58451436648d190
             }
         }
     }
@@ -44,15 +56,4 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
-
-
-
-// faire un insert id dans user if il clique sur abonnement
-
-
-}
-// faire un insert id dans user if il clique sur abonnement
-
-
 ?>

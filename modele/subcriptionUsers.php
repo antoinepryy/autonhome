@@ -11,14 +11,12 @@
 
 function findUserByIdInSubscription($bdd, $id)
 {
-    $statement = $bdd->prepare('SELECT * FROM subscription_user WHERE ID = :id ');
+    $statement = $bdd->prepare('SELECT id_subscription FROM subscription_user WHERE id_user = :id ');
     $statement->BindParam(':id', $id);
     $statement->execute();
     $subscriptionUser = $statement->fetch();
     return $subscriptionUser;
 }
-
-
 
 
 function joinIdSubscription(PDO $bdd){

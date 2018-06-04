@@ -11,7 +11,7 @@ require ('vues/header_'.$status.'.php');
     <h1>
         OFFRES ET PRODUITS
     </h1>
-
+<div class="all">
     <section class="capteurs">
         <h2>
             Capteurs
@@ -52,5 +52,6 @@ require ('vues/header_'.$status.'.php');
         </div>
 
     </section>
+</div>
 
 <?php require ('footer.php'); ?>
