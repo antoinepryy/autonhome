@@ -34,8 +34,8 @@ foreach($array as $element){
     <td>".$element["ID"]."</td>
     <td>".$element["lastName"]."</td>
     <td>".$element["firstName"]."</td>
+    <td>".$element["mail"]."</td>
     <td>".$element["phoneNumber"]."</td>
-    <td>".$element["ID"]."</td>
     </tr>
     ";
 
