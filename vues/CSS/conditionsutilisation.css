@@ -9,5 +9,5 @@ div {
     height: auto;
     width: 90%;
     margin: auto;
-    justify-content: center;
+    text-align: justify;
 }

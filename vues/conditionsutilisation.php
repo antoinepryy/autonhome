@@ -9,7 +9,7 @@
 
 require ('vues/header_'.$status.'.php');
 ?>
-<h1>Conditions générales d'utilisation</h1>
+<h1>CONDITIONS GENERALES D'UTILISATION</h1></br>
 
     <div>
     <p> <span class=art>ARTICLE 1 : Objet </span></br>
