@@ -35,18 +35,21 @@ elseif (isLoggedAsUser()){
                     'id_subscription'=>1,
                     'beginningDate'=>NULL,
                     'endingDate'=>NULL,
-                    'id_user'=>$_SESSION['ID']);
+                    'id_user'=>1);
 
-                createSubsciption($bdd, $data);
+                createSubscription($bdd, $data);
 
                 header("Location: index.php?cible=monabonnement");
+                require('vues/monabonnement.php');
             }
             else{
 
                 header("Location: index.php?cible=AbonnementPlusieursMaisons");
+                require('vues/AbonnementPlusieursMaisons.php');
             }
         }
     }
+
 else{
     $status="UU";
 }
@@ -60,28 +63,5 @@ else{
 }
 // faire un insert id dans user if il clique sur abonnement
 
-if(isset($_POST)) {
 
-    $section = 'monabonnement';
-
-    $status;
-
-    if (isset($_POST)) {
-
-        if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
-            header("Location: index.php?cible=monabonnement");
-
-        }
-
-        else
-            {
-
-            header("Location: index.php?cible=AbonnementPlusieursMaisons");
-            header("Location: index.php?cible=monabonnement");
-        };
-
-
-    }
-    header("Location: index.php?cible=monabonnement");
-}
 ?>
