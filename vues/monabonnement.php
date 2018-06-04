@@ -10,49 +10,52 @@ require ('vues/header_'.$status.'.php');
 ?>
 
 
+<h1>Mon Abonnement</h1>
 
-<h1>
-Mon Abonnement
-</h1>
-
-<h2>
-        Pack une maison
-</h2><br>
-
-
-    <BR>
-
-    <h3 class="temperature">
-        Capteur de Température : <?php echo ($i) ?>
-    </h3>
-
-    <h3 class="movement">
-        Capteur de Mouvement : <?php echo ($j) ?>
-    </h3>
+    <h2>
+<?php
+if (findUserByIdInSubscription($bdd,$_SESSION['userId'][0])==1){echo ("Pack une maison");}
+else { echo("Pack plusieurs maisons");} ?>
+    </h2>
 
 
-<section>
+<div class="display-houses">
 
-    <form class="formulairemonabonnement" method="post">
-        <div class="elementsformulairemonabonnement">
+    <ul class="my-house-list">
+        <?php foreach ($myHouses as $house){?>
+            <li>
+                <?php$sensorTemperatureInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],2);
+                $sensorMouvementInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],3);
+                $i=$i+count($sensorTemperatureInHouse);
+                $j=$j+count($sensorMouvementInHouse);?>
 
-            <h5>
-                Alarme
-            </h5>
+                <h3>
+                    <?php echo ($house['name']);?>
+                </h3>
+                <h4 class="temperature">
+                    Capteur de Température : <?php echo ($i) ?>
+                </h4>
 
+                <h4 class="movement">
+                    Capteur de Mouvement : <?php echo ($j) ?>
+                </h4>
 
-            <label> Microphone </label>
-            <input type="checkbox" name="micro" placeholder="micro"> <br>
-            <label> Détecteur de mouvement</label>
-            <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
-            <label>Caméra</label>
-            <input type ="checkbox" name="Caméra"> <br>
+                <section>
+                    <form class="formulairemonabonnement" method="post">
+                        <div class="elementsformulairemonabonnement">
+                            <h5>Alarme</h5>
+                            <label> Microphone </label>
+                            <input type="checkbox" name="micro" placeholder="micro"> <br>
+                            <label> Détecteur de mouvement</label>
+                            <input type="checkbox" name ="détecteurmouvement" placeholder="détecteurmouvement"><br>
+                            <label>Caméra</label>
+                            <input type ="checkbox" name="Caméra"> <br>
+                    </form>
+                </section>
+            </li>
+        <?php } ?>
+    </ul>
 
+</div>
 
-
-
-    </form>
-
-</section>
-
-<?php require('footer.php'); ?>
+<?php require ('vues/footer.php'); ?>

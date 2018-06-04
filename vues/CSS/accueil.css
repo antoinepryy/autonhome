@@ -33,7 +33,7 @@
     background-color: lightgray;
     justify-content: center;
     text-align: center;
-    height: 200px;
+    height: 250px;
     margin-bottom: 2%;
     width: 47%;
 }
@@ -50,9 +50,9 @@
     background-color: lightgray;
 }
 
-.assistance p,.faq p{
-    margin-right: 7%;
-    margin-left: 7%;
+.assistance p{
+    width: 60%;
+    margin: auto;
 }
 
 .form-container{
@@ -77,12 +77,14 @@
     justify-content: flex-start;
     position: absolute;
     right: 0;
+    top: 46%;
     margin-right: 3.5%;
-    margin-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
-    height: 58.5%;
+    height: 345px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .my-house-state input[type="checkbox"]
@@ -111,5 +113,30 @@
     font-size: 17px;
 }
 
+.logo_Assistance{
+    height: 50%;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    margin-top: 4.7%;
+    margin-bottom: 1%;
+
+}
+
+.logo_FAQ{
+    height: 50%;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
 
 

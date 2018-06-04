@@ -20,7 +20,7 @@ require ('vues/header_'.$status.'.php');
                 Etat
             </th>
             <th>
-                Numéro de série
+                Socket
             </th>
             <th>
                 ID chambre
@@ -33,6 +33,7 @@ require ('vues/header_'.$status.'.php');
         <?php
         foreach ($list as $element) {
             ?>
+
             <tr>
                 <td>
                     <?php echo($element["ID"]); ?>
@@ -44,7 +45,7 @@ require ('vues/header_'.$status.'.php');
                     <?php echo($element["state"]); ?>
                 </td>
                 <td>
-                    <?php echo($element["serial"]); ?>
+                    <?php echo($element["cardNumber"]." / ".$element["objectNumber"]); ?>
                 </td>
                 <td>
                     <?php echo($element["id_room"]); ?>

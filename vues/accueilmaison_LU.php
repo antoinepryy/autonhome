@@ -8,9 +8,9 @@
 <link rel="stylesheet" type="text/css" href="vues/CSS/accueil_LU.css"/>
 <section class="my-house-state">
 
-        <select name="house" class="house-choice">
-            <option value="<?php echo ($id_residency); ?>" selected> <?php echo ($name); ?> </option>
-        </select>
+        <section name="house" class="house-choice">
+            <?php echo ($name); ?>
+        </section>
     <h3>
         Etat de votre maison
     </h3>
