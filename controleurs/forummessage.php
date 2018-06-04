@@ -16,6 +16,9 @@ if(!function_exists("importAllSessionsAndModels")){
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
+    $section = 'forumMessage';
+    $value = getInfos($bdd, $_GET["id"]);
+    $text = getMessages($bdd, $_GET["id"]);
 }
 elseif (isLoggedAsUser()){
     $status="LU";;
