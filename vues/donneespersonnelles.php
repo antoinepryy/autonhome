@@ -43,20 +43,6 @@ require ('vues/header_'.$status.'.php');
     </p>
 </div>
 
-<div class="partiecadreassistanceFAQ">
-    <div class="cadreassistance">
-        <img class="logo_Assistance" src="ressources/pictures/logo_Assistance.png" title="logo_Assistance" alt="logo_Assistance">
-        <h2 class="titleassistance">Assistance</h2>
-        <p class="textecadreassistance">Une assistance ouverte 24h/24 et 7j/7 pour vous accompagner sur la prise en main et l'utilisation d'Autonhome</p>
-    </div>
-
-    <div class="cadreFAQ">
-        <img class="logo_FAQ" src="ressources/pictures/logo_FAQ.png" title="logo_FAQ" alt="logo_FAQ">
-        <h2 class="titleFAQ">FAQ</h2>
-        <p class="textecadreFAQ">La foire à questions d'Autonhome</p>
-    </div>
-</div>
-
 
 <?php
 
