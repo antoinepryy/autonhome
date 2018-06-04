@@ -22,7 +22,4 @@ require ('vues/header_'.$status.'.php');
 </br>
 
 </section>
-<?php
-
-require ('vues/footer.php');
-?>
+<?php require ('vues/footer.php'); ?>
