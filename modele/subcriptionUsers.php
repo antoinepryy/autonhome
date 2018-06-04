@@ -38,7 +38,10 @@ function joinIdUserSubscription(PDO $bdd){
 }
 
 
-function createSubsciption(PDO $bdd, $data){
+function createSubscription(PDO $bdd, $data){
+    $beginningDate = date('Y-m-d H:i:s');
+    $endingDate=date("Y-m-d",strtotime("+365days", strtotime($beginningDate)));
+
     $statement = $bdd->prepare('INSERT INTO `subscription_user` 
     (`ID`,
     `id_subscription`,
@@ -48,14 +51,32 @@ function createSubsciption(PDO $bdd, $data){
     VALUES
     (NULL,
     :id_subscription ,
-    NULL,
-    NULL,
-    :id_user,');
-    $statement->bindParam(":id_subcription", $data["id_subcription"]);
+    :beginningDate,
+    :endingDate,
+    :id_user)');
+    $statement->bindParam(":id_subscription", $data["id_subscription"]);
+    $statement->bindParam("beginningDate",$beginningDate);
+    $statement->bindParam("endingDate",$endingDate);
     $statement->bindParam(":id_user", $data["id_user"]);
     $statement->execute();
 
 }
+
+function GetHour(){
+    $beginningDate = date('Y-m-d H:i:s');
+    $endingDate=date("Y-m-d",strtotime("+365days", strtotime($beginningDate)));
+    $statement = $bdd -> prepare('SELECT beginningDate, endingDate FROM subscription_user');
+    $statement->bindParam(':beginningDate', $beginningDate);
+    $statement->bindParam(':endingDate',$endingDate);
+    $Hour = $statement->fetchAll();
+    return($Hour);
+}
+
+
+
+
+
+
 
 function deleteInscription(PDO $bdd){
 
