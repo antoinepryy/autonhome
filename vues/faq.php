@@ -64,8 +64,37 @@ require ('vues/header_'.$status.'.php');
             Sélectionnez que vous en êtes le locataire.</br>
             Vous devrez renseigner le code qui vous a été transmis par votre propriétaire.</br>
         </p>
+        <p class="question">
+            Question 5 : Comment puis-je souscrire à un abonnement ?  </br>
+        </p>
 
+        <p class="réponse">
 
+            Après avoir créé votre compte, rendez-vous dans l'onglet Mon abonnement</br>
+            Choisissez l'abonnement auquel vous souhaitez souscrire.</br>
+            Une facture ainsi qu'une autorisation de débit automatique mensuel vous seront envoyés à votre adresse de facturation.</br>
+        </p>
+        <p class="question">
+            Question 6 : Comment puis-je ajouter une pièce dans une maison ?  </br>
+        </p>
+
+        <p class="réponse">
+
+            Rendez-vous dans l'onglet Ma Maison. Cliquez sur la maison dans laquelle vous voulez ajouter une pièce.</br>
+            Cliquez sur le bouton Ajouter une pièce.</br>
+            Vous devrez renseigner le type de pièce ainsi que son nom.</br>
+        </p>
+        <p class="question">
+            Question 7 : Comment ajouter un capteur dans une pièce ?  </br>
+        </p>
+
+        <p class="réponse">
+
+            Rendez-vous dans l'onglet Ma maison, sélectionnez votre maison puis la pièce dans laquelle vous voulez ajouter le capteur.</br>
+            Choisissez le capteur que vous souhaitez ajouter.</br>
+            Une facture ainsi qu'une demande de rendez-vous vous seront envoyés à votre adresse de facturation.</br>
+            A l'issue du rendez-vous programmé, un de nos techniciens viendra vous installer le (ou les) capteur(s). </br>
+        </p>
 
     </section>
 
