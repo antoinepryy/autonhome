@@ -7,6 +7,6 @@ function lightRoomChange(id) {
 
         }
     }
-    xmlhttp.open("GET", "././controleurs/AJAX/SendFrame.php?command=modifyAll&id=" + id + "&value=" + checkbox.checked, true);
+    xmlhttp.open("GET", "././controleurs/AJAX/SendFrame.php?command=modifyAll&idRoomType=6&&id=" + id + "&value=" + checkbox.checked, true);
     xmlhttp.send();
 }

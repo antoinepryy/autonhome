@@ -62,9 +62,10 @@ function changeEffectorAction ($bdd,$id,$action){
     $effectorStatement->execute();
 }
 
-function changeRoomEffectorAction ($bdd,$id_room,$action){
-    $roomEffectorStatement = $bdd->prepare ('UPDATE effector SET action= :action WHERE id_room= :id_room');
+function changeRoomEffectorAction ($bdd,$id_room,$action,$id_effectorType){
+    $roomEffectorStatement = $bdd->prepare ('UPDATE effector SET action= :action WHERE id_room= :id_room AND id_effectorType= :id_effectorType');
     $roomEffectorStatement -> bindParam(':action', $action);
     $roomEffectorStatement -> bindParam(':id_room',$id_room);
+    $roomEffectorStatement -> bindParam('id_effectorType',$id_effectorType);
     $roomEffectorStatement -> execute();
 }

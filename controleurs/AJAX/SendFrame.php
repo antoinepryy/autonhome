@@ -15,7 +15,8 @@ switch ($_REQUEST['command']){
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
     case "modifyAll":
-        changeRoomEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+        var_dump($_REQUEST);
+        changeRoomEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF",$_REQUEST['idRoomType']);
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
