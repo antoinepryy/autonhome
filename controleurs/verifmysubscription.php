@@ -14,32 +14,41 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-if(isLoggedAsAdmin()){
-    $status="AD";
-}
-elseif (isLoggedAsUser()){
-    $status="LU";
-    if(isset($_POST)) {
+
+
+if(isset($_POST)) {
+
+
+    if (isLoggedAsAdmin()) {
+        $status = "AD";
+    } elseif (isLoggedAsUser()) {
+        $status = "LU";
+        if (isset($_POST)) {
             if ($_POST['choixPackAbonnement'] == 'packUneMaison') {
-                $data=array(
+                $data = array(
                     'ID=>NULL',
-                    'id_subscription'=>1,
-                    'id_user'=>$_SESSION['userId']);
+                    'id_subscription' => 1,
+                    'id_user' => $_SESSION['userId']);
                 createSubscription($bdd, $data);
                 header("Location: index.php?cible=monabonnement");
-            }
-            else{
-                $data=array(
+
+            } else {
+
+
+                header("Location: index.php?cible=AbonnementPlusieursMaisons");
+
+
+                $data = array(
                     'ID=>NULL',
-                    'id_subscription'=>2,
-                    'id_user'=>$_SESSION['userId']);
+                    'id_subscription' => 2,
+                    'id_user' => $_SESSION['userId']);
                 createSubscription($bdd, $data);
                 header("Location: index.php?cible=monabonnement");
+
             }
         }
+    } else {
+        $status = "UU";
     }
-
-else{
-    $status="UU";
 }
 ?>

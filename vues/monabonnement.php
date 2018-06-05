@@ -24,7 +24,10 @@ else { echo("Pack plusieurs maisons");} ?>
     <ul class="my-house-list">
         <?php foreach ($myHouses as $house){?>
             <li>
-                <?php$sensorTemperatureInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],2);
+                <?php
+                $i=0;
+                $j=0;
+                $sensorTemperatureInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],2);
                 $sensorMouvementInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],3);
                 $i=$i+count($sensorTemperatureInHouse);
                 $j=$j+count($sensorMouvementInHouse);?>

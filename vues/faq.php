@@ -95,6 +95,25 @@ require ('vues/header_'.$status.'.php');
             Une facture ainsi qu'une demande de rendez-vous vous seront envoyés à votre adresse de facturation.</br>
             A l'issue du rendez-vous programmé, un de nos techniciens viendra vous installer le (ou les) capteur(s). </br>
         </p>
+        <p class="question">
+            Question 9 : Comment supprimer une pièce ?  </br>
+        </p>
+
+        <p class="réponse">
+
+            Rendez-vous dans l'onglet Ma maison, sélectionnez votre maison puis la catégorie de pièce dans laquelle se trouve la pièce à supprimer.</br>
+            Cliquez sur le bouton Supprimer une pièce. Sélectionner la pièce voulue et validez</br>
+        </p>
+        <p class="question">
+            Question 10 : Qui contacter en cas de problème ?  </br>
+        </p>
+
+        <p class="réponse">
+
+            Rendez-vous dans l'onglet Assistance : vous y trouverez tous les moyens de nous joindre.</br>
+            Vous pouvez également cliquer sur l'icone Forum situé en dessous du bouton Ma Maison. Sur ce Forum, vous pourrez poster un message. Les internautes ou un administrateur vous répondrons.</br>
+        </p>
+
 
     </section>
 

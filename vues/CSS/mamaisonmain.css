@@ -44,9 +44,38 @@
     margin-top: 2%;
 }
 
+.graphs{
+    background-color: white;
+    border : 1px solid black;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 25%;
+    height: 45%;
 
+}
 
+.graphs .temperature-sensors{
+    display: flex;
+    margin: 3%;
+}
 
+.graphs .heat-sensors{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 3%;
+}
+
+.graphs p{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.graphs img{
+    height: 40%;
+    width: 40%;
+}
 
 
 .modal {
