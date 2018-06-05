@@ -41,9 +41,11 @@
     </h4>
 
     <form class="light" method="post" action="index.php?cible=accueil">
-        <?php foreach ($myRooms as $roomInResidence) { ?>
+        <?php foreach ($myRooms as $roomInResidence) {
+            ?>
+
             <label><?php echo ( $roomInResidence['name']);  ?></label>
-                    <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" /><br />
+                    <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="<?php echo $roomInResidence['id'] ?>" onchange="lightRoomChange(this.id)" /><br />
                 <?php } ?>
 
     </form>
