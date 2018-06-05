@@ -12,7 +12,6 @@
     background-size: 100%;
 }
 
-
 .products{
     background-color: lightgray;
     justify-content: center;
@@ -22,6 +21,25 @@
     margin-left: 3%;
     margin-bottom: 2%;
     font-size: 110%;
+}
+
+.products .image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.products img{
+    border: 1px solid black;
+    width: 30%;
+}
+
+.products .image2 img{
+    width: 20%;
+}
+
+.products p{
+    font-size: 100%;
 }
 
 ::placeholder{
@@ -51,7 +69,6 @@
 }
 
 .assistance p{
-    width: 100%;
     height: auto;
     margin: auto;
 }
@@ -78,7 +95,6 @@
     justify-content: flex-start;
     position: absolute;
     right: 0;
-    top: 46%;
     margin-right: 3.5%;
     padding-left: 1%;
     padding-right: 1%;
@@ -116,26 +132,14 @@
 
 .logo_Assistance{
     height: 50%;
-
-
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    margin-top: 4.7%;
-    margin-bottom: 1%;
-
+    margin : auto;
 }
 
 .logo_FAQ{
     height: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    margin-top: 2%;
-    margin-bottom: 1%;
+    margin: auto;
 }
 
 

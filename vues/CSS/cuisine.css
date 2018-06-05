@@ -7,14 +7,14 @@ h1{
     padding : 1%;
     border : 1px solid black;
     margin-right: 3%;
-    margin-left: 3%;
+    margin-left: 1%;
     display: flex;
     flex-direction: column;
 }
 
 .cuisine-list form{
     background-image: url("../../ressources/pictures/cuisine2.jpg");
-    width: 200%;
+    width: 170%;
     height: auto;
     padding: 2%;
     border : 1px solid black;
