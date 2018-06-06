@@ -17,9 +17,11 @@ if(!function_exists("importAllSessionsAndModels")){
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
+    $data = dataTemperature($bdd);
 }
 elseif (isLoggedAsUser()){
     $status="LU";
+    $data = dataTemperature($bdd);
 }
 else{
     $status="UU";
