@@ -59,7 +59,7 @@ function findAllDevicesByRoom2($bdd, $idRoom){
 
     function getDataFromRoomId($bdd,$idRoom){
         $sensors = $bdd->prepare('
-            SELECT data.ID,name, dateTime, data.value, state, cardNumber, objectNumber
+            SELECT data.ID,name, dateTime, data.value, state, data.id_sensor,cardNumber, objectNumber
             FROM data
               INNER JOIN
               (

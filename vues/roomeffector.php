@@ -21,7 +21,7 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[0] as $sensor){?>
         <ul>
-            <li><?php echo($sensor['name'].' : '.$sensor['value']).' : '.$sensor['ID'];?><a href=<?php echo("index.php?cible=charts&sensor=".$sensor['ID']);?>>Voir statistiques</a></li>
+            <li><?php echo($sensor['name'].' : '.$sensor['value']).' : '.$sensor['id_sensor'];?><a href=<?php echo("index.php?cible=charts&sensor=".$sensor['ID']);?>>Voir statistiques</a></li>
         </ul>
         <?php }
         ?>
