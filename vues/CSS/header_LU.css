@@ -11,7 +11,7 @@ header a{
 
 }
 
-.ma-maison{
+.ma-maison a{
     display: flex;
     background-color: lightgrey;
     border: 1px solid black;
@@ -29,11 +29,9 @@ header a{
 
 
 header nav ul {
-    display: block;
     display: flex;
     flex-direction: row;
     border: 0.5px solid black;
-
 }
 
 header nav a li{
@@ -56,6 +54,11 @@ header nav a{
 
 header nav a :hover{
     background-color: #006699;
+    box-shadow: 2px 2px;
+}
+
+header .ma-maison :hover{
+    background-color: #ff9900;
     box-shadow: 2px 2px;
 }
 
