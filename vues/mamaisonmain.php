@@ -78,7 +78,6 @@ require ('vues/header_'.$status.'.php'); ?>
     </section>
 
 
-
     <section>
         <button id="myBtn">Ajouter une pièce</button>
 

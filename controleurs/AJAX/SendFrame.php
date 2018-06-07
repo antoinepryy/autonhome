@@ -14,9 +14,24 @@ switch ($_REQUEST['command']){
         changeEffectorAction($bdd, $_REQUEST['id'], $_REQUEST['value']=='true'?"ON":"OFF");
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
-    case "VinceP":
+
+    case "modifyAllLight":
+        changeRoomLightEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
+    case "modifyAllFan":
+        changeRoomFanEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
+            echo('fans');
+        break;
+
+    case "modifyAllShutter":
+        changeRoomShutterEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
+        echo('shutter');
+        break;
 }
+
 
 
