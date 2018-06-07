@@ -2,12 +2,17 @@
 /**
  * Created by IntelliJ IDEA.
  * User: amepi
- * Date: 04/06/2018
- * Time: 21:55
+ * Date: 07/06/2018
+ * Time: 09:39
  */
+/**
+ * Created by IntelliJ IDEA.
+ * User: amepi
+ * Date: 25/05/2018
+ * Time: 16:40
+ */
+$section = 'forum';
 
-
-$section = 'charts';
 if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
@@ -17,16 +22,13 @@ if(!function_exists("importAllSessionsAndModels")){
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
-    $data = getData($bdd,$_GET["sensor"]);
 }
 elseif (isLoggedAsUser()){
     $status="LU";
-    $data = getData($bdd,$_GET["sensor"]);
-    $value = getValue($data);
-    $date = getDateTime($data);
 }
 else{
     $status="UU";
 }
 
-include('vues/charts.php');
+
+include('vues/forum.php');
