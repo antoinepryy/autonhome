@@ -2,8 +2,31 @@
     text-align: center;
 }
 
-h3,.intro, .article1, .article2, .article3, .article4,.article5 {
+h3,.intro {
     width : 90%;
     margin : auto;
     text-align: justify;
+}
+
+.button{
+    margin-left: 9%;
+    border: 2px solid black;
+    font-size: 25px;
+}
+
+.button:active /* Quand le visiteur clique sur le l'article */
+{
+    background-color: #FFCC66;
+}
+
+.button:hover /* Quand on pointe sur un article */
+{
+    border: 2px solid red;
+}
+
+#article1, #article2, #article3, #article4, #article5{
+    display: none;
+    margin-left: 10%;
+}
+
 }
