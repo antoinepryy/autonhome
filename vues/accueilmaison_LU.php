@@ -16,13 +16,6 @@
         Etat de votre maison
     </h3>
 
-    <div>
-        <label>Alarme</label>
-        <input type="checkbox"/><br />
-        <label >Température</label>
-        <input type="number" step="0.5"/><br/>
-    </div>
-
     <h4>
         Lumières :
     </h4>
