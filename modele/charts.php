@@ -7,8 +7,10 @@
  */
 include('connexion.php');
 
-function dataTemperature(PDO $bdd) {
-    $statement = $bdd->prepare('SELECT value, dateTime FROM data WHERE id_sensor=2');
+function getData(PDO $bdd, $id_sensor)
+{
+    $statement = $bdd->prepare('SELECT value,dateTime FROM data WHERE id_sensor=:id_sensor');
+    $statement->bindParam(":id_sensor", $id_sensor);
     $statement->execute();
-    return $statement->fetchAll();
+    return ($statement->fetchAll());
 }
