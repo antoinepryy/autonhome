@@ -78,19 +78,6 @@ require ('vues/header_'.$status.'.php'); ?>
     </section>
 
 
-    <section class="graphs">
-        <div class="temperature-sensors">
-            <img src="ressources/pictures/chambre2.jpg">
-            <p>Capteur de Température</p>
-        </div>
-        <div class="heat-sensors">
-            <img src="ressources/pictures/chambre2.jpg">
-            <p>Capteur de Chaleur</p>
-        </div>
-
-
-    </section>
-
     <section>
         <button id="myBtn">Ajouter une pièce</button>
 

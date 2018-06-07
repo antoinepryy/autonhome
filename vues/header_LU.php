@@ -22,11 +22,12 @@
 
 <header>
 
-        <a href="index.php?cible=mamaison" class="ma-maison">
+    <div class="ma-maison">
+        <a href="index.php?cible=mamaison">
             <div>
                 Ma maison
             </div>
-
+    </div>
         </a>
             <a href="index.php?cible=indexforum" ><img src="ressources/logo/forum.jpg" class="forum-logo"/></a>
 
