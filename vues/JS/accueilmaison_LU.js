@@ -1,3 +1,4 @@
+
 function lightRoomChange(id) {
 
     var checkboxLight = document.getElementById("lightCheckbox");

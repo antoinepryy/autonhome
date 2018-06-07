@@ -16,6 +16,7 @@ require ('vues/header_'.$status.'.php');
     </BR>
 
     <div class="descriptionsubscription"> PACK UNE MAISON:<br/>
+        
         Installation des capteurs de votre choix dans une maison + 15 euros / mois pour l'utilisation de la plateforme<br/>
 
 
