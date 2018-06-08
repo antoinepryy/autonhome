@@ -38,6 +38,18 @@
     margin-left: 60%;
 }
 
+.shutter input[type="checkbox"]{
+    width: 10%;
+    height: auto;
+    margin-left: 60%;
+}
+
+.fan input[type="checkbox"]{
+    width: 10%;
+    height: auto;
+    margin-left: 60%;
+}
+
 .my-house-state h3{
     font-weight: bold;
 }
