@@ -25,13 +25,6 @@ elseif (isLoggedAsUser()){
             $sensorMouvementInHouse=getAllTypeSensorsFromResidence($bdd,$house['ID'],3);
             $i=$i+count($sensorTemperatureInHouse);
             $j=$j+count($sensorMouvementInHouse);
-
-
-
-        include('vues/monabonnement.php');
-
-            include ('vues/monabonnement.php');
-
         }
 
         include ('vues/monabonnement.php');
