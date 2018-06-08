@@ -23,12 +23,8 @@
 <header>
 
     <div class="ma-maison">
-        <a href="index.php?cible=mamaison">
-            <div>
-                Ma maison
-            </div>
+        <a href="index.php?cible=mamaison">Ma maison</a>
     </div>
-        </a>
             <a href="index.php?cible=indexforum" ><img src="ressources/logo/forum.jpg" class="forum-logo"/></a>
 
     <div class="header-title">

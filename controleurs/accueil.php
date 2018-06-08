@@ -20,16 +20,20 @@ if(isLoggedAsAdmin()){
 }
 elseif (isLoggedAsUser()){
     $myHouses = getAllUserHouses($bdd, $_SESSION['userId']);
-    if (!isset($_POST['house'])){
+    if (empty($myHouses[0])){
+        $houseName="NULL";
+        $myRooms=array();
+    }
+    elseif (!isset($_POST['house'])){
         $id_residency=$myHouses[0][0][0];
         $houseName=$myHouses[0][0][1];
+        $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
     }
     else {
         $id_residency=$_POST['house'];
         $houseName=getHouseInfoFromId($bdd,$id_residency)[0];
+        $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
     }
-    $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
-
     $status="LU";
 }
 else{

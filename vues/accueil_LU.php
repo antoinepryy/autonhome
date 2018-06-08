@@ -33,42 +33,43 @@
         Lumières :
     </h4>
 
-    <form class="light" method="post" action="index.php?cible=accueil">
-        <?php foreach ($myRooms as $roomInResidence) {
-            ?>
 
-            <label><?php echo ( $roomInResidence['name']);  ?></label>
-                    <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="lightCheckbox" onchange="lightRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
-                <?php } ?>
+        <form class="light" method="post" action="index.php?cible=accueil">
+            <?php foreach ($myRooms as $roomInResidence) {
+                ?>
 
-    </form>
+                <label><?php echo ( $roomInResidence['name']);  ?></label>
+                        <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="lightCheckbox" onchange="lightRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
+                    <?php } ?>
 
-    <h4>
-        Volets :
-    </h4>
+        </form>
 
-    <form class="shutter" method="post" action="index.php?cible=accueil">
-        <?php foreach ($myRooms as $roomInResidence) {
-            ?>
+        <h4>
+            Volets :
+        </h4>
 
-            <label><?php echo ( $roomInResidence['name']);  ?></label>
-            <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="shutterCheckbox" onchange="shutterRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
-        <?php } ?>
+        <form class="shutter" method="post" action="index.php?cible=accueil">
+            <?php foreach ($myRooms as $roomInResidence) {
+                ?>
 
-    </form>
+                <label><?php echo ( $roomInResidence['name']);  ?></label>
+                <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="shutterCheckbox" onchange="shutterRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
+            <?php } ?>
 
-    <h4>
-        Ventilateurs :
-    </h4>
+        </form>
 
-    <form class="fan" method="post" action="index.php?cible=accueil">
-        <?php foreach ($myRooms as $roomInResidence) {
-            ?>
+        <h4>
+            Ventilateurs :
+        </h4>
 
-            <label><?php echo ( $roomInResidence['name']);  ?></label>
-            <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="fanCheckbox" onchange="fanRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
-        <?php } ?>
+        <form class="fan" method="post" action="index.php?cible=accueil">
+            <?php foreach ($myRooms as $roomInResidence) {
+                ?>
 
-    </form>
+                <label><?php echo ( $roomInResidence['name']);  ?></label>
+                <input type="checkbox" name="<?php echo ( $roomInResidence['name']);  ?>" id="fanCheckbox" onchange="fanRoomChange(<?php echo $roomInResidence['id'] ?>)" /><br />
+            <?php } ?>
+
+        </form>
 
 </section>
