@@ -24,9 +24,18 @@ if(isset($_POST)){
 
         $cryptedPassword = password_hash($_POST['passNew'], PASSWORD_DEFAULT);
         updatePassword($bdd, $_SESSION['userId'], $cryptedPassword);
+        header("Location: index.php?cible=accueil");
+    }
+    elseif (!(password_verify($_POST['pass'], $infoUser['password']))) {
+        header("Location: index.php?cible=modifiermotdepasse&alertcode=1");
     }
 
+
+    elseif(!($_POST['passNew'] == $_POST['passNewPlain'])) {
+        header("Location: index.php?cible=modifiermotdepasse&alertcode=2");
+    }
+
+
+
+
 }
-
-header("Location: index.php?cible=accueil");
-
