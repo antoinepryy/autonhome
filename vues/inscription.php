@@ -9,7 +9,20 @@ require ('vues/header_UU.php');
 
 <section class="principal">
     <?php
-    if (isset($alerte)){
+    if (isset($_GET["alertcode"])){
+        switch ($_GET["alertcode"]){
+            case "1":
+                $alerte='Cette addresse mail est déjà enregistrée !';
+                break;
+            case "2":
+                $alerte='Les mots de passe ne correspondent pas !';
+                break;
+            case "3":
+                $alerte='Les addresses email ne correspondent pas !';
+                break;
+        }
+
+
         echo AfficheAlerte($alerte);
     } ?>
     <form method="POST" action="index.php?cible=verifinscriptionform">
@@ -18,9 +31,10 @@ require ('vues/header_UU.php');
             <section class="identity">
                 <input type="text"  name="lastName" placeholder="Nom" required/>
                 <input type="text"  name="firstName" placeholder="Prénom" required/>
-
                 <input type="email" name="mail" placeholder="Adresse mail" required/>
+                <input type="email" name="mailPlain" placeholder="Confirmer adresse mail" required/>
                 <input type="password"  name="password" placeholder="Mot de passe" required/>
+                <input type="password"  name="passwordPlain" placeholder="Confirmer mot de passe" required/>
                 <input type="tel"  name="phoneNumber" placeholder="Téléphone" required/>
             </section>
 
