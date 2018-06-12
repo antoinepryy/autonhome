@@ -53,6 +53,9 @@ require ('vues/header_'.$status.'.php');
                 <td>
                     <?php echo($element["id_effectorType"]); ?>
                 </td>
+                <td>
+                    <input type="submit" id="<?php echo $element["ID"] ?>" value="Modifier" onclick="displayModalOfButtonPressed(this.id,)" />
+                </td>
             </tr>
 
             <?php
@@ -63,6 +66,10 @@ require ('vues/header_'.$status.'.php');
 
 
     </table>
+
+    <div id="myModal" class="modal">
+
+    </div>
 
 
 
