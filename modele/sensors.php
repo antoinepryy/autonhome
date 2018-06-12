@@ -147,16 +147,28 @@ function sensorStateFromsensortype(PDO $bdd){
 
 }
 
-function getDeviceIdFromSocket($bdd, $deviceType, $object, $number){
+function getDeviceIdFromSocket($bdd, $deviceType, $card, $object){
     if ($deviceType == 'sensor'){
         $st = $bdd -> prepare('
         SELECT ID FROM sensor 
         where cardNumber = :card 
         and objectNumber = :obj
         ');
-        $st -> bindParam('');
+        $st -> bindParam(':card', $card);
+        $st -> bindParam(':obj', $object);
+        $st->execute();
+        return $st->fetch();
     }
     elseif($deviceType == 'effector'){
+        $st = $bdd -> prepare('
+        SELECT ID FROM effector
+        where cardNumber = :card 
+        and objectNumber = :obj
+        ');
+        $st -> bindParam(':card', $card);
+        $st -> bindParam(':obj', $object);
+        $st->execute();
+        return $st->fetch();
 
     }
 };
@@ -164,25 +176,30 @@ function getDeviceIdFromSocket($bdd, $deviceType, $object, $number){
 function readFrame($bdd, $frame){
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
     sscanf($frame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+
     var_dump($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec);
-    if ($t == 1){
+
+    $date = $year.$month.$day." ".$hour.$min.$sec;
+
+    $id = getDeviceIdFromSocket($bdd, "sensor", $a, $x);
+
+
+    if ($t == 1 && $id!=false){
         $statement = $bdd->prepare('INSERT 
         INTO data
         (`ID`,
-        `cardNumber`,
-        `objectNumber`,
-        `name`, 
-        `state`,
-        `id_room`,
-        `id_sensortype`)
+        `dateTime`,
+        `value`,
+        `id_sensor`)
         VALUES
         (NULL,
-        NULL,
-        NULL,
-        :name, 
-        :state,
-        :id_room,
-        :id_sensortype)');
+        :dateTime,
+        :value,
+        :id_sensor)');
+        $statement->bindParam(":dateTime",$date);
+        $statement->bindParam(":value",$v);
+        $statement->bindParam("id_sensor", $id);
+
 
         return true;
     }
