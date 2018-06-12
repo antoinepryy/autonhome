@@ -61,6 +61,14 @@ function createSensor(PDO $bdd, $data){
     $statement->execute();
 }
 
+    function updateSocketSensor($bdd,$data){
+        $statement = $bdd->prepare('UPDATE sensor SET cardNumber = :CardNumber, objectNumber = :ObjectNumber WHERE ID = :id ');
+        $statement->bindParam(":CardNumber", $data["cardnumber"]);
+        $statement->bindParam(":ObjectNumber",$data["objectnumber"]);
+        $statement->bindParam(":id",$data['id']);
+        $statement->execute();
+}
+
 
 function getAllSensorsFromRoom(PDO $bdd,$idroom){
     $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID WHERE id_room = :idroom' );
@@ -191,6 +199,7 @@ function readFrame($bdd, $frame){
     }
 
 }
+
 
 
 

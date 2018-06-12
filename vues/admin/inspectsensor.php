@@ -33,6 +33,7 @@ require ('vues/header_'.$status.'.php');
     <?php
     foreach ($list as $element) {
         ?>
+
         <tr>
             <td>
             <?php echo($element["ID"]); ?>
@@ -52,16 +53,22 @@ require ('vues/header_'.$status.'.php');
             <td>
                 <?php echo($element["id_sensorType"]); ?>
             </td>
+            <td>
+                <input type="submit" id="<?php echo $element["ID"] ?>" value="Modifier" onclick="displayModalOfButtonPressed(this.id,)" />
+            </td>
+
         </tr>
 
         <?php
     }
     ?>
 
-
-
-
 </table>
+
+
+    <div id="myModal" class="modal">
+
+    </div>
 
 
 

@@ -54,6 +54,13 @@ function getAllEffectorFromRoomFromType ($bdd,$id_room,$id_type){
     return (array($roomEffectors));
 }
 
+function updateSocketEffector($bdd,$data){
+    $statement = $bdd->prepare('UPDATE effector SET cardNumber = :CardNumber, objectNumber = :ObjectNumber WHERE ID = :id ');
+    $statement->bindParam(":CardNumber", $data["cardnumber"]);
+    $statement->bindParam(":ObjectNumber",$data["objectnumber"]);
+    $statement->bindParam(":id",$data['id']);
+    $statement->execute();
+}
 
 function changeEffectorAction ($bdd,$id,$action){
     $effectorStatement = $bdd->prepare ('UPDATE effector SET action= :action WHERE id= :id');
