@@ -17,11 +17,11 @@ require ('vues/header_'.$status.'.php');
 
     <div class="descriptionsubscription"> PACK UNE MAISON:<br/>
         
-        Installation des capteurs de votre choix dans une maison + 15 euros / mois pour l'utilisation de la plateforme<br/>
+        Installation des capteurs de votre choix dans une maison facturée 70 euros + 15 euros / mois pour l'utilisation de la plateforme<br/>
 
 
         <br/>PACK PLUSIEURS MAISONS:<br/>
-        Installation des capteurs de votre choix dans plusieurs maisons + 20 euros/mois pour l'utilisation de la plateforme
+        Installation des capteurs de votre choix dans plusieurs maisons facturé 70 euros et 10 euros par maison supplémentaire + 20 euros/mois pour l'utilisation de la plateforme
 
     </div>
 

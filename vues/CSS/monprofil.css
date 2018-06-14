@@ -9,8 +9,10 @@ h1{
 
 
  .elementsformulairemonprofil{
+     display: block;
      margin: auto;
-     width: 30%;
+     width: 50%;
+     border-radius: 10px;
  }
 
  .valider{
@@ -18,7 +20,7 @@ h1{
  }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: flex; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -28,6 +30,7 @@ h1{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 /* Modal Content/Box */
@@ -36,12 +39,15 @@ h1{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 300px; /* Could be more or less, depending on screen size */
+    width: 700px; /* Could be more or less, depending on screen size */
+    height: 300px;
+    border-radius: 10px;
+    font-size: small;
 
 }
 
 .formulairemonprofil{
-    width: 100px;
+    width: 600px;
 }
 
 /* The Close Button */
@@ -69,4 +75,65 @@ section {
 
 section button{
     margin-bottom: 30px;
+}
+
+.Nom{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+
+.Prénom{
+    display: flex;
+    margin-left: 30%;
+    font-size:small;
+}
+.email{
+    display: flex;
+    margin-left: 30%;
+    font-size:small;
+
+}
+
+.Numérorue{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+.Numérotel{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+
+.addresse{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+.Ville{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+.codepostal{
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+}
+
+.Rue {
+    display: flex;
+    margin-left: 30%;
+    font-size: small;
+
+}
+
+.Numérotel, .Rue, .codepostal, .Ville, .email, .Numérorue, .Prénom, .Nom, .addresse{
+
+    text-align: justify;
+    position: absolute;
+    right: 50%;
+    margin-bottom: 30px;
+    font-family: "Berlin Sans FB";
 }
