@@ -61,6 +61,14 @@ function createSensor(PDO $bdd, $data){
     $statement->execute();
 }
 
+    function updateSocketSensor($bdd,$data){
+        $statement = $bdd->prepare('UPDATE sensor SET cardNumber = :CardNumber, objectNumber = :ObjectNumber WHERE ID = :id ');
+        $statement->bindParam(":CardNumber", $data["cardnumber"]);
+        $statement->bindParam(":ObjectNumber",$data["objectnumber"]);
+        $statement->bindParam(":id",$data['id']);
+        $statement->execute();
+}
+
 
 function getAllSensorsFromRoom(PDO $bdd,$idroom){
     $statement = $bdd->prepare('SELECT room.name , sensor.id_room FROM room INNER JOIN sensor ON sensor.id_room = room.ID WHERE id_room = :idroom' );
@@ -147,11 +155,43 @@ function sensorStateFromsensortype(PDO $bdd){
 
 }
 
+function getDeviceIdFromSocket($bdd, $deviceType, $object, $number){
+    if ($deviceType == 'sensor'){
+        $st = $bdd -> prepare('
+        SELECT ID FROM sensor 
+        where cardNumber = :card 
+        and objectNumber = :obj
+        ');
+        $st -> bindParam('');
+    }
+    elseif($deviceType == 'effector'){
+
+    }
+};
+
 function readFrame($bdd, $frame){
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
     sscanf($frame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
     var_dump($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec);
-    if (true){
+    if ($t == 1){
+        $statement = $bdd->prepare('INSERT 
+        INTO data
+        (`ID`,
+        `cardNumber`,
+        `objectNumber`,
+        `name`, 
+        `state`,
+        `id_room`,
+        `id_sensortype`)
+        VALUES
+        (NULL,
+        NULL,
+        NULL,
+        :name, 
+        :state,
+        :id_room,
+        :id_sensortype)');
+
         return true;
     }
     else{
@@ -159,6 +199,7 @@ function readFrame($bdd, $frame){
     }
 
 }
+
 
 
 

@@ -9,7 +9,7 @@ if(!function_exists("importAllSessionsAndModels")){
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
-if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName"]) && isset($_POST["lastName"])){
+if(isset($_POST["mail"]) && ($_POST["password"]==$_POST["passwordPlain"]) && ($_POST["mail"]==$_POST["mailPlain"])){
     if (createUser($bdd, $_POST)){
         $section = 'accueil';
         $status;
@@ -28,8 +28,16 @@ if(isset($_POST["mail"]) && isset($_POST["password"]) && isset($_POST["firstName
         $section='inscription';
         $alerte='Cette addresse mail est déjà enregistrée !';
         $status='UU';
-        header("Location: index.php?cible=inscription");
+        header("Location: index.php?cible=inscription&alertcode=1");
     }
+}
+elseif($_POST["password"] != $_POST["passwordPlain"]){
+    header("Location: index.php?cible=inscription&alertcode=2");
+
+}
+elseif ($_POST["mail"] != $_POST["mailPlain"]){
+    header("Location: index.php?cible=inscription&alertcode=3");
+
 }
 else{
     require ('erreur404.php');

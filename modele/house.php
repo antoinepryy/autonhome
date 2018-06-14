@@ -53,7 +53,6 @@ function linkRenter($bdd, $hashCode){
     $foundResidence = $statement->fetch();
 
     if ($foundResidence){
-
         $statement = $bdd->prepare('UPDATE residence SET 
         id_tenant = :idTenant
         WHERE 

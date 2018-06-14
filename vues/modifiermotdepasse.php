@@ -8,9 +8,19 @@
 
 
 require ('vues/header_'.$status.'.php');
-?>
 
-<link rel="stylesheet" type="text/css" href="vues/CSS/changerdemotdepasse.css"/>
+if (isset($_REQUEST['alertcode'])) {
+    switch ($_REQUEST['alertcode']){
+        case "1":
+            $alert= "mot de passe actuel n'est pas valide";
+            break;
+        case "2":
+            $alert= "Les nouveaux mots de passe ne correspondent pas";
+            break;
+    }
+
+    echo AfficheAlerte($alert);
+} ?>
 
 <section class="container-modifmdp">
     <h1 class="titlemodifiermotdepasse"> Modifier le mot de passe </h1>
@@ -34,4 +44,6 @@ require ('vues/header_'.$status.'.php');
     </form>
 </section>
 
+
 <?php require('footer.php'); ?>
+
