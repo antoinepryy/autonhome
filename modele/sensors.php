@@ -181,6 +181,14 @@ function getDeviceIdFromSocket($bdd, $deviceType, $card, $object){
     }
 };
 
+function getInfosFrameFromDeviceId($bdd, $id){
+    $statement = $bdd->prepare('select * from effector where ID=:id');
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+    $effector = $statement->fetch();
+    return $effector;
+}
+
 function readFrame($bdd, $frame){
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
     sscanf($frame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
@@ -203,8 +211,6 @@ function readFrame($bdd, $frame){
     $statement->execute();
 
 
-
-    var_dump($date);
 
     $id = getDeviceIdFromSocket($bdd, "sensor", $a, $x);
     if ($t == 1 && $id!=false){
