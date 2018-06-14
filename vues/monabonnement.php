@@ -14,8 +14,8 @@ require ('vues/header_'.$status.'.php');
 
     <h2>
 <?php
-if (findUserByIdInSubscription($bdd,$_SESSION['userId'][0])==1){echo ("Pack une maison");}
-else { echo("Pack plusieurs maisons");} ?>
+if (findUserByIdInSubscription($bdd,$_SESSION['userId'][0])==1){echo ("Mon Pack");}
+else { echo("Mon Pack");} ?>
     </h2>
 
 

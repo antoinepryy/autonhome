@@ -72,6 +72,12 @@ function GetHour(){
 
 
 
+//function GetHouruser(PDO $bdd){
+//    statement = $bdd-> prepare('SELECT beginningDate FROM subscription_user');
+//    $statement->bindParam('beginningDate',$beginningDate);
+//    $statement->execute();
+//
+//}
 
 
 
