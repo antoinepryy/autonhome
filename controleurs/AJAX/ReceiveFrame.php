@@ -10,6 +10,10 @@ if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les 
     include('controleurs/importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
+
+$lastDateInData = getLastData($bdd)['dateTime'];
+$lastDateConverted = substr($lastDateInData, 0,4).substr($lastDateInData, 5,2).substr($lastDateInData, 8,2).substr($lastDateInData, 11,2).substr($lastDateInData, 14,2).substr($lastDateInData, 17,2);
+
 $ch = curl_init();
 curl_setopt(
     $ch,
@@ -24,6 +28,12 @@ curl_close($ch);
 
 $data_tab = str_split($data,33);
 
+foreach ($data_tab as $key => $value){
+    $date = substr($value,19,33);
+    $booleanVerif = ($date == $lastDateConverted) ? 'true' : 'false';
+    var_dump($booleanVerif);
+}
+die();
 
 
 for($i=0, $size=count($data_tab); $i<$size; $i++) {
