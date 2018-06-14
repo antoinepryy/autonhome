@@ -9,6 +9,7 @@ if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les 
     include('importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
+
 $ch = curl_init();
 //curl_setopt(
 //    $ch,
@@ -20,7 +21,7 @@ $ch = curl_init();
 curl_setopt(
     $ch,
     CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=G10B&TRAME=1G10B123456789");
+    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=G10B&TRAME=1G10B12456789");
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);

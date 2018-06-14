@@ -10,8 +10,6 @@ function postActionTOR(id){
 
         }
     };
-
     xmlhttp.open("GET", "././controleurs/AJAX/SendFrame.php?command=modifyOne&id=" + id + "&value=" + checkbox.checked, true);
     xmlhttp.send();
-
 }
