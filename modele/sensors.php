@@ -190,8 +190,6 @@ function readFrame($bdd, $frame){
     $date = $year.$month.$day." ".$hour.$min.$sec;
 
     $id = getDeviceIdFromSocket($bdd, "sensor", $a, $x);
-
-
     if ($t == 1 && $id!=false){
         $statement = $bdd->prepare('INSERT 
         INTO data
@@ -207,7 +205,6 @@ function readFrame($bdd, $frame){
         $statement->bindParam(":dateTime",$date);
         $statement->bindParam(":value",$v);
         $statement->bindParam("id_sensor", $id);
-
 
         return true;
     }

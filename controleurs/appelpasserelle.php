@@ -14,6 +14,7 @@ $ch = curl_init();
 //    $ch,
 //    CURLOPT_URL,
 //    "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G10B");
+
 curl_setopt(
     $ch,
     CURLOPT_URL,
@@ -25,15 +26,6 @@ curl_close($ch);
 //echo "Raw Data:<br />";
 //echo("$data");
 
-$data_tab = str_split($data,33);
-for($i=0, $size=count($data_tab); $i<$size; $i++) {
-    if(strlen($data_tab[$i]) == 33){
-        $statusFrame = readFrame($bdd, $data_tab[$i]);
-    }
-    else{
-        break;
-    }
-}
 
 
 

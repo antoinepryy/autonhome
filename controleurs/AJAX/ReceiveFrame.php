@@ -7,7 +7,7 @@
  */
 
 if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les variables de sessions ainsi que des fcts de BDD
-    include('importAllSessionsAndModels.php');
+    include('controleurs/importAllSessionsAndModels.php');
     importAllSessionsAndModels();
 }
 $ch = curl_init();
