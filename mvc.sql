@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 04 juin 2018 à 15:18
+-- Généré le :  sam. 16 juin 2018 à 01:16
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -51,10 +51,14 @@ CREATE TABLE `data` (
 --
 
 INSERT INTO `data` (`ID`, `dateTime`, `value`, `id_sensor`) VALUES
-(1, '2018-05-30 07:00:00', 2, 2),
-(2, '2018-05-22 00:00:00', 3, 2),
+(1, '2018-05-16 07:00:00', 2, 2),
+(2, '2018-05-22 03:00:00', 3, 2),
 (3, '2018-03-06 00:21:00', 7, 1),
-(4, '2018-04-10 02:16:29', 1, 1);
+(4, '2018-04-10 02:16:29', 1, 1),
+(5, '2018-06-06 06:00:00', 2, 1),
+(12, '2018-06-14 00:00:00', 5, 1),
+(146, '2018-06-15 14:51:00', 9, 1),
+(147, '2018-06-15 16:48:41', 10, 2);
 
 -- --------------------------------------------------------
 
@@ -80,7 +84,8 @@ CREATE TABLE `effector` (
 INSERT INTO `effector` (`ID`, `cardNumber`, `objectNumber`, `name`, `action`, `state`, `id_room`, `id_effectorType`) VALUES
 (1, 'G10B', '12', 'Volets chambre YM', 'ON', 'OK', 4, 5),
 (2, 'G10B', '17', 'test', 'OFF', 'ORD', 4, 6),
-(3, 'G10B', '76', '3', 'OFF', 'ORD', 4, 4);
+(3, 'G10B', '76', '3', 'ON', 'ORD', 4, 4),
+(4, NULL, NULL, '2ème Lumière', 'OFF', 'ORD', 4, 6);
 
 -- --------------------------------------------------------
 
@@ -125,11 +130,9 @@ INSERT INTO `forum_discussion` (`ID`, `topic`, `text`, `id_user`, `dateTime`) VA
 (15, 'Ventilateur en panne', 'Bonjour, mon ventilateur semble être en panne après avoir été activé toute cette nuit, suite à un pic de chaleur. Peut-être a-t-il été en marche trop longtemps?\r\nMerci par avance', 1, '2018-05-24 10:15:14'),
 (16, 'Volets bloqués', 'Bonjour, mes volets sont bloqués en position fermée. Une idée pour les monter ?\r\nMerci par avance', 14, '2018-05-24 10:17:38'),
 (19, 'Alarme ne sonne plus', 'Bonjour, mon alarme ne sonne qu\'une fois sur deux lorsque mon chien passe devant le capteur... Peut-être ai-je un problème de capteur de mouvement ? Merci par avance', 21, '2018-05-24 11:24:01'),
-(21, 'Je suis un admin', 'Salut c\'est moi\r\n', 23, '2018-05-28 14:47:26'),
-(22, 'Je suis un autre admin', 'Salut salut\r\n', 15, '2018-05-28 14:48:06'),
 (24, 'Mon YM de compagnie ne fonctionne plus', 'Help me', 20, '2018-06-01 15:29:16'),
 (25, 'Je m\'appelle ToinouKatyGareth', 'Mon surnom me pose problème', 2, '2018-06-01 15:30:24'),
-(26, 'Votez Canard ISEP d\'or', 'IL faut voter voter pour moi!!!!!!', 24, '2018-06-01 15:53:25');
+(26, 'Votez Canard ISEP d\'or', 'Il faut voter voter pour moi!!!!!!', 24, '2018-06-01 15:53:25');
 
 -- --------------------------------------------------------
 
@@ -346,7 +349,8 @@ CREATE TABLE `subscription_user` (
 --
 
 INSERT INTO `subscription_user` (`ID`, `id_subscription`, `id_user`, `beginningDate`, `endingDate`) VALUES
-(1, 1, 1, '2018-05-03', '2019-05-03');
+(1, 1, 1, '2018-05-03', '2019-05-03'),
+(2, 1, 11, '2018-06-14 09:48:57', '2019-06-14');
 
 -- --------------------------------------------------------
 
@@ -384,7 +388,7 @@ INSERT INTO `user` (`ID`, `firstName`, `lastName`, `mail`, `password`, `phoneNum
 (8, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$/hyDI4mM6TVQPY.sRRz34eD', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user'),
 (9, 'as', 'as', 'antoine.ap.57@gmail.com', '$2y$10$SYoKTix0jXxKg/7Iyn2XiOH189.TSjM4pjagpe5zEg3pv0tTkqdCe', '674181395', 2, '20, rue des couvents', 57950, 'Mon', 'france', 'user'),
 (10, 'Antoine', 'Perry', 'antoine.ap.57@gmail.com', '$2y$10$pnPkmlY1DJPRUJGeQoP4gevZP76BwqUji9guVDV11rKt5yobIoDzW', '674181395', 20, 'rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
-(11, 'Yves-Marie', 'PAUL', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard', 0, 'Paris', 'france', 'user'),
+(11, 'Yves-Marie', 'A', 'yvesdu29@gmail.com', '$2y$10$m07Iis93r6NiGVCO1IPbG.U6IggDVvKV8rNSS3MBZslDOsn/9NyfW', '123456789', 15, 'boulevard', 0, 'Paris', 'france', 'user'),
 (12, 'Yacine', 'Nabti', 'yac@mail.com', '$2y$10$Z3Q8ZB1KfcwEO6mYKUC6WurpuE6QKRpBpgPXoyk7EjkoxSfDCExne', '123456789', 19, 'Rue du blabla ', 57950, 'Metz', 'france', 'user'),
 (13, 'test', 'test', 'antoine.ap.57@gmail.com', '$2y$10$ujIB4iSl7yDOxpA4tWTH2uIZDK6VZaTPNdWHt7ElSuowEo6qjS7FO', '674181395', 10, '20, rue des couvents', 57950, 'Montigny-Lès-Metz', 'france', 'user'),
 (14, 'Sylviana', 'Mialisao', 'sylv@mail.com', '$2y$10$B4qJCm8Lgn.X0z5OrXevuu1AVQsOXIDXnfRHLZcnf51tH37zHWKzi', '123456789', 20, 'rue', 57000, 'Metz', 'france', 'user'),
@@ -507,13 +511,13 @@ ALTER TABLE `action`
 -- AUTO_INCREMENT pour la table `data`
 --
 ALTER TABLE `data`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT pour la table `effector`
 --
 ALTER TABLE `effector`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `effector_type`
@@ -579,7 +583,7 @@ ALTER TABLE `subscription`
 -- AUTO_INCREMENT pour la table `subscription_user`
 --
 ALTER TABLE `subscription_user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `user`

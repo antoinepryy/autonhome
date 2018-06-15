@@ -55,7 +55,7 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.$effector['action'].'</span>'.$effector['type']);?></span>
+                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.' '.$effector['action'].' '.'</span>'.$effector['type']);?></span>
 
                     <?php
 
