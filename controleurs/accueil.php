@@ -28,6 +28,35 @@ elseif (isLoggedAsUser()){
         $id_residency=$myHouses[0][0][0];
         $houseName=$myHouses[0][0][1];
         $myRooms=getAllResidenceRooms($bdd,$id_residency)[0];
+
+        foreach ($myRooms as $roomInResidence) {
+
+            $roomLightEffector = isThereLightEffector($bdd,$roomInResidence['id']);
+            $roomFanEffector = isThereFanEffector($bdd,$roomInResidence['id']);
+            $roomShutterEffector = isThereShutterEffector($bdd,$roomInResidence['id']);
+
+            if($roomLightEffector != false){
+                $lightEffectorHere = true;
+            }
+            else{
+                $lightEffectorHere =  false;
+            }
+            if($roomFanEffector != false){
+                $fanEffectorHere = true;
+            }
+            else{
+                $fanEffectorHere =  false;
+            }
+            if($roomShutterEffector != false){
+                $shutterEffectorHere = true;
+            }
+            else{
+                $shutterEffectorHere =  false;
+            }
+        }
+
+
+
     }
     else {
         $id_residency=$_POST['house'];

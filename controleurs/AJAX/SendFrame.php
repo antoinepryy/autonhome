@@ -17,19 +17,17 @@ switch ($_REQUEST['command']){
 
     case "modifyAllLight":
         changeRoomLightEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
-//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
+        echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
     case "modifyAllFan":
         changeRoomFanEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
-//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
-            echo('fans');
+        echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
     case "modifyAllShutter":
         changeRoomShutterEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
-//        echo ($_REQUEST['value']=='true'?"ON":"OFF");
-        echo('shutter');
+        echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 }
 

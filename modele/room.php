@@ -32,8 +32,32 @@ function getAllResidenceRooms($bdd, $id){
     $residencyStatement = $bdd->prepare('SELECT id, name FROM room WHERE id_residency = :idResidency');
     $residencyStatement->bindParam(':idResidency', $id);
     $residencyStatement->execute();
-    $inHouse = $residencyStatement->fetchAll();;
+    $inHouse = $residencyStatement->fetchAll();
     return (array($inHouse));
+}
+
+function isThereLightEffector($bdd, $id){
+    $statement = $bdd->prepare('SELECT id_room FROM effector WHERE id_room = :idResidency AND id_effectorType = 6');
+    $statement->bindParam(':idResidency',$id);
+    $statement->execute();
+    $lighteffector = $statement->fetchAll();
+    return($lighteffector);
+}
+
+function isThereFanEffector($bdd, $id){
+    $statement = $bdd->prepare('SELECT id_room FROM effector WHERE id_room = :idResidency AND id_effectorType = 4');
+    $statement->bindParam(':idResidency',$id);
+    $statement->execute();
+    $faneffector = $statement->fetchAll();
+    return($faneffector);
+}
+
+function isThereShutterEffector($bdd, $id){
+    $statement = $bdd->prepare('SELECT id_room FROM effector WHERE id_room = :idResidency AND id_effectorType = 5');
+    $statement->bindParam(':idResidency',$id);
+    $statement->execute();
+    $shuttereffector = $statement->fetchAll();
+    return($shuttereffector);
 }
 
 function getAllRoomCategoryRooms ($bdd, $id, $id_category){
