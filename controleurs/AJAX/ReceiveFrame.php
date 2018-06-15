@@ -7,10 +7,19 @@
  */
 
 
-if(!function_exists("importAllSessionsAndModels")){ //Upload auto de toutes les variables de sessions ainsi que des fcts de BDD
-    include('controleurs/importAllSessionsAndModels.php');
-    importAllSessionsAndModels();
-}
+
+include('../../modele/connexion.php');
+include('../../modele/room.php');
+include('../../modele/roomCategory.php');
+include('../../modele/sensors.php');
+include('../../modele/users.php');
+include('../../modele/forumMessage.php');
+include('../../modele/forumDiscussion.php');
+include('../../modele/device.php');
+include('../../modele/effector.php');
+include('../../modele/subcriptionUsers.php');
+include('../../modele/charts.php');
+include('../../modele/data.php');
 
 $lastDateInData = getLastData($bdd)['dateTime'];
 $lastDateConverted = substr($lastDateInData, 0,4).substr($lastDateInData, 5,2).substr($lastDateInData, 8,2).substr($lastDateInData, 11,2).substr($lastDateInData, 14,2).substr($lastDateInData, 17,2);
