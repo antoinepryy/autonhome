@@ -35,18 +35,24 @@ switch ($_REQUEST['command']){
         foreach($allLightsEffector as $roomLightEffector){
             sendFrameOneEffector($bdd,$roomLightEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
         }
-        // recupère tous les id lumière de la pièce avc id = $id
-        // boucle for -> sendframe(.., id effector, "ON"/"OFF")
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
     case "modifyAllFan":
         changeRoomFanEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+        $allFanEffector = getRoomAllFanEffector($bdd,$_REQUEST['id']);
+        foreach($allFanEffector as $roomFanEffector){
+            sendFrameOneEffector($bdd,$roomFanEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
+        }
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 
     case "modifyAllShutter":
         changeRoomShutterEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
+        $allShutterEffector = getRoomAllShutterEffector($bdd,$_REQUEST['id']);
+        foreach($allShutterEffector as $roomShutterEffector){
+            sendFrameOneEffector($bdd,$roomShutterEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
+        }
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
 }
