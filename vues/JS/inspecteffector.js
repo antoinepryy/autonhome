@@ -3,9 +3,6 @@ function displayModalOfButtonPressed(id){
 
     var modal = document.getElementById('myModal');
 
-    var span = document.getElementsByClassName('close');
-
-
 
     var inputCardNumber = "<input type='number' name='cardNumber" + id + "' placeholder='Card Number' required />";
     var inputObjectNumber = "<input type='number' name='objectNumber" + id + "'  placeholder='Object Number' required />";
