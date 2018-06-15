@@ -33,7 +33,7 @@ switch ($_REQUEST['command']){
         changeRoomLightEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
         $allLightsEffector = getRoomAllLightsEffector($bdd,$_REQUEST['id']);
         foreach($allLightsEffector as $roomLightEffector){
-            sendFrameOneEffector($bdd,$roomLightEffector,$_REQUEST['value']=='true'?"ON":"OFF");
+            sendFrameOneEffector($bdd,$roomLightEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
         }
         // recupère tous les id lumière de la pièce avc id = $id
         // boucle for -> sendframe(.., id effector, "ON"/"OFF")

@@ -89,11 +89,11 @@ function changeRoomShutterEffectorAction ($bdd,$id_room,$action){
 }
 
 function  getRoomAllLightsEffector ($bdd,$id_room){
-    $roomEffectorStatement = $bdd->prepare ('SELECT ID, FROM effector WHERE id_room = :id_room AND id_effectorType = 6');
+    $roomEffectorStatement = $bdd->prepare ('SELECT ID FROM effector WHERE id_room = :id_room AND id_effectorType = 6');
     $roomEffectorStatement -> bindParam(':id_room',$id_room);
     $roomEffectorStatement -> execute();
-    $roomEffectors = $roomEffectorStatement->fetchAll();;
-    return ($roomEffectors);
+
+    return $roomEffectorStatement->fetchAll();
 }
 
 function  getRoomAllFanEffector ($bdd,$id_room){
