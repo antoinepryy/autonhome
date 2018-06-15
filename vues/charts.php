@@ -24,7 +24,7 @@ type: 'line',
 data: {
 labels: dat,
 datasets: [{
-label: "My First dataset",
+label: "Informations capteur",
 backgroundColor: 'rgb(255, 99, 132)',
 borderColor: 'rgb(255, 99, 132)',
 data: val,
