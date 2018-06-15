@@ -22,9 +22,30 @@ require ('vues/header_'.$status.'.php');
         foreach ($devices[0] as $sensor){?>
         <ul>
             <li><?php
-                var_dump($sensor);
 
-                echo($sensor['name'].' : '.$sensor['value']);?><a href=<?php echo("index.php?cible=charts&sensor=".$sensor['ID']);?>>Voir statistiques</a></li>
+
+                echo($sensor['name'].' : ');
+
+                switch ($sensor["id_sensorType"]){
+                    case "1":
+                        $value = ($sensor['value']==1111)?"Allumée":"Eteinte";
+                        echo($value);
+                        break;
+                    case "2":
+                        $value = strval($sensor['value']/10);
+                        echo($value." °C");
+                        break;
+                    case "3":
+                        $value = ($sensor['value']==1111)?"PRESENCE DETECTEE":"Pas de mouvement";
+                        echo("3");
+                        break;
+                }
+
+
+
+                echo(' <a href='."index.php?cible=charts&sensor=".$sensor["ID"].'>Voir statistiques</a></li>');
+
+                ?>
         </ul>
         <?php }
         ?>

@@ -40,11 +40,8 @@ $data_tab = str_split($data,33);
 $keyStart=0;
 foreach ($data_tab as $key => $value){
     $date = substr($value,19,33);
-
     $booleanVerif = ($date == $lastDateConverted) ? 'true' : 'false';
-
     if ($booleanVerif == 'true'){
-
         $keyStart = $key+1;
     }
 }

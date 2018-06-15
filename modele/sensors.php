@@ -192,28 +192,18 @@ function getInfosFrameFromDeviceId($bdd, $id){
 function readFrame($bdd, $frame){
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
     sscanf($frame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-    $id = 2;
+
+    $findId = $bdd->prepare('SELECT * from sensor where cardNumber = :CN and objectNumber=:ObN');
+    $findId->bindParam(":CN",$o);
+    $findId->bindParam(":ObN",$n);
+    $findId->execute();
+    $id = $findId->fetch();
+    $id =$id['ID'];
+
     $date = $year."-".$month."-".$day." ".$hour.":".$min.":".$sec;
-    $statement = $bdd->prepare('INSERT 
-        INTO data
-        (`ID`,
-        `dateTime`,
-        `value`,
-        `id_sensor`)
-        VALUES
-        (NULL,
-        :dateTime,
-        :value,
-        :id_sensor)');
-    $statement->bindParam(":dateTime",$date);
-    $statement->bindParam(":value",$v);
-    $statement->bindParam("id_sensor", $id);
-    $statement->execute();
 
-
-
-    $id = getDeviceIdFromSocket($bdd, "sensor", $a, $x);
-    if ($t == 1 && $id!=false){
+    if ($id!=false){
+        $id = $id['ID'];
         $statement = $bdd->prepare('INSERT 
         INTO data
         (`ID`,
