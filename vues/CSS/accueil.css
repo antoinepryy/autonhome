@@ -154,4 +154,89 @@
     margin: auto;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    header nav a{
+        line-height: normal;
+    }
+
+    .ma-maison a{
+        width: auto;
+    }
+
+    .forum-logo{
+        width: 20vw;
+        top: 10%;
+    }
+
+    ul{
+        justify-content: space-around;
+
+    }
+
+    .why-us{
+        display: none;
+    }
+
+    .my-house-state{
+        position: inherit;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+    }
+
+    .light input, .shutter input, .fan input{
+        position: inherit !important;
+        margin-left: 0 !important;
+        width: auto;
+    }
+
+    .logo_Assistance, .logo_FAQ{
+        height: 25%;
+        width: auto;
+    }
+
+    .assistance p{
+        font-size: 4vw;
+        width: 70%;
+        margin: auto;
+    }
+
+    h3{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .faq p{
+        font-size: 4vw;
+        width: 40%;
+        margin: auto;
+    }
+
+    footer{width: 100%}
+
+    .droit-reserve{
+        display: none;
+    }
+
+    .footer-links ul {
+        padding-left: 0;
+        justify-content: space-around;
+    }
+
+    body{
+        width: 100%!important;
+    }
+
+    .faq div{
+        width: auto;
+    }
+
+
+
+
+
+
+}
+
 

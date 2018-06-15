@@ -94,6 +94,7 @@ function identifyUserDatabase(PDO $bdd, $mail, $password){
 
     function updateUser($bdd, $data){
 
+
         $statement = $bdd -> prepare(
         'UPDATE user
         SET 

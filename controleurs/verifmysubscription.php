@@ -35,7 +35,7 @@ if(isset($_POST)) {
             } else {
 
 
-                header("Location: index.php?cible=AbonnementPlusieursMaisons");
+                header("Location: index.php?cible=monabonnement");
 
 
                 $data = array(

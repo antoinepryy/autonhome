@@ -26,4 +26,5 @@ function importAllSessionsAndModels(){
     include('./modele/effector.php');
     include('./modele/subcriptionUsers.php');
     include('./modele/charts.php');
+    include('./modele/data.php');
 }
