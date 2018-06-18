@@ -23,8 +23,8 @@ require ('vues/header_'.$status.'.php'); ?>
 
                 if ($houseInfo['id_owner']==$_SESSION["userId"]){
                     if(isset($user['firstName'])){
-                        echo ('Loué à '.$user['firstName'].' '.$user['lastName']);
-                        echo('<a href="">Supprimer la location</a>');
+                        echo ('Loué à '.$user['firstName'].' '.$user['lastName'].'   ');
+                        echo('<a href="index.php?cible=emptyhouselocation&id='.$_GET["id"].'">Supprimer la location</a>');
                     }
                     else{
                         echo ('Non loué');

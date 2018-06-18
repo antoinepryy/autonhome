@@ -117,3 +117,12 @@ function belongToUser($bdd, $idUser, $idHouse){
     }
 
 }
+
+
+function emptyHouse($bdd, $idHouse){
+
+    $statement = $bdd->prepare('UPDATE `residence` SET `id_tenant` = NULL WHERE `residence`.`ID` = :house');
+    $statement->bindParam(':house', $idHouse);
+    $statement->execute();
+
+}
