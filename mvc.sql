@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 16 juin 2018 à 01:16
+-- Généré le :  ven. 22 juin 2018 à 12:50
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.11
 
@@ -83,9 +83,10 @@ CREATE TABLE `effector` (
 
 INSERT INTO `effector` (`ID`, `cardNumber`, `objectNumber`, `name`, `action`, `state`, `id_room`, `id_effectorType`) VALUES
 (1, 'G10B', '12', 'Volets chambre YM', 'ON', 'OK', 4, 5),
-(2, 'G10B', '17', 'test', 'OFF', 'ORD', 4, 6),
-(3, 'G10B', '76', '3', 'ON', 'ORD', 4, 4),
-(4, NULL, NULL, '2ème Lumière', 'OFF', 'ORD', 4, 6);
+(2, 'G10B', '17', 'test', 'ON', 'ORD', 4, 6),
+(3, 'G10B', '76', '3', 'OFF', 'ORD', 4, 4),
+(4, NULL, NULL, '2ème Lumière', 'ON', 'ORD', 4, 6),
+(5, 'G10B', NULL, 'Test', 'ON', 'OK', 5, 5);
 
 -- --------------------------------------------------------
 
@@ -211,11 +212,11 @@ CREATE TABLE `residence` (
 --
 
 INSERT INTO `residence` (`ID`, `name`, `surface`, `nbPeople`, `secret`, `addressNumber`, `addressStreet`, `addressZipCode`, `addressCity`, `addressCountry`, `id_owner`, `id_tenant`) VALUES
-(1, 'Ma maison', 150, 6, 'monmdp', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1),
-(2, 'test', 2, 2, 'sdiecuzec', 2, 'azdoi', 4568, 'uhzd', 'uhzbd', 5, 11),
-(3, 'Maison 1', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
-(4, 'Maison 2', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
-(5, 'Maison 3', 4, 6, 'test', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(1, 'Ma maison', 150, 6, '35623137653536663937613566', 10, 'Vanves', 92130, 'Issy-Les-Moulineaux', 'France', 1, 1),
+(2, 'test', 2, 2, '35623136653536663937613566', 2, 'azdoi', 4568, 'uhzd', 'uhzbd', 5, 11),
+(3, 'Maison 1', 4, 6, '35623135653536663937613566', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(4, 'Maison 2', 4, 6, '35623134653536663937613566', 45, 'y', 456, 'fc', 'france', 11, NULL),
+(5, 'Maison 3', 4, 6, '35623133653536663937613566', 45, 'y', 456, 'fc', 'france', 11, NULL),
 (6, 'Addresse principale', 150, 2, '35623132653536663937613566', 10, 'Rue des roses', 57000, 'Marly', 'france', 25, 11);
 
 -- --------------------------------------------------------
@@ -517,7 +518,7 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT pour la table `effector`
 --
 ALTER TABLE `effector`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `effector_type`
