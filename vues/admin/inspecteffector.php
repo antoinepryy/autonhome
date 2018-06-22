@@ -35,25 +35,25 @@ require ('vues/header_'.$status.'.php');
             ?>
 
             <tr>
-                <td>
+                <td class="id">
                     <?php echo($element["ID"]); ?>
                 </td>
-                <td>
+                <td class="name">
                     <?php echo($element["name"]); ?>
                 </td>
-                <td>
+                <td class="state">
                     <?php echo($element["state"]); ?>
                 </td>
-                <td>
+                <td class="cardObjectNumber">
                     <?php echo($element["cardNumber"]." / ".$element["objectNumber"]); ?>
                 </td>
-                <td>
+                <td class="idRoom">
                     <?php echo($element["id_room"]); ?>
                 </td>
-                <td>
+                <td class="idEffectorType">
                     <?php echo($element["id_effectorType"]); ?>
                 </td>
-                <td>
+                <td class="Boutton">
                     <input type="submit" id="<?php echo $element["ID"] ?>" value="Modifier" onclick="displayModalOfButtonPressed(this.id,)" />
                 </td>
             </tr>

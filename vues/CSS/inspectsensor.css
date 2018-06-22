@@ -1,20 +1,12 @@
-tr th {
+
+tr,th,td {
+
     border: 2px solid black;
-    justify-content: center;
-    text-align: center;
-    margin-left:30%;
-    padding: 1%;
 }
 
-td{
-    border: 2px solid black;
-    justify-content: center;
-    text-align: center;
-    margin-left:30%;
-    padding: 1%;
-    border-collapse: collapse;
+td, th{
+    padding:10px;
 }
-
 
 table{
     display: flex;
@@ -23,6 +15,7 @@ table{
     border-collapse: collapse;
     margin-top: 2%;
     margin-bottom: 2%;
+    text-align: center;
 
 
 }
