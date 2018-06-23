@@ -1,23 +1,23 @@
 
 
-tr th {
-    border: 2px solid black;
-    justify-content: center;
-    text-align: center;
-    margin-left:30%;
-    padding:1%;
-    border-collapse: collapse;
-}
+/*tr th {*/
+    /*border: 2px solid black;*/
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    /*margin-left:30%;*/
+    /*padding:1%;*/
+    /*border-collapse: collapse;*/
+/*}*/
 
 
-td {
-    border: 2px solid black;
-    justify-content: center;
-    text-align: center;
-    margin-left:30%;
-    padding: 5%;
-    border-collapse: collapse;
-}
+/*td {*/
+    /*border: 2px solid black;*/
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    /*margin-left:30%;*/
+    /*padding: 5%;*/
+    /*border-collapse: collapse;*/
+/*}*/
 
 table{
     display: flex;

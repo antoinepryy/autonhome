@@ -18,7 +18,6 @@ if(!function_exists("importAllSessionsAndModels")){
     importAllSessionsAndModels();
 }
 
-
 $status;
 if(isLoggedAsAdmin()){
     $status="AD";
@@ -29,6 +28,5 @@ elseif (isLoggedAsUser()){
 else{
     $status="UU";
 }
-
 
 include('vues/forum.php');

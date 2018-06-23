@@ -14,7 +14,6 @@ if(!function_exists("importAllSessionsAndModels")){
 }
 
 
-$status;
 if(isLoggedAsAdmin()){
     $status="AD";
     $data = getData($bdd,$_GET["sensor"]);
