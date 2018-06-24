@@ -215,6 +215,21 @@ input:checked + .slider:before {
 
 }
 
+.form1{
+    text-align: center;
+}
+
+.form1{
+    padding-bottom: 10px;
+}
+
+.form2{
+    padding-bottom: 30px;
+}
+
+section{
+    margin-bottom: 40px;
+}
 @keyframes reduceWidth {
     from {height: 707px}
     to {height: 270px}
