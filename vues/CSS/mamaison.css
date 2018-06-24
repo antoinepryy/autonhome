@@ -136,4 +136,9 @@ input:checked + .slider:before {
     list-style: none;
 }
 
+.add-button div{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 

@@ -73,6 +73,7 @@ function findAllDevicesByRoom2($bdd, $idRoom){
                 on data.id_sensor = sensor.ID
               inner join sensor_type on sensor.id_sensorType = sensor_type.ID
             where id_room = :idroom
+            group by name
         ');
         $effectors = $bdd->prepare('
         select effector.ID, name, action, state, effector_type.type from effector
