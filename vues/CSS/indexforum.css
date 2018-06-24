@@ -17,3 +17,10 @@ h1 {
     width: 20%;
     padding: 1%;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .discussion{
+        font-size: 3vw;
+        justify-content: space-between;
+    }
+}

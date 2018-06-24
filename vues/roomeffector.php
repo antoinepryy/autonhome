@@ -43,7 +43,7 @@ require ('vues/header_'.$status.'.php');
 
 
 
-                echo(' <a href='."index.php?cible=charts&sensor=".$sensor["ID"].'><img src="./ressources/pictures/graph.png"/></a></li>');
+                echo(' <a href='."index.php?cible=charts&sensor=".$sensor["ID"].'><img style="vertical-align: bottom; width: 22px" src="./ressources/pictures/graph.png"/></a></li>');
 
                 ?>
         </ul>
@@ -56,7 +56,7 @@ require ('vues/header_'.$status.'.php');
 
         foreach ($devices[1] as $effector){ ?>
             <ul>
-                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.' '.$effector['action'].' '.'</span>'.$effector['type']);?></span>
+                <li><span><?php echo($effector['name'].' : <span id="effector-'.$effector['ID'].'">'.' '.$effector['action'].' '.'</span>'.' '.$effector['type']);?></span>
 
                     <?php
 

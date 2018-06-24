@@ -126,6 +126,7 @@ header .ma-maison :hover{
         position: fixed;
         top:10px;
         right:10px;
+        z-index: 999;
     }
 
 

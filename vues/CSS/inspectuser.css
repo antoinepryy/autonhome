@@ -4,26 +4,38 @@ tr th {
     justify-content: center;
     text-align: center;
     margin-left:30%;
-    padding: 1%;
+
 }
 
 td{
     border: 2px solid black;
     justify-content: center;
     text-align: center;
-    margin-left:30%;
-    padding: 1%;
+
     border-collapse: collapse;
 }
 
 
 table{
+    margin-bottom: 60px;
     display: flex;
-    margin-right: 10%;
+
     justify-content: center;
     border-collapse: collapse;
-    margin-bottom: 2%;
-    margin-top: 2%;
 
 
+
+}
+
+section{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
