@@ -33,7 +33,7 @@ switch ($_REQUEST['command']){
         changeRoomLightEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
         $allLightsEffector = getRoomAllLightsEffector($bdd,$_REQUEST['id']);
         foreach($allLightsEffector as $roomLightEffector){
-            sendFrameOneEffector($bdd,$roomLightEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
+            sendFrameOneEffector($bdd,$roomLightEffector['ID'],$_REQUEST['value']);
         }
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
@@ -42,7 +42,7 @@ switch ($_REQUEST['command']){
         changeRoomFanEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
         $allFanEffector = getRoomAllFanEffector($bdd,$_REQUEST['id']);
         foreach($allFanEffector as $roomFanEffector){
-            sendFrameOneEffector($bdd,$roomFanEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
+            sendFrameOneEffector($bdd,$roomFanEffector['ID'],$_REQUEST['value']);
         }
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;
@@ -51,7 +51,7 @@ switch ($_REQUEST['command']){
         changeRoomShutterEffectorAction($bdd,$_REQUEST['id'],$_REQUEST['value']=='true'?"ON":"OFF");
         $allShutterEffector = getRoomAllShutterEffector($bdd,$_REQUEST['id']);
         foreach($allShutterEffector as $roomShutterEffector){
-            sendFrameOneEffector($bdd,$roomShutterEffector['ID'],$_REQUEST['value']=='true'?"ON":"OFF");
+            sendFrameOneEffector($bdd,$roomShutterEffector['ID'],$_REQUEST['value']);
         }
         echo ($_REQUEST['value']=='true'?"ON":"OFF");
         break;

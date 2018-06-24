@@ -43,13 +43,14 @@ require ('vues/header_'.$status.'.php');
 
 
 
-                echo(' <a href='."index.php?cible=charts&sensor=".$sensor["ID"].'>Voir statistiques</a></li>');
+                echo(' <a href='."index.php?cible=charts&sensor=".$sensor["ID"].'><img src="./ressources/pictures/graph.png"/></a></li>');
 
                 ?>
         </ul>
         <?php }
         ?>
     </div>
+
     <div class="effector-container">
         <?php
 
