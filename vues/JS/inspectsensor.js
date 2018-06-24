@@ -7,13 +7,12 @@ function displayModalOfButtonPressed(id){
 
 
 
-    var inputCardNumber = "<input type='number' name='cardNumber" + id + "' placeholder='Card Number' required />";
-    var inputObjectNumber = "<input type='number' name='objectNumber" + id + "'  placeholder='Object Number' required />";
+    var inputCardNumber = "<input type='text' name='cardNumber" + id + "' placeholder='Card Number' required />";
+    var inputObjectNumber = "<input type='text' name='objectNumber" + id + "'  placeholder='Object Number' required />";
     var inputButton = "<button class='valider' type='submit' name='submit'> Valider </button>";
 
 
     var Form = "<div class='modal-content'>" +
-        "<span class='close'>&times;</span>" +
         "<form class='formulairemodifierCardAndObjectNumber' method='post' action='index.php?cible=verifsensorform&idsensor=" + id + "'>" +
         "<div class='elementsformulairemonprofil'>"
         + inputCardNumber + inputObjectNumber + inputButton +

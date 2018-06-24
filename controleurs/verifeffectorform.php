@@ -24,7 +24,6 @@ else{
 
 }
 
-var_dump($_POST['cardNumber'.$_GET['ideffector']],$_POST['objectNumber'.$_GET['ideffector']],$_GET['ideffector']);
 
 if (isset($_GET['ideffector'],$_POST['cardNumber'.$_GET['ideffector']],$_POST['objectNumber'.$_GET['ideffector']])){
 
