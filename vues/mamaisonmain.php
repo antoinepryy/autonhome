@@ -27,9 +27,9 @@ require ('vues/header_'.$status.'.php'); ?>
                         echo('<a href="index.php?cible=emptyhouselocation&id='.$_GET["id"].'">Supprimer la location</a>');
                     }
                     else{
-                        echo ('Non loué');
+                        echo ('Non loué  ');
                         echo('<button id="dispSecret">Afficher le code</button>');
-                        echo('<div id="secretCode" >'. $houseInfo["secret"].' </div>');
+                        echo('<div style="color: red; background-color: white; border: 1px solid black; padding: 2px; width: fit-content" id="secretCode" >'. $houseInfo["secret"].' </div>');
                     }
                 }
                 else{

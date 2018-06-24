@@ -11,18 +11,23 @@ require ('vues/header_'.$status.'.php');
 
 <section>
     <div class="link-tools">
-        <?php
-
-
-        ?>
-
+        <p style="margin: auto">
+            <strong >SECTION EN DEVELOPPEMENT</strong>
+        </p>
     </div>
 
 
 </section>
 
 
-
+<style>
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+</style>
 <?php
 require ('vues/footer.php');
 ?>
