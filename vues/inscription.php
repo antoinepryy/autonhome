@@ -33,8 +33,8 @@ require ('vues/header_UU.php');
                 <input type="text"  name="firstName" placeholder="Prénom" required/>
                 <input type="email" name="mail" placeholder="Adresse mail" required/>
                 <input type="email" name="mailPlain" placeholder="Confirmer adresse mail" required/>
-                <input type="password"  name="password" placeholder="Mot de passe" required/>
-                <input type="password"  name="passwordPlain" placeholder="Confirmer mot de passe" required/>
+                <input type="password"  minlength="6" name="password" placeholder="Mot de passe" required/>
+                <input type="password"  minlength="6" name="passwordPlain" placeholder="Confirmer mot de passe" required/>
                 <input type="tel"  name="phoneNumber" placeholder="Téléphone" required/>
             </section>
 
